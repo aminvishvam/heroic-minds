@@ -1,0 +1,35 @@
+.Nav-text{
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0px 20px;
+    margin-top: 5px;
+}
+.Nav-text:hover{
+    color: #F57C00;
+}
+.Nav-item-right{
+    margin-top: 8px;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .Nav-item-right{
+        display: flex;
+        flex-direction: column!important;
+        margin-bottom: 8px;
+    }
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+
+    .Nav-item-right{
+        display: flex;
+        flex-direction: column!important;
+        margin-bottom: 8px;
+    }
+  }
