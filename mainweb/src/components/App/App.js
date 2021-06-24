@@ -3,31 +3,31 @@ import { Router, Route, Switch } from "react-router-dom";
 import history from "../../history";
 import HomePage from "../HomePage/HomePage";
 import TopNav from "../TopNav/TopNav";
-
-
-
-
+import ScrollToTop from '../ScrollToTop/ScrollTOTop';
+import Scrolls from '../Scrolls/Scrolls';
 
 class App extends Component {
-  state = {}
-
+  state = {};
 
   render() {
-    return (<div className="App">
-
-      <Router history={history}>
-        <div>
-          <Switch>
-            < Route path="/" component={TopNav} />
-          </Switch>
-          <div className="Page">
-            <Route path="/" exact component={HomePage}/>
+    return (
+      <div className="App">
+        <Router history={history}>
+          <div>
+            <Switch>
+              <Route path="/" component={TopNav} />
+            </Switch>
+            <div className="Page">
+              <ScrollToTop>
+                <Route path="/" exact component={HomePage} />
+              </ScrollToTop>
+            </div>
           </div>
-
-          </div>
-      </Router>
-    </div>);
+        </Router>
+        <Scrolls/>
+      </div>
+    );
   }
 }
 
-      export default App;
+export default App;

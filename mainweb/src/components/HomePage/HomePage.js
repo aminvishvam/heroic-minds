@@ -3,6 +3,7 @@ import DisplayBox from "../DisplayBox/DisplayBox";
 import Background from "../../assets/home-page-background.svg";
 import HompageImage2 from "../../assets/Hompage-image2.svg";
 import storytelling from "../../assets/storytelling.svg";
+import guide from "../../assets/guide.svg";
 
 import "./HomePage.css";
 import { Link } from "react-router-dom";
@@ -149,6 +150,93 @@ class HomePage extends Component {
       </div>
     );
   }
+  renderComponent() {
+    return (
+      <div className="res-box">
+        <div className="container">
+          <div className="text-layout1">
+            <h1 className="tagline-layout1">Value of Heroic Minds</h1>
+          </div>
+          <br />
+          <br />
+          <div className="row justify-content-start">
+            <div className="col div-box">
+              <h1 className="div-box-h1">Enjoyable</h1>
+              <p className="div-box-p">
+                Short and engaging stories to wake up to, enjoy during your
+                communte or to fall asleep to at night.
+              </p>
+            </div>
+            <div className="col div-box">
+              <h1 className="div-box-h1">Organized</h1>
+              <p className="div-box-p">
+                Content organizaed by topic, and theme such as, Pop Culture and
+                Greek Mythology OR Perseverence or Leadership.
+              </p>
+            </div>
+            <div className="col div-box">
+              <h1 className="div-box-h1">Impactful</h1>
+              <p className="div-box-p">
+                Long form stories and ideas condensed down to 5-10 minutes
+                listens or reads for an efficient and effective experience.
+              </p>
+            </div>
+            <div className="col div-box">
+              <h1 className="div-box-h1">Therapeutic </h1>
+              <p className="div-box-p">
+                The experience of listening to and reflecting on heroic stories
+                is a form of logotherapy and behaviooural activation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  renderLeft4() {
+    return (
+      <div className="res-box">
+        <br /> <br /> <br />
+        <br />
+        <h1 className="tagline-layout1">A guide to invigorate human life.</h1>
+        <br />
+        <p className="intro-layout2">
+          Historically, lives shaped around
+          <br />
+          heroism are full of purpose, meaning
+          <br />
+          resolve and high-performance.
+        </p>
+        <Link to="/about">
+          <span className="intro-layout4">Learn More.</span>
+        </Link>
+      </div>
+    );
+  }
+  renderRight4() {
+    return (
+      <span className="img_animat1">
+        <img alt="Hompage-image2" className="img-fluid" src={guide} />
+      </span>
+    );
+  }
+  renderComponent2() {
+    return (
+      <div className="res-box">
+        <div className="container">
+          <div className="justify-centent-center box-p">
+            When you lead your daily life with the aim to serve and improve the
+            lives of others, your attention <br />
+            shifts from self-serving worry and rumination to focus on the world
+            around you. <br />
+            It is then that you see life as an adventure and its challenges as
+            opportunities. <br />
+            It is then that you are able to live fully in the moment.
+          </div>
+        </div>
+      </div>
+    );
+  }
   render() {
     const sectionStyle = {
       backgroundImage: "url(" + Background + ")",
@@ -185,6 +273,16 @@ class HomePage extends Component {
             contentRight={this.renderRight3()}
           />
         </section>
+        <section className="layout2">{this.renderComponent()}</section>
+        <section className="layout2">
+          <DisplayBox
+            colLeft="8"
+            colRight="4"
+            contentLeft={this.renderLeft4()}
+            contentRight={this.renderRight4()}
+          />
+        </section>
+        <section className="layout2 black">{this.renderComponent2()}</section>
       </div>
     );
   }

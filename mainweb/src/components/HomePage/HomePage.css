@@ -125,6 +125,49 @@
   top: -30px;
   left: 60px;
 }
+
+.div-box-h1 {
+    margin: 0;
+    visibility: visible;
+    font-weight: 600;
+    font-family: "Karma";
+    font-size: 30px;
+    padding: 0px 10px;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.4;
+  }
+.div-box {
+  border-radius: 50px;
+  padding: 3%;
+  margin: 10px;
+  background-color: #000000;
+}
+.div-box-p {
+  margin: 0;
+  visibility: visible;
+  font-family: "Halant";
+  font-size: 19px;
+  color: #ffffff;
+  text-align: left;
+  line-height: 1.4;
+  letter-spacing: 1;
+  padding: 10px 8px;
+}
+.box-p {
+    font-family: "Halant";
+    font-size: 22px;
+    color: #ffffff;
+    line-height: 1.4;
+    letter-spacing: 1;
+    padding: 5% ;
+    text-align: center;
+  }
+.black{
+    background-color: #000000;
+}
+
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .tagline-layout1 .intro-layout1 {
     margin: 20px;
@@ -139,6 +182,12 @@
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .tagline-layout1 .intro-layout1 {
     padding: 20px;
+  }
+  .div-box {
+    border-radius: 50px;
+    padding: 8%;
+    margin: 10px;
+    background-color: #000000;
   }
 }
 
@@ -161,6 +210,12 @@
     position: relative;
     top: -30px;
     left: 0px;
+  }
+  .div-box {
+    border-radius: 50px;
+    padding: 8%;
+    margin: 10px;
+    background-color: #000000;
   }
 }
 
@@ -186,6 +241,12 @@
   }
   .res-box {
     padding: 10%;
+  }
+  .div-box {
+    border-radius: 50px;
+    padding: 8%;
+    margin: 10px;
+    background-color: #000000;
   }
 }
 @-webkit-keyframes fadeInUp {
