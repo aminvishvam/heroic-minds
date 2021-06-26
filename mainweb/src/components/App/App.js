@@ -5,6 +5,10 @@ import HomePage from "../HomePage/HomePage";
 import TopNav from "../TopNav/TopNav";
 import ScrollToTop from '../ScrollToTop/ScrollTOTop';
 import Scrolls from '../Scrolls/Scrolls';
+import AboutPage from "../AboutPage/AboutPage";
+import TeamAccess from "../TeamAccess/TeamAccess";
+import CommingSoon from "../CommingSoon/CommingSoon";
+import BookPage from "../BookPage/BookPage";
 
 class App extends Component {
   state = {};
@@ -20,6 +24,13 @@ class App extends Component {
             <div className="Page">
               <ScrollToTop>
                 <Route path="/" exact component={HomePage} />
+                <Route path="/about" exact component={AboutPage}/>
+                <Route path='/teamaccess'exact component={TeamAccess}/>
+                <Route path='/book' exact component={BookPage}/>
+                <Route path='/library'exact component={CommingSoon}/>
+                <Route path='/community'exact component={CommingSoon}/>
+                <Route path='/login'exact component={CommingSoon}/>
+                <Route path='/joinnow'exact component={CommingSoon}/>
               </ScrollToTop>
             </div>
           </div>

@@ -26,6 +26,7 @@
   font-size: 40px;
   text-align: left;
   line-height: 1.4;
+  color: #000;
 }
 
 .intro-layout1 {
@@ -123,7 +124,7 @@
 .img-storytelling {
   position: relative;
   top: -30px;
-  left: 60px;
+  left: 0px;
 }
 
 .div-box-h1 {
@@ -163,14 +164,51 @@
     padding: 5% ;
     text-align: center;
   }
-.black{
+.black-box{
     background-color: #000000;
 }
-
-
+.tagline-layout5 {
+  margin: 0;
+  visibility: visible;
+  font-weight: 600;
+  font-family: "Karma";
+  font-size: 52px;
+  text-align: left;
+  line-height: 1.4;
+  color: #000;
+}
+.intro-layout5 {
+  text-align: left;
+  font-family: "Halant";
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: px;
+  color: #000;
+}
+.community-img{
+  position: relative;
+  top: -60px;
+  right: 60px;
+}
+.tagline-layout6{
+  margin: 0;
+  visibility: visible;
+  font-weight: 600;
+  font-family: "Karma";
+  font-size: 52px;
+  text-align: center;
+  line-height: 1.4;
+  color: #000;
+  letter-spacing: 1.4;
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   .tagline-layout1 .intro-layout1 {
     margin: 20px;
+  }
+  .community-img{
+    position: relative;
+    top: 0px;
+    right: 00px;
   }
 }
 
@@ -189,6 +227,12 @@
     margin: 10px;
     background-color: #000000;
   }
+  .community-img{
+    position: relative;
+    top: 00px;
+    right: 00px;
+  }
+
 }
 
 /* 
@@ -216,6 +260,11 @@
     padding: 8%;
     margin: 10px;
     background-color: #000000;
+  }
+  .community-img{
+    position: relative;
+    top: -20px;
+    right: 00px;
   }
 }
 
@@ -247,6 +296,11 @@
     padding: 8%;
     margin: 10px;
     background-color: #000000;
+  }
+  .community-img{
+    position: relative;
+    top: -20px;
+    right: 00px;
   }
 }
 @-webkit-keyframes fadeInUp {

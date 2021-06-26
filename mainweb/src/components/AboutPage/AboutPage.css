@@ -1,0 +1,154 @@
+.about-tagline-layout1 {
+  margin: 0;
+  visibility: visible;
+  font-family: "Karma";
+  font-size: 48px;
+  font-weight: 200;
+  text-align: left;
+  color: #000;
+}
+.about-tagline-layout2 {
+  margin: 0;
+  visibility: visible;
+  font-weight: 900;
+  font-family: "Karma";
+  font-size: 48px;
+  text-align: left;
+  line-height: 1.4;
+  color: #000;
+}
+
+.about-intro-layout1 {
+  font-size: 22px;
+  font-family: "Halant";
+  text-align: left;
+  color: #000000;
+}
+
+.about-storytelling {
+  position: relative;
+  top: 150px;
+  left: 101px;
+}
+.about-tagline-layout3 {
+  margin: 0;
+  visibility: visible;
+  font-weight: 200;
+  font-family: "Karma";
+  font-size: 48px;
+  text-align: right;
+  line-height: 1.4;
+  color: #000;
+}
+.about-intro-layout2 {
+  font-size: 22px;
+  font-family: "Halant";
+  text-align: right;
+  color: #000000;
+}
+.about-tagline-layout5 {
+  margin: 0;
+  visibility: visible;
+  font-weight: 900;
+  font-family: "Karma";
+  font-size: 48px;
+  text-align: center;
+  line-height: 1.4;
+  color: #000;
+}
+.about-intro-layout5 {
+  font-size: 22px;
+  font-family: "Halant";
+  text-align: center;
+  color: #000000;
+}
+.about-intro-layout4 {
+  font-size: 34px;
+  font-family: "Halant";
+  font-weight: 500;
+  text-align: left;
+  color: #000000;
+}
+.about-intro-layout6 {
+  font-size: 21px;
+  letter-spacing: 1;
+  font-family: "Halant";
+  text-align: center;
+  color: #000000;
+}
+.about-intro-layout7 {
+    font-size: 20px;
+    letter-spacing: 1;
+    font-family: "Halant";
+    font-weight: 800;
+    text-align: center;
+    color: #000000;
+  }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-storytelling {
+    position: relative;
+    top: 150px;
+    left: 101px;
+  }
+}
+
+/* 
+      ##Device = Tablets, Ipads (landscape)
+      ##Screen = B/w 768px to 1024px
+    */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .about-storytelling {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+/* 
+      ##Device = Low Resolution Tablets, Mobiles (Landscape)
+      ##Screen = B/w 481px to 767px
+    */
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .about-storytelling {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+/* 
+      ##Device = Most of the Smartphones Mobiles (Portrait)
+      ##Screen = B/w 320px to 479px
+    */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .about-storytelling {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+}
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+/* Standard syntax */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

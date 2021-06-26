@@ -40,7 +40,7 @@ class TopNav extends Component {
                             About</NavLink>
 
                         <NavLink
-                            to="/teamaccount"
+                            to="/teamaccess"
                             className="Nav-text"
 
                             activeClassName="active"

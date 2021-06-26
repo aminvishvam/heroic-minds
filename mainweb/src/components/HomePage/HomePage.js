@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import DisplayBox from "../DisplayBox/DisplayBox";
+
 import Background from "../../assets/home-page-background.svg";
 import HompageImage2 from "../../assets/Hompage-image2.svg";
 import storytelling from "../../assets/storytelling.svg";
 import guide from "../../assets/guide.svg";
+import vector from "../../assets/Vector.svg";
+import community from "../../assets/community.svg";
 
 import "./HomePage.css";
 import { Link } from "react-router-dom";
@@ -87,8 +90,8 @@ class HomePage extends Component {
           <br />
           <br />
           This had led to lives with an unfillable void, stressed, anxious,
-          tired, over-thinking and reliant on passive routines to perform
-          day-to-day.
+          disconnected, tired, over-thinking and reliant on passive routines to
+          perform day-to-day.
         </p>
       </div>
     );
@@ -132,8 +135,9 @@ class HomePage extends Component {
     return (
       <div className="res-box">
         <br />
+        <br />
         <p className="intro-layout2">
-          Heroic Minds utilizes the pleasurable medium of story telling as an
+          Heroic Minds utilizes the enjoyable medium of story telling as an
           engaging, therapeutic experience.
           <br />
           <br />
@@ -237,8 +241,48 @@ class HomePage extends Component {
       </div>
     );
   }
+  renderLeft5() {
+    return (
+      <div className="res-box">
+        <br /> <br /> <br />
+        <br />
+        <h1 className="tagline-layout5">Heroic Minds Global Community</h1>
+        <br />
+        <p className="intro-layout5">
+          Sharing empowering stories and ideas to make the world a more
+          selfless, courageous, resilient place.
+        </p>
+      </div>
+    );
+  }
+  renderRight5() {
+    return (
+      <span className="img_animat1">
+        <img
+          alt="Hompage-image2"
+          className="img-fluid community-img"
+          src={vector}
+        />
+      </span>
+    );
+  }
+  renderComponent3() {
+    return (
+      <div className="res-box">
+        <div className="container">
+          <div className="justify-centent-center ">
+            <h1 className="tagline-layout6">
+              Be the first to hear
+              <br />
+              when Heroic Minds goes live!
+            </h1>
+          </div>
+        </div>
+      </div>
+    );
+  }
   render() {
-    const sectionStyle = {
+    const mainSectionStyle = {
       backgroundImage: "url(" + Background + ")",
       backgroundPosition: "center",
       backgroundSize: "cover",
@@ -246,7 +290,7 @@ class HomePage extends Component {
     };
     return (
       <div className="HomePage">
-        <section className="layout1" style={sectionStyle}>
+        <section className="layout1" style={mainSectionStyle}>
           {this.renderMain()}
         </section>
         <section className="layout2">
@@ -282,7 +326,25 @@ class HomePage extends Component {
             contentRight={this.renderRight4()}
           />
         </section>
-        <section className="layout2 black">{this.renderComponent2()}</section>
+        <section className="layout2 black-box">
+          {this.renderComponent2()}
+        </section>
+        <section className="layout2">
+          <DisplayBox
+            colLeft="9"
+            colRight="3"
+            contentLeft={this.renderLeft5()}
+            contentRight={this.renderRight5()}
+          />
+        </section>
+        <section className="layout2">
+          <div className="container">
+            <img alt="Hompage-image2" className="img-fluid" src={community} />
+          </div>
+        </section>
+        <section className="layout2">
+          {this.renderComponent3()}
+        </section>
       </div>
     );
   }
