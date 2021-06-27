@@ -44,6 +44,10 @@ class HomePage extends Component {
       </div>
     );
   }
+  renderMainImg1(){
+
+  }
+
   renderLeft1() {
     return (
       <div className="res-box">
@@ -292,6 +296,9 @@ class HomePage extends Component {
       <div className="HomePage">
         <section className="layout1" style={mainSectionStyle}>
           {this.renderMain()}
+        </section>
+        <section className="mainImage1">
+          {this.renderMainImg1()}
         </section>
         <section className="layout2">
           <DisplayBox

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import DisplayBox from "../DisplayBox/DisplayBox";
 import Storytelling from "../../assets/storytelling.svg";
@@ -236,8 +237,20 @@ class AboutPage extends Component {
             </p>
           </div>
         </div>
-        <br/>
-        <br/>
+        <br />
+        <br />
+      </div>
+    );
+  }
+  rendorfooter() {
+    return (
+      <div className="container justify-content-center">
+        <div className="res-box">
+            <p class="about-intro-layout6">
+        click here to view <Link to="about/PrivacyPolicy">privacy policy</Link> and <Link to='about/TermsOfUse'>terms of use</Link></p>
+      </div>
+      <br/>
+      <br/>
       </div>
     );
   }
@@ -279,6 +292,7 @@ class AboutPage extends Component {
           />
         </section>
         <section className="layout2">{this.renderCom3()}</section>
+        <section >{this.rendorfooter()}</section>
       </div>
     );
   }
