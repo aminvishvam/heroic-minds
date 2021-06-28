@@ -245,13 +245,15 @@ class AboutPage extends Component {
   rendorfooter() {
     return (
       <div className="container justify-content-center">
-        <div className="res-box">
-            <p class="about-intro-layout6">
-        click here to view <Link to="about/PrivacyPolicy">privacy policy</Link> and <Link to='about/TermsOfUse'>terms of use</Link></p>
-      </div>
-      <br/>
-      <br/>
-      </div>
+        <div className="res-box rounded" style={{ backgroundColor: "#cdcdcd" }}>
+          <p class="about-intro-layout6 p-1 ">
+            click here to view <Link to="about/PrivacyPolicy">privacy policy</Link> and <Link to='about/TermsOfUse'>terms of use</Link></p>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+      </div >
     );
   }
   render() {
