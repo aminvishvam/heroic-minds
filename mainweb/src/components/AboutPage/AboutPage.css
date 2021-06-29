@@ -48,6 +48,8 @@
   font-family: "Halant";
   text-align: left;
   color: #000000;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .about-storytelling {
@@ -70,6 +72,8 @@
   font-family: "Halant";
   text-align: right;
   color: #000000;
+  text-align: justify;
+  text-justify: inter-word;
 }
 .about-tagline-layout5 {
   margin: 0;

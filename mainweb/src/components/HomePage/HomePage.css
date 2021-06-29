@@ -12,7 +12,7 @@
 }
 
 .layout4 {
-  margin-top: 2%;
+  margin-top: 3%;
 }
 
 .header-text {
@@ -58,20 +58,23 @@
   font-weight: bolder;
 }
 
-.text-shadow {
-  text-shadow: 0px 4px 5px rgb(173, 173, 173);
-}
-
 /* ---------------------------------- styles for 2nd page  ------------------------------------*/
 .imghead {
   font-family: "Karma";
-  font-size: 40px;
+  font-size: 44px;
   letter-spacing: 0px;
   font-weight: bolder;
   position: relative;
   bottom: -60px;
 }
+.gray-text {
+  color: #757780;
+}
 
+.main-img {
+  width: auto;
+  height: auto;
+}
 /* ---------------------------------- styles for listen now page  ------------------------------------*/
 
 .story-head {
@@ -82,67 +85,144 @@
   margin: 0;
   visibility: visible;
   font-weight: 600;
-  font-family: "Halant";
-  font-size: 52px;
+  font-family: "Karma";
+  font-size: 56px;
   text-align: center;
   color: #000;
 }
 
 .story-title {
   text-align: left;
-  font-family: "Halant";
-  font-size: 28px;
+  font-family: sans-serif;
+  font-size: 30px;
+  line-height: 20px;
   letter-spacing: 0;
   font-weight: bold;
   color: #000;
+  display: block;
 }
 
 .story-catagory {
   text-align: left;
-  font-family: "Karma";
-  font-size: 16px;
+  font-family: sans-serif;
+  font-size: 20px;
+  line-height: 20px;
   letter-spacing: 0;
-  color: #000;
-  opacity: 0.5;
+  font-weight: 500;
+  color: #979797;
+  vertical-align: bottom;
 }
 
-.story-text {
+#story-text {
   text-align: left;
-  font-family: "Karma";
-  font-size: 14px;
-  letter-spacing: 0;
-  height: 100px;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  height: 110px;
+  width: auto;
   overflow-y: scroll;
   scroll-behavior: smooth;
   color: #000;
 }
-/* -----------custom scrollbar !!!!  NOT WORKING !!! */
+
 /* width */
-story-text::-webkit-scrollbar {
-  width: 10px;
-  background-color: #ffffff;
+#story-text::-webkit-scrollbar {
+  width: 4px;
+  background-color: #c4c4c4;
 }
 
 /* Track */
-story-text::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: #000;
+#story-text::-webkit-scrollbar-track {
   background-color: #ffffff;
 }
 
-/* Handle */
-story-text::-webkit-scrollbar-thumb {
-  background-color: #000000;
-  border: 2px solid #555555;
+#story-text::-webkit-scrollbar-thumb {
+  height: 26px;
 }
 
 /* Handle on hover */
-story-text::-webkit-scrollbar-thumb:hover {
-  background: #555555;
+#story-text::-webkit-scrollbar-thumb:hover {
+  background-color: #838383;
 }
 
 .story-img {
   text-align: center;
+}
+
+.audio-controls {
+  display: block;
+  position: relative;
+  top: -18px;
+}
+
+.audio-btn {
+  opacity: 1;
+}
+
+.audio-btn:hover {
+  opacity: 0.8;
+}
+
+.back-btn {
+  animation-name: rotate-right;
+  animation-duration: 0.05s;
+}
+
+.forward-btn {
+  animation-name: rotate-left;
+  animation-duration: 0.1s;
+}
+
+.back-btn:hover {
+  animation-name: rotate-left;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-duration: 0.05s;
+  animation-fill-mode: forwards;
+}
+
+.forward-btn:hover {
+  animation-name: rotate-right;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotate-right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes rotate-left {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
+}
+
+@-webkit-keyframes rotate-right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
+}
+
+@-webkit-keyframes rotate-left {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
 }
 
 .section-box {

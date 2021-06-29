@@ -7,11 +7,15 @@ import storytelling from "../../assets/storytelling.svg";
 import guide from "../../assets/guide.svg";
 import vector from "../../assets/Vector.svg";
 import community from "../../assets/community.svg";
-import audio1Img from "../../assets/audio1.jpg";
-import audio2Img from "../../assets/audio2.png";
-//import audio1 from "../../assets/audio1.mp3";
-//import audio2 from "../../assets/audio2.mp3"
-import imgHeadphone from "../../assets/ImgHeadphone.png";
+import audio1Img from "../../assets/homepageAssests/audio1.jpg";
+import audio2Img from "../../assets/homepageAssests/audio2.png";
+import audio1 from "../../assets/homepageAssests/audio1.mp3";
+import audio2 from "../../assets/homepageAssests/audio2.mp3"
+import imgHeadphone from "../../assets/homepageAssests/ImgHeadphone.png";
+import playIcon from "../../assets/homepageAssests/play.png";
+import back_20 from "../../assets/homepageAssests/back_20.png";
+import forward_20 from "../../assets/homepageAssests/forward_20.png";
+
 import "./HomePage.css";
 import { Link } from "react-router-dom";
 
@@ -45,10 +49,8 @@ class HomePage extends Component {
     return (
       <div className="res-box">
         <div className="container ">
-          <h1 className="text-right imghead ">
-            <span className="text-secondary ">
-              The root of well-being & performance:
-            </span>
+          <h1 className="text-right  imghead">
+            <span className="gray-text">The root of well-being &amp; performance: &nbsp;</span>
             your value system.
           </h1>
         </div>
@@ -61,7 +63,7 @@ class HomePage extends Component {
         <img
           src={imgHeadphone}
           alt="laptop and phone with heroic minds app running"
-          className="img-fluid"
+          className="img-fluid main-img"
         ></img>
       </div>
     );
@@ -277,20 +279,23 @@ class HomePage extends Component {
   }
 
   // ---------------- sound track 1  (title , catagory and lyrics) ------------ //
+
+
   renderStory1() {
     return (
-      <div className="container mt-4 ">
-        <div className="story-head ">
-          <span className="story-title mr-3">A Heroic Mind</span>
-          <span className="story-catagory mr-3">The Introduction</span>
-          <span>
-            {/* <audio controls>
-              <source src={} type="audio/ogg" />
-            </audio> */}
-          </span>
+      <div className="container mt-4 mb-1 row">
+        <div className="container story-head mt-2 col-md-8 row">
+          <div className="story-title mr-3 mb-3 ">Heroic Minds </div>
+          <div className="story-catagory pt-1 mb-3 mr-3">The Introduction</div>
         </div>
-
-        <div className="story-text mt-4">
+        <div className="col-md-4 mt-4 justify-content-center">
+          <div className="justify-content-end audio-controls text-center">
+            <input type="image" alt="audio-controls" className=" back-btn img-fluid ml-1 " src={back_20} />
+            <input type="image" alt="audio-controls play-button" id="play-btn" className="audio-btn img-fluid ml-3 " src={playIcon} width="54px" height="52.2px" onClick={this.togglePlay()} />
+            <input type="image" alt="audio-controls" className="forward-btn img-fluid ml-3 " src={forward_20} />
+          </div>
+        </div>
+        <div className="mt-2 mb-3 pr-3 .smooth-scroll" id='story-text'>
           A lion doesn't go into battle worrying about how it feels, worried
           about how sharp its tools are, worried about how it compares to other
           lions, a lion goes into battle, willing to do whatever it takes to get
@@ -360,10 +365,15 @@ class HomePage extends Component {
       </div>
     );
   }
+
+  togglePlay() {
+
+  }
+
   // ---------------- sound track 1  (image) ------------ //
   renderStory1Img() {
     return (
-      <div className="story-img mt-4 img-fluid center-text ">
+      <div className="story-img  img-fluid center-text mt-3 mb-3">
         <img alt="story-thumbnail" className="img-fluid " src={audio1Img} />
       </div>
     );
@@ -372,12 +382,19 @@ class HomePage extends Component {
   // ---------------- sound track 2  (title , catagory and lyrics) ------------ //
   renderStory2() {
     return (
-      <div className="container mt-4">
-        <div className="story-head">
-          <span className="story-title mr-3">Music by sia </span>
-          <span className="story-catagory">Pop Culture</span>
+      <div className="container mt-4 mb-1 row">
+        <div className="container story-head mt-2 col-md-8 row">
+          <div className="story-title mr-3 mb-3 ">Music by Sia </div>
+          <div className="story-catagory pt-1 mb-3 mr-3">Pop Culture</div>
         </div>
-        <div className="story-text mt-4">
+        <div className="col-md-4 mt-4 justify-content-center">
+          <div className="justify-content-end audio-controls text-center">
+            <input type="image" alt="audio-controls" className=" back-btn img-fluid ml-1 " src={back_20} />
+            <input type="image" alt="audio-controls" id="play-btn" className="audio-btn img-fluid ml-3 " src={playIcon} width="54px" height="52.2px" />
+            <input type="image" alt="audio-controls" className="forward-btn img-fluid ml-3 " src={forward_20} />
+          </div>
+        </div>
+        <div className="mt-4 mb-3 pr-3 .smooth-scroll" id='story-text'>
           We have two options, we listen to the chorus of voices screaming, you
           can't handle this, or we listen to that lone whisper that says heroes
           are born and challenge that this idea of the path of least resistance
@@ -433,7 +450,7 @@ class HomePage extends Component {
   // ---------------- sound track 2  (image) ------------ //
   renderStory2Img() {
     return (
-      <div className="story-img mt-4 img-fluid center-text ">
+      <div className="story-img  img-fluid center-text mb-3 mt-3">
         <img alt="story-thumbnail" className="img-fluid" src={audio2Img} />
       </div>
     );
@@ -533,7 +550,7 @@ class HomePage extends Component {
 
         {/* -----------Listen Now page */}
         <section className="layout2">{this.renderListenNowHead()}</section>
-        <section className="layout3 ">
+        <section className="layout4 ">
           <DisplayBox
             colLeft="8"
             colRight="4"
