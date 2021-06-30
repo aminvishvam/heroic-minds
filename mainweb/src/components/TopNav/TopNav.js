@@ -49,7 +49,7 @@ class TopNav extends Component {
                                 color: "#F57C00",
                             }}
 
-                        >Team Account</NavLink>
+                        >Team Access</NavLink>
                         <NavLink
                             to="/book"
                             className="Nav-text"
@@ -91,7 +91,7 @@ class TopNav extends Component {
 
                     </span>
                     <NavLink
-                        to="/joinNow"
+                        to="/joinnow"
                         className="Nav-text"
                     >
                         <button className='btn btn-dark'>Join Today</button>

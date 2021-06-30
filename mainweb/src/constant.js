@@ -1,6 +1,6 @@
 const prod = {
     url: {
-        API_URL: 'https://damp-headland-62353.herokuapp.com/',
+        API_URL: 'https://heroicmindadmin.herokuapp.com/',
     }
 };
 const dev = {
