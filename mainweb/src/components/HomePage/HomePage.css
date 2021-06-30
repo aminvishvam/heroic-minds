@@ -160,68 +160,35 @@
 }
 
 .audio-btn:hover {
-  opacity: 0.8;
-}
-
-.back-btn {
-  animation-name: rotate-right;
-  animation-duration: 0.05s;
-}
-
-.forward-btn {
-  animation-name: rotate-left;
-  animation-duration: 0.1s;
+  animation-name: mouse-hover;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
 }
 
 .back-btn:hover {
-  animation-name: rotate-left;
-  animation-timing-function: ease;
+  animation-name: mouse-hover;
+  animation-timing-function: ease-in;
   animation-iteration-count: 1;
-  animation-duration: 0.05s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
 .forward-btn:hover {
-  animation-name: rotate-right;
-  animation-timing-function: ease;
+  animation-name: mouse-hover;
+  animation-timing-function: ease-in;
   animation-iteration-count: 1;
-  animation-duration: 0.3s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
-@keyframes rotate-right {
+@keyframes mouse-hover {
   from {
-    transform: rotate(0deg);
+    opacity: 1;
   }
   to {
-    transform: rotate(45deg);
-  }
-}
-
-@keyframes rotate-left {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-45deg);
-  }
-}
-
-@-webkit-keyframes rotate-right {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-45deg);
-  }
-}
-
-@-webkit-keyframes rotate-left {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(45deg);
+    opacity: 0.7;
   }
 }
 

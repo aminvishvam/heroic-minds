@@ -34,9 +34,12 @@ class TeamAccess extends Component {
   }
   renderLeft1() {
     return (
-      <div className="res-box">
+      <div className="res-box mt-4">
+        <br />
+        <br />
         <p className="team-tagline-layout1">Bring heroism into your team.</p>
         <br />
+
         <p className="team-tagline-layout2">
           Selflessness, purpose, passion, courage, honesty, integrity,
           resolve...

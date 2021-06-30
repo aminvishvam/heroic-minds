@@ -1,0 +1,64 @@
+.layout1 {
+  padding-bottom: 10%;
+}
+
+.layout2 {
+  margin-top: 7%;
+}
+.layout3 {
+  margin-top: 5%;
+}
+
+.layout4 {
+  margin-top: 3%;
+}
+
+.text {
+  margin: 0;
+  visibility: visible;
+  color: #000;
+  text-align: left;
+}
+
+.head {
+  font-weight: 700;
+}
+
+.intro {
+  font-weight: 400;
+}
+
+.k40 {
+  font-family: "Karma";
+  font-size: 40px;
+  color: #f57c00;
+}
+
+.k70 {
+  font-family: "Karma";
+  font-size: 70px;
+}
+
+.h30 {
+  font-family: "Halant";
+  font-size: 30px;
+}
+
+.h20 {
+  font-family: "Halant";
+  font-size: 20px;
+}
+
+.h22 {
+  font-family: "Halant";
+  font-size: 22px;
+  line-height: 35px;
+  color: #757780;
+}
+
+.btn-text {
+  font-size: 23px !important;
+  font-family: sans-serif;
+  color: #fff;
+  line-height: 122% !important;
+}

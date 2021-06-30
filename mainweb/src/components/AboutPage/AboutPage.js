@@ -259,7 +259,7 @@ class AboutPage extends Component {
   render() {
     return (
       <div className="about-page">
-        <section className="about-layout2">{this.renderComp()}</section>
+        <section className="layout3">{this.renderComp()}</section>
         <section className="layout2">
           <DisplayBox
             colLeft="8"
