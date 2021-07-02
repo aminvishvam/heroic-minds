@@ -10,8 +10,8 @@ import community from "../../assets/community.svg";
 import audio1Img from "../../assets/homepageAssests/audio1.jpg";
 import audio2Img from "../../assets/homepageAssests/audio2.png";
 import audio1 from "../../assets/homepageAssests/audio1.mp3";
-import audio2 from "../../assets/homepageAssests/audio2.mp3"
-import imgHeadphone from "../../assets/homepageAssests/ImgHeadphone.png";
+import audio2 from "../../assets/homepageAssests/audio2.mp3";
+import imgHeadphone from "../../assets/homepageAssests/Group 725.jpeg";
 import playIcon from "../../assets/homepageAssests/play.png";
 import back_20 from "../../assets/homepageAssests/back_20.png";
 import forward_20 from "../../assets/homepageAssests/forward_20.png";
@@ -26,26 +26,28 @@ class HomePage extends Component {
 
   renderMain2() {
     return (
-      <div className="container-fluid main-page header-text">
-        <div className="main-page-header ml-4 p-4">
-          <div className="">
-            <h1 className="text bold k40">
-              Shape your life around the most powerful framework known to
-              humankind.
-            </h1>
+      <div className="container">
+        <div className="row justify-content-center box">
+          <div className="col-lg-6 content-center">
+            <div className="header-text">
+              <div className="text-layout1">
+                <h1 className="tagline-layout1">
+                  Shape your life around the most powerful framework known to
+                  humankind.
+                </h1>
+              </div>
+              <p className="intro-layout1">
+                Historically, heroism has lead to purpose-driven, resilient,
+                high-performing lives.
+              </p>
+              <div className="row btn-layout1"></div>
+            </div>
           </div>
-          <div className="mt-4">
-            <p className="text simple h20 line-h150">
-              Historically, heroism has lead to purpose-driven, resilient,
-              high-performing lives.
-            </p>
-          </div>
+          <div className="col-lg-6 vertcal-center"></div>
         </div>
       </div>
-
     );
   }
-
 
   renderMain() {
     return (
@@ -77,7 +79,9 @@ class HomePage extends Component {
       <div className="res-box">
         <div className="container ">
           <h1 className="text-right  imghead">
-            <span className="gray-text">The root of well-being &amp; performance: &nbsp;</span>
+            <span className="gray-text">
+              The root of well-being &amp; performance: &nbsp;
+            </span>
             your value system.
           </h1>
         </div>
@@ -90,7 +94,7 @@ class HomePage extends Component {
         <img
           src={imgHeadphone}
           alt="laptop and phone with heroic minds app running"
-          className="img-fluid main-img"
+          className="img-fluid"
         ></img>
       </div>
     );
@@ -309,7 +313,6 @@ class HomePage extends Component {
 
   // ---------------- sound track 1  (title , catagory and lyrics) ------------ //
 
-
   renderStory1() {
     return (
       <div className="container mt-4 mb-1 row">
@@ -319,12 +322,31 @@ class HomePage extends Component {
         </div>
         <div className="col-md-4 mt-4 justify-content-center">
           <div className="justify-content-end audio-controls text-center">
-            <input type="image" alt="audio-controls" className=" back-btn img-fluid ml-1 " src={back_20} />
-            <input type="image" alt="audio-controls play-button" id="play-btn" className="audio-btn img-fluid ml-3 " src={playIcon} width="54px" height="52.2px" onClick={this.togglePlay()} />
-            <input type="image" alt="audio-controls" className="forward-btn img-fluid ml-3 " src={forward_20} />
+            <input
+              type="image"
+              alt="audio-controls"
+              className=" back-btn img-fluid ml-1 "
+              src={back_20}
+            />
+            <input
+              type="image"
+              alt="audio-controls play-button"
+              id="play-btn"
+              className="audio-btn img-fluid ml-3 "
+              src={playIcon}
+              width="54px"
+              height="52.2px"
+              onClick={this.togglePlay()}
+            />
+            <input
+              type="image"
+              alt="audio-controls"
+              className="forward-btn img-fluid ml-3 "
+              src={forward_20}
+            />
           </div>
         </div>
-        <div className="mt-2 mb-3 pr-3 .smooth-scroll" id='story-text'>
+        <div className="mt-2 mb-3 pr-3 .smooth-scroll" id="story-text">
           A lion doesn't go into battle worrying about how it feels, worried
           about how sharp its tools are, worried about how it compares to other
           lions, a lion goes into battle, willing to do whatever it takes to get
@@ -395,9 +417,7 @@ class HomePage extends Component {
     );
   }
 
-  togglePlay() {
-
-  }
+  togglePlay() {}
 
   // ---------------- sound track 1  (image) ------------ //
   renderStory1Img() {
@@ -418,12 +438,30 @@ class HomePage extends Component {
         </div>
         <div className="col-md-4 mt-4 justify-content-center">
           <div className="justify-content-end audio-controls text-center">
-            <input type="image" alt="audio-controls" className=" back-btn img-fluid ml-1 " src={back_20} />
-            <input type="image" alt="audio-controls" id="play-btn" className="audio-btn img-fluid ml-3 " src={playIcon} width="54px" height="52.2px" />
-            <input type="image" alt="audio-controls" className="forward-btn img-fluid ml-3 " src={forward_20} />
+            <input
+              type="image"
+              alt="audio-controls"
+              className=" back-btn img-fluid ml-1 "
+              src={back_20}
+            />
+            <input
+              type="image"
+              alt="audio-controls"
+              id="play-btn"
+              className="audio-btn img-fluid ml-3 "
+              src={playIcon}
+              width="54px"
+              height="52.2px"
+            />
+            <input
+              type="image"
+              alt="audio-controls"
+              className="forward-btn img-fluid ml-3 "
+              src={forward_20}
+            />
           </div>
         </div>
-        <div className="mt-4 mb-3 pr-3 .smooth-scroll" id='story-text'>
+        <div className="mt-4 mb-3 pr-3 .smooth-scroll" id="story-text">
           We have two options, we listen to the chorus of voices screaming, you
           can't handle this, or we listen to that lone whisper that says heroes
           are born and challenge that this idea of the path of least resistance
@@ -558,11 +596,11 @@ class HomePage extends Component {
       backgroundPosition: "center",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
+      height: "800px",
     };
     return (
       <div className="HomePage">
-        <section className="lay
-        out1" style={mainSectionStyle}>
+        <section className="layout1" style={mainSectionStyle}>
           {this.renderMain()}
         </section>
 
@@ -571,7 +609,7 @@ class HomePage extends Component {
         </section> */}
 
         <section>{this.renderMainImgHead()}</section>
-        <section >{this.renderMainImg()}</section>
+        <section>{this.renderMainImg()}</section>
 
         <section className="layout1">
           <DisplayBox

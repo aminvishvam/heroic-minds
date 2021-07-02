@@ -43,6 +43,7 @@
 }
 
 .header-text {
+  margin: 15%;
   animation-delay: 0.1s;
   -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
   animation: fadeInUp 1500ms ease-in-out;
