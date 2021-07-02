@@ -9,7 +9,10 @@ import AboutPage from "../AboutPage/AboutPage";
 import PrivacyPolicy from "../AboutPage/PrivacyPolicy";
 import TermsOfUse from "../AboutPage/TermsOfUse";
 import TeamAccess from "../TeamAccess/TeamAccess";
-import CommingSoon from "../CommingSoon/CommingSoon";
+import Library from "../ComingSoon/Library";
+import Community from "../ComingSoon/Community";
+import JoinToday from "../ComingSoon/JoinToday";
+import Login from "../ComingSoon/Login";
 import BookPage from "../BookPage/BookPage";
 
 class App extends Component {
@@ -31,10 +34,10 @@ class App extends Component {
                 <Route path="/about/TermsOfUse" exact component={TermsOfUse} />
                 <Route path='/teamaccess' exact component={TeamAccess} />
                 <Route path='/book' exact component={BookPage} />
-                <Route path='/library' exact component={CommingSoon} />
-                <Route path='/community' exact component={CommingSoon} />
-                <Route path='/login' exact component={CommingSoon} />
-                <Route path='/joinnow' exact component={CommingSoon} />
+                <Route path='/library' exact component={Library} />
+                <Route path='/community' exact component={Community} />
+                <Route path='/login' exact component={Login} />
+                <Route path='/joinToday' exact component={JoinToday} />
               </ScrollToTop>
             </div>
           </div>

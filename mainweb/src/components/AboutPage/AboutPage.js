@@ -13,16 +13,16 @@ class AboutPage extends Component {
   renderComp() {
     return (
       <div className="container">
-        <div className="row justify-content-center">
-          <div className="res-box">
-            <h1 className="about-tagline-layout1">
+        <div className="row justify-content-center ">
+          <div className="res-box  mt-4 mr-4 ml-4 layout4">
+            <h1 className="text k40 lh150">
               Story-Telling + Logotherapy + Behavioural Activation
             </h1>
-            <span className="about-tagline-layout2">= Heroic Minds</span>
+            <span className="text bold k40 lh150">= Heroic Minds</span>
             <br />
             <br />
             <br />
-            <p className="about-intro-layout1">
+            <p className="text h22 lh150">
               The basis of Heroic Minds is that if you want to live a
               purpose-driven, resilient, high-performing life, without being
               stuck in your own head, without forcing yourself to do the right
@@ -43,6 +43,7 @@ class AboutPage extends Component {
               is what scientists, philosophers and psychologists have known for
               thousands of years.
             </p>
+            <br />
           </div>
         </div>
       </div>
@@ -50,10 +51,10 @@ class AboutPage extends Component {
   }
   renderLeft1() {
     return (
-      <div className="res-box">
-        <h1 className="about-tagline-layout1">Story-Telling</h1>
+      <div className="res-box p-4">
+        <h1 className="text k50 lh150">Story-Telling</h1>
         <br />
-        <p className="about-intro-layout1">
+        <p className="text h22 lh130">
           5-10 minute short and engaging stories to wake up to, enjoy during
           your communte or to fall asleep to at night.
           <br />
@@ -77,32 +78,26 @@ class AboutPage extends Component {
   }
   renderRight1() {
     return (
-      <div className="res-box">
-        <span className="img_animat1">
-          <img
-            alt="Hompage-image2"
-            className="img-fluid about-storytelling"
-            src={Storytelling}
-          />
+      <div class="text-center d-table p-4 mb-4">
+        <span class="vertical-center">
+          <img alt="Hompage-image2 " className="img-fluid" src={Storytelling} />
         </span>
       </div>
     );
   }
   renderLeft2() {
     return (
-      <div className="res-box">
-        <span className="img_animat1">
-          <img alt="Hompage-image2" className="img-fluid" src={Man} />
-        </span>
+      <div className="res-box p-4 mt-4 text-center">
+        <img alt="Hompage-image2" className="img-fluid" src={Man} />
       </div>
     );
   }
   renderRight2() {
     return (
-      <div className="res-box">
-        <h1 className="about-tagline-layout3">Logotherapy</h1>
+      <div className="res-box p-4">
+        <h1 className="text k50 lh150 text-right pr-4">Logotherapy</h1>
         <br />
-        <p className="about-intro-layout2">
+        <p className="text h22 lh130 text-right">
           Find meaning in life beyond the illusive ideas that society is
           reinforcing everywhere you look today. Seek to find purpose in
           improving the world around you which is attainable in every life
@@ -114,11 +109,11 @@ class AboutPage extends Component {
   }
   renderLeft3() {
     return (
-      <div className="res-box">
-        <h1 className="about-tagline-layout1">Behavioural Activation</h1>
+      <div className="res-box p-4 mt-4">
+        <h1 className="text k50 lh120">Behavioural Activation</h1>
         <br />
         <br />
-        <p className="about-intro-layout1">
+        <p className="text h22 lh130">
           Activating behaviours that make you feel good and improve the quality
           of your life have shown to be one of the most effective ways to combat
           depression and depressive feelings. (World Psychiatry Association,
@@ -135,25 +130,22 @@ class AboutPage extends Component {
   }
   renderRight3() {
     return (
-      <div className="res-box">
-        <span className="img_animat1">
-          <img alt="Hompage-image2" className="img-fluid" src={Behavioural} />
-        </span>
+      <div className="res-box p-4 mt-4">
+        <img alt="Hompage-image2" className="img-fluid" src={Behavioural} />
       </div>
     );
   }
   renderCom2() {
     return (
       <div className="container">
-        <div className="row justify-content-center">
-          <div className="res-box">
-            <h1 className="about-tagline-layout5">
+        <div className="row justify-content-center p-3">
+          <div className="res-box p-4">
+            <h1 className="text h40 bold lh150 text-center">
               Build your psychological foundation on solid rock.
             </h1>
             <br />
             <br />
-            <br />
-            <p className="about-intro-layout5">
+            <p className="text text-center h20 lh150">
               Throughout history, people have persevered through immense
               adversity and tribulation, giving rise to lives of purpose,
               meaning, and exploration of human potential. But today, it appears
@@ -187,39 +179,38 @@ class AboutPage extends Component {
   }
   renderLeft4() {
     return (
-      <div className="res-box">
-        <span className="img_animat1">
-          <img alt="Hompage-image2" className="img-fluid" src={House} />
-        </span>
+      <div className="res-box p-4">
+        <img alt="Hompage-image2" className="img-fluid" src={House} />
       </div>
     );
   }
   renderRight4() {
     return (
-      <div className="res-box">
+      <div class="text-center d-table  mb-4 p-4">
+        <span class="vertical-center">
+          <p className="text h30 lh150 w500">
+            When the heavy rain, wind, and floods arrived, those that built their
+            homes on sand were in ruin, while those that built their homes solid
+            rock, stood tall.
+          </p>
+          <br />
+          <br />
+          <p className="text h20 lh150">
+            Parable of the Wise and the Foolish Builders
+          </p>
+        </span>
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <p className="about-intro-layout4">
-          When the heavy rain, wind, and floods arrived, those that built their
-          homes on sand were in ruin, while those that built their homes solid
-          rock, stood tall.
-        </p>
-        <p className="about-intro-layout1">
-          Parable of the Wise and the Foolish Builders
-        </p>
       </div>
     );
   }
   renderCom3() {
     return (
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="res-box">
-            <p className="about-intro-layout6">
+      <div className="container mt-4 p-4">
+
+        <div class="text-center d-table p-3 mb-4">
+          <span class="vertical-center">
+            <p className="text h20 text-center lh150">
               The optimal way to achieve a heroic life is such that you are not
               looking to the world to be fulfilled, you are not calculating your
               behaviour. Rather, you allow an invigorating love of serving the
@@ -231,11 +222,11 @@ class AboutPage extends Component {
               psychological foundation on solid rock. You maintain a composed
               and powerful mind that appears to the world as the hero.
             </p>
-            <p className="about-intro-layout7">
+            <p className="text h20 text-center lh150">
               We have seen throughout history that living this way leads toward
               the ultimate good for you and the world around you.
             </p>
-          </div>
+          </span>
         </div>
         <br />
         <br />
@@ -245,15 +236,21 @@ class AboutPage extends Component {
   rendorfooter() {
     return (
       <div className="container justify-content-center">
-        <div className="res-box rounded" style={{ backgroundColor: "#cdcdcd" }}>
-          <p class="about-intro-layout6 p-1 ">
-            click here to view <Link to="about/PrivacyPolicy">privacy policy</Link> and <Link to='about/TermsOfUse'>terms of use</Link></p>
+        <div
+          className="res-box p-4 rounded"
+          style={{ backgroundColor: "#cdcdcd" }}
+        >
+          <p class="text text-center h22 lh150 p-1 ">
+            click here to view{" "}
+            <Link to="about/PrivacyPolicy">privacy policy</Link> and{" "}
+            <Link to="about/TermsOfUse">terms of use</Link>
+          </p>
         </div>
         <br />
         <br />
         <br />
         <br />
-      </div >
+      </div>
     );
   }
   render() {
@@ -266,6 +263,7 @@ class AboutPage extends Component {
             colRight="4"
             contentLeft={this.renderLeft1()}
             contentRight={this.renderRight1()}
+            reverse="true"
           />
         </section>
         <section className="layout2">
@@ -282,6 +280,7 @@ class AboutPage extends Component {
             colRight="4"
             contentLeft={this.renderLeft3()}
             contentRight={this.renderRight3()}
+            reverse="true"
           />
         </section>
         <section className="layout2">{this.renderCom2()}</section>
@@ -294,7 +293,7 @@ class AboutPage extends Component {
           />
         </section>
         <section className="layout2">{this.renderCom3()}</section>
-        <section >{this.rendorfooter()}</section>
+        <section>{this.rendorfooter()}</section>
       </div>
     );
   }

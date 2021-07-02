@@ -1,0 +1,26 @@
+.bg-img {
+  height: 100vh;
+  width: 100vw;
+}
+
+.community-bg-img {
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.15;
+}
+
+.header-text {
+  position: relative;
+  height: 100vh;
+  height: 100vw;
+  vertical-align: middle;
+}
+
+.image-block {
+  position: absolute;
+}
+
+.h28 {
+  font-family: "Halant";
+  font-size: 28px;
+}

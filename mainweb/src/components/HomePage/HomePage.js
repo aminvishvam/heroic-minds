@@ -17,14 +17,39 @@ import back_20 from "../../assets/homepageAssests/back_20.png";
 import forward_20 from "../../assets/homepageAssests/forward_20.png";
 
 import "./HomePage.css";
+import "./Text.css";
 import { Link } from "react-router-dom";
 
 // export default HomePage;
 class HomePage extends Component {
   state = {};
+
+  renderMain2() {
+    return (
+      <div className="container-fluid main-page header-text">
+        <div className="main-page-header ml-4 p-4">
+          <div className="">
+            <h1 className="text bold k40">
+              Shape your life around the most powerful framework known to
+              humankind.
+            </h1>
+          </div>
+          <div className="mt-4">
+            <p className="text simple h20 line-h150">
+              Historically, heroism has lead to purpose-driven, resilient,
+              high-performing lives.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    );
+  }
+
+
   renderMain() {
     return (
-      <div className="container">
+      <div className="container-fluid">
         <div className="row justify-content-center box">
           <div className="col-lg-6 content-center">
             <div className="header-text">
@@ -61,7 +86,7 @@ class HomePage extends Component {
   }
   renderMainImg() {
     return (
-      <div className="res-box">
+      <div className="res-box text-center">
         <img
           src={imgHeadphone}
           alt="laptop and phone with heroic minds app running"
@@ -536,14 +561,19 @@ class HomePage extends Component {
     };
     return (
       <div className="HomePage">
-        <section className="layout1" style={mainSectionStyle}>
+        <section className="lay
+        out1" style={mainSectionStyle}>
           {this.renderMain()}
         </section>
 
-        <section className=" layout2">{this.renderMainImgHead()}</section>
-        <section>{this.renderMainImg()}</section>
+        {/* <section className="" >
+          {this.renderMain()}
+        </section> */}
 
-        <section>
+        <section>{this.renderMainImgHead()}</section>
+        <section >{this.renderMainImg()}</section>
+
+        <section className="layout1">
           <DisplayBox
             colLeft="8"
             colRight="4"
@@ -551,7 +581,7 @@ class HomePage extends Component {
             contentRight={this.renderRight1()}
           />
         </section>
-        <section className="layout2">
+        <section className="layout2 layout1">
           <DisplayBox
             colLeft="6"
             colRight="6"
@@ -559,7 +589,7 @@ class HomePage extends Component {
             contentRight={this.renderRight2()}
           />
         </section>
-        <section className="layout2">
+        <section className="layout2 layout1">
           <DisplayBox
             colLeft="6"
             colRight="6"
@@ -567,8 +597,8 @@ class HomePage extends Component {
             contentRight={this.renderRight3()}
           />
         </section>
-        <section className="layout2">{this.renderComponent()}</section>
-        <section className="layout2">
+        <section className="layout3 layout1">{this.renderComponent()}</section>
+        <section className="layout3 layout1">
           <DisplayBox
             colLeft="8"
             colRight="4"

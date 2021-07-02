@@ -1,29 +1,16 @@
-.team-tagline-layout2 {
-  margin: 0;
-  visibility: visible;
-  font-weight: 900;
-  font-family: "Karma";
-  font-size: 22px;
-  text-align: left;
-  line-height: 1.4;
-  color: #979797;
-}
-.team-intro-layout6 {
-  font-size: 21px;
-  letter-spacing: 1;
-  font-family: "Karma";
-  text-align: left;
-  color: #000000;
-}
-.team-tagline-layout1 {
-  margin: 0;
-  visibility: visible;
-  font-weight: 900;
-  font-family: "Karma";
-  font-size: 42px;
-  text-align: left;
-  line-height: 1.4;
-  color: #000;
+.btn-send {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 0.4rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

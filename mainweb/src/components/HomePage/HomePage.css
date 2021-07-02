@@ -1,11 +1,9 @@
-.box {
-  margin: auto;
-}
+/* Section tag styles */
 .layout1 {
-  padding-bottom: 18%;
+  margin-bottom: 18%;
 }
 .layout2 {
-  margin-top: 10%;
+  margin-top: 8%;
 }
 .layout3 {
   margin-top: 5%;
@@ -15,8 +13,36 @@
   margin-top: 3%;
 }
 
+.layout5 {
+  margin-bottom: 3%;
+}
+/* text styles */
+
+.text {
+  margin: 0;
+  visibility: visible;
+  color: #000;
+  text-align: left;
+}
+
+/* stle for main page  */
+.main-page {
+  background-image: url("../../assets/home-page-background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.main-page-img {
+  position: absolute;
+}
+
+.main-page-header {
+  width: 100%;
+}
+
 .header-text {
-  margin-top: 15%;
   animation-delay: 0.1s;
   -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
   animation: fadeInUp 1500ms ease-in-out;
@@ -72,8 +98,8 @@
 }
 
 .main-img {
-  width: auto;
-  height: auto;
+  width: 60%;
+  height: 60%;
 }
 /* ---------------------------------- styles for listen now page  ------------------------------------*/
 
@@ -344,7 +370,7 @@
   letter-spacing: 1.4;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+/* @media (min-width: 768px) and (max-width: 1024px) {
   .tagline-layout1 .intro-layout1 {
     margin: 20px;
   }
@@ -353,13 +379,13 @@
     top: 0px;
     right: 00px;
   }
-}
+} */
 
 /* 
     ##Device = Tablets, Ipads (landscape)
     ##Screen = B/w 768px to 1024px
   */
-
+/* 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .tagline-layout1 .intro-layout1 {
     padding: 20px;
@@ -375,13 +401,13 @@
     top: 00px;
     right: 00px;
   }
-}
+} */
 
 /* 
     ##Device = Low Resolution Tablets, Mobiles (Landscape)
     ##Screen = B/w 481px to 767px
   */
-
+/* 
 @media (min-width: 481px) and (max-width: 767px) {
   .layout1 {
     height: 500px;
@@ -408,13 +434,13 @@
     top: -20px;
     right: 00px;
   }
-}
+} */
 
 /* 
     ##Device = Most of the Smartphones Mobiles (Portrait)
     ##Screen = B/w 320px to 479px
   */
-
+/* 
 @media (min-width: 320px) and (max-width: 480px) {
   .layout1 {
     height: 500px;
@@ -445,7 +471,7 @@
     right: 00px;
   }
 }
-@-webkit-keyframes fadeInUp {
+ @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
     -webkit-transform: translateY(40px);
@@ -456,7 +482,7 @@
   }
 }
 
-/* Standard syntax */
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -466,4 +492,4 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
+} */

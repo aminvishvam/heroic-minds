@@ -1,0 +1,173 @@
+/* This class is for font */
+/* properties included 
+text = simple black text
+text-xxxx = xxxx is color name like '.text-orange'
+bold = bold font or font with 700 weight
+AXX = A is font family initial and xx is font size like '.k40' is karma font of 40 px size
+lhXXX = lh is line height and XXX is value in percentage '.lh150' is line heright of 150%*/
+
+/* font color */
+.text {
+  margin: 0;
+  visibility: visible;
+  color: #000;
+  text-align: left;
+  font-weight: 400;
+}
+
+.text-orange {
+  margin: 0;
+  visibility: visible;
+  text-align: left;
+  color: #f57c00;
+  font-weight: 400;
+}
+
+.text-gray {
+  margin: 0;
+  visibility: visible;
+  text-align: left;
+  color: #757780;
+  font-weight: 400;
+}
+
+.text-gray2 {
+  margin: 0;
+  visibility: visible;
+  text-align: left;
+  color: #979797;
+  font-weight: 400;
+}
+
+/* text weight */
+.bold {
+  font-weight: 700;
+}
+
+.w600 {
+  font-weight: 600;
+}
+
+.w400 {
+  font-weight: 400;
+}
+
+.w300 {
+  font-weight: 300;
+}
+
+.w500 {
+  font-weight: 500;
+}
+
+/* font-family = Karma with different font sizes */
+.k40 {
+  font-family: "Karma";
+  font-size: 40px;
+}
+
+.k45 {
+  font-family: "Karma";
+  font-size: 45px;
+}
+
+.k50 {
+  font-family: "Karma";
+  font-size: 50px;
+}
+
+.k70 {
+  font-family: "Karma";
+  font-size: 70px;
+}
+
+.k18 {
+  font-family: "Karma";
+  font-size: 18px;
+}
+
+/* font-family = Halant with different font sizes */
+.h20 {
+  font-family: "Halant";
+  font-size: 20px;
+}
+
+.h22 {
+  font-family: "Halant";
+  font-size: 22px;
+}
+
+.h24 {
+  font-family: "Halant";
+  font-size: 24px;
+}
+
+.h28 {
+  font-family: "Halant";
+  font-size: 28px;
+}
+
+.h30 {
+  font-family: "Halant";
+  font-size: 30px;
+}
+
+.h40 {
+  font-family: "Halant";
+  font-size: 40px;
+}
+
+/* font-family = sans-serif with different font sizes */
+
+.s16 {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.s23 {
+  font-family: sans-serif;
+  font-size: 23px;
+}
+
+/* line height  */
+.lh150 {
+  line-height: 150%;
+}
+
+.lh120 {
+  line-height: 120%;
+}
+
+.lh130 {
+  line-height: 130%;
+}
+
+.lh100 {
+  line-height: 100%;
+}
+
+.lh200 {
+  line-height: 200%;
+}
+
+/* line height  */
+
+.p-0 {
+  padding: 0;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.pl-0 {
+  padding-left: 0;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.pr-0 {
+  padding-right: 0;
+}

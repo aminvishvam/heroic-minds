@@ -13,47 +13,8 @@
   margin-top: 3%;
 }
 
-.text {
-  margin: 0;
-  visibility: visible;
-  color: #000;
-  text-align: left;
-}
-
-.head {
-  font-weight: 700;
-}
-
-.intro {
-  font-weight: 400;
-}
-
-.k40 {
-  font-family: "Karma";
-  font-size: 40px;
-  color: #f57c00;
-}
-
-.k70 {
-  font-family: "Karma";
-  font-size: 70px;
-}
-
-.h30 {
-  font-family: "Halant";
-  font-size: 30px;
-}
-
-.h20 {
-  font-family: "Halant";
-  font-size: 20px;
-}
-
-.h22 {
-  font-family: "Halant";
-  font-size: 22px;
-  line-height: 35px;
-  color: #757780;
+.pt-10 {
+  padding-top: 10%;
 }
 
 .btn-text {

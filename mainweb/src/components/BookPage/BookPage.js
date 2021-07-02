@@ -8,25 +8,26 @@ class BookPage extends Component {
 
   renderHead1() {
     return (
-      <div className="mb-3 container">
-        <h1 className="text head k40 ">
+      <div className="pb-3 container">
+        <br />
+        <br />
+        <h1 className="text-orange head k40 ">
           The first book of its kind.
           <br /> Created by you.
         </h1>
+        <br />
       </div>
 
     );
   }
   renderHead2() {
     return (
-      <div className='mb-3'>
-        <br />
-        <br />
-        <h1 className="text head k70  layout2">
+      <div className='pb-3 layout2'>
+        <h1 className="text bold k70  ">
           100 Heroic Stories <br /> from around the world.
         </h1>
-        <p className="text intro h20">*To be released on December 1st 2022</p>
-        <br />
+        <p className="text h20">*To be released on December 1st 2022</p>
+
       </div>
 
     );
@@ -34,12 +35,15 @@ class BookPage extends Component {
 
   renderHead2Img() {
     return (
-      <div className="text-center">
-        <img
-          alt="Hompage-image2"
-          className="img-fluid "
-          src={book}
-        />
+      <div class="text-center d-table p-4 pb-4">
+        <span class="vertical-center">
+          <img
+            alt="Hompage-image2"
+            className="img-fluid "
+            src={book}
+          />
+        </span>
+        <br />
       </div>
     );
 
@@ -47,13 +51,15 @@ class BookPage extends Component {
 
   renderSharebtn() {
     return (
-      <div className="container mb-3">
+      <div className="container pb-4">
+        <br />
+        <br />
         <div className="row justify-content-center">
           <div className="text-center  ">
-            <button type="submit" className="btn btn-dark text intro btn-text">
+            <button type="submit" className="btn pt-2 pb-2 pr-3 pl-3 btn-dark text btn-text">
               Share Something Today
             </button>
-            <p className="text intro h22 mt-2">
+            <p className="text text-gray intro h22 lh mt-2">
               because everyone has a story to share.
             </p>
             <br />
@@ -66,7 +72,7 @@ class BookPage extends Component {
   render() {
     return (
       <div className="BookPage container">
-        <section className="layout3">
+        <section className="layout2">
           {this.renderHead1()}
         </section>
         <section >
