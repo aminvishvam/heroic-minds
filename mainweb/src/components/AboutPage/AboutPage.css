@@ -1,34 +1,57 @@
-.about-tagline-layout1 {
-  margin: 0;
-  visibility: visible;
-  font-family: "Karma";
-  font-size: 48px;
-  font-weight: 200;
-  text-align: left;
-  color: #000;
-}
-.about-tagline-layout2 {
-  margin: 0;
-  visibility: visible;
-  font-weight: 900;
-  font-family: "Karma";
-  font-size: 48px;
-  text-align: left;
-  line-height: 1.4;
-  color: #000;
+.layout1 {
+  padding-bottom: 18%;
 }
 
-.about-intro-layout1 {
-  font-size: 22px;
-  font-family: "Halant";
+.layout2 {
+  margin-top: 10%;
+}
+.layout3 {
+  margin-top: 5%;
+}
+
+.layout4 {
+  margin-top: 3%;
+}
+
+.pt-15 {
+  padding-bottom: 15%;
+}
+
+.d-table {
+  display: table;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.vertical-center {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.full-div {
+  height: 100%;
+}
+
+.pp-intro-layout1 {
+  font-size: 44px;
+  font-family: "Karma";
   text-align: left;
   color: #000000;
 }
 
+.pp-intro-layout2 {
+  font-size: 22px;
+  font-family: "Halant";
+  text-align: left;
+  color: #000000;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .about-storytelling {
-  position: relative;
-  top: 150px;
-  left: 101px;
+  height: 100%;
+  width: 100%;
 }
 .about-tagline-layout3 {
   margin: 0;
@@ -45,6 +68,8 @@
   font-family: "Halant";
   text-align: right;
   color: #000000;
+  text-align: justify;
+  text-justify: inter-word;
 }
 .about-tagline-layout5 {
   margin: 0;
@@ -56,12 +81,14 @@
   line-height: 1.4;
   color: #000;
 }
+
 .about-intro-layout5 {
   font-size: 22px;
   font-family: "Halant";
   text-align: center;
   color: #000000;
 }
+
 .about-intro-layout4 {
   font-size: 34px;
   font-family: "Halant";
@@ -77,59 +104,14 @@
   color: #000000;
 }
 .about-intro-layout7 {
-    font-size: 20px;
-    letter-spacing: 1;
-    font-family: "Halant";
-    font-weight: 800;
-    text-align: center;
-    color: #000000;
-  }
-@media (min-width: 768px) and (max-width: 1024px) {
-  .about-storytelling {
-    position: relative;
-    top: 150px;
-    left: 101px;
-  }
+  font-size: 20px;
+  letter-spacing: 1;
+  font-family: "Halant";
+  font-weight: 800;
+  text-align: center;
+  color: #000000;
 }
 
-/* 
-      ##Device = Tablets, Ipads (landscape)
-      ##Screen = B/w 768px to 1024px
-    */
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .about-storytelling {
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-}
-
-/* 
-      ##Device = Low Resolution Tablets, Mobiles (Landscape)
-      ##Screen = B/w 481px to 767px
-    */
-
-@media (min-width: 481px) and (max-width: 767px) {
-  .about-storytelling {
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-}
-
-/* 
-      ##Device = Most of the Smartphones Mobiles (Portrait)
-      ##Screen = B/w 320px to 479px
-    */
-
-@media (min-width: 320px) and (max-width: 480px) {
-  .about-storytelling {
-    position: relative;
-    top: 0px;
-    left: 0px;
-  }
-}
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
