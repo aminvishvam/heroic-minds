@@ -14,13 +14,13 @@ class Login extends Component {
 
     renderHead() {
         return (
-            <div className="header-text  justify-content-center">
+            <div className="header-text mt-8 justify-content-center">
 
                 <p className="text bold k70 text-center pt-10">Coming Soon!</p>
                 <br />
                 <p className="text k40 lh150 text-center">Be the first to hear when<br /> Heroic Minds go live!</p>
                 <br />
-                <p className="text-center"><input type="email" class=" text intro h28 lh100 pl4" id="email1" placeholder="Email..." /></p>
+                <p className="text-center"><input type="email" className=" text intro h28 lh100 pl4" id="email1" placeholder="Email..." /></p>
             </div >
 
 

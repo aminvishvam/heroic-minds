@@ -6,14 +6,19 @@ import TopNav from "../TopNav/TopNav";
 import ScrollToTop from '../ScrollToTop/ScrollTOTop';
 import Scrolls from '../Scrolls/Scrolls';
 import AboutPage from "../AboutPage/AboutPage";
-import PrivacyPolicy from "../AboutPage/PrivacyPolicy";
-import TermsOfUse from "../AboutPage/TermsOfUse";
 import TeamAccess from "../TeamAccess/TeamAccess";
 import Library from "../ComingSoon/Library";
 import Community from "../ComingSoon/Community";
 import JoinToday from "../ComingSoon/JoinToday";
 import Login from "../ComingSoon/Login";
 import BookPage from "../BookPage/BookPage";
+import Footer from "../Footer/Footer";
+import PrivacyPolicy from "../Footer/PrivacyPolicy";
+import TermsOfUse from "../Footer/TermsOfUse";
+import Press from "../Footer/Press";
+import Contact from "../Footer/Contact";
+import WorkWithTheCreator from "../Footer/WorkWithTheCreator";
+import FAQ from "../Footer/FAQ";
 
 class App extends Component {
   state = {};
@@ -40,6 +45,9 @@ class App extends Component {
                 <Route path='/joinToday' exact component={JoinToday} />
               </ScrollToTop>
             </div>
+            <Switch>
+              <Route path="/" component={Footer} />
+            </Switch>
           </div>
         </Router>
         <Scrolls />

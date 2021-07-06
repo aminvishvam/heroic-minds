@@ -14,7 +14,7 @@ class AboutPage extends Component {
     return (
       <div className="container">
         <div className="row justify-content-center ">
-          <div className="res-box  mt-4 mr-4 ml-4 layout4">
+          <div className="res-box  mt-4 mr-4 ml-4 mt-3">
             <h1 className="text k40 lh150">
               Story-Telling + Logotherapy + Behavioural Activation
             </h1>
@@ -78,8 +78,8 @@ class AboutPage extends Component {
   }
   renderRight1() {
     return (
-      <div class="text-center d-table p-4 mb-4">
-        <span class="vertical-center">
+      <div className="text-center d-table p-4 mb-4">
+        <span className="vertical-center">
           <img alt="Hompage-image2 " className="img-fluid" src={Storytelling} />
         </span>
       </div>
@@ -186,8 +186,8 @@ class AboutPage extends Component {
   }
   renderRight4() {
     return (
-      <div class="text-center d-table  mb-4 p-4">
-        <span class="vertical-center">
+      <div className="text-center d-table  mb-4 p-4">
+        <span className="vertical-center">
           <p className="text h30 lh150 w500">
             When the heavy rain, wind, and floods arrived, those that built their
             homes on sand were in ruin, while those that built their homes solid
@@ -208,8 +208,8 @@ class AboutPage extends Component {
     return (
       <div className="container mt-4 p-4">
 
-        <div class="text-center d-table p-3 mb-4">
-          <span class="vertical-center">
+        <div className="text-center d-table p-3 mb-4">
+          <span className="vertical-center">
             <p className="text h20 text-center lh150">
               The optimal way to achieve a heroic life is such that you are not
               looking to the world to be fulfilled, you are not calculating your
@@ -240,7 +240,7 @@ class AboutPage extends Component {
           className="res-box p-4 rounded"
           style={{ backgroundColor: "#cdcdcd" }}
         >
-          <p class="text text-center h22 lh150 p-1 ">
+          <p className="text text-center h22 lh150 p-1 ">
             click here to view{" "}
             <Link to="about/PrivacyPolicy">privacy policy</Link> and{" "}
             <Link to="about/TermsOfUse">terms of use</Link>
@@ -256,8 +256,8 @@ class AboutPage extends Component {
   render() {
     return (
       <div className="about-page">
-        <section className="layout3">{this.renderComp()}</section>
-        <section className="layout2">
+        <section className="mt-5">{this.renderComp()}</section>
+        <section className="mt-8">
           <DisplayBox
             colLeft="8"
             colRight="4"
@@ -266,7 +266,7 @@ class AboutPage extends Component {
             reverse="true"
           />
         </section>
-        <section className="layout2">
+        <section className="mt-8">
           <DisplayBox
             colLeft="4"
             colRight="8"
@@ -274,7 +274,7 @@ class AboutPage extends Component {
             contentRight={this.renderRight2()}
           />
         </section>
-        <section className="layout2">
+        <section className="mt-8">
           <DisplayBox
             colLeft="8"
             colRight="4"
@@ -283,8 +283,8 @@ class AboutPage extends Component {
             reverse="true"
           />
         </section>
-        <section className="layout2">{this.renderCom2()}</section>
-        <section className="layout2">
+        <section className="mt-8">{this.renderCom2()}</section>
+        <section className="mt-8">
           <DisplayBox
             colLeft="5"
             colRight="7"
@@ -292,7 +292,7 @@ class AboutPage extends Component {
             contentRight={this.renderRight4()}
           />
         </section>
-        <section className="layout2">{this.renderCom3()}</section>
+        <section className="mt-8">{this.renderCom3()}</section>
         <section>{this.rendorfooter()}</section>
       </div>
     );

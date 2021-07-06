@@ -22,7 +22,7 @@ class BookPage extends Component {
   }
   renderHead2() {
     return (
-      <div className='pb-3 layout2'>
+      <div className='pb-3 mt-8'>
         <h1 className="text bold k70  ">
           100 Heroic Stories <br /> from around the world.
         </h1>
@@ -35,8 +35,8 @@ class BookPage extends Component {
 
   renderHead2Img() {
     return (
-      <div class="text-center d-table p-4 pb-4">
-        <span class="vertical-center">
+      <div className="text-center d-table p-4 pb-4">
+        <span classname="vertical-center">
           <img
             alt="Hompage-image2"
             className="img-fluid "
@@ -72,7 +72,7 @@ class BookPage extends Component {
   render() {
     return (
       <div className="BookPage container">
-        <section className="layout2">
+        <section className="mt-8">
           {this.renderHead1()}
         </section>
         <section >
@@ -83,15 +83,15 @@ class BookPage extends Component {
             contentRight={this.renderHead2Img()}
           />
         </section>
-        <section className='layout3 container'>
+        <section className='mt-5 container'>
           <p className="txt intro h30">
             <strong>100</strong> empowering stories &amp; ideas from the Heroic Minds Community,
             packaged up and shared with the world.
           </p>
         </section>
-        <section className="layout2">{this.renderSharebtn()}</section>
-        <section className="layout2">
-          <div className="container layout1">
+        <section className="mt-8">{this.renderSharebtn()}</section>
+        <section className="mt-8">
+          <div className="container mb-18">
             <img alt="Hompage-image2" className="img-fluid" src={bookBack} />
           </div>
         </section>

@@ -9,7 +9,7 @@ class PrivacyPolicy extends Component {
             <div className="Container ">
                 <div className=" row justify-content-center col-md-12">
                     <div className="col-md-10 ">
-                        <p className="pp-intro-layout1 ">Privacy Policy</p>
+                        <p className="pp-intro-layout1">Privacy Policy</p>
 
                         <br />
                         <br />
@@ -306,7 +306,7 @@ class PrivacyPolicy extends Component {
     }
     render() {
         return (
-            <div className="privacy-policy layout3">
+            <div className="privacy-policy mt-5">
                 <section className="about-layout2">
                     {this.renderHead()}
                 </section>

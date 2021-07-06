@@ -24,31 +24,6 @@ import { Link } from "react-router-dom";
 class HomePage extends Component {
   state = {};
 
-  renderMain2() {
-    return (
-      <div className="container">
-        <div className="row justify-content-center box">
-          <div className="col-lg-6 content-center">
-            <div className="header-text">
-              <div className="text-layout1">
-                <h1 className="tagline-layout1">
-                  Shape your life around the most powerful framework known to
-                  humankind.
-                </h1>
-              </div>
-              <p className="intro-layout1">
-                Historically, heroism has lead to purpose-driven, resilient,
-                high-performing lives.
-              </p>
-              <div className="row btn-layout1"></div>
-            </div>
-          </div>
-          <div className="col-lg-6 vertcal-center"></div>
-        </div>
-      </div>
-    );
-  }
-
   renderMain() {
     return (
       <div className="container-fluid">
@@ -417,7 +392,7 @@ class HomePage extends Component {
     );
   }
 
-  togglePlay() {}
+  togglePlay() { }
 
   // ---------------- sound track 1  (image) ------------ //
   renderStory1Img() {
@@ -600,7 +575,7 @@ class HomePage extends Component {
     };
     return (
       <div className="HomePage">
-        <section className="layout1" style={mainSectionStyle}>
+        <section className="mb-18" style={mainSectionStyle}>
           {this.renderMain()}
         </section>
 
@@ -611,7 +586,7 @@ class HomePage extends Component {
         <section>{this.renderMainImgHead()}</section>
         <section>{this.renderMainImg()}</section>
 
-        <section className="layout1">
+        <section className="mb-18">
           <DisplayBox
             colLeft="8"
             colRight="4"
@@ -619,7 +594,7 @@ class HomePage extends Component {
             contentRight={this.renderRight1()}
           />
         </section>
-        <section className="layout2 layout1">
+        <section className="mt-8 mb-18">
           <DisplayBox
             colLeft="6"
             colRight="6"
@@ -627,7 +602,7 @@ class HomePage extends Component {
             contentRight={this.renderRight2()}
           />
         </section>
-        <section className="layout2 layout1">
+        <section className="mt-8 mb-18">
           <DisplayBox
             colLeft="6"
             colRight="6"
@@ -635,8 +610,8 @@ class HomePage extends Component {
             contentRight={this.renderRight3()}
           />
         </section>
-        <section className="layout3 layout1">{this.renderComponent()}</section>
-        <section className="layout3 layout1">
+        <section className="mt-5 mb-18">{this.renderComponent()}</section>
+        <section className="mt-5 mb-18">
           <DisplayBox
             colLeft="8"
             colRight="4"
@@ -644,13 +619,13 @@ class HomePage extends Component {
             contentRight={this.renderRight4()}
           />
         </section>
-        <section className="layout2 black-box">
+        <section className="mt-8 black-box">
           {this.renderComponent2()}
         </section>
 
         {/* -----------Listen Now page */}
-        <section className="layout2">{this.renderListenNowHead()}</section>
-        <section className="layout4 ">
+        <section className="mt-8">{this.renderListenNowHead()}</section>
+        <section className="mt-3 ">
           <DisplayBox
             colLeft="8"
             colRight="4"
@@ -658,7 +633,7 @@ class HomePage extends Component {
             contentRight={this.renderStory1Img()}
           />
         </section>
-        <section className="layout1 layout4">
+        <section className="mb-18 mt-3">
           <DisplayBox
             colLeft="8"
             colRight="4"
@@ -667,7 +642,7 @@ class HomePage extends Component {
           />
         </section>
 
-        <section className="layout2">
+        <section className="mt-8">
           <DisplayBox
             colLeft="9"
             colRight="3"
@@ -675,13 +650,13 @@ class HomePage extends Component {
             contentRight={this.renderRight5()}
           />
         </section>
-        <section className="layout2">
+        <section className="mt-8">
           <div className="container">
             <img alt="Hompage-image2" className="img-fluid" src={community} />
           </div>
         </section>
-        <section className="layout2">{this.renderComponent3()}</section>
-        <section className="layout2 layout1">{this.renderPrice()}</section>
+        <section className="mt-8">{this.renderComponent3()}</section>
+        <section className="mt-8 ">{this.renderPrice()}</section>
       </div>
     );
   }

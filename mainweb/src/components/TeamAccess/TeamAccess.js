@@ -105,7 +105,7 @@ class TeamAccess extends Component {
   render() {
     return (
       <div className="TeamAccess">
-        <section className="layout4">
+        <section className="mt-3">
           <DisplayBox
             colLeft="8"
             colRight="4"
@@ -113,7 +113,7 @@ class TeamAccess extends Component {
             contentRight={this.renderRight1()}
           />
         </section>
-        <section className="layout2 layout1">
+        <section className="layout2 mb-18">
           {this.renderBottom()}
         </section>
       </div>
