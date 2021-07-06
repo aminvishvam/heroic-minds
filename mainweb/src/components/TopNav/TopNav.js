@@ -5,6 +5,8 @@ import Nav from "react-bootstrap/Nav";
 import Logo from "../Logo/Logo";
 import { NavLink } from "react-router-dom";
 import "./TopNav.css";
+import { connect } from "react-redux";
+
 class TopNav extends Component {
   itemStyle = {
     color: "black",
@@ -14,98 +16,147 @@ class TopNav extends Component {
     marginTop: "5px",
   };
 
-  render() {
-    return (
-      <div className="TopNav">
-        <Navbar expand="lg">
-          <Navbar.Brand to="/">
-            <Logo />
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll" className="Nav-item">
-            <Nav
-              className="mr-auto my-6 my-lg-0"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
-            >
-              <NavLink
-                to="/about"
-                className="Nav-text"
-                activeClassName="active"
-                activeStyle={{
-                  fontWeight: "bold",
-                  color: "#F57C00",
-                }}
+  renderLinks() {
+    if (this.props.authenticated) {
+      return (
+        <div>
+          <Navbar expand="lg">
+            <Navbar.Brand to="/">
+              <Logo />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="navbarScroll" />
+            <Navbar.Collapse id="navbarScroll" className="Nav-item">
+              <Nav
+                className="mr-auto my-6 my-lg-0"
+                style={{ maxHeight: "100px" }}
+                navbarScroll
               >
-                About
-              </NavLink>
+                <NavLink
+                  to="/library"
+                  className="Nav-text navbar-right"
+                  activeClassName="active"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "#F57C00",
+                  }}
+                >
+                  Library
+                </NavLink>
+                <NavLink
+                  to="/community"
+                  className="Nav-text"
+                  activeClassName="active"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "#F57C00",
+                  }}
+                >
+                  Community
+                </NavLink>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <Navbar expand="lg">
+            <Navbar.Brand to="/">
+              <Logo />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="navbarScroll" />
+            <Navbar.Collapse id="navbarScroll" className="Nav-item">
+              <Nav
+                className="mr-auto my-6 my-lg-0"
+                style={{ maxHeight: "100px" }}
+                navbarScroll
+              >
+                <NavLink
+                  to="/about"
+                  className="Nav-text"
+                  activeClassName="active"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "#F57C00",
+                  }}
+                >
+                  About
+                </NavLink>
 
-              <NavLink
-                to="/teamaccess"
-                className="Nav-text"
-                activeClassName="active"
-                activeStyle={{
-                  fontWeight: "bold",
-                  color: "#F57C00",
-                }}
-              >
-                Team Access
+                <NavLink
+                  to="/teamaccess"
+                  className="Nav-text"
+                  activeClassName="active"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "#F57C00",
+                  }}
+                >
+                  Team Access
+                </NavLink>
+                <NavLink
+                  to="/book"
+                  className="Nav-text"
+                  activeClassName="active"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "#F57C00",
+                  }}
+                >
+                  Book
+                </NavLink>
+              </Nav>
+              <span className="Nav-item-right">
+                <NavLink
+                  to="/library"
+                  className="Nav-text navbar-right"
+                  activeClassName="active"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "#F57C00",
+                  }}
+                >
+                  Library
+                </NavLink>
+                <NavLink
+                  to="/community"
+                  className="Nav-text"
+                  activeClassName="active"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "#F57C00",
+                  }}
+                >
+                  Community
+                </NavLink>
+                <NavLink
+                  to="/login"
+                  className="Nav-text"
+                  activeClassName="active"
+                  activeStyle={{
+                    fontWeight: "bold",
+                    color: "#F57C00",
+                  }}
+                >
+                  Login
+                </NavLink>
+              </span>
+              <NavLink to="/joinToday" className="Nav-text">
+                <button className="btn btn-dark">Join Today</button>
               </NavLink>
-              <NavLink
-                to="/book"
-                className="Nav-text"
-                activeClassName="active"
-                activeStyle={{
-                  fontWeight: "bold",
-                  color: "#F57C00",
-                }}
-              >
-                Book
-              </NavLink>
-            </Nav>
-            <span className="Nav-item-right">
-              <NavLink
-                to="/library"
-                className="Nav-text navbar-right"
-                activeClassName="active"
-                activeStyle={{
-                  fontWeight: "bold",
-                  color: "#F57C00",
-                }}
-              >
-                Library
-              </NavLink>
-              <NavLink
-                to="/community"
-                className="Nav-text"
-                activeClassName="active"
-                activeStyle={{
-                  fontWeight: "bold",
-                  color: "#F57C00",
-                }}
-              >
-                Community
-              </NavLink>
-              <NavLink
-                to="/login"
-                className="Nav-text"
-                activeClassName="active"
-                activeStyle={{
-                  fontWeight: "bold",
-                  color: "#F57C00",
-                }}
-              >
-                Login
-              </NavLink>
-            </span>
-            <NavLink to="/joinToday" className="Nav-text">
-              <button className="btn btn-dark">Join Today</button>
-            </NavLink>
-          </Navbar.Collapse>
-        </Navbar>
-      </div>
-    );
+            </Navbar.Collapse>
+          </Navbar>
+        </div>
+      );
+    }
+  }
+  render() {
+    return <div className="TopNav">{this.renderLinks()}</div>;
   }
 }
+function mapStateToProps(state) {
+  return { authenticated: state.auth.authenticated };
+}
 
-export default TopNav;
+export default connect(mapStateToProps)(TopNav);
