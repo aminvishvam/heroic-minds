@@ -1,0 +1,28 @@
+.menu {
+    overflow:hidden;
+    background-color:#EEEEEE;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 0.3em 0.3em;
+    text-align:center;
+    transition: all 0.2s; 
+    border:0.12em solid #EEEEEE;
+}
+.items{
+    padding: 0.7em 5.0em;
+    visibility: visible;
+    font-weight: bold;
+    font-family: Lato;
+    text-align:center;
+    font-size:14px;
+    letter-spacing: 1px;
+    line-height: 1.4;;
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
+}
+.items.actived{
+    background-color:#ffffff;
+    border-radius: 25px ;
+    border:0.12em solid #000;
+}
