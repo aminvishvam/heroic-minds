@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { required, email, length, acceptance } from "redux-form-validators";
+import { required, email, length, } from "redux-form-validators";
 
 import { reduxForm, Field } from "redux-form";
 import { compose } from "redux";
@@ -10,6 +10,7 @@ import * as actions from "../../actions/Auth";
 import "./Login.css";
 import RenderField from "../RenderField/RenderField";
 import LogoIcon from "../LogoIcon/LogoIcon";
+import { Link } from "react-router-dom";
 
 class Login extends Component {
   onSubmit = (formValues) => {
@@ -48,7 +49,9 @@ class Login extends Component {
                 label="Remeber Me"
                 component={RenderField}
               />
-              <p>forgotPassword?</p>
+              <Link to="/forgot-password">
+                <p>forgotPassword?</p>
+              </Link>
               <button
                 type="submit"
                 disabled={submitting || pristine}
