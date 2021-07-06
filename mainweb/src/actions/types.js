@@ -7,3 +7,6 @@ export const AUTH_ERROR = "AUTH_ERROR";
 
 export const TOGGLE_PERSONAL = "TOGGLE_PERSONAL";
 export const TOGGLE_ORGANIZATION = "TOGGLE_ORGANIZATION";
+
+export const FETCH_ORGS = "FETCH_ORGS";
+export const FETCH_ORG = "FETCH_ORG";

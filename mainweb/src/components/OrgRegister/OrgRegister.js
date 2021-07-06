@@ -11,16 +11,41 @@ import { reduxForm, Field } from "redux-form";
 import { compose } from "redux";
 import { connect } from "react-redux";
 
-import * as actions from "../../actions/Auth";
+import { orgRegister } from "../../actions/Auth";
+import { fetchOrgs } from "../../actions/OrgReg";
 
 import "./OrgRegister.css";
 import RenderField from "../RenderField/RenderField";
 
 class OrgRegister extends Component {
+  componentDidMount() {
+    this.props.fetchOrgs();
+  }
   onSubmit = (formValues) => {
-    this.props.OrgRegister(formValues);
+    this.props.orgRegister(formValues);
   };
 
+  renderOrgOption() {
+    return this.props.orgs.map((org) => {
+      return (
+        <option key={org._id} value={org._id}>
+          {org.orgName}
+        </option>
+      );
+    });
+  }
+
+  renderOrgSelect() {
+    return (
+      <div>
+        <label>Organization Name</label>
+        <br />
+        <Field name="orgId" component="select">
+          {this.renderOrgOption()}
+        </Field>
+      </div>
+    );
+  }
   render() {
     const { handleSubmit, pristine, submitting } = this.props;
     return (
@@ -42,6 +67,7 @@ class OrgRegister extends Component {
                 component={RenderField}
                 validate={[required(), length({ min: 2 })]}
               />
+              {this.renderOrgSelect()}
               <Field
                 name="orgCode"
                 type="text"
@@ -99,13 +125,14 @@ class OrgRegister extends Component {
 
 function mapStateToProps(state) {
   return {
+    orgs: Object.values(state.org),
     errorMessage: state.auth.errorMessage,
     emailVerfiyError: state.auth.emailVerifyError,
   };
 }
 
 export default compose(
-  connect(mapStateToProps, actions),
+  connect(mapStateToProps, { fetchOrgs, orgRegister }),
   reduxForm({
     form: "OrgRegisterForm",
   })
