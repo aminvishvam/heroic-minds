@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import * as actions from "../../actions/toggleRegister";
 import LogoIcon from "../LogoIcon/LogoIcon";
 import PersonalRegister from "../PersonalRegister/PersonalRegister";
+import OrgRegister from "../OrgRegister/OrgRegister";
 
 import "./Register.css";
 
@@ -41,8 +42,8 @@ class Register extends Component {
             </div>
           </div>
           <div>
-            {isPersonalOpen ? <PersonalRegister/> : ""}
-            {isOrganizationOpen ? <div> Organization</div> : ""}
+            {isPersonalOpen ? <PersonalRegister /> : ""}
+            {isOrganizationOpen ? <OrgRegister /> : ""}
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
-import { AUTH_USER, AUTH_ERROR } from "./types";
+import { AUTH_USER, AUTH_VERIFY_EMAIL, AUTH_ERROR } from "./types";
 import authapi from "../api/heroicmindsapi";
+import history from "../history";
 
 export const personalRegister = (formValues) => async (dispatch) => {
   try {
@@ -7,11 +8,9 @@ export const personalRegister = (formValues) => async (dispatch) => {
       ...formValues,
       accountType: "Personal",
     });
-
-   
+    dispatch({ type: AUTH_VERIFY_EMAIL, payload: response.data.message });
   } catch (e) {
-    console.log(e.message)
-    dispatch({ type: AUTH_ERROR, payload: "Email in use" });
+    dispatch({ type: AUTH_ERROR, payload: e.response.data.message });
   }
 };
 

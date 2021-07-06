@@ -13,14 +13,13 @@ import { connect } from "react-redux";
 
 import * as actions from "../../actions/Auth";
 
-import "./PersonalRegister.css";
+import "./OrgRegister.css";
 import RenderField from "../RenderField/RenderField";
 
-class PersonalRegister extends Component {
+class OrgRegister extends Component {
   onSubmit = (formValues) => {
-    this.props.personalRegister(formValues);
+    this.props.OrgRegister(formValues);
   };
-
 
   render() {
     const { handleSubmit, pristine, submitting } = this.props;
@@ -40,6 +39,13 @@ class PersonalRegister extends Component {
                 name="lastName"
                 type="text"
                 label="Last Name"
+                component={RenderField}
+                validate={[required(), length({ min: 2 })]}
+              />
+              <Field
+                name="orgCode"
+                type="text"
+                label="Organization Code"
                 component={RenderField}
                 validate={[required(), length({ min: 2 })]}
               />
@@ -101,6 +107,6 @@ function mapStateToProps(state) {
 export default compose(
   connect(mapStateToProps, actions),
   reduxForm({
-    form: "PersonalRegisterForm",
+    form: "OrgRegisterForm",
   })
-)(PersonalRegister);
+)(OrgRegister);
