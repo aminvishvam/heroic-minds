@@ -60,8 +60,9 @@ function Payment() {
       console.log(result.error.message);
     } else {
       const res = await axios.post("http://localhost:5080/api/v1/sub", {
-        payment_method: result.paymentMethod.id,
-        email: email,
+        userId:'60e36635f5b6f87238374eca',
+        paymentMethod: result.paymentMethod.id,
+        planId: 'price_1JAfaOGFy9bXfzIUINOjecoN'
       });
       console.log(res)
       // eslint-disable-next-line camelcase
