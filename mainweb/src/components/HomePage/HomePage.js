@@ -579,10 +579,6 @@ class HomePage extends Component {
           {this.renderMain()}
         </section>
 
-        {/* <section className="" >
-          {this.renderMain()}
-        </section> */}
-
         <section>{this.renderMainImgHead()}</section>
         <section>{this.renderMainImg()}</section>
 

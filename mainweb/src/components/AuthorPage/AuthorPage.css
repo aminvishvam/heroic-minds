@@ -17,9 +17,10 @@
   padding-top: 10%;
 }
 
-.btn-text {
+.book-btn-text {
   font-size: 23px !important;
   font-family: sans-serif;
   color: #fff;
   line-height: 122% !important;
+  font-weight: 400;
 }

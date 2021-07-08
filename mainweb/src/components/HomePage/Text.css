@@ -47,6 +47,18 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   font-weight: 400;
 }
 
+.text-lightblack {
+  color: #333333;
+}
+
+.text-yellow {
+  color: rgba(245, 124, 0, 0.7);
+}
+
+.text-lightblack2 {
+  color: rgba(0, 0, 0, 0.79);
+}
+
 /* text weight */
 .bold {
   font-weight: 700;
@@ -88,6 +100,11 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   font-size: 50px;
 }
 
+.k60 {
+  font-family: "Karma";
+  font-size: 60px;
+}
+
 .k70 {
   font-family: "Karma";
   font-size: 70px;
@@ -99,6 +116,12 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 }
 
 /* font-family = Halant with different font sizes */
+
+.h16 {
+  font-family: "Halant";
+  font-size: 16px !important;
+}
+
 .h20 {
   font-family: "Halant";
   font-size: 20px;
@@ -124,12 +147,22 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   font-size: 30px;
 }
 
+.h35 {
+  font-family: "Halant";
+  font-size: 35px;
+}
+
 .h40 {
   font-family: "Halant";
   font-size: 40px;
 }
 
 /* font-family = sans-serif with different font sizes */
+
+.s10 {
+  font-family: sans-serif;
+  font-size: 10px;
+}
 
 .s16 {
   font-family: sans-serif;
@@ -138,7 +171,12 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 
 .s18 {
   font-family: sans-serif;
-  font-size: 18px;
+  font-size: 18px !important;
+}
+
+.s20 {
+  font-family: sans-serif;
+  font-size: 20px;
 }
 
 .s23 {
@@ -160,6 +198,10 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   line-height: 120%;
 }
 
+.lh110 {
+  line-height: 110%;
+}
+
 .lh130 {
   line-height: 130%;
 }
@@ -174,6 +216,10 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 
 .lh60 {
   line-height: 60%;
+}
+
+.lh160 {
+  line-height: 160%;
 }
 
 /* line height  */
@@ -205,6 +251,10 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 }
 
 /* margin bottom */
+
+.mb-0 {
+  margin-bottom: 0%;
+}
 .mb-3 {
   margin-bottom: 3%;
 }
@@ -235,12 +285,31 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   margin-top: 3%;
 }
 
+.mt-4 {
+  margin-top: 4%;
+}
+
 .mt-5 {
   margin-top: 5%;
 }
 
+.mt-6 {
+  margin-top: 6%;
+}
+.mt-7 {
+  margin-top: 7%;
+}
+
 .mt-8 {
   margin-top: 8%;
+}
+
+.mt-9 {
+  margin-top: 9%;
+}
+
+.mt-10 {
+  margin-top: 10%;
 }
 
 .mt-15 {
@@ -253,4 +322,18 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 
 .mt-20 {
   margin-top: 20%;
+}
+
+/* letter-spacing */
+
+.ls1 {
+  letter-spacing: 1px;
+}
+
+.ls2 {
+  letter-spacing: 2px;
+}
+
+.ls-half {
+  letter-spacing: 0.5px;
 }

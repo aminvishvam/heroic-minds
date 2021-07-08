@@ -30,7 +30,7 @@ class TopNav extends Component {
             >
               <NavLink
                 to="/about"
-                className="Nav-text"
+                className="Nav-text s18"
                 activeClassName="active"
                 activeStyle={{
                   fontWeight: "bold",
@@ -41,8 +41,8 @@ class TopNav extends Component {
               </NavLink>
 
               <NavLink
-                to="/teamaccess"
-                className="Nav-text"
+                to="/team-access"
+                className="Nav-text s18"
                 activeClassName="active"
                 activeStyle={{
                   fontWeight: "bold",
@@ -52,21 +52,21 @@ class TopNav extends Component {
                 Team Access
               </NavLink>
               <NavLink
-                to="/book"
-                className="Nav-text"
+                to="/author"
+                className="Nav-text s18"
                 activeClassName="active"
                 activeStyle={{
                   fontWeight: "bold",
                   color: "#F57C00",
                 }}
               >
-                Book
+                Author
               </NavLink>
             </Nav>
             <span className="Nav-item-right">
               <NavLink
                 to="/library"
-                className="Nav-text navbar-right"
+                className="Nav-text navbar-right s18"
                 activeClassName="active"
                 activeStyle={{
                   fontWeight: "bold",
@@ -77,7 +77,7 @@ class TopNav extends Component {
               </NavLink>
               <NavLink
                 to="/community"
-                className="Nav-text"
+                className="Nav-text s18"
                 activeClassName="active"
                 activeStyle={{
                   fontWeight: "bold",
@@ -88,7 +88,7 @@ class TopNav extends Component {
               </NavLink>
               <NavLink
                 to="/login"
-                className="Nav-text"
+                className="Nav-text s18"
                 activeClassName="active"
                 activeStyle={{
                   fontWeight: "bold",
@@ -98,8 +98,8 @@ class TopNav extends Component {
                 Login
               </NavLink>
             </span>
-            <NavLink to="/joinToday" className="Nav-text">
-              <button className="btn btn-dark">Join Today</button>
+            <NavLink to="/join-today" className="Nav-text ">
+              <button className="btn btn-black s18">Join Today</button>
             </NavLink>
           </Navbar.Collapse>
         </Navbar>

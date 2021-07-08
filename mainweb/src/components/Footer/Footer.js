@@ -1,21 +1,21 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Footer.css"
 
 class Footer extends Component {
     render() {
         return (
-            <div className="container-fluid bg-black mt-8 mb-10 ">
+            <div className="container-fluid bg-black mt-8 mb-0 vertical-align-bottom">
                 <br />
                 <div className="container mt-3 pb-3 ">
-                    <div className="text-center text-white s30 lh200">
-                        HEROIC MINDS<sup>TM</sup>
+                    <div className="text-center text-white s30 lh200 ls1">
+                        HEROIC MINDS<sup className='sup'>TM</sup>
                     </div>
                     <br />
                     <div className="text-uppercase text-center fw100 s18 lh150 justify-content-center mt-3 row">
                         <div className="link-text p-4">
-                            <Link
-                                to="/press"
+                            <NavLink
+                                to="/work-with-the-creator"
                                 className="footer-link-text "
                                 activeClassName='active'
                                 activeStyle={
@@ -23,11 +23,11 @@ class Footer extends Component {
                                 }
                             >
                                 work with the creator
-                            </Link>
+                            </NavLink>
                         </div>
 
-                        <div className="p-4"><Link
-                            to="/press"
+                        <div className="p-4"><NavLink
+                            to="/privacy-policy"
                             className="footer-link-text "
                             activeClassName='active'
                             activeStyle={
@@ -35,9 +35,9 @@ class Footer extends Component {
                             }
                         >
                             privacy policy
-                        </Link></div>
-                        <div className="p-4"><Link
-                            to="/press"
+                        </NavLink></div>
+                        <div className="p-4"><NavLink
+                            to="/terms-of-use"
                             className="footer-link-text "
                             activeClassName='active'
                             activeStyle={
@@ -45,9 +45,9 @@ class Footer extends Component {
                             }
                         >
                             terms of use
-                        </Link></div>
+                        </NavLink></div>
                         <div className="link-text p-4">
-                            <Link
+                            <NavLink
                                 to="/press"
                                 className="footer-link-text "
                                 activeClassName='active'
@@ -56,10 +56,10 @@ class Footer extends Component {
                                 }
                             >
                                 press
-                            </Link>
+                            </NavLink>
                         </div>
-                        <div className="p-4"><Link
-                            to="/press"
+                        <div className="p-4"><NavLink
+                            to="/contact"
                             className="footer-link-text "
                             activeClassName='active'
                             activeStyle={
@@ -67,7 +67,7 @@ class Footer extends Component {
                             }
                         >
                             contact
-                        </Link>
+                        </NavLink>
                         </div>
                     </div>
                     <br />

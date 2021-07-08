@@ -5,3 +5,11 @@
 .footer-link-text:hover {
   color: #f57c00;
 }
+
+.sup {
+  font-size: 35%;
+  position: relative;
+  vertical-align: text-top;
+  top: 0.8em;
+  letter-spacing: 0px;
+}

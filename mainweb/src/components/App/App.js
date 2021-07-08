@@ -11,7 +11,7 @@ import Library from "../ComingSoon/Library";
 import Community from "../ComingSoon/Community";
 import JoinToday from "../ComingSoon/JoinToday";
 import Login from "../ComingSoon/Login";
-import BookPage from "../BookPage/BookPage";
+import AuthorPage from "../AuthorPage/AuthorPage";
 import Footer from "../Footer/Footer";
 import PrivacyPolicy from "../Footer/PrivacyPolicy";
 import TermsOfUse from "../Footer/TermsOfUse";
@@ -35,14 +35,18 @@ class App extends Component {
               <ScrollToTop>
                 <Route path="/" exact component={HomePage} />
                 <Route path="/about" exact component={AboutPage} />
-                <Route path="/about/PrivacyPolicy" exact component={PrivacyPolicy} />
-                <Route path="/about/TermsOfUse" exact component={TermsOfUse} />
-                <Route path='/teamaccess' exact component={TeamAccess} />
-                <Route path='/book' exact component={BookPage} />
+                <Route path='/team-access' exact component={TeamAccess} />
+                <Route path='/author' exact component={AuthorPage} />
                 <Route path='/library' exact component={Library} />
                 <Route path='/community' exact component={Community} />
                 <Route path='/login' exact component={Login} />
-                <Route path='/joinToday' exact component={JoinToday} />
+                <Route path='/join-today' exact component={JoinToday} />
+                <Route path='/work-with-the-creator' exact component={WorkWithTheCreator} />
+                <Route path="/privacy-policy" exact component={PrivacyPolicy} />
+                <Route path="/terms-of-use" exact component={TermsOfUse} />
+                <Route path='/predd' exact component={Press} />
+                <Route path='/contact' exact component={Contact} />
+                <Route path='/frequently-asked-questions' exact component={FAQ} />
               </ScrollToTop>
             </div>
             <Switch>

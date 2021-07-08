@@ -233,26 +233,7 @@ class AboutPage extends Component {
       </div>
     );
   }
-  rendorfooter() {
-    return (
-      <div className="container justify-content-center">
-        <div
-          className="res-box p-4 rounded"
-          style={{ backgroundColor: "#cdcdcd" }}
-        >
-          <p className="text text-center h22 lh150 p-1 ">
-            click here to view{" "}
-            <Link to="about/PrivacyPolicy">privacy policy</Link> and{" "}
-            <Link to="about/TermsOfUse">terms of use</Link>
-          </p>
-        </div>
-        <br />
-        <br />
-        <br />
-        <br />
-      </div>
-    );
-  }
+
   render() {
     return (
       <div className="about-page">
@@ -293,7 +274,6 @@ class AboutPage extends Component {
           />
         </section>
         <section className="mt-8">{this.renderCom3()}</section>
-        <section>{this.rendorfooter()}</section>
       </div>
     );
   }
