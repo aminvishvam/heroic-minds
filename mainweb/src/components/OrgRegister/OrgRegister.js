@@ -16,6 +16,8 @@ import { fetchOrgs } from "../../actions/OrgReg";
 
 import "./OrgRegister.css";
 import RenderField from "../RenderField/RenderField";
+import Alert from '@material-ui/lab/Alert';
+import { Snackbar } from "@material-ui/core";
 
 class OrgRegister extends Component {
   componentDidMount() {
@@ -48,6 +50,8 @@ class OrgRegister extends Component {
   }
   render() {
     const { handleSubmit, pristine, submitting } = this.props;
+    const isAnyError = !!(this.props.errorMessage || this.props.emailVerfiyError)
+
     return (
       <div className="container justify-content-center">
         <div className="row justify-content-center">
@@ -116,8 +120,11 @@ class OrgRegister extends Component {
             </form>
           </div>
         </div>
-        <p>{this.props.errorMessage}</p>
-        <p>{this.props.emailVerfiyError}</p>
+        <Snackbar open={isAnyError} open autoHideDuration={6000}>
+          <Alert severity="error">
+            {this.props.errorMessage || this.props.emailVerfiyError}
+          </Alert>
+        </Snackbar>
       </div>
     );
   }

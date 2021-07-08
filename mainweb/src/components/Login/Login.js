@@ -11,6 +11,8 @@ import "./Login.css";
 import RenderField from "../RenderField/RenderField";
 import LogoIcon from "../LogoIcon/LogoIcon";
 import { Link } from "react-router-dom";
+import Alert from '@material-ui/lab/Alert';
+import Snackbar from '@material-ui/core/Snackbar';
 
 class Login extends Component {
   onSubmit = (formValues) => {
@@ -62,7 +64,11 @@ class Login extends Component {
             </form>
           </div>
         </div>
-        <p>{this.props.errorMessage}</p>
+        <Snackbar open={!!this.props.errorMessage} autoHideDuration={5000}>
+          <Alert elevation={6} variant="filled" severity="error">
+            {this.props.errorMessage}
+          </Alert>
+        </Snackbar>
       </div>
     );
   }

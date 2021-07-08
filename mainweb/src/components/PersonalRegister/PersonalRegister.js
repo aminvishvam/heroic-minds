@@ -15,6 +15,8 @@ import * as actions from "../../actions/Auth";
 
 import "./PersonalRegister.css";
 import RenderField from "../RenderField/RenderField";
+import Alert from '@material-ui/lab/Alert';
+import Snackbar from '@material-ui/core/Snackbar';
 
 class PersonalRegister extends Component {
   onSubmit = (formValues) => {
@@ -24,6 +26,8 @@ class PersonalRegister extends Component {
 
   render() {
     const { handleSubmit, pristine, submitting } = this.props;
+    const isAnyError = !!(this.props.errorMessage || this.props.emailVerfiyError)
+
     return (
       <div className="container justify-content-center">
         <div className="row justify-content-center">
@@ -84,8 +88,11 @@ class PersonalRegister extends Component {
             </form>
           </div>
         </div>
-        <p>{this.props.errorMessage}</p>
-        <p>{this.props.emailVerfiyError}</p>
+        <Snackbar open={isAnyError} autoHideDuration={5000}>
+          <Alert elevation={6} variant="filled" severity="error">
+            {this.props.errorMessage || this.props.emailVerfiyError}
+          </Alert>
+        </Snackbar>
       </div>
     );
   }
