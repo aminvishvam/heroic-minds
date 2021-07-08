@@ -21,20 +21,29 @@ class TeamAccess extends Component {
   renderFields() {
     return _.map(teamField, ({ label, name }) => {
       return (
-        <Field
-          key={name}
-          component={InputField}
-          type={name}
-          label={label}
-          name={name}
-        />
+        <div className='row align-items-center'>
+          <label for={label} className="col-lg-2 text-left text text-secondary bold s16 lh150 text-uppercase ">{label}</label>
+          <span className="col-lg-10 p-0 pl-3 text-left ">
+            <Field
+              key={name}
+              component={InputField}
+              type={name}
+              name={name}
+            />
+          </span>
+        </div>
       );
     });
   }
   renderTextArea() {
     return _.map(teamArea, ({ label, name }) => {
       return (
-        <Field key={name} component={InputTextArea} label={label} name={name} />
+        <div className='row align-items-center'>
+          <label for={label} className="col-lg-2 text-left text  text-secondary  s16 bold lh150 text-uppercase ">{label}</label>
+          <span className="col-lg-10 p-0 pl-3 text-left ">
+            <Field key={name} component={InputTextArea} name={name} />
+          </span>
+        </div>
       );
     });
   }
@@ -47,29 +56,35 @@ class TeamAccess extends Component {
   renderLeft1() {
     const { handleSubmit } = this.props;
     return (
-      <div className="res-box">
-        <p className="team-tagline-layout1">Bring heroism into your team.</p>
-        <br />
-        <p className="team-tagline-layout2">
+      <div className="res-box mt-4 p-4">
+        <p className="text k40 w600 bold lh150">Bring heroism into your team.</p>
+        <p className="text-gray2 k18 lh200">
           Selflessness, purpose, passion, courage, honesty, integrity,
           resolve...
         </p>
         <br />
-        <p className="team-intro-layout6">
+        <br />
+        <p className="text h20 lh150 w400" >
           Are you interested in offering Heroic Minds to your team?
           <br />
           If so, send us an email.
           <br />
+          <br />
+          <br />
+
+
         </p>
         <form onSubmit={handleSubmit(this.onSubmit)}>
           {this.renderFields()}
           {this.renderTextArea()}
-          <button
-            type="submit"
-            className="btn btn-dark"
-          >
-            Send!
-          </button>
+          <div className="text-center">
+            <button
+              type="submit"
+              className="btn-send btn-dark text text-center s23 lh120 p-1 pr-4 pl-4"
+            >
+              Send!
+            </button>
+          </div>
         </form>
       </div>
     );
@@ -90,10 +105,20 @@ class TeamAccess extends Component {
       </div>
     );
   }
+
+  renderBottom() {
+    return (
+      <div>
+        <h1 className="text text-center k30 lh130 bold">
+          Organizations Enjoying the Benefits of Heroic Minds
+        </h1>
+      </div >
+    );
+  }
   render() {
     return (
       <div className="TeamAccess">
-        <section className="layout">
+        <section className="layout4">
           <DisplayBox
             colLeft="8"
             colRight="4"
@@ -101,11 +126,9 @@ class TeamAccess extends Component {
             contentRight={this.renderRight1()}
           />
         </section>
-        <br />
-        <br />
-        <p className="about-intro-layout7">
-          Organizations Enjoying the Benefits of Heroic Minds
-        </p>
+        <section className="layout2 layout1">
+          {this.renderBottom()}
+        </section>
       </div>
     );
   }

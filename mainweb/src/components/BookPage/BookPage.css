@@ -1,0 +1,25 @@
+.layout1 {
+  padding-bottom: 10%;
+}
+
+.layout2 {
+  margin-top: 7%;
+}
+.layout3 {
+  margin-top: 5%;
+}
+
+.layout4 {
+  margin-top: 3%;
+}
+
+.pt-10 {
+  padding-top: 10%;
+}
+
+.btn-text {
+  font-size: 23px !important;
+  font-family: sans-serif;
+  color: #fff;
+  line-height: 122% !important;
+}
