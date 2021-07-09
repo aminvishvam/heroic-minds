@@ -38,6 +38,21 @@ const ProductDisplay = () => (
         <button id="basic-plan-btn">Select</button>
       </form>
     </section>
+    <section>
+      <form
+        action="http://localhost:5080/create-checkout-session"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          id="basicPrice"
+          name="email"
+          value="maitrik.patel2025@gmail.com"
+        />
+
+        <button id="basic-plan-btn">Manging Billing</button>
+      </form>
+    </section>
   </div>
 );
 
