@@ -5,7 +5,7 @@ import "./Footer.css"
 class Footer extends Component {
     render() {
         return (
-            <div className="container-fluid bg-black mt-8 mb-0 vertical-align-bottom">
+            <footer className="container-fluid bg-black mt-8 mb-0 vertical-align-bottom">
                 <br />
                 <div className="container mt-3 pb-3 ">
                     <div className="text-center text-white s30 lh200 ls1">
@@ -75,7 +75,7 @@ class Footer extends Component {
                         &copy; 2021 Heroic Minds All Rights Reserved
                     </div>
                 </div>
-            </div>
+            </footer>
         );
     }
 }

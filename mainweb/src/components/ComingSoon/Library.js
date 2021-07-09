@@ -30,7 +30,7 @@ class Library extends Component {
 
     render() {
         return (
-            <div classname="Library">
+            <div className="Library">
                 <section>
                     {this.renderImg()}
                 </section>

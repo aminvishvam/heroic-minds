@@ -10,12 +10,12 @@ class WorkWithTheCreator extends Component {
     renderHeader() {
         return (
             <div className="container ">
-                <div className="text text-lightblack  bold h40 lh100 ls2 text-center">
+                <div className="text text-black-333  bold h40 lh100 ls2 text-center">
                     Ben Fanelli
                 </div>
                 <br />
                 <div className="mt-4">
-                    <p className="mx-auto text h16 lh160 text-center text-lightblack2 col-md-10">
+                    <p className="mx-auto text h16 lh160 text-center text-black-079 col-md-10">
                         Ben has spent years studying anecdotal stories of heroism and has
                         correlated those stories with science and ancient wisdom to realize
                         the world does not need more life hacks or cognitive gymnastics.
@@ -34,11 +34,11 @@ class WorkWithTheCreator extends Component {
         return (
             <div className="d-table ">
                 <div className="vertical-center ">
-                    <div className="text text-lightblack text-uppercase h35 lh100 ls2">
+                    <div className="text text-black-333 text-uppercase h35 lh100 ls2">
                         lover. creator. thinker.
                     </div>
                     <br />
-                    <div className="text h16 lh150 text-lightblack2">
+                    <div className="text h16 lh150 text-black-079">
                         <p>
                             Ben grew up like many other Canadian kids chasing the dream of
                             playing in the NHL. His career took a scary yet adventurous turn in
@@ -115,16 +115,16 @@ class WorkWithTheCreator extends Component {
     renderInfo1() {
         return (
             <div className="pt-4 ">
-                <div className="text text-lightblack text-uppercase h35 lh100 ls2">
+                <div className="text text-black-333 text-uppercase h35 lh100 ls2">
                     Brain Injury Survivor
                 </div>
                 <br />
                 <br />
-                <div className="text h16 lh150 text-lightblack2">
+                <div className="text h16 lh150 text-black-079">
                     <p>
                         in 2009 Ben sustained a serious head injury playing the game he loved. He woke up in the hospital to news that he would never play sports again or return to school on his own. He was told his brain was bleeding in three different places. As the hospital staff were prepping him for brain surgery the neurosurgeon saw his recent MRI and declared he did not need the surgery, the bleeds started to absorb back into the body. That is where Ben's two year journey back to the game of hockey began.
                         <br />
-                        (<a href="">Full story here<br /> --&gt;</a>)
+                        (<a href="https://youtu.be/JdAvPA6_V08?t=10">Full story here<br /> --&gt;</a>)
                         <br />
                         <br />
                     </p>
@@ -147,12 +147,12 @@ class WorkWithTheCreator extends Component {
     renderInfo2() {
         return (
             <div className="pt-4 ">
-                <div className="text text-lightblack text-uppercase h35 lh100 ls2">
+                <div className="text text-black-333 text-uppercase h35 lh100 ls2">
                     Humanitarian of the Year
                 </div>
                 <br />
                 <br />
-                <div className="text h16 lh150 text-lightblack2">
+                <div className="text h16 lh150 text-black-079">
                     <p>
                         In 2013 Ben was the recipient of the Ontario Hockey League and the Canadian Hockey League Humanitarian of The Year Award. Ben was given this award for the work he did in community while playing for the Kitchener Rangers. The work he did revolved around the program he started called, Head Strong. This was a program that raised awareness, shared information and optimism around brain injury.
 
@@ -178,12 +178,12 @@ class WorkWithTheCreator extends Component {
     renderInfo3() {
         return (
             <div className="pt-4 pr-4">
-                <div className="text text-lightblack text-uppercase h35 lh100 ls2">
+                <div className="text text-black-333 text-uppercase h35 lh100 ls2">
                     Public Speaker
                 </div>
                 <br />
                 <br />
-                <div className="text h16 lh150 text-lightblack2">
+                <div className="text h16 lh150 text-black-079">
                     <p>Ben's mother Sue encouraged him to begin public speaking at 8 years old. This early developed led Ben to find an inherent desire for engaging with an audience. Ben see's public speaking as the extraordinary opportunity bestowed upon someone to positively influence the minds and lives of others.
                         <br />
                         "It is a Heroic opportunity that I take the utmost pride in."
@@ -209,12 +209,12 @@ class WorkWithTheCreator extends Component {
     renderInfo4() {
         return (
             <div className="pt-4 pr-4">
-                <div className="text text-lightblack text-uppercase h35 lh100 ls2">
+                <div className="text text-black-333 text-uppercase h35 lh100 ls2">
                     Podcast Host
                 </div>
                 <br />
                 <br />
-                <div className="text h16 lh150 text-lightblack2">
+                <div className="text h16 lh150 text-black-079">
                     <p>
                         In 2017, while beginning his Masters in counselling psychology, Ben started the Heroic Minds Podcast. The goal is to uncover real stories of real heroes. It is the correlation between these stories and the concepts from the founding fathers of psychology and philosophy that make for a life changing listen.
                         <br />

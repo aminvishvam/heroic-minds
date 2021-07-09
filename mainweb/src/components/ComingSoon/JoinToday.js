@@ -29,7 +29,7 @@ class JoinToday extends Component {
 
     render() {
         return (
-            <div classname="Login">
+            <div className="Login">
                 <section>
                     {this.renderImg()}
                 </section>

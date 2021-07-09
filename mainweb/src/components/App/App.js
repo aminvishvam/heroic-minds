@@ -18,6 +18,7 @@ import TermsOfUse from "../Footer/TermsOfUse";
 import Press from "../Footer/Press";
 import Contact from "../Footer/Contact";
 import WorkWithTheCreator from "../Footer/WorkWithTheCreator";
+import "./App.css"
 import FAQ from "../Footer/FAQ";
 
 class App extends Component {
@@ -27,28 +28,29 @@ class App extends Component {
     return (
       <div className="App">
         <Router history={history}>
-          <div>
-            <Switch>
-              <Route path="/" component={TopNav} />
-            </Switch>
-            <div className="Page">
-              <ScrollToTop>
-                <Route path="/" exact component={HomePage} />
-                <Route path="/about" exact component={AboutPage} />
-                <Route path='/team-access' exact component={TeamAccess} />
-                <Route path='/author' exact component={AuthorPage} />
-                <Route path='/library' exact component={Library} />
-                <Route path='/community' exact component={Community} />
-                <Route path='/login' exact component={Login} />
-                <Route path='/join-today' exact component={JoinToday} />
-                <Route path='/work-with-the-creator' exact component={WorkWithTheCreator} />
-                <Route path="/privacy-policy" exact component={PrivacyPolicy} />
-                <Route path="/terms-of-use" exact component={TermsOfUse} />
-                <Route path='/predd' exact component={Press} />
-                <Route path='/contact' exact component={Contact} />
-                <Route path='/frequently-asked-questions' exact component={FAQ} />
-              </ScrollToTop>
-            </div>
+          <Switch>
+            <Route path="/" component={TopNav} />
+          </Switch>
+          <div className="Page">
+            <ScrollToTop>
+              <Route path="/" exact component={HomePage} />
+              <Route path="/about" exact component={AboutPage} />
+              <Route path='/team-access' exact component={TeamAccess} />
+              <Route path='/author' exact component={AuthorPage} />
+              <Route path='/library' exact component={Library} />
+              <Route path='/community' exact component={Community} />
+              <Route path='/login' exact component={Login} />
+              <Route path='/join-today' exact component={JoinToday} />
+              <Route path='/work-with-the-creator' exact component={WorkWithTheCreator} />
+              <Route path="/privacy-policy" exact component={PrivacyPolicy} />
+              <Route path="/terms-of-use" exact component={TermsOfUse} />
+              <Route path='/press' exact component={Press} />
+              <Route path='/contact' exact component={Contact} />
+              <Route path='/contact/frequently-asked-questions' exact component={FAQ} />
+            </ScrollToTop>
+          </div>
+
+          <div className='Footer'>
             <Switch>
               <Route path="/" component={Footer} />
             </Switch>

@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-
 import DisplayBox from "../DisplayBox/DisplayBox";
 import Storytelling from "../../assets/storytelling.svg";
 import Behavioural from "../../assets/Click.svg";

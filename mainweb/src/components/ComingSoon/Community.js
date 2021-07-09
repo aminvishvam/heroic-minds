@@ -30,7 +30,7 @@ class Community extends Component {
 
     render() {
         return (
-            <div classname="Community">
+            <div className="Community">
                 <section>
                     {this.renderImg()}
                 </section>

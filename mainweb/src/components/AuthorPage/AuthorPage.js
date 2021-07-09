@@ -36,7 +36,7 @@ class AuthorPage extends Component {
   renderHead2Img() {
     return (
       <div className="text-center d-table">
-        <span classname="vertical-center">
+        <span className="vertical-center">
           <img
             alt="Hompage-image2"
             className="img-fluid "
