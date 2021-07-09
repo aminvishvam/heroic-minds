@@ -1,122 +1,69 @@
-import React, { useState } from "react";
-import axios from "axios";
-// MUI Components
-import Button from "@material-ui/core/Button";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import TextField from "@material-ui/core/TextField";
-// stripe
+import React, { useState, useEffect } from "react";
 
-import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
-// Util imports
-import { makeStyles } from "@material-ui/core/styles";
-// Custom Components
-import CardInput from "./CardInput";
-
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 500,
-    margin: "35vh auto",
-  },
-  content: {
-    display: "flex",
-    flexDirection: "column",
-    alignContent: "flex-start",
-  },
-  div: {
-    display: "flex",
-    flexDirection: "row",
-    alignContent: "flex-start",
-    justifyContent: "space-between",
-  },
-  button: {
-    margin: "2em auto 1em",
-  },
-});
-
-function Payment() {
-  const classes = useStyles();
-  // State
-  const [email, setEmail] = useState("")
-  const stripe = useStripe();
-  const elements = useElements();
-
-  const handleSubmitSub = async (event) => {
-    if (!stripe || !elements) {
-      // Stripe.js has not yet loaded.
-      // Make sure to disable form submission until Stripe.js has loaded.
-      return;
-    }
-
-    const result = await stripe.createPaymentMethod({
-      type: "card",
-      card: elements.getElement(CardElement),
-      billing_details: {
-        email: email,
-      },
-    });
-
-    if (result.error) {
-      console.log(result.error.message);
-    } else {
-      const res = await axios.post("http://localhost:5080/api/v1/sub", {
-        userId:'60e36635f5b6f87238374eca',
-        paymentMethod: result.paymentMethod.id,
-        planId: 'price_1JAfaOGFy9bXfzIUINOjecoN'
-      });
-      console.log(res)
-      // eslint-disable-next-line camelcase
-      const { client_secret, status } = res.data;
-      if (status === "requires_action") {
-        stripe.confirmCardPayment(client_secret).then(function (result) {
-          if (result.error) {
-            console.log("There was an issue!");
-            console.log(result.error.message);
-            // Display error message in your UI.
-            // The card was declined (i.e. insufficient funds, card has expired, etc)
-          } else {
-            console.log("You got the money!");
-            // Show a success message to your customer
-          }
-        });
-      } else {
-        console.log("You got the money!");
-        // No additional information was needed
-        // Show a success message to your customer
-      }
-    }
-  };
-
-  return (
-    <Card className={classes.root}>
-      <CardContent className={classes.content}>
-        <TextField
-          label="Email"
-          id="outlined-email-input"
-          helperText={`Email you'll recive updates and receipts on`}
-          margin="normal"
-          variant="outlined"
-          type="email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          fullWidth
+const ProductDisplay = () => (
+  <div>
+    <section>
+      <form
+        action="http://localhost:5080/create-checkout-session"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          id="basicPrice"
+          name="planId"
+          value="price_1JAjCEGFy9bXfzIU6HYm0fyV"
         />
-        <CardInput />
-        <div className={classes.div}>
-          <Button
-            variant="contained"
-            color="primary"
-            className={classes.button}
-            onClick={handleSubmitSub}
-          >
-            Subscription
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
-  );
+        <img src="/img/starter.png" width="120" height="120" />
+        <div class="name">Monthly</div>
+        <div class="price">$20</div>
+        <div class="duration">per month</div>
+        <button id="basic-plan-btn">Select</button>
+      </form>
+    </section>
+    <section>
+      <form
+        action="http://localhost:5080/create-checkout-session"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          id="basicPrice"
+          name="planId"
+          value="price_1JAjVOGFy9bXfzIUq7ySnwy4"
+        />
+        <img src="/img/starter.png" width="120" height="120" />
+        <div class="name">Annual</div>
+        <div class="price">$170</div>
+        <div class="duration">14 per month</div>
+        <button id="basic-plan-btn">Select</button>
+      </form>
+    </section>
+  </div>
+);
+
+const Message = ({ message }) => (
+  <section>
+    <p>{message}</p>
+  </section>
+);
+
+export default function App() {
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    // Check to see if this is a redirect back from Checkout
+    const query = new URLSearchParams(window.location.search);
+    console.log(query);
+    if (query.get("success")) {
+      setMessage("Order placed! You will receive an email confirmation.");
+    }
+
+    if (query.get("canceled")) {
+      setMessage(
+        "Order canceled -- continue to shop around and checkout when you're ready."
+      );
+    }
+  }, []);
+
+  return message ? <Message message={message} /> : <ProductDisplay />;
 }
-
-export default Payment;
-
