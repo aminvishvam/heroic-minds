@@ -16,6 +16,7 @@ import JoinToday from "../ComingSoon/JoinToday";
 import BookPage from "../BookPage/BookPage";
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Login from "../Login/Login";
+import ConfirmRegister from "../ConfirmRegister/ConfirmRegister";
 
 class App extends Component {
   state = {};
@@ -45,6 +46,7 @@ class App extends Component {
                 <Route path="/login" exact component={Login} />
                 <Route path="/register" exact component={CreateAccount} />
                 <Route path="/joinToday" exact component={JoinToday} />
+                <Route path="/confirmRegister" exact component={ConfirmRegister} />
               </ScrollToTop>
             </div>
           </div>

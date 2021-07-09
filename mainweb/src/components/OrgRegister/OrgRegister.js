@@ -18,6 +18,7 @@ import "./OrgRegister.css";
 import RenderField from "../RenderField/RenderField";
 import Alert from '@material-ui/lab/Alert';
 import { Snackbar } from "@material-ui/core";
+import history from "../../history";
 
 class OrgRegister extends Component {
   componentDidMount() {
@@ -25,6 +26,7 @@ class OrgRegister extends Component {
   }
   onSubmit = (formValues) => {
     this.props.orgRegister(formValues);
+    history.push("/confirmRegister");
   };
 
   renderOrgOption() {
@@ -120,7 +122,7 @@ class OrgRegister extends Component {
             </form>
           </div>
         </div>
-        <Snackbar open={isAnyError} open autoHideDuration={6000}>
+        <Snackbar open={isAnyError} autoHideDuration={6000}>
           <Alert severity="error">
             {this.props.errorMessage || this.props.emailVerfiyError}
           </Alert>

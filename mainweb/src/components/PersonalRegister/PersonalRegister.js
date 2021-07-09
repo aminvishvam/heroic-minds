@@ -17,10 +17,12 @@ import "./PersonalRegister.css";
 import RenderField from "../RenderField/RenderField";
 import Alert from '@material-ui/lab/Alert';
 import Snackbar from '@material-ui/core/Snackbar';
+import history from "../../history";
 
 class PersonalRegister extends Component {
   onSubmit = (formValues) => {
     this.props.personalRegister(formValues);
+    history.push("/confirmRegister");
   };
 
 
