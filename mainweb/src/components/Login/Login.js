@@ -23,9 +23,9 @@ class Login extends Component {
     const { handleSubmit, pristine, submitting } = this.props;
     return (
       <div className="container justify-content-center">
-        <div className="justify-content-center">
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} className="justify-content-center">
           <LogoIcon />
-          <h1>Welcome</h1>
+          <h1>Welcome back.</h1>
           <p>The Hero is in you</p>
         </div>
         <div className="row justify-content-center">
@@ -57,15 +57,15 @@ class Login extends Component {
               <button
                 type="submit"
                 disabled={submitting || pristine}
-                className="btn-dark "
+                className="login-button"
               >
                 LOGIN
               </button>
             </form>
           </div>
         </div>
-        <Snackbar open={!!this.props.errorMessage} autoHideDuration={5000}>
-          <Alert elevation={6} variant="filled" severity="error">
+        <Snackbar open={!!this.props.errorMessage} autoHideDuration={5000} anchorOrigin={{ horizontal: "right", vertical: "top" }} onClose={() => { }} >
+          <Alert elevation={6} variant="filled" severity="error" onClose={() => { }}>
             {this.props.errorMessage}
           </Alert>
         </Snackbar>

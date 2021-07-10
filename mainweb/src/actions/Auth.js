@@ -8,9 +8,10 @@ export const personalRegister = (formValues) => async (dispatch) => {
       ...formValues,
       accountType: "Personal",
     });
-    dispatch({ type: AUTH_VERIFY_EMAIL, payload: response.data.message });
+    dispatch({ type: AUTH_VERIFY_EMAIL, payload: response?.data.message });
+    history.push("/confirmRegister");
   } catch (e) {
-    dispatch({ type: AUTH_ERROR, payload: e.response.data.message });
+    dispatch({ type: AUTH_ERROR, payload: 'Failed with server error' });
   }
 };
 
@@ -20,9 +21,10 @@ export const orgRegister = (formValues) => async (dispatch) => {
       ...formValues,
       accountType: "Organization",
     });
-    dispatch({ type: AUTH_VERIFY_EMAIL, payload: response.data.message });
+    dispatch({ type: AUTH_VERIFY_EMAIL, payload: response?.data.message });
+    history.push("/confirmRegister");
   } catch (e) {
-    dispatch({ type: AUTH_ERROR, payload: e.response.data.message });
+    dispatch({ type: AUTH_ERROR, payload: e?.response?.data.message });
   }
 };
 

@@ -18,7 +18,6 @@ import "./OrgRegister.css";
 import RenderField from "../RenderField/RenderField";
 import Alert from '@material-ui/lab/Alert';
 import { Snackbar } from "@material-ui/core";
-import history from "../../history";
 
 class OrgRegister extends Component {
   componentDidMount() {
@@ -26,7 +25,6 @@ class OrgRegister extends Component {
   }
   onSubmit = (formValues) => {
     this.props.orgRegister(formValues);
-    history.push("/confirmRegister");
   };
 
   renderOrgOption() {
@@ -108,22 +106,23 @@ class OrgRegister extends Component {
               <Field
                 name="terms"
                 type="checkbox"
-                label="I accept the terms of service"
+                label="By signing up, I agree to privacy policy of this app"
                 component={RenderField}
                 validate={acceptance()}
               />
               <button
                 type="submit"
                 disabled={submitting || pristine}
-                className="btn-dark "
+                className="sign-up-button"
               >
-                Send!
+                Sign up
               </button>
             </form>
           </div>
         </div>
-        <Snackbar open={isAnyError} autoHideDuration={6000}>
-          <Alert severity="error">
+        <Snackbar open={isAnyError} anchorOrigin={{ horizontal: "right", vertical: "top" }}
+          autoHideDuration={6000} onClose={() => { }}>
+          <Alert severity="error" onClose={() => { }}>
             {this.props.errorMessage || this.props.emailVerfiyError}
           </Alert>
         </Snackbar>

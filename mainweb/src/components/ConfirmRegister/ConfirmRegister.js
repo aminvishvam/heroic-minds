@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import LogoIcon from "../LogoIcon/LogoIcon";
+import "./ConfirmRegister.css";
 
 class ConfirmRegister extends Component {
     renderMain() {
@@ -22,9 +23,9 @@ class ConfirmRegister extends Component {
     }
     render() {
         return (
-            <div style={{ display: 'flex', justifyContent: 'space-around', flexDirection: 'column', height: '660px', margin: 'auto', width: '430px', border: '2px solid', backgroundColor: '#FCFCFC', textAlign: 'center', borderRadius: '14px', boxShadow: '0px 12px 40px rgba(35, 34, 43, 0.16)' }}>
+            <div className='main-wrapper'>
                 {this.renderMain()}
-                <div style={{ fontSize: '18px', color: '#01061F', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div className='text-content'>
                     <span>
                         Welcome to the Heroic Minds Community!<br /> We have a sent a <strong>verification link to your email</strong>.
                     <br /> <br /> Click that link to get started.
@@ -33,7 +34,7 @@ class ConfirmRegister extends Component {
 
                 </div>
                 <div className="row justify-content-center box">
-                    <button className='btn btn-dark' style={{ width: '378px', height: '67px', borderRadius: '10px' }}>Ok</button>
+                    <button className='btn btn-dark ok-button'>Ok</button>
                 </div>
             </div>
         );

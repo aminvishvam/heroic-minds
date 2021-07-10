@@ -17,12 +17,10 @@ import "./PersonalRegister.css";
 import RenderField from "../RenderField/RenderField";
 import Alert from '@material-ui/lab/Alert';
 import Snackbar from '@material-ui/core/Snackbar';
-import history from "../../history";
 
 class PersonalRegister extends Component {
   onSubmit = (formValues) => {
     this.props.personalRegister(formValues);
-    history.push("/confirmRegister");
   };
 
 
@@ -38,14 +36,7 @@ class PersonalRegister extends Component {
               <Field
                 name="firstName"
                 type="text"
-                label="First Name"
-                component={RenderField}
-                validate={[required(), length({ min: 2 })]}
-              />
-              <Field
-                name="lastName"
-                type="text"
-                label="Last Name"
+                label="Full Name"
                 component={RenderField}
                 validate={[required(), length({ min: 2 })]}
               />
@@ -76,22 +67,24 @@ class PersonalRegister extends Component {
               <Field
                 name="terms"
                 type="checkbox"
-                label="I accept the terms of service"
+                label="By signing up, I agree to privacy policy of this app"
                 component={RenderField}
                 validate={acceptance()}
               />
               <button
+
                 type="submit"
                 disabled={submitting || pristine}
-                className="btn-dark "
+                className="sign-up-button"
               >
-                Send!
+                Sign Up
               </button>
             </form>
           </div>
         </div>
-        <Snackbar open={isAnyError} autoHideDuration={5000}>
-          <Alert elevation={6} variant="filled" severity="error">
+        <Snackbar open={isAnyError} anchorOrigin={{ horizontal: "right", vertical: "top" }}
+          autoHideDuration={5000} onClose={() => { }}>
+          <Alert elevation={6} variant="filled" severity="error" onClose={() => { }}>
             {this.props.errorMessage || this.props.emailVerfiyError}
           </Alert>
         </Snackbar>
