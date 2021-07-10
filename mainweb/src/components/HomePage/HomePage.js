@@ -1,21 +1,21 @@
 import React, { Component } from "react";
 import DisplayBox from "../DisplayBox/DisplayBox";
 
-import Background from "../../assets/home-page-background.svg";
-import HompageImage2 from "../../assets/Hompage-image2.svg";
-import storytelling from "../../assets/storytelling.svg";
-import vector from "../../assets/Vector.svg";
-import community from "../../assets/community.svg";
-import audio1Img from "../../assets/homepageAssests/audio1Img.svg";
-import audio2Img from "../../assets/homepageAssests/audio2Img.svg";
-import audio3Img from "../../assets/homepageAssests/audio3Img.svg";
-import imgHeadphone from "../../assets/homepageAssests/Group 725.jpeg";
-import playIcon from "../../assets/homepageAssests/play.png";
-import back_20 from "../../assets/homepageAssests/back_20.png";
-import forward_20 from "../../assets/homepageAssests/forward_20.png";
-import plusSign from "../../assets/homepageAssests/plusSign.svg";
-import logotherapy from "../../assets/Man.svg";
-import behavioural from "../../assets/homepageAssests/behavioural.png";
+import Background from "../../assets/HomePageAssets/home-page-background.svg";
+import HompageImage2 from "../../assets/HomePageAssets/Hompage-image2.svg";
+import storytelling from "../../assets/AboutPageAssets/storytelling.svg";
+import vector from "../../assets/HomePageAssets/Vector.svg";
+import community from "../../assets/HomePageAssets/community.svg";
+import audio1Img from "../../assets/HomePageAssets/audio1Img.svg";
+import audio2Img from "../../assets/HomePageAssets/audio2Img.svg";
+import audio3Img from "../../assets/HomePageAssets/audio3Img.svg";
+import imgHeadphone from "../../assets/HomePageAssets/Group 725.jpeg";
+import playIcon from "../../assets/HomePageAssets/play.png";
+import back_20 from "../../assets/HomePageAssets/back_20.png";
+import forward_20 from "../../assets/HomePageAssets/forward_20.png";
+import plusSign from "../../assets/HomePageAssets/plusSign.svg";
+import logotherapy from "../../assets/AboutPageAssets/Man.svg";
+import behavioural from "../../assets/HomePageAssets/behavioural.png";
 
 import "./HomePage.css";
 import "./Text.css";
@@ -594,7 +594,7 @@ class HomePage extends Component {
 
   renderCommunity() {
     return (
-      <div className="home-page-10 my-container-85">
+      <div className="home-page-10 my-container-90">
         <div className="row">
           <div className="col-9 d-flex align-items-end p-0">
             <div>
@@ -641,7 +641,7 @@ class HomePage extends Component {
       <div className="home-page-13">
         <div className="row justify-content-center">
           <div className="col-lg-3 mb-8">
-            <a href=""><p className="text text-center bold h30 lh120 pb-4">
+            <a href="/"><p className="text text-center bold h30 lh120 pb-4">
               <u>30-Day Free Trial</u></p>
             </a>
             <p className="text text-center h22 lh200 mt-4">
@@ -651,7 +651,7 @@ class HomePage extends Component {
           </div>
 
           <div className="col-lg-6 mb-8">
-            <a href="">
+            <a href="/">
               <p className="text text-center bold h60 lh47 pb-4">
                 <u>Yearly</u>
               </p>
@@ -665,7 +665,7 @@ class HomePage extends Component {
           </div>
 
           <div className="col-lg-3 mb-8">
-            <a href="">
+            <a href="/">
               <p className="text text-center bold h30 lh120 pb-4">
                 <u>Monthly</u>
               </p>
@@ -768,7 +768,7 @@ class HomePage extends Component {
         <div className="my-container-85">
           <section className="mt-18">{this.renderCommunity()}</section>
           <section className="mt-18">
-            <div className="container">
+            <div className="container-fluid">
               <img alt="Hompage-image2" className="img-fluid" src={community} />
             </div>
           </section>

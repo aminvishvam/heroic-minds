@@ -237,6 +237,10 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   line-height: 150%;
 }
 
+.lh140 {
+  line-height: 140%;
+}
+
 .lh120 {
   line-height: 120%;
 }
