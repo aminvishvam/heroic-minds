@@ -15,68 +15,20 @@
   width: 100%;
 }
 
-.header-text {
-  margin: 15%;
-  animation-delay: 0.1s;
-  -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
-  animation: fadeInUp 1500ms ease-in-out;
+.header-text-animation {
+  animation-delay: 1s;
+  -webkit-animation: fadeInUp 0s ease-in-out; /* Chrome, Safari, Opera */
+  animation: fadeInUp 1.5s ease-in-out;
 }
 
-.text-layout1 {
-  padding-bottom: 10px;
-}
-.tagline-layout1 {
-  margin: 0;
-  visibility: visible;
-  font-weight: 600;
-  font-family: "Karma";
-  font-size: 40px;
-  text-align: left;
-  line-height: 1.4;
-  color: #000;
-}
-
-.intro-layout1 {
-  font-size: 16px;
-  font-family: "Halant";
-  text-align: left;
-  color: #000000;
-}
-.intro-layout2 {
-  text-align: left;
-  font-family: "Halant";
-  font-size: 22px;
-  letter-spacing: 0;
-  line-height: px;
-}
-.intro-layout3 {
-  text-align: left;
-  font-family: "Halant";
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: px;
-  font-weight: bolder;
+.page-2-text {
+  position: relative;
+  bottom: -80px;
 }
 
 /* ---------------------------------- styles for 2nd page  ------------------------------------*/
-.imghead {
-  font-family: "Karma";
-  font-size: 44px;
-  letter-spacing: 0px;
-  font-weight: bolder;
-  position: relative;
-  bottom: -60px;
-}
-.gray-text {
-  color: #757780;
-}
 
-.main-img {
-  width: 60%;
-  height: 60%;
-}
 /* ---------------------------------- styles for listen now page  ------------------------------------*/
-
 .story-head {
   width: 60%;
 }
@@ -192,156 +144,42 @@
   }
 }
 
+.plusImg {
+  width: 35%;
+}
+
 .section-box {
   background-color: #000000;
   border-radius: 50px;
-  padding: 10%;
-}
-.section-box-h1 {
-  margin: 0;
-  visibility: visible;
-  font-weight: 600;
-  font-family: "Karma";
-  font-size: 36px;
-  color: #ffffff;
-  text-align: left;
-  line-height: 1.4;
-}
-.section-box-p {
-  margin: 0;
-  visibility: visible;
-  font-family: "Halant";
-  font-size: 19px;
-  color: #ffffff;
-  text-align: left;
-  line-height: 1.4;
-}
-.section-box-white {
-  border-radius: 50px;
-  padding: 10%;
+  padding: 8% 5%;
 }
 
-.section-box-h1-black {
-  margin: 0;
-  visibility: visible;
-  font-weight: 600;
-  font-family: "Karma";
-  font-size: 36px;
-  text-align: left;
-  line-height: 1.4;
+.section-box-mini {
+  background-color: #000000;
+  border-radius: 50px;
+  padding: 3%;
+  margin-bottom: 6% !important;
 }
-.section-box-p-black {
-  margin: 0;
-  visibility: visible;
-  font-family: "Halant";
-  font-size: 19px;
-  text-align: left;
-  line-height: 1.4;
+
+.section-box-white {
+  border-radius: 50px;
+  padding: 8% 5%;
 }
-.intro-layout4 {
-  text-align: left;
-  font-family: "Halant";
-  font-size: 22px;
-  letter-spacing: 0;
-  line-height: px;
-  font-weight: 900;
-  color: #000;
-}
-.tagline-layout3 {
-  margin: 0;
-  visibility: visible;
-  font-weight: 500;
-  font-family: "Karma";
-  font-size: 48px;
-  text-align: left;
-}
-.tagline-layout4 {
-  margin: 0;
-  visibility: visible;
-  font-weight: 900;
-  font-family: "Karma";
-  font-size: 48px;
-  text-align: left;
-}
+
 .img-storytelling {
   position: relative;
   top: -30px;
   left: 0px;
 }
 
-.div-box-h1 {
-  margin: 0;
-  visibility: visible;
-  font-weight: 600;
-  font-family: "Karma";
-  font-size: 30px;
-  padding: 0px 10px;
-  color: #ffffff;
-  text-align: left;
-  line-height: 1.4;
-}
-.div-box {
-  border-radius: 50px;
-  padding: 3%;
-  margin: 10px;
-  background-color: #000000;
-}
-.div-box-p {
-  margin: 0;
-  visibility: visible;
-  font-family: "Halant";
-  font-size: 19px;
-  color: #ffffff;
-  text-align: left;
-  line-height: 1.4;
-  letter-spacing: 1;
-  padding: 10px 8px;
-}
-.box-p {
-  font-family: "Halant";
-  font-size: 22px;
-  color: #ffffff;
-  line-height: 1.4;
-  letter-spacing: 1;
-  padding: 5%;
-  text-align: center;
-}
 .black-box {
   background-color: #000000;
 }
-.tagline-layout5 {
-  margin: 0;
-  visibility: visible;
-  font-weight: 600;
-  font-family: "Karma";
-  font-size: 52px;
-  text-align: left;
-  line-height: 1.4;
-  color: #000;
-}
-.intro-layout5 {
-  text-align: left;
-  font-family: "Halant";
-  font-size: 32px;
-  letter-spacing: 0;
-  line-height: px;
-  color: #000;
-}
+
 .community-img {
   position: relative;
   top: -60px;
   right: 60px;
-}
-.tagline-layout6 {
-  margin: 0;
-  visibility: visible;
-  font-weight: 600;
-  font-family: "Karma";
-  font-size: 52px;
-  text-align: center;
-  line-height: 1.4;
-  color: #000;
-  letter-spacing: 1.4;
 }
 
 /* @media (min-width: 768px) and (max-width: 1024px) {
@@ -445,25 +283,21 @@
     right: 00px;
   }
 }
- @-webkit-keyframes fadeInUp {
+*/
+@-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(40px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
   }
 }
-
 
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(40px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
-} */
+}

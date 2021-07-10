@@ -112,16 +112,18 @@ class AboutPage extends Component {
         <br />
         <br />
         <p className="text h22 lh130">
-          Activating behaviours that make you feel good and improve the quality
-          of your life have shown to be one of the most effective ways to combat
-          depression and depressive feelings. (World Psychiatry Association,
-          2021)
+          The most important part of Heroic Minds is implementation. Thinking is not enough. It is the feelings created through action and behaviour that brings meaning to your experience.
           <br />
           <br />
-          Heroic Minds aims to activate an impulse to do more of what brings
-          real value, purpose and meaning into your life. The goal is to have as
-          many of these experiences as possible in your day to day life,
-          improving how you feel and how you perform.
+          ehaviours that truly fulfil your required human needs and improve the quality of your life have shown to be the most effective way to combat negative feelings when compared to other leading forms of therapy.(World Psychiatry Association, 2021)
+<br />
+          <br />
+Heroic Minds aims to activate an impulse to do more of what brings real value, purpose and meaning into your life. In other terms, activating heroic behaviours or a heroic orientation to your life. 
+          <br />
+          <br />
+The goal is to have as many of these experiences as possible in your day to day life. Ultimately leading to a purpose-driven, resilient, high-performing individual.
+          <br />
+          <br />
         </p>
       </div>
     );

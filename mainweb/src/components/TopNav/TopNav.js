@@ -5,6 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import Logo from "../Logo/Logo";
 import { NavLink } from "react-router-dom";
 import "./TopNav.css";
+
 class TopNav extends Component {
   itemStyle = {
     color: "black",

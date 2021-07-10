@@ -12,7 +12,7 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   visibility: visible;
   color: #000;
   text-align: left;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .text-orange {
@@ -23,12 +23,8 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   font-weight: 400;
 }
 
-.text-gray {
-  margin: 0;
-  visibility: visible;
-  text-align: left;
+.text-gray-757 {
   color: #757780;
-  font-weight: 400;
 }
 
 .text-gray2 {
@@ -37,6 +33,10 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   text-align: left;
   color: #979797;
   font-weight: 400;
+}
+
+.text-gray-97 {
+  color: #979797;
 }
 
 .text-white {
@@ -80,14 +80,6 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   font-weight: 400;
 }
 
-.fw300 {
-  font-weight: 300;
-}
-
-.fw100 {
-  font-weight: 100;
-}
-
 .fw500 {
   font-weight: 500;
 }
@@ -101,6 +93,11 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 .k45 {
   font-family: "Karma";
   font-size: 45px;
+}
+
+.k43 {
+  font-family: "Karma";
+  font-size: 43px;
 }
 
 .k50 {
@@ -123,6 +120,11 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   font-size: 18px;
 }
 
+.k32 {
+  font-family: "Karma";
+  font-size: 32px;
+}
+
 /* font-family = Halant with different font sizes */
 
 .h16 {
@@ -135,6 +137,11 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   font-size: 20px;
 }
 
+.h21 {
+  font-family: "Halant";
+  font-size: 21px;
+}
+
 .h22 {
   font-family: "Halant";
   font-size: 22px;
@@ -143,6 +150,11 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 .h24 {
   font-family: "Halant";
   font-size: 24px;
+}
+
+.h26 {
+  font-family: "Halant";
+  font-size: 26px;
 }
 
 .h28 {
@@ -163,6 +175,21 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 .h40 {
   font-family: "Halant";
   font-size: 40px;
+}
+
+.h45 {
+  font-family: "Halant";
+  font-size: 45px;
+}
+
+.h50 {
+  font-family: "Halant";
+  font-size: 50px;
+}
+
+.h60 {
+  font-family: "Halant";
+  font-size: 60px;
 }
 
 /* font-family = sans-serif with different font sizes */
@@ -198,6 +225,14 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 }
 
 /* line height  */
+.lh93 {
+  line-height: 93%;
+}
+
+.lh47 {
+  line-height: 47%;
+}
+
 .lh150 {
   line-height: 150%;
 }
@@ -363,10 +398,68 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   letter-spacing: 1px;
 }
 
+.ls1half {
+  letter-spacing: 1.5px;
+}
+
 .ls2 {
   letter-spacing: 2px;
 }
 
 .ls1by2 {
   letter-spacing: 0.5px;
+}
+
+.my-container-95 {
+  max-width: 95%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-container-90 {
+  max-width: 90%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-container-85 {
+  max-width: 85%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-container-80 {
+  max-width: 80%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-container-75 {
+  max-width: 75%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-container-70 {
+  max-width: 70%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-container-65 {
+  max-width: 65%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-container-60 {
+  max-width: 60%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-container-50 {
+  max-width: 50%;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }

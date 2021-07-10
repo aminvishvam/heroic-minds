@@ -57,9 +57,9 @@ class Contact extends Component {
                 <section className="mt-4 pl-3">
                     <div>
                         <p className="text h28 lh200 bold text-black-047">Work with Ben</p>
-                        <button type="submit" className="btn-lg btn-black ls1 k18">
+                        <a href="mailto:info@heroicminds.live" className="btn-lg btn-black ls1 k18">
                             Click Here
-                        </button>
+                        </a>
                     </div>
                 </section>
 
