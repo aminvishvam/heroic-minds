@@ -134,13 +134,14 @@ class AboutPage extends Component {
         <br />
         <p className="text h22 lh130">
           In this modern day world of endlessly accessible information,
-          podcasts, videos, articles and more, people often consume, dont apply
-          and forget (repeat). Meaning, endless valuable information is consumed
-          but it is not reflected upon, or applied to ones life and therefore it
-          is forgotten.
+          podcasts, videos, articles and more, people often <b>consume</b>,{" "}
+          <b>dont apply</b>
+          and <b>forget</b> (repeat). Meaning, endless valuable information is
+          consumed but it is not reflected upon, or applied to ones life and
+          therefore it is forgotten.
           <br />
           <br />
-          Heroic Minds has a better idea. Apply what you learn.
+          <b>Heroic Minds has a better idea. Apply what you learn.</b>
           <br />
           <br />
           Fully engage with these stories and ideas. Reflect on how they relate
@@ -167,8 +168,8 @@ class AboutPage extends Component {
 
   renderRight4() {
     return (
-      <div className="about-page-4">
-        <h1 className="text text-right k50 lh120">Behavioural Activation</h1>
+      <div className="about-page-5">
+        <h1 className="text text-right k50 lh120">4. Behavioural Activation</h1>
         <br />
         <br />
         <p className="text text-right h22 lh130">
@@ -178,14 +179,14 @@ class AboutPage extends Component {
           <br />
           <br />
           ehaviours that truly fulfil your required human needs and improve the
-          quality of your life have shown to be the most effective way to combat
-          negative feelings when compared to other leading forms of
-          therapy.(World Psychiatry Association, 2021)
+          uality of your life have shown to be the most effective way to combat
+          egative feelings when compared to other leading forms of herapy.(World
+          Psychiatry Association, 2021)
           <br />
           <br />
           Heroic Minds aims to activate an impulse to do more of what brings
           real value, purpose and meaning into your life. In other terms,
-          activating heroic behaviours or a heroic orientation to your life.
+          activating heroic behaviours or a hroic orientation to your life.
           <br />
           <br />
           The goal is to have as many of these experiences as possible in your
@@ -208,65 +209,64 @@ class AboutPage extends Component {
   }
   renderCom2() {
     return (
-      <div className="-my-container-85">
-        <div className="row justify-content-center p-3">
-          <div className="res-box p-4">
-            <h1 className="text h40 bold lh150 text-center">
-              Build your psychological foundation on solid rock.
-            </h1>
-            <br />
-            <br />
-            <p className="text text-center h20 lh150">
-              Throughout history, people have persevered through immense
-              adversity and tribulation, giving rise to lives of purpose,
-              meaning, and exploration of human potential. But today, it appears
-              we are less able to handle the challenges that are inherent to our
-              existence. What has caused this change?
-              <br />
-              <br />
-              People’s lives were once guided by a very simple global belief
-              that assumed life and its collection of challenges were an
-              opportunity to serve others and this was guided by an invigorating
-              love to do so. This led people to see life as an opportunity and
-              its challenges as adventures.
-              <br />
-              <br />
-              But today, the aims of our society have shifted to hyper-focus on
-              self-fulfillment at the expense of one’s own psychological
-              well-being and the well-being of those around them. What is the
-              product of living this way? Presently, there is more anxiety,
-              depression and fatigue than there has ever been. People feelings
-              are increasingly at odds with what they need to do or want to do.
-              We see a world of immense cognitive effort to produce the ideal
-              life, thinking, analyzing and convincing themselves into
-              submission of ideal behaviour. A stressful way to live.
-              <br />
-              <br />
-            </p>
-          </div>
-        </div>
+      <div className="about-page-6">
+        <h1 className="text text-center h40 bold lh150 ls1by2">
+          Build your psychological foundation on solid rock.
+        </h1>
+        <br />
+        <br />
+        <p className="text text-center h20 lh140">
+          Throughout history, people have persevered through immense
+          adversity and tribulation, giving rise to lives of purpose,
+          meaning, and exploration of human potential. But today, it appears
+          we are less able to handle the challenges that are inherent to our
+          existence. What has caused this change?
+          <br />
+          <br />
+          People’s lives were once guided by a very simple global belief
+          that assumed life and its collection of challenges were an
+          opportunity to serve others and this was guided by an invigorating
+          love to do so. This led people to see life as an opportunity and
+          its challenges as adventures.
+          <br />
+          <br />
+          But today, the aims of our society have shifted to hyper-focus on
+          self-fulfillment at the expense of one’s own psychological
+          well-being and the well-being of those around them. What is the
+          product of living this way? Presently, there is more anxiety,
+          depression and fatigue than there has ever been. People feelings
+          are increasingly at odds with what they need to do or want to do.
+          We see a world of immense cognitive effort to produce the ideal
+          life, thinking, analyzing and convincing themselves into
+          submission of ideal behaviour. A stressful way to live.
+          <br />
+          <br />
+        </p>
       </div>
     );
   }
   renderLeft5() {
     return (
-      <div className="res-box p-4">
-        <img alt="Hompage-image2" className="img-fluid" src={House} />
+
+      <div className="text-center d-table">
+        <span className="vertical-center">
+          <img alt="Hompage-image2" className="img-fluid" src={House} />
+        </span>
       </div>
     );
   }
   renderRight5() {
     return (
-      <div className="text-center d-table  mb-4 p-4">
+      <div className="abput-page-7 text-center d-table">
         <span className="vertical-center">
-          <p className="text h30 lh150 w500">
+          <p className="text h30 lh160 w500">
             When the heavy rain, wind, and floods arrived, those that built
             their homes on sand were in ruin, while those that built their homes
             solid rock, stood tall.
           </p>
           <br />
           <br />
-          <p className="text h20 lh150">
+          <p className="text h20 lh130 w500">
             Parable of the Wise and the Foolish Builders
           </p>
         </span>
@@ -277,38 +277,33 @@ class AboutPage extends Component {
   }
   renderCom3() {
     return (
-      <div className="my-container-85 mt-4 p-4">
-        <div className="text-center d-table p-3 mb-4">
-          <span className="vertical-center">
-            <p className="text h20 text-center lh150">
-              The optimal way to achieve a heroic life is such that you are not
-              looking to the world to be fulfilled, you are not calculating your
-              behaviour. Rather, you allow an invigorating love of serving the
-              world to be your guiding global belief. In living this way, you
-              feel as if you already have everything you need because what you
-              value is attainable in every life experience. You have the ability
-              to feel fulfilled and engaged regardless of the situation or the
-              environment you are in. This allows you to build your
-              psychological foundation on solid rock. You maintain a composed
-              and powerful mind that appears to the world as the hero.
-            </p>
-            <p className="text h20 text-center lh150">
-              We have seen throughout history that living this way leads toward
-              the ultimate good for you and the world around you.
-            </p>
-          </span>
-        </div>
-        <br />
-        <br />
+      <div className="about-page-8">
+        <p className="text h20 text-center lh150">
+          The optimal way to achieve a heroic life is such that you are not
+          looking to the world to be fulfilled, you are not calculating your
+          behaviour. Rather, you allow an invigorating love of serving the
+          world to be your guiding global belief. In living this way, you
+          feel as if you already have everything you need because what you
+          value is attainable in every life experience. You have the ability
+          to feel fulfilled and engaged regardless of the situation or the
+          environment you are in. This allows you to build your
+          psychological foundation on solid rock. You maintain a composed
+          and powerful mind that appears to the world as the hero.
+          <br />
+          <br />
+          <b>We have seen throughout history that living this way leads toward
+            the ultimate good for you and the world around you.
+          </b>
+        </p>
       </div>
     );
   }
 
   render() {
     return (
-      <div className="about-page my-container-85">
-        <section className="mt-5">{this.renderComp()}</section>
-        <section className="mt-8">
+      <div className="about-page my-container-90">
+        <section className="mt-8">{this.renderComp()}</section>
+        <section className="mt-13">
           <DisplayBox
             colLeft="9"
             colRight="3"
@@ -317,7 +312,7 @@ class AboutPage extends Component {
             fullContainer="true"
           />
         </section>
-        <section className="mt-8">
+        <section className="mt-13">
           <DisplayBox
             colLeft="3"
             colRight="9"
@@ -327,7 +322,7 @@ class AboutPage extends Component {
             reverse="true"
           />
         </section>
-        <section className="mt-8">
+        <section className="mt-13">
           <DisplayBox
             colLeft="9"
             colRight="3"
@@ -335,7 +330,7 @@ class AboutPage extends Component {
             contentRight={this.renderRight3()}
             fullContainer="true"
           />
-          <section className="mt-8">
+          <section className="mt-13">
             <DisplayBox
               colLeft="3"
               colRight="9"
@@ -346,19 +341,21 @@ class AboutPage extends Component {
             />
           </section>
         </section>
-        <section className="mt-8">{this.renderCom2()}</section>
-        <section className="mt-8">
-          <DisplayBox
-            colLeft="5"
-            colRight="7"
-            contentLeft={this.renderLeft5()}
-            contentRight={this.renderRight5()}
-            fullContainer="true"
-            reverse="true"
-          />
-        </section>
-        <section className="mt-8">{this.renderCom3()}</section>
-      </div>
+        <div className="my-container-90">
+          <section className="mt-13">{this.renderCom2()}</section>
+          <section className="mt-13">
+            <DisplayBox
+              colLeft="5"
+              colRight="7"
+              contentLeft={this.renderLeft5()}
+              contentRight={this.renderRight5()}
+              fullContainer="true"
+              reverse="true"
+            />
+          </section>
+          < section className="mt-13 mb-6">{this.renderCom3()}</section>
+        </div>
+      </div >
     );
   }
 }

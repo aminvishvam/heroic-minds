@@ -8,7 +8,6 @@ import teamacess from "../../assets/teamacess.png";
 import _ from "lodash";
 import teamField from "./teamfield";
 import teamArea from "./teamArea";
-
 import "./TeamAccess.css";
 
 class TeamAccess extends Component {
@@ -16,13 +15,14 @@ class TeamAccess extends Component {
     return _.map(teamField, ({ label, name }) => {
       return (
         <div className='row align-items-center'>
-          <label for={label} className="col-lg-2 text-left text text-secondary bold s16 lh150 text-uppercase ">{label}</label>
+          <label for={label} className="col-lg-2 text-left text  bold s16 lh150 text-uppercase ">{label}</label>
           <span className="col-lg-10 p-0 pl-3 text-left ">
             <Field
               key={name}
               component={InputField}
               type={name}
               name={name}
+              props={{ className: "team-form-field" }}
             />
           </span>
         </div>
@@ -33,7 +33,7 @@ class TeamAccess extends Component {
     return _.map(teamArea, ({ label, name }) => {
       return (
         <div className='row align-items-center'>
-          <label for={label} className="col-lg-2 text-left text  text-secondary  s16 bold lh150 text-uppercase ">{label}</label>
+          <label for={label} className="col-lg-2 text-left text   s16 bold lh150 text-uppercase ">{label}</label>
           <span className="col-lg-10 p-0 pl-3 text-left ">
             <Field key={name} component={InputTextArea} name={name} />
           </span>
@@ -43,9 +43,9 @@ class TeamAccess extends Component {
   }
   renderLeft1() {
     return (
-      <div className="res-box mt-4 p-4">
-        <p className="text k40 w600 bold lh150">Bring heroism into your team.</p>
-        <p className="text-gray2 k18 lh200">
+      <div className="team-page-header">
+        <p className="text k40 w600 bold lh140 ls1by2">Bring heroism into your team.</p>
+        <p className="text-gray-757 k18 lh140 fw600 mt-2">
           Selflessness, purpose, passion, courage, honesty, integrity,
           resolve...
         </p>
@@ -65,10 +65,7 @@ class TeamAccess extends Component {
           {this.renderFields()}
           {this.renderTextArea()}
           <div className="text-center">
-            <button
-              type="submit"
-              className="btn-send btn-dark text text-center s23 lh120 p-1 pr-4 pl-4"
-            >
+            <button type="submit" className="btn btn-black team-btn-text ">
               Send!
             </button>
           </div>
@@ -79,16 +76,11 @@ class TeamAccess extends Component {
   renderRight1() {
     return (
       <div className="res-box">
-        <br />
-        <br />
-        <br />
-        <span className="img_animat1">
-          <img
-            alt="Hompage-image2"
-            className="img-fluid about-teamacess"
-            src={teamacess}
-          />
-        </span>
+        <img
+          alt="Hompage-image2"
+          className="img-fluid about-teamacess"
+          src={teamacess}
+        />
       </div>
     );
   }
@@ -104,16 +96,17 @@ class TeamAccess extends Component {
   }
   render() {
     return (
-      <div className="TeamAccess">
-        <section className="mt-3">
+      <div className="TeamAccess-page my-container-85">
+        <section className="mt-10">
           <DisplayBox
             colLeft="8"
             colRight="4"
             contentLeft={this.renderLeft1()}
             contentRight={this.renderRight1()}
+            fullContainer="true"
           />
         </section>
-        <section className="layout2 mb-18">
+        <section className="mt-15 mb-15">
           {this.renderBottom()}
         </section>
       </div>

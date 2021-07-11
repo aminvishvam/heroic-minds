@@ -14,7 +14,7 @@ class Community extends Component {
 
     renderHead() {
         return (
-            <div className="header-text mt-8 justify-content-center">
+            <div className="header-text-animation mt-8 justify-content-center">
 
                 <p className="text bold k70 text-center pt-10 ">Coming Soon!</p>
                 <br />

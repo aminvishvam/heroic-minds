@@ -27,14 +27,6 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   color: #757780;
 }
 
-.text-gray2 {
-  margin: 0;
-  visibility: visible;
-  text-align: left;
-  color: #979797;
-  font-weight: 400;
-}
-
 .text-gray-97 {
   color: #979797;
 }
@@ -382,6 +374,10 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 
 .mt-10 {
   margin-top: 10%;
+}
+
+.mt-13 {
+  margin-top: 13%;
 }
 
 .mt-15 {

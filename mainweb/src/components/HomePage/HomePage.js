@@ -94,7 +94,7 @@ class HomePage extends Component {
   renderRight1() {
     return (
       <div className="d-table home-page-3-image">
-        <span className="img_animat1 vertical-center">
+        <span className="vertical-center">
           <img alt="Hompage-image2" className="img-fluid" src={HompageImage2} />
         </span>
       </div>
@@ -148,10 +148,10 @@ class HomePage extends Component {
               src={logotherapy}
             />
 
-            <p className="text k45 lh100 ls1by2 text-center pt-4">
+            <p className="text k40 lh100 ls1by2 text-center mt-5">
               Logotherapy
             </p>
-            <p className="text h21 lh150 ls1by2 text-center mt-3">
+            <p className="text h21 lh150 ls1by2 text-center mt-4">
               Find meaning and purpose in life beyond the illusive ideas that
               society reinforces today.
             </p>
@@ -166,10 +166,10 @@ class HomePage extends Component {
           <span className="">
             <img alt="" className="img-fluid h-50 pb-4" src={behavioural} />
 
-            <p className="text k45 lh100 ls1by2 text-center pt-3">
+            <p className="text k40 lh100 ls1by2 text-center mt-5">
               Behavioural Activation
             </p>
-            <p className="text h21 lh150 ls1by2 text-center mt-3">
+            <p className="text h21 lh150 ls1by2 text-center mt-4">
               Heroic Minds aims to activate the feeling of doing more of what
               brings real value into your life.
             </p>
@@ -706,7 +706,7 @@ class HomePage extends Component {
               fullContainer="true"
             />
           </section>
-          <section className="mt-18">
+          <section className="mt-15">
             <DisplayBox
               colLeft="6"
               colRight="6"
@@ -719,7 +719,7 @@ class HomePage extends Component {
           <section className="mt-18"> {this.rendorComponantPlus()}</section>
         </div>
 
-        <section className="mt-18 my-container-95">
+        <section className="mt-15 my-container-95">
           <DisplayBox
             colLeft="3"
             colRight="9"
@@ -731,13 +731,14 @@ class HomePage extends Component {
 
         <div className=" my-container-90">
           {/* -----------Listen Now page */}
-          <section className="mt-18">{this.renderListenNowHead()}</section>
+          <section className="mt-15">{this.renderListenNowHead()}</section>
           <section className="mt-3 ">
             <DisplayBox
               colLeft="8"
               colRight="4"
               contentLeft={this.renderStory1()}
               contentRight={this.renderStory1Img()}
+              reverse="true"
               fullContainer="true"
             />
           </section>
@@ -747,6 +748,7 @@ class HomePage extends Component {
               colRight="4"
               contentLeft={this.renderStory2()}
               contentRight={this.renderStory2Img()}
+              reverse="true"
               fullContainer="true"
             />
           </section>
@@ -756,24 +758,25 @@ class HomePage extends Component {
               colRight="4"
               contentLeft={this.renderStory3()}
               contentRight={this.renderStory3Img()}
+              reverse="true"
               fullContainer="true"
             />
           </section>
 
-          <section className="mt-18">{this.renderComponent()}</section>
+          <section className="mt-15">{this.renderComponent()}</section>
         </div>
 
         <section className="mt-18 black-box">{this.renderComponent2()}</section>
 
         <div className="my-container-85">
-          <section className="mt-18">{this.renderCommunity()}</section>
-          <section className="mt-18">
+          <section className="mt-15">{this.renderCommunity()}</section>
+          <section className="mt-15">
             <div className="container-fluid">
               <img alt="Hompage-image2" className="img-fluid" src={community} />
             </div>
           </section>
-          <section className="mt-5">{this.renderComponent3()}</section>
-          <section className="mt-18 ">{this.renderPrice()}</section>
+          <section className="mt-1">{this.renderComponent3()}</section>
+          <section className="mt-18">{this.renderPrice()}</section>
         </div>
       </div>
     );
