@@ -10,3 +10,12 @@
     color: #FFFFFF;
     font-style: normal
 }
+
+.dropdown-wrapper {
+    width: auto; 
+    min-width: 590px;
+    height: 55px;
+    background: rgba(112, 115, 128, 0.08);
+    border-radius: 10px;
+    padding: 10px 0px;
+}

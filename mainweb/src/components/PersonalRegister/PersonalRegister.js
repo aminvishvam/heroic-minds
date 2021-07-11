@@ -15,14 +15,16 @@ import * as actions from "../../actions/Auth";
 
 import "./PersonalRegister.css";
 import RenderField from "../RenderField/RenderField";
-import Alert from '@material-ui/lab/Alert';
-import Snackbar from '@material-ui/core/Snackbar';
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 class PersonalRegister extends Component {
   onSubmit = (formValues) => {
     this.props.personalRegister(formValues);
   };
 
+  clearErrorState = () => {
+    this.props.resetPreviousError();
+  }
 
   render() {
     const { handleSubmit, pristine, submitting } = this.props;
@@ -34,7 +36,7 @@ class PersonalRegister extends Component {
           <div>
             <form onSubmit={handleSubmit(this.onSubmit)}>
               <Field
-                name="firstName"
+                name="Fullname"
                 type="text"
                 label="Full Name"
                 component={RenderField}
@@ -64,13 +66,17 @@ class PersonalRegister extends Component {
                   fieldLabel: "Password",
                 })}
               />
-              <Field
-                name="terms"
-                type="checkbox"
-                label="By signing up, I agree to privacy policy of this app"
-                component={RenderField}
-                validate={acceptance()}
-              />
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <Field
+                  name="terms"
+                  type="checkbox"
+                  component={RenderField}
+                  validate={acceptance()}
+                />
+                <label>
+                  By signing up, I agree to privacy policy of this app
+              </label>
+              </div>
               <button
 
                 type="submit"
@@ -82,12 +88,11 @@ class PersonalRegister extends Component {
             </form>
           </div>
         </div>
-        <Snackbar open={isAnyError} anchorOrigin={{ horizontal: "right", vertical: "top" }}
-          autoHideDuration={5000} onClose={() => { }}>
-          <Alert elevation={6} variant="filled" severity="error" onClose={() => { }}>
-            {this.props.errorMessage || this.props.emailVerfiyError}
-          </Alert>
-        </Snackbar>
+        <ErrorMessage
+          open={isAnyError}
+          errorMessage={this.props.errorMessage || this.props.emailVerfiyError}
+          clearErrorState={this.clearErrorState}
+        />
       </div>
     );
   }

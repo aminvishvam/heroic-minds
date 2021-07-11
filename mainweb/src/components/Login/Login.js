@@ -11,8 +11,7 @@ import "./Login.css";
 import RenderField from "../RenderField/RenderField";
 import LogoIcon from "../LogoIcon/LogoIcon";
 import { Link } from "react-router-dom";
-import Alert from '@material-ui/lab/Alert';
-import Snackbar from '@material-ui/core/Snackbar';
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 class Login extends Component {
   onSubmit = (formValues) => {
@@ -45,15 +44,19 @@ class Login extends Component {
                 component={RenderField}
                 validate={[required(), length({ min: 8 })]}
               />
-              <Field
-                name="remeber"
-                type="checkbox"
-                label="Remeber Me"
-                component={RenderField}
-              />
-              <Link to="/forgot-password">
-                <p>forgotPassword?</p>
-              </Link>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Field
+                    name="remeber"
+                    type="checkbox"
+                    component={RenderField}
+                  />
+                  <label>Remember Me</label>
+                </div>
+                <Link style={{ marginTop: '10px' }} to="/forgot-password">
+                  <p>forgotPassword?</p>
+                </Link>
+              </div>
               <button
                 type="submit"
                 disabled={submitting || pristine}
@@ -64,11 +67,10 @@ class Login extends Component {
             </form>
           </div>
         </div>
-        <Snackbar open={!!this.props.errorMessage} autoHideDuration={5000} anchorOrigin={{ horizontal: "right", vertical: "top" }} onClose={() => { }} >
-          <Alert elevation={6} variant="filled" severity="error" onClose={() => { }}>
-            {this.props.errorMessage}
-          </Alert>
-        </Snackbar>
+        <ErrorMessage
+          open={!!this.props.errorMessage}
+          errorMessage={this.props.errorMessage}
+        />
       </div>
     );
   }

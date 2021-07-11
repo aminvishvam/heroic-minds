@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import history from "../../history";
+import { Field } from "redux-form";
+import { email, required } from "redux-form-validators";
 import LogoIcon from "../LogoIcon/LogoIcon";
-import "./ConfirmRegister.css";
+import RenderField from "../RenderField/RenderField";
+import "./ForgetPassword.css";
 
-class ConfirmRegister extends Component {
+class ForgetPassword extends Component {
     renderMain() {
         return (
             <div className="container">
@@ -22,28 +24,22 @@ class ConfirmRegister extends Component {
 
         );
     }
-
-    redictToLogin = () => {
-        history.push('/login');
-    }
     render() {
         return (
             <div className='main-wrapper'>
                 {this.renderMain()}
                 <div className='text-content'>
-                    <span>
-                        Welcome to the Heroic Minds Community!<br /> We have a sent a <strong>verification link to your email</strong>.
-                    <br /> <br /> Click that link to get started.
-                    <br /> (It may have gone to your junk folder)
+                    <span style={{ marginBottom: '20px', padding: '0px 10px' }}>
+                        Don't worry! Enter your email below and <br /> we'll sent a verification code to reset your password
                     </span>
-
+                    <input className='email-input-field' placeholder='Enter your email' />
                 </div>
                 <div className="row justify-content-center box">
-                    <button className='btn btn-dark ok-button' onClick={this.redictToLogin}>Ok</button>
+                    <button className='btn btn-dark ok-button'>SEND</button>
                 </div>
             </div>
         );
     }
 }
 
-export default ConfirmRegister;
+export default ForgetPassword;
