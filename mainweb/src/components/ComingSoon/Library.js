@@ -35,7 +35,7 @@ class Library extends Component {
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
-            height: "1300px",
+            height: "100px",
         };
 
 
