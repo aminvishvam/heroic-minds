@@ -16,8 +16,7 @@ import { fetchOrgs } from "../../actions/OrgReg";
 
 import "./OrgRegister.css";
 import RenderField from "../RenderField/RenderField";
-import Alert from '@material-ui/lab/Alert';
-import { Snackbar } from "@material-ui/core";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 class OrgRegister extends Component {
   componentDidMount() {
@@ -37,12 +36,16 @@ class OrgRegister extends Component {
     });
   }
 
+  clearErrorState = () => {
+    this.props.resetPreviousError();
+  }
+
   renderOrgSelect() {
     return (
       <div>
         <label>Organization Name</label>
         <br />
-        <Field name="orgId" component="select">
+        <Field className='dropdown-wrapper' name="orgId" component="select">
           {this.renderOrgOption()}
         </Field>
       </div>
@@ -58,16 +61,9 @@ class OrgRegister extends Component {
           <div>
             <form onSubmit={handleSubmit(this.onSubmit)}>
               <Field
-                name="firstName"
+                name="FullName"
                 type="text"
-                label="First Name"
-                component={RenderField}
-                validate={[required(), length({ min: 2 })]}
-              />
-              <Field
-                name="lastName"
-                type="text"
-                label="Last Name"
+                label="Full name"
                 component={RenderField}
                 validate={[required(), length({ min: 2 })]}
               />
@@ -103,28 +99,32 @@ class OrgRegister extends Component {
                   fieldLabel: "Password",
                 })}
               />
-              <Field
-                name="terms"
-                type="checkbox"
-                label="I accept the terms of service"
-                component={RenderField}
-                validate={acceptance()}
-              />
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <Field
+                  name="terms"
+                  type="checkbox"
+                  component={RenderField}
+                  validate={acceptance()}
+                />
+                <label>
+                  By signing up, I agree to privacy policy of this app
+              </label>
+              </div>
               <button
                 type="submit"
                 disabled={submitting || pristine}
-                className="btn-dark "
+                className="sign-up-button"
               >
-                Send!
+                Sign up
               </button>
             </form>
           </div>
         </div>
-        <Snackbar open={isAnyError} open autoHideDuration={6000}>
-          <Alert severity="error">
-            {this.props.errorMessage || this.props.emailVerfiyError}
-          </Alert>
-        </Snackbar>
+        <ErrorMessage
+          open={isAnyError}
+          errorMessage={this.props.errorMessage || this.props.emailVerfiyError}
+          clearErrorState={this.clearErrorState}
+        />
       </div>
     );
   }

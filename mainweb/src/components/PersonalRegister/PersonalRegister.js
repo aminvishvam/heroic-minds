@@ -15,14 +15,16 @@ import * as actions from "../../actions/Auth";
 
 import "./PersonalRegister.css";
 import RenderField from "../RenderField/RenderField";
-import Alert from '@material-ui/lab/Alert';
-import Snackbar from '@material-ui/core/Snackbar';
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 class PersonalRegister extends Component {
   onSubmit = (formValues) => {
     this.props.personalRegister(formValues);
   };
 
+  clearErrorState = () => {
+    this.props.resetPreviousError();
+  }
 
   render() {
     const { handleSubmit, pristine, submitting } = this.props;
@@ -34,16 +36,9 @@ class PersonalRegister extends Component {
           <div>
             <form onSubmit={handleSubmit(this.onSubmit)}>
               <Field
-                name="firstName"
+                name="Fullname"
                 type="text"
-                label="First Name"
-                component={RenderField}
-                validate={[required(), length({ min: 2 })]}
-              />
-              <Field
-                name="lastName"
-                type="text"
-                label="Last Name"
+                label="Full Name"
                 component={RenderField}
                 validate={[required(), length({ min: 2 })]}
               />
@@ -71,28 +66,33 @@ class PersonalRegister extends Component {
                   fieldLabel: "Password",
                 })}
               />
-              <Field
-                name="terms"
-                type="checkbox"
-                label="I accept the terms of service"
-                component={RenderField}
-                validate={acceptance()}
-              />
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <Field
+                  name="terms"
+                  type="checkbox"
+                  component={RenderField}
+                  validate={acceptance()}
+                />
+                <label>
+                  By signing up, I agree to privacy policy of this app
+              </label>
+              </div>
               <button
+
                 type="submit"
                 disabled={submitting || pristine}
-                className="btn-dark "
+                className="sign-up-button"
               >
-                Send!
+                Sign Up
               </button>
             </form>
           </div>
         </div>
-        <Snackbar open={isAnyError} autoHideDuration={5000}>
-          <Alert elevation={6} variant="filled" severity="error">
-            {this.props.errorMessage || this.props.emailVerfiyError}
-          </Alert>
-        </Snackbar>
+        <ErrorMessage
+          open={isAnyError}
+          errorMessage={this.props.errorMessage || this.props.emailVerfiyError}
+          clearErrorState={this.clearErrorState}
+        />
       </div>
     );
   }
