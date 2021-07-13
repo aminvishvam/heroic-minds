@@ -76,146 +76,146 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   font-weight: 500;
 }
 
-/* font-family = Karma with different font sizes */
-.k40 {
-  font-family: "Karma";
-  font-size: 40px;
+@media (min-width: 1024px) {
+  /* font-family = Karma with different font sizes */
+  .k70 {
+    font-family: "Karma";
+    font-size: 70px;
+  }
+
+  .k60 {
+    font-family: "Karma";
+    font-size: 60px;
+  }
+
+  .k50 {
+    font-family: "Karma";
+    font-size: 50px;
+  }
+
+  .k45 {
+    font-family: "Karma";
+    font-size: 45px;
+  }
+
+  .k43 {
+    font-family: "Karma";
+    font-size: 43px;
+  }
+
+  .k40 {
+    font-family: "Karma";
+    font-size: 40px;
+  }
+
+  .k32 {
+    font-family: "Karma";
+    font-size: 32px;
+  }
+
+  .k18 {
+    font-family: "Karma";
+    font-size: 18px;
+  }
+  /* font-family = Halant with different font sizes */
+
+  .h16 {
+    font-family: "Halant";
+    font-size: 16px !important;
+  }
+
+  .h20 {
+    font-family: "Halant";
+    font-size: 20px;
+  }
+
+  .h21 {
+    font-family: "Halant";
+    font-size: 21px;
+  }
+
+  .h22 {
+    font-family: "Halant";
+    font-size: 22px;
+  }
+
+  .h24 {
+    font-family: "Halant";
+    font-size: 24px;
+  }
+
+  .h26 {
+    font-family: "Halant";
+    font-size: 26px;
+  }
+
+  .h28 {
+    font-family: "Halant";
+    font-size: 28px;
+  }
+
+  .h30 {
+    font-family: "Halant";
+    font-size: 30px;
+  }
+
+  .h35 {
+    font-family: "Halant";
+    font-size: 35px;
+  }
+
+  .h40 {
+    font-family: "Halant";
+    font-size: 40px;
+  }
+
+  .h45 {
+    font-family: "Halant";
+    font-size: 45px;
+  }
+
+  .h50 {
+    font-family: "Halant";
+    font-size: 50px;
+  }
+
+  .h60 {
+    font-family: "Halant";
+    font-size: 60px;
+  }
+
+  /* font-family = sans-serif with different font sizes */
+
+  .s10 {
+    font-family: sans-serif;
+    font-size: 10px;
+  }
+
+  .s16 {
+    font-family: sans-serif;
+    font-size: 16px;
+  }
+
+  .s18 {
+    font-family: sans-serif;
+    font-size: 18px !important;
+  }
+
+  .s20 {
+    font-family: sans-serif;
+    font-size: 20px;
+  }
+
+  .s23 {
+    font-family: sans-serif;
+    font-size: 23px;
+  }
+
+  .s30 {
+    font-family: sans-serif;
+    font-size: 30px;
+  }
 }
-
-.k45 {
-  font-family: "Karma";
-  font-size: 45px;
-}
-
-.k43 {
-  font-family: "Karma";
-  font-size: 43px;
-}
-
-.k50 {
-  font-family: "Karma";
-  font-size: 50px;
-}
-
-.k60 {
-  font-family: "Karma";
-  font-size: 60px;
-}
-
-.k70 {
-  font-family: "Karma";
-  font-size: 70px;
-}
-
-.k18 {
-  font-family: "Karma";
-  font-size: 18px;
-}
-
-.k32 {
-  font-family: "Karma";
-  font-size: 32px;
-}
-
-/* font-family = Halant with different font sizes */
-
-.h16 {
-  font-family: "Halant";
-  font-size: 16px !important;
-}
-
-.h20 {
-  font-family: "Halant";
-  font-size: 20px;
-}
-
-.h21 {
-  font-family: "Halant";
-  font-size: 21px;
-}
-
-.h22 {
-  font-family: "Halant";
-  font-size: 22px;
-}
-
-.h24 {
-  font-family: "Halant";
-  font-size: 24px;
-}
-
-.h26 {
-  font-family: "Halant";
-  font-size: 26px;
-}
-
-.h28 {
-  font-family: "Halant";
-  font-size: 28px;
-}
-
-.h30 {
-  font-family: "Halant";
-  font-size: 30px;
-}
-
-.h35 {
-  font-family: "Halant";
-  font-size: 35px;
-}
-
-.h40 {
-  font-family: "Halant";
-  font-size: 40px;
-}
-
-.h45 {
-  font-family: "Halant";
-  font-size: 45px;
-}
-
-.h50 {
-  font-family: "Halant";
-  font-size: 50px;
-}
-
-.h60 {
-  font-family: "Halant";
-  font-size: 60px;
-}
-
-/* font-family = sans-serif with different font sizes */
-
-.s10 {
-  font-family: sans-serif;
-  font-size: 10px;
-}
-
-.s16 {
-  font-family: sans-serif;
-  font-size: 16px;
-}
-
-.s18 {
-  font-family: sans-serif;
-  font-size: 18px !important;
-}
-
-.s20 {
-  font-family: sans-serif;
-  font-size: 20px;
-}
-
-.s23 {
-  font-family: sans-serif;
-  font-size: 23px;
-}
-
-.s30 {
-  font-family: sans-serif;
-  font-size: 30px;
-}
-
 /* line height  */
 .lh93 {
   line-height: 93%;

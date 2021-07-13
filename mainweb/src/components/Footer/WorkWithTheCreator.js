@@ -107,6 +107,7 @@ class WorkWithTheCreator extends Component {
                     controls="2"
                     allow="accelerometer"
                     allowFullScreen
+                    alt="Youtube video covering Ben's life story"
                 ></iframe>
             </div>
         );

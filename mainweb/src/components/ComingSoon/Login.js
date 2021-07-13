@@ -14,7 +14,7 @@ class Login extends Component {
 
     renderHead() {
         return (
-            <div className="header-text-animation mt-8 justify-content-center">
+            <div className="header-text-animation coming-soon-head">
 
                 <p className="text bold k70 text-center pt-10">Coming Soon!</p>
                 <br />
@@ -22,7 +22,6 @@ class Login extends Component {
                 <br />
                 <p className="text-center"><input type="email" className=" text intro h28 lh100 pl4" id="email1" placeholder="Email..." /></p>
             </div >
-
 
 
         );
@@ -33,8 +32,6 @@ class Login extends Component {
             <div className="Login">
                 <section>
                     {this.renderImg()}
-                </section>
-                <section>
                     {this.renderHead()}
                 </section>
             </div>

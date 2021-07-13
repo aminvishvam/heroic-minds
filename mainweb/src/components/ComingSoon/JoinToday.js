@@ -13,7 +13,7 @@ class JoinToday extends Component {
 
     renderHead() {
         return (
-            <div className="header-text-animation mt-8 justify-content-center">
+            <div className="header-text-animation coming-soon-head">
 
                 <p className="text bold k70 text-center pt-10">Coming Soon!</p>
                 <br />
@@ -29,11 +29,9 @@ class JoinToday extends Component {
 
     render() {
         return (
-            <div className="Login">
+            <div className="JoinToday">
                 <section>
                     {this.renderImg()}
-                </section>
-                <section>
                     {this.renderHead()}
                 </section>
             </div>

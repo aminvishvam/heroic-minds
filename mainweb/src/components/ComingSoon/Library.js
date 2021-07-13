@@ -14,7 +14,7 @@ class Library extends Component {
 
     renderHead() {
         return (
-            <div className="header-text-animation mt-5 justify-content-center">
+            <div className="header-text-animation coming-soon-head">
 
                 <p className="text bold k70 text-center pt-10">Coming Soon!</p>
                 <br />
@@ -30,22 +30,11 @@ class Library extends Component {
 
     render() {
 
-        const mainSectionStyle = {
-            backgroundImage: "url(" + comingSoonImg + ")",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            height: "100px",
-        };
-
-
         return (
             <div className="Library">
-                <section style={mainSectionStyle}>
-                    {this.renderImg()}
-                </section>
                 <section>
                     {this.renderHead()}
+                    {this.renderImg()}
                 </section>
             </div>
         );

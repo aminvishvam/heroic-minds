@@ -6,7 +6,7 @@ class Community extends Component {
 
     renderImg() {
         return (
-            <div className="image-block m-0">
+            <div className="text-center image-block">
                 <img className='img-fluid community-bg-img' alt='' src={comingSoonImg} />
             </div>
         );
@@ -14,7 +14,7 @@ class Community extends Component {
 
     renderHead() {
         return (
-            <div className="header-text-animation mt-8 justify-content-center">
+            <div className="header-text-animation coming-soon-head">
 
                 <p className="text bold k70 text-center pt-10 ">Coming Soon!</p>
                 <br />
@@ -33,8 +33,6 @@ class Community extends Component {
             <div className="Community">
                 <section>
                     {this.renderImg()}
-                </section>
-                <section>
                     {this.renderHead()}
                 </section>
             </div>

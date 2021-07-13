@@ -19,6 +19,8 @@ import behavioural from "../../assets/HomePageAssets/behavioural.png";
 
 import "./HomePage.css";
 import "./Text.css";
+import "./TextMobile.css";
+import "./TextIpad.css";
 import { Link } from "react-router-dom";
 
 // export default HomePage;
@@ -641,13 +643,13 @@ class HomePage extends Component {
       <div className="home-page-13">
         <div className="row justify-content-center">
           <div className="col-lg-3 mb-8">
-            <a href="/"><p className="text text-center bold h30 lh120 pb-4">
+            <a href="/"><p className="text text-center bold h30 lh130 pb-4">
               <u>30-Day Free Trial</u></p>
             </a>
-            <p className="text text-center h22 lh200 mt-4">
+            <p className="text text-center h22 lh130 mt-4">
               30% of Heroic Minds Library
             </p>
-            <h1 className="text text-center h45 lh150">Free</h1>
+            <h1 className="text text-center h40 lh150">Free</h1>
           </div>
 
           <div className="col-lg-6 mb-8">
@@ -660,13 +662,13 @@ class HomePage extends Component {
             <p className="text text-center h30 lh150 mt-1">
               Full Heroic Minds Library
             </p>
-            <h1 className="text text-center h60 lh120">$170</h1>
-            <p className="text text-center h24 lh120 text-gray-97 ">$14/month</p>
+            <h1 className="text text-center h60 lh130">$170</h1>
+            <p className="text text-center h24 lh130 text-gray-97 ">$14/month</p>
           </div>
 
           <div className="col-lg-3 mb-8">
             <a href="/">
-              <p className="text text-center bold h30 lh120 pb-4">
+              <p className="text text-center bold h30 lh130 pb-4">
                 <u>Monthly</u>
               </p>
             </a>
@@ -674,7 +676,7 @@ class HomePage extends Component {
               Full Heroic Minds Library
             </p>
             <h1 className="text text-center h45 lh150">$240</h1>
-            <p className="text text-center h22 lh120 text-gray-97 ">$20/month</p>
+            <p className="text text-center h22 lh130 text-gray-97 ">$20/month</p>
           </div>
         </div>
       </div>

@@ -10,6 +10,14 @@
   vertical-align: middle;
 }
 
+.image-padding-right {
+  padding-right: 4%;
+}
+
+.image-padding-left {
+  padding-left: 4%;
+}
+
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
