@@ -16,12 +16,14 @@ import JoinToday from "../ComingSoon/JoinToday";
 import BookPage from "../BookPage/BookPage";
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Login from "../Login/Login";
+
+import ConfirmRegister from "../ConfirmRegister/ConfirmRegister";
+import ForgetPassword from "../ForgotPassword/ForgetPassword";
+
 import Payment from "../Payment/Payment";
 
-import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
+
 
 class App extends Component {
   state = {};
@@ -51,9 +53,13 @@ class App extends Component {
                 <Route path="/login" exact component={Login} />
                 <Route path="/register" exact component={CreateAccount} />
                 <Route path="/joinToday" exact component={JoinToday} />
-                <Elements stripe={stripePromise}>
+
+                <Route path="/confirm-register" exact component={ConfirmRegister} />
+                <Route path="/forgot-password" exact component={ForgetPassword} />
+
+          
                   <Route path="/payment" exact component={Payment} />
-                </Elements>
+
               </ScrollToTop>
             </div>
           </div>
