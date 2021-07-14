@@ -9,6 +9,7 @@ import community from "../../assets/HomePageAssets/community.svg";
 import audio1Img from "../../assets/HomePageAssets/audio1Img.svg";
 import audio2Img from "../../assets/HomePageAssets/audio2Img.svg";
 import audio3Img from "../../assets/HomePageAssets/audio3Img.svg";
+import audio4Img from "../../assets/HomePageAssets/audio4Img.svg";
 import imgHeadphone from "../../assets/HomePageAssets/Group 725.jpeg";
 import playIcon from "../../assets/HomePageAssets/play.png";
 import back_20 from "../../assets/HomePageAssets/back_20.png";
@@ -16,6 +17,7 @@ import forward_20 from "../../assets/HomePageAssets/forward_20.png";
 import plusSign from "../../assets/HomePageAssets/plusSign.svg";
 import logotherapy from "../../assets/AboutPageAssets/Man.svg";
 import behavioural from "../../assets/HomePageAssets/behavioural.png";
+import pen_icon from "../../assets/HomePageAssets/penIcon.png";
 
 import "./HomePage.css";
 import "./Text.css";
@@ -34,12 +36,11 @@ class HomePage extends Component {
           <div className=" col-6  header-text-animation mt-10">
             <div className="pb-10">
               <p className="text bold k40 lh140 ls1by2">
-                Shape your life around the most powerful framework known to
-                humankind.
+                Shape your mind around the most powerful framework known for life.
               </p>
               <br />
             </div>
-            <p className="text fw600 h18 lh150 ls1by2">
+            <p className="text fw500 h20 lh150 ls1by2">
               Live a purpose-driven, resilient, high-performing life.
             </p>
           </div>
@@ -282,7 +283,7 @@ class HomePage extends Component {
       <div className="home-page-7">
         <br /> <br /> <br />
         <br />
-        <h1 className="tagline-layout7">Listen Now</h1>
+        <h1 className="text text-center k50 lh120 bold">Listen Now</h1>
       </div>
     );
   }
@@ -291,24 +292,36 @@ class HomePage extends Component {
 
   renderStory1() {
     return (
-      <div className="container mt-4 mb-1 row">
-        <div className="container story-head mt-2 col-md-8 row">
-          <div className="story-title mr-3  lh120">Heroic Minds </div>
-          <div className="story-catagory mb-3 mr-3 lh200">The Introduction</div>
-        </div>
-        <div className="col-md-4 mt-4 justify-content-center row">
-          <div className="justify-content-end audio-controls text-center">
+      <div>
+        <div className="d-flex flex-md-row flex-column justify-content-between align-items-center">
+          <div className="Story-header my-auto">
+            <div className="story-title  d-flex  flex-sm-row flex-column align-items-end">
+              <p className="text s30 lh120 bold mr-4">A Heroic Mind</p>
+              <p className="text s18 lh150 text-gray-97 mr-3 fw600">Introduction Course</p>
+            </div>
+            <div className="mt-2 story-categary">
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Love</span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Behaviour</span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Philosophy</span>
+
+            </div>
+
+
+          </div>
+          <div className="d-flex flex-row align-items-center justify-content-center audio-controls mr-4 pr-4 ">
             <input
               type="image"
               alt="audio-controls"
-              className=" back-btn img-fluid ml-1 "
+              className=" back-btn mr-3"
               src={back_20}
+              width="35"
+              height="35"
             />
             <input
               type="image"
               alt="audio-controls play-button"
               id="play-btn"
-              className="audio-btn img-fluid ml-3 "
+              className="audio-btn mr-3"
               src={playIcon}
               width="54px"
               height="52.2px"
@@ -317,12 +330,23 @@ class HomePage extends Component {
             <input
               type="image"
               alt="audio-controls"
-              className="forward-btn img-fluid ml-3 "
+              className="forward-btn mr-3"
               src={forward_20}
+
+              width="35"
+              height="35"
+            />
+            <input
+              type="image"
+              alt="audio-controls"
+              className="audio-btn pen-btn ml-4 "
+              src={pen_icon}
+              width="35px"
+              height="35px"
             />
           </div>
         </div>
-        <div className="mt-2 mb-3 pr-3 .smooth-scroll" id="story-text">
+        <div className="mt-4  pr-3 .smooth-scroll" id="story-text">
           A lion doesn't go into battle worrying about how it feels, worried
           about how sharp its tools are, worried about how it compares to other
           lions, a lion goes into battle, willing to do whatever it takes to get
@@ -389,7 +413,7 @@ class HomePage extends Component {
           <br />
           <br />
         </div>
-      </div>
+      </div >
     );
   }
 
@@ -407,33 +431,57 @@ class HomePage extends Component {
   // ---------------- sound track 2  (title , catagory and lyrics) ------------ //
   renderStory2() {
     return (
-      <div className="container mt-4 mb-1 row">
-        <div className="container story-head mt-2 col-md-8 row">
-          <div className="story-title mr-3 lh120">Music by Sia </div>
-          <div className="story-catagory lh200 mr-3">Pop Culture</div>
-        </div>
-        <div className="col-md-4 mt-4 justify-content-center row">
-          <div className="justify-content-end audio-controls text-center">
+      <div>
+        <div className="d-flex flex-md-row flex-column justify-content-between align-items-center">
+          <div className="Story-header my-auto">
+            <div className="story-title  d-flex  flex-sm-row flex-column align-items-end">
+              <p className="text s30 lh120 bold mr-4">Music - Sia</p>
+              <p className="text s18 lh150 text-gray-97 mr-3 fw600">Pop Culture</p>
+            </div>
+            <div className="mt-2 story-categary">
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Love</span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Change</span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Altruism</span>
+
+            </div>
+
+
+          </div>
+          <div className="d-flex flex-row align-items-center justify-content-center audio-controls mr-4 pr-4 ">
             <input
               type="image"
               alt="audio-controls"
-              className=" back-btn img-fluid ml-1 "
+              className=" back-btn mr-3"
               src={back_20}
+              width="35"
+              height="35"
             />
             <input
               type="image"
-              alt="audio-controls"
+              alt="audio-controls play-button"
               id="play-btn"
-              className="audio-btn img-fluid ml-3 "
+              className="audio-btn mr-3"
               src={playIcon}
               width="54px"
               height="52.2px"
+              onClick={this.togglePlay()}
             />
             <input
               type="image"
               alt="audio-controls"
-              className="forward-btn img-fluid ml-3 "
+              className="forward-btn mr-3"
               src={forward_20}
+
+              width="35"
+              height="35"
+            />
+            <input
+              type="image"
+              alt="audio-controls"
+              className="audio-btn pen-btn ml-4 "
+              src={pen_icon}
+              width="35px"
+              height="35px"
             />
           </div>
         </div>
@@ -502,33 +550,57 @@ class HomePage extends Component {
   // ---------------- sound track 3 (title , catagory and lyrics) ------------ //
   renderStory3() {
     return (
-      <div className="container mt-4 mb-1 row">
-        <div className="container story-head mt-2  row col-md-8">
-          <div className="story-title mr-3 lh120">Quidditch - Harry Potter</div>
-          <div className="story-catagory lh200 mr-3">Fiction Literature</div>
-        </div>
-        <div className="col-md-4 mt-4 justify-content-center row">
-          <div className="justify-content-end audio-controls text-center">
+      <div>
+        <div className="d-flex flex-md-row flex-column justify-content-between align-items-center">
+          <div className="Story-header my-auto">
+            <div className="story-title  d-flex  flex-sm-row flex-column align-items-end">
+              <p className="text s30 lh120 bold mr-4">Quiddich - Harry Potter</p>
+              <p className="text s18 lh150 text-gray-97 mr-3 fw600">Fiction Literature</p>
+            </div>
+            <div className="mt-2 story-categary">
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Leadership</span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Adventure</span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Bravery</span>
+
+            </div>
+
+
+          </div>
+          <div className="d-flex flex-row align-items-center justify-content-center audio-controls mr-4 pr-4 ">
             <input
               type="image"
               alt="audio-controls"
-              className=" back-btn img-fluid ml-1 "
+              className=" back-btn mr-3"
               src={back_20}
+              width="35"
+              height="35"
             />
             <input
               type="image"
-              alt="audio-controls"
+              alt="audio-controls play-button"
               id="play-btn"
-              className="audio-btn img-fluid ml-3 "
+              className="audio-btn mr-3"
               src={playIcon}
               width="54px"
               height="52.2px"
+              onClick={this.togglePlay()}
             />
             <input
               type="image"
               alt="audio-controls"
-              className="forward-btn img-fluid ml-3 "
+              className="forward-btn mr-3"
               src={forward_20}
+
+              width="35"
+              height="35"
+            />
+            <input
+              type="image"
+              alt="audio-controls"
+              className="audio-btn pen-btn ml-4 "
+              src={pen_icon}
+              width="35px"
+              height="35px"
             />
           </div>
         </div>
@@ -593,6 +665,127 @@ class HomePage extends Component {
       </div>
     );
   }
+
+
+  // ---------------- sound track 4 (title , catagory and lyrics) ------------ //
+  renderStory4() {
+    return (
+      <div>
+        <div className="d-flex flex-md-row flex-column justify-content-between align-items-center">
+          <div className="Story-header my-auto">
+            <div className="story-title  d-flex  flex-sm-row flex-column align-items-end">
+              <p className="text s30 lh120 bold mr-4">Nihilism - True Detective</p>
+              <p className="text s18 lh150 text-gray-97 mr-3 fw600">Pop Culture</p>
+            </div>
+            <div className="mt-2 story-categary">
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Purpose</span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Meaning</span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Philosophy</span>
+
+            </div>
+
+
+          </div>
+          <div className="d-flex flex-row align-items-center justify-content-center audio-controls mr-4 pr-4 ">
+            <input
+              type="image"
+              alt="audio-controls"
+              className=" back-btn mr-3"
+              src={back_20}
+              width="35"
+              height="35"
+            />
+            <input
+              type="image"
+              alt="audio-controls play-button"
+              id="play-btn"
+              className="audio-btn mr-3"
+              src={playIcon}
+              width="54px"
+              height="52.2px"
+              onClick={this.togglePlay()}
+            />
+            <input
+              type="image"
+              alt="audio-controls"
+              className="forward-btn mr-3"
+              src={forward_20}
+
+              width="35"
+              height="35"
+            />
+            <input
+              type="image"
+              alt="audio-controls"
+              className="audio-btn pen-btn ml-4 "
+              src={pen_icon}
+              width="35px"
+              height="35px"
+            />
+          </div>
+        </div>
+        <div className="mt-4 mb-3 pr-3 .smooth-scroll" id="story-text">
+          I was sitting at my dining room table when I was writing up my first
+          ever business model. I used all the information that the internet had
+          to offer. I was told to build a 20 pages report if I wanted to have
+          any chance at a successful business. I was also told if I didnt have
+          this perfectly executed, I would fail. So I did it. But it didn’t have
+          the effect I thought it would. I thought it would bring me great
+          comfort and I would be able to exuute everything I needed to with
+          ease. What began...
+          <br />
+          <br />
+          I was sitting at my dining room table when I was writing up my first
+          ever business model. I used all the information that the internet had
+          to offer. I was told to build a 20 pages report if I wanted to have
+          any chance at a successful business. I was also told if I didnt have
+          this perfectly executed, I would fail. So I did it. But it didn’t have
+          the effect I thought it would. I thought it would bring me great
+          comfort and I would be able to exuute everything I needed to with
+          ease. What began...
+          <br />
+          <br />
+          I was sitting at my dining room table when I was writing up my first
+          ever business model. I used all the information that the internet had
+          to offer. I was told to build a 20 pages report if I wanted to have
+          any chance at a successful business. I was also told if I didnt have
+          this perfectly executed, I would fail. So I did it. But it didn’t have
+          the effect I thought it would. I thought it would bring me great
+          comfort and I would be able to exuute everything I needed to with
+          ease. What began...
+          <br />
+          <br />I was sitting at my dining room table when I was writing up my
+          first ever business model. I used all the information that the
+          internet had to offer. I was told to build a 20 pages report if I
+          wanted to have any chance at a successful business. I was also told if
+          I didnt have this perfectly executed, I would fail. So I did it. But
+          it didn’t have the effect I thought it would. I thought it would bring
+          me great comfort and I would be able to exuute everything I needed to
+          with ease. What began...
+          <br />
+          <br />I was sitting at my dining room table when I was writing up my
+          first ever business model. I used all the information that the
+          internet had to offer. I was told to build a 20 pages report if I
+          wanted to have any chance at a successful business. I was also told if
+          I didnt have this perfectly executed, I would fail. So I did it. But
+          it didn’t have the effect I thought it would. I thought it would bring
+          me great comfort and I would be able to exuute everything I needed to
+          with ease. What began...
+          <br />
+          <br />
+        </div>
+      </div>
+    );
+  }
+  // ---------------- sound track 4  (image) ------------ //
+  renderStory4Img() {
+    return (
+      <div className="story-img  img-fluid center-text mb-3 mt-3">
+        <img alt="story-thumbnail" className="img-fluid" src={audio4Img} />
+      </div>
+    );
+  }
+
 
   renderCommunity() {
     return (
@@ -734,7 +927,7 @@ class HomePage extends Component {
         <div className=" my-container-90">
           {/* -----------Listen Now page */}
           <section className="mt-15">{this.renderListenNowHead()}</section>
-          <section className="mt-3 ">
+          <section className="mt-8 ">
             <DisplayBox
               colLeft="8"
               colRight="4"
@@ -760,6 +953,17 @@ class HomePage extends Component {
               colRight="4"
               contentLeft={this.renderStory3()}
               contentRight={this.renderStory3Img()}
+              reverse="true"
+              fullContainer="true"
+            />
+          </section>
+
+          <section className=" mt-4">
+            <DisplayBox
+              colLeft="8"
+              colRight="4"
+              contentLeft={this.renderStory4()}
+              contentRight={this.renderStory4Img()}
               reverse="true"
               fullContainer="true"
             />
