@@ -6,6 +6,7 @@ const RenderField = ({
   label,
   type,
   meta: { touched, error, warning },
+
 }) => {
   const isCheckbox = type === 'checkbox';
   return (
@@ -18,6 +19,7 @@ const RenderField = ({
           ((error && <div className='error-text'>{error}</div>) ||
             (warning && <div className='error-text'>{warning}</div>))}
       </div>
+
     </div>
   );
 }
