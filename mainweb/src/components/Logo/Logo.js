@@ -1,9 +1,9 @@
 import React from "react";
 
 import './Logo.css'
-import LogoIcon from "../LogoIcon/LogoIcon";
+import LogoIcon from "./LogoIcon/LogoIcon";
 import { NavLink } from "react-router-dom";
-import LogoText from "../LogoText/LogoText";
+import LogoText from "./LogoText/LogoText";
 
 
 const Logo = () => {

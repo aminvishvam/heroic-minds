@@ -19,7 +19,7 @@ class TopNav extends Component {
   renderLinks() {
     if (this.props.authenticated) {
       return (
-        <div>
+        <div className="TopNav">
           <Navbar expand="lg">
             <Navbar.Brand to="/">
               <Logo />
@@ -27,32 +27,33 @@ class TopNav extends Component {
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll" className="Nav-item">
               <Nav
-                className="mr-auto my-6 my-lg-0"
-                style={{ maxHeight: "100px" }}
+                className="w-100 d-flex justify-content-between my-navbar"
                 navbarScroll
               >
-                <NavLink
-                  to="/library"
-                  className="Nav-text navbar-right"
-                  activeClassName="active"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "#F57C00",
-                  }}
-                >
-                  Library
-                </NavLink>
-                <NavLink
-                  to="/community"
-                  className="Nav-text"
-                  activeClassName="active"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "#F57C00",
-                  }}
-                >
-                  Community
-                </NavLink>
+                <span className="Nav-item-left d-flex align-items-center">
+                  <NavLink
+                    to="/library"
+                    className="Nav-text navbar-right s18"
+                    activeClassName="active"
+                    activeStyle={{
+                      fontWeight: "bold",
+                      color: "#F57C00",
+                    }}
+                  >
+                    Library
+                  </NavLink>
+                  <NavLink
+                    to="/community"
+                    className="Nav-text s18"
+                    activeClassName="active"
+                    activeStyle={{
+                      fontWeight: "bold",
+                      color: "#F57C00",
+                    }}
+                  >
+                    Community
+                  </NavLink>
+                </span>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -60,7 +61,7 @@ class TopNav extends Component {
       );
     } else {
       return (
-        <div>
+        <div className="TopNav">
           <Navbar expand="lg">
             <Navbar.Brand to="/">
               <Logo />
@@ -68,83 +69,85 @@ class TopNav extends Component {
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll" className="Nav-item">
               <Nav
-                className="mr-auto my-6 my-lg-0"
-                style={{ maxHeight: "100px" }}
+                className="w-100 d-flex justify-content-between my-navbar"
                 navbarScroll
               >
-                <NavLink
-                  to="/about"
-                  className="Nav-text"
-                  activeClassName="active"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "#F57C00",
-                  }}
-                >
-                  About
-                </NavLink>
+                <span className="Nav-item-left d-flex align-items-center">
+                  <NavLink
+                    to="/about"
+                    className="Nav-text s18"
+                    activeClassName="active"
+                    activeStyle={{
+                      fontWeight: "bold",
+                      color: "#F57C00",
+                    }}
+                  >
+                    About
+                  </NavLink>
 
-                <NavLink
-                  to="/teamaccess"
-                  className="Nav-text"
-                  activeClassName="active"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "#F57C00",
-                  }}
-                >
-                  Team Access
-                </NavLink>
-                <NavLink
-                  to="/book"
-                  className="Nav-text"
-                  activeClassName="active"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "#F57C00",
-                  }}
-                >
-                  Book
-                </NavLink>
+                  <NavLink
+                    to="/team-access"
+                    className="Nav-text s18"
+                    activeClassName="active"
+                    activeStyle={{
+                      fontWeight: "bold",
+                      color: "#F57C00",
+                    }}
+                  >
+                    Team Access
+                  </NavLink>
+                  <NavLink
+                    to="/author"
+                    className="Nav-text s18"
+                    activeClassName="active"
+                    activeStyle={{
+                      fontWeight: "bold",
+                      color: "#F57C00",
+                    }}
+                  >
+                    Author
+                  </NavLink>
+                </span>
+                <span className="Nav-item-right d-flex align-items-center">
+                  <NavLink
+                    to="/library"
+                    className="Nav-text navbar-right s18"
+                    activeClassName="active"
+                    activeStyle={{
+                      fontWeight: "bold",
+                      color: "#F57C00",
+                    }}
+                  >
+                    Library
+                  </NavLink>
+                  <NavLink
+                    to="/community"
+                    className="Nav-text s18"
+                    activeClassName="active"
+                    activeStyle={{
+                      fontWeight: "bold",
+                      color: "#F57C00",
+                    }}
+                  >
+                    Community
+                  </NavLink>
+                  <NavLink
+                    to="/login"
+                    className="Nav-text s18"
+                    activeClassName="active"
+                    activeStyle={{
+                      fontWeight: "bold",
+                      color: "#F57C00",
+                    }}
+                  >
+                    Login
+                  </NavLink>
+
+                  <NavLink to="/join-today" className="Nav-text">
+                    <button className="btn btn-black s18">Join Today</button>
+                  </NavLink>
+                </span>
               </Nav>
-              <span className="Nav-item-right">
-                <NavLink
-                  to="/library"
-                  className="Nav-text navbar-right"
-                  activeClassName="active"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "#F57C00",
-                  }}
-                >
-                  Library
-                </NavLink>
-                <NavLink
-                  to="/community"
-                  className="Nav-text"
-                  activeClassName="active"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "#F57C00",
-                  }}
-                >
-                  Community
-                </NavLink>
-                <NavLink
-                  to="/login"
-                  className="Nav-text"
-                  activeClassName="active"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "#F57C00",
-                  }}
-                >
-                  Login
-                </NavLink>
-              </span>
-              <NavLink to="/joinToday" className="Nav-text">
-                <button className="btn btn-dark">Join Today</button>
-              </NavLink>
             </Navbar.Collapse>
           </Navbar>
         </div>

@@ -6,21 +6,19 @@
 .community-bg-img {
   height: 100vh;
   width: 100vw;
-  opacity: 0.15;
+  opacity: 0.2;
 }
 
-.header-text {
-  position: relative;
+.coming-soon-head {
+  position: absolute;
+  top: 100px;
   height: 100vh;
-  height: 100vw;
-  vertical-align: middle;
+  width: 100vw;
+  z-index: 0;
 }
 
 .image-block {
-  position: absolute;
-}
-
-.h28 {
-  font-family: "Halant";
-  font-size: 28px;
+  position: relative;
+  top: -100px;
+  z-index: -1;
 }

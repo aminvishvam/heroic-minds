@@ -1,16 +1,19 @@
-.btn-send {
-  display: inline-block;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 1px solid transparent;
-  border-radius: 0.4rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+.team-btn-text {
+  font-family: sans-serif !important;
+  font-size: 23px !important;
+  border-radius: 8px !important;
+  padding: 3px 19px !important;
+}
+
+.TeamAccess-page .input_field,
+.TeamAccess-page .input-text-area {
+  background-color: rgba(236, 236, 236, 0.04) !important;
+  border: 1px solid #000000 !important;
+  border-radius: 10px !important;
+  font-family: "Halant" !important;
+  font-size: 19px !important;
+  font-weight: 600;
+  padding: 25px 18px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

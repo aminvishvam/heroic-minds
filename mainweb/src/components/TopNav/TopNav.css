@@ -1,35 +1,49 @@
-.Nav-text{
-    color: black;
-    font-size: 15px;
-    font-weight: 500;
-    padding: 0px 20px;
-    margin-top: 5px;
+.Nav-text {
+  color: black;
+  font-size: 18px;
+  font-weight: 500 !important;
+  padding: 10px 15px !important;
+  width: max-content !important;
 }
-.Nav-text:hover{
-    color: #F57C00;
-}
-.Nav-item-right{
-    margin-top: 8px;
+.Nav-text:hover {
+  color: #f57c00 !important;
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-    .Nav-item-right{
-        display: flex;
-        flex-direction: column!important;
-        margin-bottom: 8px;
-    }
+.btn-black {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+
+.btn-black:hover {
+  color: #f57c00;
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+  .my-navbar .d-flex {
+    flex-direction: column !important;
+    margin-bottom: 8px;
   }
-  
-  /* 
+
+  .navbar {
+    z-index: 1;
+    background-color: #fff;
+  }
+}
+
+/* 
     ##Device = Most of the Smartphones Mobiles (Portrait)
     ##Screen = B/w 320px to 479px
   */
-  
-  @media (min-width: 320px) and (max-width: 480px) {
 
-    .Nav-item-right{
-        display: flex;
-        flex-direction: column!important;
-        margin-bottom: 8px;
-    }
+@media (min-width: 320px) and (max-width: 480px) {
+  .my-navbar .d-flex {
+    flex-direction: column !important;
+    margin-bottom: 8px;
   }
+
+  .navbar {
+    z-index: 1;
+    background-color: #fff;
+  }
+}

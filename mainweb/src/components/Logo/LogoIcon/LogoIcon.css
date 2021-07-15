@@ -1,0 +1,6 @@
+@media (min-width: 320px) and (max-width: 480px) {
+  .logoIcon img {
+    width: 10px !important;
+    height: 10px !important;
+  }
+}

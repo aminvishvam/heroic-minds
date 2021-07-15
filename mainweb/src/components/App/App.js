@@ -6,14 +6,11 @@ import TopNav from "../TopNav/TopNav";
 import ScrollToTop from "../ScrollToTop/ScrollTOTop";
 import Scrolls from "../Scrolls/Scrolls";
 import AboutPage from "../AboutPage/AboutPage";
-import PrivacyPolicy from "../AboutPage/PrivacyPolicy";
-import TermsOfUse from "../AboutPage/TermsOfUse";
 import TeamAccess from "../TeamAccess/TeamAccess";
 import Library from "../ComingSoon/Library";
 import Community from "../ComingSoon/Community";
 import JoinToday from "../ComingSoon/JoinToday";
 
-import BookPage from "../BookPage/BookPage";
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Login from "../Login/Login";
 
@@ -22,9 +19,6 @@ import ForgetPassword from "../ForgotPassword/ForgetPassword";
 
 import Payment from "../Payment/Payment";
 
-
-
-
 class App extends Component {
   state = {};
 
@@ -32,36 +26,51 @@ class App extends Component {
     return (
       <div className="App">
         <Router history={history}>
-          <div>
+          <Switch>
+            <Route path="/" component={TopNav} />
+          </Switch>
+          <div className="Page">
+            <ScrollToTop>
+              <Route path="/" exact component={HomePage} />
+              <Route path="/about" exact component={AboutPage} />
+              <Route path="/team-access" exact component={TeamAccess} />
+              <Route path="/author" exact component={AuthorPage} />
+              <Route path="/library" exact component={Library} />
+              <Route path="/community" exact component={Community} />
+              <Route path="/login" exact component={Login} />
+              <Route path="/join-today" exact component={JoinToday} />
+              <Route
+                path="/work-with-the-creator"
+                exact
+                component={WorkWithTheCreator}
+              />
+              <Route path="/privacy-policy" exact component={PrivacyPolicy} />
+              <Route path="/terms-of-use" exact component={TermsOfUse} />
+              <Route path="/press" exact component={Press} />
+              <Route path="/contact" exact component={Contact} />
+              <Route
+                path="/contact/frequently-asked-questions"
+                exact
+                component={FAQ}
+              />
+              <Route path="/login" exact component={Login} />
+              <Route path="/register" exact component={CreateAccount} />
+
+              <Route
+                path="/confirm-register"
+                exact
+                component={ConfirmRegister}
+              />
+              <Route path="/forgot-password" exact component={ForgetPassword} />
+
+              <Route path="/payment" exact component={Payment} />
+            </ScrollToTop>
+          </div>
+
+          <div className="Footer">
             <Switch>
-              <Route path="/" component={TopNav} />
+              <Route path="/" component={Footer} />
             </Switch>
-            <div className="Page">
-              <ScrollToTop>
-                <Route path="/" exact component={HomePage} />
-                <Route path="/about" exact component={AboutPage} />
-                <Route
-                  path="/about/PrivacyPolicy"
-                  exact
-                  component={PrivacyPolicy}
-                />
-                <Route path="/about/TermsOfUse" exact component={TermsOfUse} />
-                <Route path="/teamaccess" exact component={TeamAccess} />
-                <Route path="/book" exact component={BookPage} />
-                <Route path="/library" exact component={Library} />
-                <Route path="/community" exact component={Community} />
-                <Route path="/login" exact component={Login} />
-                <Route path="/register" exact component={CreateAccount} />
-                <Route path="/joinToday" exact component={JoinToday} />
-
-                <Route path="/confirm-register" exact component={ConfirmRegister} />
-                <Route path="/forgot-password" exact component={ForgetPassword} />
-
-          
-                  <Route path="/payment" exact component={Payment} />
-
-              </ScrollToTop>
-            </div>
           </div>
         </Router>
         <Scrolls />

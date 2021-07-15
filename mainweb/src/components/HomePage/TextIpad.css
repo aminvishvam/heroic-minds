@@ -1,0 +1,150 @@
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .k70 {
+    font-family: "Karma";
+    font-size: 36px;
+  }
+
+  .k60 {
+    font-family: "Karma";
+    font-size: 32px;
+  }
+
+  .k50 {
+    font-family: "Karma";
+    font-size: 28px;
+  }
+
+  .k45 {
+    font-family: "Karma";
+    font-size: 27px;
+  }
+
+  .k43 {
+    font-family: "Karma";
+    font-size: 26.5px;
+  }
+
+  .k40 {
+    font-family: "Karma";
+    font-size: 25px;
+  }
+
+  .k32 {
+    font-family: "Karma";
+    font-size: 23px;
+  }
+
+  .k18 {
+    font-family: "Karma";
+    font-size: 16px;
+  }
+
+  /* font-family = Halant with different font sizes */
+
+  .h16 {
+    font-family: "Halant";
+    font-size: 16px !important;
+  }
+
+  .h18 {
+    font-family: "Halant";
+    font-size: 16px !important;
+  }
+
+  .h20 {
+    font-family: "Halant";
+    font-size: 17px;
+  }
+
+  .h21 {
+    font-family: "Halant";
+    font-size: 18px;
+  }
+
+  .h22 {
+    font-family: "Halant";
+    font-size: 19px;
+  }
+
+  .h24 {
+    font-family: "Halant";
+    font-size: 20px;
+  }
+
+  .h26 {
+    font-family: "Halant";
+    font-size: 21px;
+  }
+
+  .h28 {
+    font-family: "Halant";
+    font-size: 22px;
+  }
+
+  .h30 {
+    font-family: "Halant";
+    font-size: 23px;
+  }
+
+  .h35 {
+    font-family: "Halant";
+    font-size: 24px;
+  }
+
+  .h40 {
+    font-family: "Halant";
+    font-size: 25px;
+  }
+
+  .h45 {
+    font-family: "Halant";
+    font-size: 27px;
+  }
+
+  .h50 {
+    font-family: "Halant";
+    font-size: 28px;
+  }
+
+  .h60 {
+    font-family: "Halant";
+    font-size: 32px;
+  }
+
+  /* font-family = sans-serif with different font sizes */
+
+  .s10 {
+    font-family: sans-serif;
+    font-size: 10px;
+  }
+
+  .s16 {
+    font-family: sans-serif;
+    font-size: 15px;
+  }
+
+  .s18 {
+    font-family: sans-serif;
+    font-size: 16px !important;
+  }
+
+  .s20 {
+    font-family: sans-serif;
+    font-size: 17px;
+  }
+
+  .s23 {
+    font-family: sans-serif;
+    font-size: 19px;
+  }
+
+  .s30 {
+    font-family: sans-serif;
+    font-size: 23px;
+  }
+}
