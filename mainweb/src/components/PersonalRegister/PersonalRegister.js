@@ -24,11 +24,13 @@ class PersonalRegister extends Component {
 
   clearErrorState = () => {
     this.props.resetPreviousError();
-  }
+  };
 
   render() {
     const { handleSubmit, pristine, submitting } = this.props;
-    const isAnyError = !!(this.props.errorMessage || this.props.emailVerfiyError)
+    const isAnyError = !!(
+      this.props.errorMessage || this.props.emailVerfiyError
+    );
 
     return (
       <div className="container justify-content-center">
@@ -36,9 +38,16 @@ class PersonalRegister extends Component {
           <div>
             <form onSubmit={handleSubmit(this.onSubmit)}>
               <Field
-                name="Fullname"
+                name="firstName"
                 type="text"
-                label="Full Name"
+                label="First Name"
+                component={RenderField}
+                validate={[required(), length({ min: 2 })]}
+              />
+              <Field
+                name="lastName"
+                type="text"
+                label="Last Name"
                 component={RenderField}
                 validate={[required(), length({ min: 2 })]}
               />
@@ -57,7 +66,7 @@ class PersonalRegister extends Component {
                 validate={[required(), length({ min: 8 })]}
               />
               <Field
-                name="confirm_password"
+                name="confirmPassword"
                 type="password"
                 label="Confirm Password"
                 component={RenderField}
@@ -66,7 +75,7 @@ class PersonalRegister extends Component {
                   fieldLabel: "Password",
                 })}
               />
-              <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div style={{ display: "flex", alignItems: "center" }}>
                 <Field
                   name="terms"
                   type="checkbox"
@@ -75,10 +84,9 @@ class PersonalRegister extends Component {
                 />
                 <label>
                   By signing up, I agree to privacy policy of this app
-              </label>
+                </label>
               </div>
               <button
-
                 type="submit"
                 disabled={submitting || pristine}
                 className="sign-up-button"
