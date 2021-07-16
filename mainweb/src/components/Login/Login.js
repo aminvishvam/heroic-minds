@@ -9,7 +9,7 @@ import * as actions from "../../actions/Auth";
 
 import "./Login.css";
 import RenderField from "../RenderField/RenderField";
-import LogoIcon from "../LogoIcon/LogoIcon";
+import LogoIcon from "../Logo/LogoIcon/LogoIcon";
 import { Link } from "react-router-dom";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 

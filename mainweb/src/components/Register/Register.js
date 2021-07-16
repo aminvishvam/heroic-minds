@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../../actions/toggleRegister";
-import LogoIcon from "../LogoIcon/LogoIcon";
+import LogoIcon from "../Logo/LogoIcon/LogoIcon";
 import PersonalRegister from "../PersonalRegister/PersonalRegister";
 import OrgRegister from "../OrgRegister/OrgRegister";
 

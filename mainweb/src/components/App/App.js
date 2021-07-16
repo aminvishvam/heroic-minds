@@ -10,6 +10,14 @@ import TeamAccess from "../TeamAccess/TeamAccess";
 import Library from "../ComingSoon/Library";
 import Community from "../ComingSoon/Community";
 import JoinToday from "../ComingSoon/JoinToday";
+import AuthorPage from "../AuthorPage/AuthorPage";
+import Footer from "../Footer/Footer";
+import PrivacyPolicy from "../Footer/PrivacyPolicy";
+import TermsOfUse from "../Footer/TermsOfUse";
+import Press from "../Footer/Press";
+import Contact from "../Footer/Contact";
+import WorkWithTheCreator from "../Footer/WorkWithTheCreator";
+import FAQ from "../Footer/FAQ";
 
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Login from "../Login/Login";
@@ -37,7 +45,6 @@ class App extends Component {
               <Route path="/author" exact component={AuthorPage} />
               <Route path="/library" exact component={Library} />
               <Route path="/community" exact component={Community} />
-              <Route path="/login" exact component={Login} />
               <Route path="/join-today" exact component={JoinToday} />
               <Route
                 path="/work-with-the-creator"
