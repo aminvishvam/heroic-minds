@@ -27,31 +27,6 @@
 }
 
 /* ---------------------------------- styles for listen now page  ------------------------------------*/
-.story-head22 {
-  width: 60%;
-}
-
-.story-title22 {
-  text-align: left;
-  font-family: sans-serif;
-  font-size: 30px;
-  line-height: 20px;
-  letter-spacing: 0;
-  font-weight: bold;
-  color: #000;
-  display: block;
-}
-
-.story-catagory22 {
-  text-align: left;
-  font-family: sans-serif;
-  font-size: 20px;
-  line-height: 20px;
-  letter-spacing: 0;
-  font-weight: 500;
-  color: #979797;
-  vertical-align: bottom;
-}
 
 #story-text {
   text-align: left;
@@ -85,43 +60,24 @@
   background-color: #838383;
 }
 
-.story-img {
-  text-align: center;
-}
-
 .story-categary .rounded {
   border-radius: 6px !important;
 }
 
-.audio-controls2 {
-  display: block;
-  position: relative;
-  top: -18px;
+.model-header2 img,
+.modal-content {
+  border-radius: 8px !important;
 }
 
 .audio-btn {
   opacity: 1;
 }
 
-.audio-btn:hover {
-  animation-name: mouse-hover;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-duration: 0.2s;
-  animation-fill-mode: forwards;
-}
-
-.back-btn:hover {
-  animation-name: mouse-hover;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-  animation-duration: 0.2s;
-  animation-fill-mode: forwards;
-}
-
+.audio-btn:hover,
+.back-btn:hover,
 .forward-btn:hover {
   animation-name: mouse-hover;
-  animation-timing-function: ease-in;
+  animation-timing-function: ease;
   animation-iteration-count: 1;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
@@ -132,7 +88,7 @@
     opacity: 1;
   }
   to {
-    opacity: 0.7;
+    opacity: 0.75;
   }
 }
 
@@ -158,20 +114,8 @@
   padding: 8% 5%;
 }
 
-.img-storytelling {
-  position: relative;
-  top: -30px;
-  left: 0px;
-}
-
 .black-box {
   background-color: #000000;
-}
-
-.community-img {
-  position: relative;
-  top: -60px;
-  right: 60px;
 }
 
 @-webkit-keyframes fadeInUp {
@@ -190,4 +134,28 @@
   100% {
     opacity: 1;
   }
+}
+
+.modal-dialog {
+  margin-top: 35vh !important;
+  margin-left: auto !important;
+  width: 65vw !important;
+  max-width: 1100px !important;
+}
+
+.modal-content {
+  box-shadow: 4px 7px 0px #e59d53;
+}
+
+.modal-header {
+  border-bottom: 0px !important;
+  font-size: 30px !important;
+  font-family: sans-serif !important;
+  padding-bottom: 0px !important;
+}
+
+.close-btn {
+  background-color: #ffffff !important;
+  border: none !important;
+  cursor: pointer !important;
 }

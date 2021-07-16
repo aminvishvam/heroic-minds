@@ -50,7 +50,7 @@ class AboutPage extends Component {
     return (
       <div className="about-page-2 image-padding-right">
         <h1 className="text k45 lh120 ls1by2">
-          1. Fortify Your Psychological Foundation(Via Storytelling)
+          1. Fortify Your Psychological Foundation (Via Storytelling)
         </h1>
         <br />
         <br />
@@ -80,7 +80,7 @@ class AboutPage extends Component {
     return (
       <div className="text-center d-table ">
         <span className="vertical-center">
-          <img alt="Hompage-image1 " className="img-fluid h-75" src={Man} />
+          <img alt="Hompage-image1 " className="img-fluid h-75 man-img" src={Man} />
         </span>
       </div>
     );
@@ -89,7 +89,7 @@ class AboutPage extends Component {
     return (
       <div className="d-table text-center">
         <span className="vertical-center">
-          <img alt="Hompage-image2" className="img-fluid " src={Storytelling} />
+          <img alt="Hompage-image2" className="img-fluid story-telling-img" src={Storytelling} />
         </span>
       </div>
     );
@@ -122,7 +122,7 @@ class AboutPage extends Component {
   renderLeft3() {
     return (
       <div className="about-page-4 image-padding-right">
-        <h1 className="text k45 lh120"> 3. Journal(In - App) </h1> <br />
+        <h1 className="text k45 lh120"> 3. Journal (In - App) </h1> <br />
         <br />
         <p className="text h22 lh150">
           In our modern day world of endlessly accessible information, podcasts,
@@ -146,7 +146,7 @@ class AboutPage extends Component {
     return (
       <div className="d-table text-center">
         <span className="vertical-center">
-          <img alt="Hompage-image3" className="img-fluid w-75" src={Pen} />
+          <img alt="Hompage-image3" className="img-fluid w-75 penImg" src={Pen} />
         </span>
       </div>
     );
@@ -184,7 +184,7 @@ class AboutPage extends Component {
     return (
       <div className="d-table text-center">
         <span className="vertical-center">
-          <img alt="Hompage-image4" className="img-fluid" src={Behavioural} />
+          <img alt="Hompage-image4" className="img-fluid behavioural-img" src={Behavioural} />
         </span>
       </div>
     );
@@ -229,7 +229,7 @@ class AboutPage extends Component {
     return (
       <div className="text-center d-table">
         <span className="vertical-center">
-          <img alt="Hompage-image2" className="img-fluid" src={House} />
+          <img alt="Hompage-image2" className="img-fluid houseImg" src={House} />
         </span>
       </div>
     );

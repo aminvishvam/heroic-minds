@@ -18,16 +18,63 @@ import plusSign from "../../assets/HomePageAssets/plusSign.svg";
 import logotherapy from "../../assets/AboutPageAssets/Man.svg";
 import behavioural from "../../assets/HomePageAssets/behavioural.png";
 import pen_icon from "../../assets/HomePageAssets/penIcon.png";
+import pen_icon2 from "../../assets/HomePageAssets/penIcon2.png";
 
 import "./HomePage.css";
 import "./Text.css";
 import "./TextMobile.css";
 import "./TextIpad.css";
 import { Link } from "react-router-dom";
+import { Modal } from "react-bootstrap";
+import dateFormat from 'dateformat';
 
 // export default HomePage;
 class HomePage extends Component {
-  state = {};
+  state = {
+    modal1IsOpen: false,
+    modal2IsOpen: false,
+    modal3IsOpen: false,
+    modal4IsOpen: false
+
+  };
+
+  openModal1 = () => {
+    this.setState({ modal1IsOpen: true });
+  };
+
+  closeModal1 = () => {
+    this.setState({ modal1IsOpen: false });
+  };
+
+  openModal2 = () => {
+    this.setState({ modal2IsOpen: true });
+  };
+
+  closeModal2 = () => {
+    this.setState({ modal2IsOpen: false });
+  };
+
+  openModal3 = () => {
+    this.setState({ modal3IsOpen: true });
+  };
+
+  closeModal3 = () => {
+    this.setState({ modal3IsOpen: false });
+  };
+
+  openModal4 = () => {
+    this.setState({ modal4IsOpen: true });
+  };
+
+  closeModal4 = () => {
+    this.setState({ modal4IsOpen: false });
+  };
+
+  renderDate() {
+    var now = new Date();
+    var today = dateFormat(now, "mmmm dS, yyyy")
+    return today.toString;
+  }
 
   renderMain() {
     return (
@@ -36,7 +83,7 @@ class HomePage extends Component {
           <div className=" col-6  header-text-animation mt-10">
             <div className="pb-10">
               <p className="text bold k40 lh140 ls1by2">
-                Shape your mind around the most powerful framework known for life.
+                Shape your mind around the most powerful framework for life.
               </p>
               <br />
             </div>
@@ -288,6 +335,11 @@ class HomePage extends Component {
     );
   }
 
+
+  togglePlay() {
+
+  }
+
   // ---------------- sound track 1  (title , catagory and lyrics) ------------ //
 
   renderStory1() {
@@ -297,16 +349,21 @@ class HomePage extends Component {
           <div className="Story-header my-auto">
             <div className="story-title  d-flex  flex-sm-row flex-column align-items-end">
               <p className="text s30 lh120 bold mr-4">A Heroic Mind</p>
-              <p className="text s18 lh150 text-gray-97 mr-3 fw600">Introduction Course</p>
+              <p className="text s18 lh150 text-gray-97 mr-3 fw500">
+                Introduction Course
+              </p>
             </div>
             <div className="mt-2 story-categary">
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Love</span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Behaviour</span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Philosophy</span>
-
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+                Love
+              </span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+                Behaviour
+              </span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+                Philosophy
+              </span>
             </div>
-
-
           </div>
           <div className="d-flex flex-row align-items-center justify-content-center audio-controls mr-4 pr-4 ">
             <input
@@ -332,17 +389,54 @@ class HomePage extends Component {
               alt="audio-controls"
               className="forward-btn mr-3"
               src={forward_20}
-
               width="35"
               height="35"
             />
+            <Modal show={this.state.modal1IsOpen} onHide={this.closeModal1} >
+              <Modal.Header>
+                <div className="d-flex flex-row align-items-center justify-content-between w-100 model-header mt-3">
+                  <div className="d-flex flex-row align-items-center"><img
+                    alt="pen"
+                    src={pen_icon2}
+                    width="30px"
+                    height="30px"
+                    className="mr-3"
+                  />
+                    <p className="text fw500 h40 ls1by2">A Heroic Mind</p>
+                  </div>
+                  <div className="d-flex flex-row align-items-center model-header2">
+                    <p className="text fw500 h26 mr-3"></p>
+                    <img
+                      alt="pen"
+                      src={audio1Img}
+                      width="90px"
+                      height="57px"
+                      className="mr-3 rounded"
+                    />
+
+                  </div>
+                </div>
+                <div ClassName="closeModel">
+                  <button type="button" onClick={this.closeModal1} className="btn-lg  close-btn">
+                    X
+                  </button>
+                </div>
+              </Modal.Header>
+              <Modal.Body className="ml-4 mt-2 pt-0">
+                <p className=" text fw600 text-gray-757 h16">{this.renderDate()}</p>
+                <p className="mt-5 text s18 bold lh140"><i>Thoughts? How does this story relate to your past? present? future?</i></p>
+                <p className="mt-5 mb-5 text s18 bold lh140"><i>Thoughts? How does this story relate to your past? present? future?</i></p>
+              </Modal.Body>
+            </Modal>
             <input
               type="image"
+              variant="primary"
+              onClick={this.openModal1}
               alt="audio-controls"
-              className="audio-btn pen-btn ml-4 "
-              src={pen_icon}
-              width="35px"
-              height="35px"
+              className="forward-btn ml-3"
+              src={pen_icon2}
+              width="35"
+              height="35"
             />
           </div>
         </div>
@@ -413,11 +507,9 @@ class HomePage extends Component {
           <br />
           <br />
         </div>
-      </div >
+      </div>
     );
   }
-
-  togglePlay() { }
 
   // ---------------- sound track 1  (image) ------------ //
   renderStory1Img() {
@@ -436,16 +528,21 @@ class HomePage extends Component {
           <div className="Story-header my-auto">
             <div className="story-title  d-flex  flex-sm-row flex-column align-items-end">
               <p className="text s30 lh120 bold mr-4">Music - Sia</p>
-              <p className="text s18 lh150 text-gray-97 mr-3 fw600">Pop Culture</p>
+              <p className="text s18 lh150 text-gray-97 mr-3 fw500">
+                Pop Culture
+              </p>
             </div>
             <div className="mt-2 story-categary">
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Love</span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Change</span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Altruism</span>
-
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+                Love
+              </span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+                Change
+              </span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+                Altruism
+              </span>
             </div>
-
-
           </div>
           <div className="d-flex flex-row align-items-center justify-content-center audio-controls mr-4 pr-4 ">
             <input
@@ -471,17 +568,54 @@ class HomePage extends Component {
               alt="audio-controls"
               className="forward-btn mr-3"
               src={forward_20}
-
               width="35"
               height="35"
             />
+            <Modal show={this.state.modal2IsOpen} onHide={this.closeModal2} >
+              <Modal.Header>
+                <div className="d-flex flex-row align-items-center justify-content-between w-100 model-header mt-3">
+                  <div className="d-flex flex-row align-items-center"><img
+                    alt="pen"
+                    src={pen_icon2}
+                    width="30px"
+                    height="30px"
+                    className="mr-3"
+                  />
+                    <p className="text fw500 h40 ls1by2">Music - Sia</p>
+                  </div>
+                  <div className="d-flex flex-row align-items-center model-header2">
+                    <p className="text fw500 h26 mr-3"></p>
+                    <img
+                      alt="pen"
+                      src={audio2Img}
+                      width="90px"
+                      height="57px"
+                      className="mr-3 rounded"
+                    />
+
+                  </div>
+                </div>
+                <div ClassName="closeModel">
+                  <button type="button" onClick={this.closeModal2} className="btn-lg  close-btn">
+                    X
+                  </button>
+                </div>
+              </Modal.Header>
+              <Modal.Body className="ml-4 mt-2 pt-0">
+                <p className=" text fw600 text-gray-757 h16">{this.renderDate()}</p>
+                <p className="mt-5 text s18 bold lh140"><i>Thoughts? How does this story relate to your past? present? future?</i></p>
+                <p className="mt-5 mb-5 text s18 bold lh140"><i>Thoughts? How does this story relate to your past? present? future?</i></p>
+              </Modal.Body>
+            </Modal>
             <input
               type="image"
+              variant="primary"
+              onClick={this.openModal2}
               alt="audio-controls"
-              className="audio-btn pen-btn ml-4 "
-              src={pen_icon}
-              width="35px"
-              height="35px"
+              className="forward-btn ml-3"
+              src={pen_icon2}
+              width="35"
+              height="35"
             />
           </div>
         </div>
@@ -554,17 +688,24 @@ class HomePage extends Component {
         <div className="d-flex flex-md-row flex-column justify-content-between align-items-center">
           <div className="Story-header my-auto">
             <div className="story-title  d-flex  flex-sm-row flex-column align-items-end">
-              <p className="text s30 lh120 bold mr-4">Quiddich - Harry Potter</p>
-              <p className="text s18 lh150 text-gray-97 mr-3 fw600">Fiction Literature</p>
+              <p className="text s30 lh120 bold mr-4">
+                Quiddich - Harry Potter
+              </p>
+              <p className="text s18 lh150 text-gray-97 mr-3 fw500">
+                Fiction Literature
+              </p>
             </div>
             <div className="mt-2 story-categary">
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Leadership</span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Adventure</span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Bravery</span>
-
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+                Leadership
+              </span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+                Adventure
+              </span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+                Bravery
+              </span>
             </div>
-
-
           </div>
           <div className="d-flex flex-row align-items-center justify-content-center audio-controls mr-4 pr-4 ">
             <input
@@ -590,17 +731,54 @@ class HomePage extends Component {
               alt="audio-controls"
               className="forward-btn mr-3"
               src={forward_20}
-
               width="35"
               height="35"
             />
+            <Modal show={this.state.modal3IsOpen} onHide={this.closeModal3} >
+              <Modal.Header>
+                <div className="d-flex flex-row align-items-center justify-content-between w-100 model-header mt-3">
+                  <div className="d-flex flex-row align-items-center"><img
+                    alt="pen"
+                    src={pen_icon2}
+                    width="30px"
+                    height="30px"
+                    className="mr-3"
+                  />
+                    <p className="text fw500 h40 ls1by2">Quiddich - Harry Potter</p>
+                  </div>
+                  <div className="d-flex flex-row align-items-center model-header2">
+                    <p className="text fw500 h26 mr-3"></p>
+                    <img
+                      alt="pen"
+                      src={audio3Img}
+                      width="90px"
+                      height="57px"
+                      className="mr-3 rounded"
+                    />
+
+                  </div>
+                </div>
+                <div ClassName="closeModel">
+                  <button type="button" onClick={this.closeModal3} className="btn-lg  close-btn">
+                    X
+                  </button>
+                </div>
+              </Modal.Header>
+              <Modal.Body className="ml-4 mt-2 pt-0">
+                <p className=" text fw600 text-gray-757 h16">{this.renderDate()}</p>
+                <p className="mt-5 text s18 bold lh140"><i>Thoughts? How does this story relate to your past? present? future?</i></p>
+                <p className="mt-5 mb-5 text s18 bold lh140"><i>Thoughts? How does this story relate to your past? present? future?</i></p>
+              </Modal.Body>
+            </Modal>
             <input
               type="image"
+              variant="primary"
+              onClick={this.openModal3}
               alt="audio-controls"
-              className="audio-btn pen-btn ml-4 "
-              src={pen_icon}
-              width="35px"
-              height="35px"
+              className="forward-btn ml-3"
+              src={pen_icon2}
+              width="35"
+              height="35"
             />
           </div>
         </div>
@@ -666,7 +844,6 @@ class HomePage extends Component {
     );
   }
 
-
   // ---------------- sound track 4 (title , catagory and lyrics) ------------ //
   renderStory4() {
     return (
@@ -674,17 +851,24 @@ class HomePage extends Component {
         <div className="d-flex flex-md-row flex-column justify-content-between align-items-center">
           <div className="Story-header my-auto">
             <div className="story-title  d-flex  flex-sm-row flex-column align-items-end">
-              <p className="text s30 lh120 bold mr-4">Nihilism - True Detective</p>
-              <p className="text s18 lh150 text-gray-97 mr-3 fw600">Pop Culture</p>
+              <p className="text s30 lh120 bold mr-4">
+                Nihilism - True Detective
+              </p>
+              <p className="text s18 lh150 text-gray-97 mr-3 fw500">
+                Pop Culture
+              </p>
             </div>
             <div className="mt-2 story-categary">
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Purpose</span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Meaning</span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Philosophy</span>
-
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+                Purpose
+              </span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+                Meaning
+              </span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+                Philosophy
+              </span>
             </div>
-
-
           </div>
           <div className="d-flex flex-row align-items-center justify-content-center audio-controls mr-4 pr-4 ">
             <input
@@ -710,17 +894,54 @@ class HomePage extends Component {
               alt="audio-controls"
               className="forward-btn mr-3"
               src={forward_20}
-
               width="35"
               height="35"
             />
+            <Modal show={this.state.modal4IsOpen} onHide={this.closeModal4} >
+              <Modal.Header>
+                <div className="d-flex flex-row align-items-center justify-content-between w-100 model-header mt-3">
+                  <div className="d-flex flex-row align-items-center"><img
+                    alt="pen"
+                    src={pen_icon2}
+                    width="30px"
+                    height="30px"
+                    className="mr-3"
+                  />
+                    <p className="text fw500 h40 ls1by2">Nihilism - True Detective</p>
+                  </div>
+                  <div className="d-flex flex-row align-items-center model-header2">
+                    <p className="text fw500 h26 mr-3"></p>
+                    <img
+                      alt="pen"
+                      src={audio4Img}
+                      width="90px"
+                      height="57px"
+                      className="mr-3 rounded"
+                    />
+
+                  </div>
+                </div>
+                <div ClassName="closeModel">
+                  <button type="button" onClick={this.closeModal4} className="btn-lg  close-btn">
+                    X
+                  </button>
+                </div>
+              </Modal.Header>
+              <Modal.Body className="ml-4 mt-2 pt-0">
+                <p className=" text fw600 text-gray-757 h16">{this.renderDate()}</p>
+                <p className="mt-5 text s18 bold lh140"><i>Thoughts? How does this story relate to your past? present? future?</i></p>
+                <p className="mt-5 mb-5 text s18 bold lh140"><i>Thoughts? How does this story relate to your past? present? future?</i></p>
+              </Modal.Body>
+            </Modal>
             <input
               type="image"
+              variant="primary"
+              onClick={this.openModal4}
               alt="audio-controls"
-              className="audio-btn pen-btn ml-4 "
-              src={pen_icon}
-              width="35px"
-              height="35px"
+              className="forward-btn ml-3"
+              src={pen_icon2}
+              width="35"
+              height="35"
             />
           </div>
         </div>
@@ -786,7 +1007,6 @@ class HomePage extends Component {
     );
   }
 
-
   renderCommunity() {
     return (
       <div className="home-page-10 my-container-90">
@@ -836,8 +1056,10 @@ class HomePage extends Component {
       <div className="home-page-13">
         <div className="row justify-content-center">
           <div className="col-lg-3 mb-8">
-            <a href="/"><p className="text text-center bold h30 lh130 pb-4">
-              <u>30-Day Free Trial</u></p>
+            <a href="/">
+              <p className="text text-center bold h30 lh130 pb-4">
+                <u>30-Day Free Trial</u>
+              </p>
             </a>
             <p className="text text-center h22 lh130 mt-4">
               30% of Heroic Minds Library
@@ -856,7 +1078,9 @@ class HomePage extends Component {
               Full Heroic Minds Library
             </p>
             <h1 className="text text-center h60 lh130">$170</h1>
-            <p className="text text-center h24 lh130 text-gray-97 ">$14/month</p>
+            <p className="text text-center h24 lh130 text-gray-97 ">
+              $14/month
+            </p>
           </div>
 
           <div className="col-lg-3 mb-8">
@@ -869,7 +1093,9 @@ class HomePage extends Component {
               Full Heroic Minds Library
             </p>
             <h1 className="text text-center h45 lh150">$240</h1>
-            <p className="text text-center h22 lh130 text-gray-97 ">$20/month</p>
+            <p className="text text-center h22 lh130 text-gray-97 ">
+              $20/month
+            </p>
           </div>
         </div>
       </div>
@@ -926,6 +1152,7 @@ class HomePage extends Component {
 
         <div className=" my-container-90">
           {/* -----------Listen Now page */}
+
           <section className="mt-15">{this.renderListenNowHead()}</section>
           <section className="mt-8 ">
             <DisplayBox

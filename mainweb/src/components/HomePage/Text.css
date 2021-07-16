@@ -211,9 +211,19 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
     font-size: 23px;
   }
 
+  .s25 {
+    font-family: sans-serif;
+    font-size: 25px;
+  }
+
   .s30 {
     font-family: sans-serif;
     font-size: 30px;
+  }
+
+  .s35 {
+    font-family: sans-serif;
+    font-size: 35px !important;
   }
 }
 /* line height  */
