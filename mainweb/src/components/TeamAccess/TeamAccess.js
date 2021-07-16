@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+
 import InputField from "../InputField/InputField";
 import InputTextArea from "../InputTextArea/InputTextArea";
 import DisplayBox from "../DisplayBox/DisplayBox";
@@ -8,7 +11,13 @@ import teamacess from "../../assets/teamacess.png";
 import _ from "lodash";
 import teamField from "./teamfield";
 import teamArea from "./teamArea";
+
+
+import * as actions from '../../actions/teamAccess';
+
+
 import "./TeamAccess.css";
+
 
 class TeamAccess extends Component {
   renderFields() {
@@ -41,7 +50,14 @@ class TeamAccess extends Component {
       );
     });
   }
+  
+  onSubmit = formValues => {
+    console.log(formValues)
+      this.props.createTeamAccess(formValues);
+   };
+
   renderLeft1() {
+    const { handleSubmit } = this.props;
     return (
       <div className="team-page-header">
         <p className="text k40 w600 bold lh140 ls1by2">Bring heroism into your team.</p>
@@ -61,7 +77,7 @@ class TeamAccess extends Component {
 
 
         </p>
-        <form>
+        <form onSubmit={handleSubmit(this.onSubmit)}>
           {this.renderFields()}
           {this.renderTextArea()}
           <div className="text-center">
@@ -138,8 +154,13 @@ function validatetextarea(values) {
   return errors;
 }
 
-export default reduxForm({
-  form: "TeamAccessForm",
-  validate,
+export default compose(
+  connect(null, actions ),
+  reduxForm({
+    validate,
   validatetextarea,
-})(TeamAccess);
+      form: 'TeamAccess',
+
+  })
+)(TeamAccess);
+
