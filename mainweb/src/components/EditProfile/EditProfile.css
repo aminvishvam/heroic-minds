@@ -1,0 +1,29 @@
+.Button-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile-pic-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.edit-profile-input {
+    width: 290px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.08);
+    mix-blend-mode: normal;
+    border: 2px solid rgba(112, 115, 128, 0.2);
+    border-radius: 10px;
+}
+
+.save-cancel-button {
+    width: 90px; 
+    border-radius: 8px; 
+    height: 40px;
+    background-color: #F57C00;
+    border: none;
+    color: #ffffff;
+}
