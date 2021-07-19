@@ -1,20 +1,4 @@
 /* stle for main page  */
-.main-page {
-  background-image: url("../../assets/HomePageAssets/home-page-background.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-}
-
-.main-page-img {
-  position: absolute;
-}
-
-.main-page-header {
-  width: 100%;
-}
-
 .header-text-animation {
   animation-delay: 1s;
   -webkit-animation: fadeInUp 0s ease-in-out; /* Chrome, Safari, Opera */
@@ -38,6 +22,17 @@
   overflow-y: scroll;
   scroll-behavior: smooth;
   color: #000;
+}
+
+.back-btn,
+.forward-btn {
+  width: 35px;
+  height: 35px;
+}
+
+.audio-btn {
+  width: 54px;
+  height: 52.2px;
 }
 
 /* width */
@@ -140,6 +135,7 @@
   margin-top: 35vh !important;
   margin-left: auto !important;
   width: 65vw !important;
+  height: 100% !important;
   max-width: 1100px !important;
 }
 
@@ -158,4 +154,108 @@
   background-color: #ffffff !important;
   border: none !important;
   cursor: pointer !important;
+}
+
+.image1 {
+  background-image: url("../../assets/HomePageAssets/home-page-background.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+}
+
+@media (max-width: 991px) {
+  .home-page-1 .col-6 {
+    flex: 0 0 90% !important;
+    width: 90% !important;
+    max-width: 90% !important;
+  }
+
+  .page-2-text {
+    bottom: -40px;
+  }
+
+  .plusImg {
+    max-width: 50px !important;
+    max-height: 50px !important;
+  }
+
+  .home-page-3-img,
+  .img-storytelling {
+    max-width: 210px !important;
+    max-height: 210px;
+  }
+
+  .home-page-5 img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .image1 {
+    height: 700px;
+  }
+
+  .home-page-2 .text-right {
+    text-align: center !important;
+  }
+
+  .section-box,
+  .section-box-white {
+    padding: 12% 8%;
+  }
+}
+
+@media (max-width: 767px) {
+  .image1 {
+    height: 600px;
+  }
+
+  .back-btn,
+  .forward-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .audio-btn {
+    width: 50px;
+    height: 48px;
+  }
+
+  .section-box-white {
+    background-color: #eeeeee;
+  }
+}
+
+@media (max-width: 585px) {
+  .home-page-3-img,
+  .img-storytelling {
+    max-width: 170px !important;
+    max-height: 170px;
+  }
+
+  .home-page-5 img {
+    max-width: 110px;
+    max-height: 110px;
+  }
+
+  .modal-dialog {
+    margin-top: 20vh !important;
+    margin-left: 15vw !important;
+  }
+
+  .model-header2 {
+    margin-top: 10%;
+  }
+
+  .story-categary {
+    margin-top: 0px !important;
+  }
+
+  .home-page-5 .lh150 {
+    line-height: 120%;
+  }
+
+  .vertical-center {
+    vertical-align: bottom !important;
+  }
 }

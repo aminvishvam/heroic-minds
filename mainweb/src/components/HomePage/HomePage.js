@@ -17,7 +17,7 @@ import forward_20 from "../../assets/HomePageAssets/forward_20.png";
 import plusSign from "../../assets/HomePageAssets/plusSign.svg";
 import logotherapy from "../../assets/AboutPageAssets/Man.svg";
 import behavioural from "../../assets/HomePageAssets/behavioural.png";
-import pen_icon from "../../assets/HomePageAssets/penIcon.png";
+import pen_icon from "../../assets/HomePageAssets/penIcon2.svg";
 import pen_icon2 from "../../assets/HomePageAssets/penIcon2.png";
 
 import "./HomePage.css";
@@ -80,7 +80,7 @@ class HomePage extends Component {
     return (
       <div className="my-container-85 home-page-1">
         <div className="row text-left">
-          <div className=" col-6  header-text-animation mt-10">
+          <div className=" col-11 col-sm-9 col-md-7 col-lg-7 col-xl-7  header-text-animation mt-15">
             <div className="pb-10">
               <p className="text bold k40 lh140 ls1by2">
                 Shape your mind around the most powerful framework for life.
@@ -116,7 +116,7 @@ class HomePage extends Component {
 
   renderLeft1() {
     return (
-      <div className="home-page-3">
+      <div className="home-page-3 mt-5">
         <p className="text h22 lh130">
           Philosophical and psychological heavy weights have known for hundreds
           of years that there are currents beneath our behaviour guiding what we
@@ -143,16 +143,16 @@ class HomePage extends Component {
   }
   renderRight1() {
     return (
-      <div className="d-table home-page-3-image">
+      <div className="text-center d-table mt-3">
         <span className="vertical-center">
-          <img alt="Hompage-image2" className="img-fluid" src={HompageImage2} />
+          <img alt="Hompage-image2" className="img-fluid home-page-3-img" src={HompageImage2} />
         </span>
       </div>
     );
   }
   renderLeft2() {
     return (
-      <div className="section-box home-page-4">
+      <div className="section-box home-page-4 mt-5">
         <h1 className="text text-white bold k43 lh120 ls1by2">The Problem</h1>
         <br />
         <p className="text text-white h21 lh130 ">
@@ -170,7 +170,7 @@ class HomePage extends Component {
   }
   renderRight2() {
     return (
-      <div className="section-box-white home-page-4">
+      <div className="section-box-white home-page-4 mt-5">
         <h1 className="text text-black bold k43 lh120 ls1by2">The Solution </h1>
         <br />
         <p className="text text-black h21 lh130 ">
@@ -189,8 +189,8 @@ class HomePage extends Component {
 
   rendorComponantPlus() {
     return (
-      <div className="row home-page-5">
-        <div className="col-md-5 text-center">
+      <div className="row home-page-5 mr-3">
+        <div className="col-md-5 col-lg-5 col-xl-5 col-sm-5 col-5 text-center">
           <span className="">
             <img
               alt=""
@@ -207,12 +207,12 @@ class HomePage extends Component {
             </p>
           </span>
         </div>
-        <div className="col-md-2 text-center verical-center my-auto">
+        <div className="col-md-2 col-lg-2 col-xl-2 col-sm-2 col-2 text-center verical-center my-auto">
           <span className="">
             <img alt="" className="img-fluid plusImg" src={plusSign} />
           </span>
         </div>
-        <div className="col-md-5 text-center">
+        <div className="col-md-5 col-lg-5 col-xl-5 col-sm-5 col-5 text-center">
           <span className="">
             <img alt="" className="img-fluid h-50 pb-4" src={behavioural} />
 
@@ -230,11 +230,11 @@ class HomePage extends Component {
   }
   renderLeft4() {
     return (
-      <div className="d-table home-page-6">
+      <div className="d-table home-page-6 pt-5">
         <span className="vertical-center text-center">
           <img
             alt="Hompage-image2"
-            className="img-fluid img-storytelling pr-4"
+            className="img-fluid img-storytelling  pr-4"
             src={storytelling}
           />
         </span>
@@ -243,7 +243,7 @@ class HomePage extends Component {
   }
   renderRight4() {
     return (
-      <div className="home-page-6">
+      <div className="home-page-6 mt-5">
         <h1 className="text k40 lh130 ls1by2">
           Through the invigorating medium of <b>story telling.</b>
         </h1>
@@ -345,34 +345,32 @@ class HomePage extends Component {
   renderStory1() {
     return (
       <div>
-        <div className="d-flex flex-md-row flex-column justify-content-between align-items-center">
-          <div className="Story-header my-auto">
-            <div className="story-title  d-flex  flex-sm-row flex-column align-items-end">
+        <div className="d-flex flex-sm-nowrap flex-wrap-reverse justify-content-sm-between justify-content-between align-items-sm-center align-items-end story-titlebar my-container-95 mx-0">
+          <div className="Story-header my-auto pt-4">
+            <div className="story-title  d-flex flex-wrap align-items-lg-end">
               <p className="text s30 lh120 bold mr-4">A Heroic Mind</p>
               <p className="text s18 lh150 text-gray-97 mr-3 fw500">
                 Introduction Course
               </p>
             </div>
-            <div className="mt-2 story-categary">
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+            <div className="d-flex flex-wrap mt-1 story-categary">
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
                 Love
               </span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
                 Behaviour
               </span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
                 Philosophy
               </span>
             </div>
           </div>
-          <div className="d-flex flex-row align-items-center justify-content-center audio-controls mr-4 pr-4 ">
+          <div className="d-flex flex-row align-items-center justify-content-center mx-auto audio-controls mt-4 ml-2">
             <input
               type="image"
               alt="audio-controls"
               className=" back-btn mr-3"
               src={back_20}
-              width="35"
-              height="35"
             />
             <input
               type="image"
@@ -380,8 +378,7 @@ class HomePage extends Component {
               id="play-btn"
               className="audio-btn mr-3"
               src={playIcon}
-              width="54px"
-              height="52.2px"
+
               onClick={this.togglePlay()}
             />
             <input
@@ -389,12 +386,11 @@ class HomePage extends Component {
               alt="audio-controls"
               className="forward-btn mr-3"
               src={forward_20}
-              width="35"
-              height="35"
             />
+
             <Modal show={this.state.modal1IsOpen} onHide={this.closeModal1} >
               <Modal.Header>
-                <div className="d-flex flex-row align-items-center justify-content-between w-100 model-header mt-3">
+                <div className="d-flex flex-wrap align-items-center justify-content-between w-100 model-header mt-3">
                   <div className="d-flex flex-row align-items-center"><img
                     alt="pen"
                     src={pen_icon2}
@@ -402,16 +398,16 @@ class HomePage extends Component {
                     height="30px"
                     className="mr-3"
                   />
-                    <p className="text fw500 h40 ls1by2">A Heroic Mind</p>
+                    <p className="text fw500 h40 ls1by2">Sample Journal</p>
                   </div>
-                  <div className="d-flex flex-row align-items-center model-header2">
-                    <p className="text fw500 h26 mr-3"></p>
+                  <div className="d-flex flex-wrap align-items-center justify-content-center model-header2">
+                    <p className="text fw500 h26 mr-3">A Heroic Mind</p>
                     <img
                       alt="pen"
                       src={audio1Img}
                       width="90px"
                       height="57px"
-                      className="mr-3 rounded"
+                      className="mr-3 rounded mt-3"
                     />
 
                   </div>
@@ -433,8 +429,8 @@ class HomePage extends Component {
               variant="primary"
               onClick={this.openModal1}
               alt="audio-controls"
-              className="forward-btn ml-3"
-              src={pen_icon2}
+              className="audio-btn ml-3"
+              src={pen_icon}
               width="35"
               height="35"
             />
@@ -514,9 +510,12 @@ class HomePage extends Component {
   // ---------------- sound track 1  (image) ------------ //
   renderStory1Img() {
     return (
-      <div className="story-img  img-fluid center-text mt-3 mb-3">
-        <img alt="story-thumbnail" className="img-fluid " src={audio1Img} />
-      </div>
+
+      <div className=" d-table story-img-section" >
+        <span className="vertical-center text-center">
+          <img alt="Hompage-image1 " className="img-fluid story-img " src={audio1Img} />
+        </span>
+      </div >
     );
   }
 
@@ -1111,29 +1110,31 @@ class HomePage extends Component {
     };
     return (
       <div className="HomePage">
-        <section className="HomePageHeader" style={mainSectionStyle}>
+        <section className="HomePageHeader image1">
           {this.renderMain()}
         </section>
 
         <section className="mt-7">{this.renderpage2()}</section>
 
         <div className="HomePageData my-container-85">
-          <section className="mt-6">
+          <section className="mt-5">
             <DisplayBox
               colLeft="8"
               colRight="4"
               contentLeft={this.renderLeft1()}
               contentRight={this.renderRight1()}
               fullContainer="true"
+              alwaysColumn="true"
             />
           </section>
-          <section className="mt-15">
+          <section className="mt-18">
             <DisplayBox
               colLeft="6"
               colRight="6"
               contentLeft={this.renderLeft2()}
               contentRight={this.renderRight2()}
               fullContainer="true"
+              alwaysColumn="true"
             />
           </section>
 
@@ -1164,7 +1165,7 @@ class HomePage extends Component {
               fullContainer="true"
             />
           </section>
-          <section className="mt-4">
+          <section className="mt-6">
             <DisplayBox
               colLeft="8"
               colRight="4"
@@ -1174,7 +1175,7 @@ class HomePage extends Component {
               fullContainer="true"
             />
           </section>
-          <section className=" mt-4">
+          <section className=" mt-6">
             <DisplayBox
               colLeft="8"
               colRight="4"
@@ -1185,7 +1186,7 @@ class HomePage extends Component {
             />
           </section>
 
-          <section className=" mt-4">
+          <section className=" mt-6">
             <DisplayBox
               colLeft="8"
               colRight="4"

@@ -76,7 +76,7 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   font-weight: 500;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   /* font-family = Karma with different font sizes */
   .k70 {
     font-family: "Karma";
@@ -355,7 +355,7 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 }
 
 .mt-4 {
-  margin-top: 4%;
+  margin-top: 4% !important;
 }
 
 .mt-5 {

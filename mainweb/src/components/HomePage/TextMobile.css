@@ -3,14 +3,12 @@
     ##Screen = B/w 481px to 767px
   */
 
-@media (min-width: 481px) and (max-width: 767px) {
-}
-
-/* 
+@media (min-width: 320px) and (max-width: 767px) {
+  /* 
     ##Device = Most of the Smartphones Mobiles (Portrait)
     ##Screen = B/w 320px to 479px
   */
-@media (min-width: 320px) and (max-width: 480px) {
+  /* @media (min-width: 320px) and (max-width: 480px) { */
   /* font-family = Karma with different font sizes */
 
   .k70 {

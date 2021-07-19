@@ -24,16 +24,6 @@ import FAQ from "../Footer/FAQ";
 class App extends Component {
   state = {};
 
-  state = { show: false }
-
-  showModal = () => {
-    this.setState({ show: true });
-  }
-
-  hideModal = () => {
-    this.setState({ show: false });
-  }
-
   render() {
     return (
       <div className="App">
