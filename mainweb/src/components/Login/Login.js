@@ -32,7 +32,7 @@ class Login extends Component {
           <p>The Hero is in you</p>
         </div>
         <div className="row justify-content-center">
-          <div>
+          <div style={{ maxWidth: '600px', width: '100%' }} className="container">
             <form onSubmit={handleSubmit(this.onSubmit)}>
               <Field
                 name="email"
