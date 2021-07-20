@@ -7,8 +7,9 @@ const DisplayBox = ({
     contentRight,
     reverse = "false",
     fullContainer = "false",
+    alwaysColumn = "false"
 }) => {
-    if (reverse === "true" && fullContainer === "false") {
+    if (reverse === "true" && fullContainer === "false" && alwaysColumn === "false") {
         return (
             <div className="DisplayBox">
                 <section>
@@ -30,7 +31,7 @@ const DisplayBox = ({
             </div>
         );
     }
-    else if (fullContainer === "true" && reverse === "false") {
+    else if (fullContainer === "true" && reverse === "false" && alwaysColumn === "false") {
         return (
             <div className="DisplayBox">
                 <section>
@@ -52,7 +53,30 @@ const DisplayBox = ({
             </div>
         );
     }
-    if (reverse === "true" && fullContainer === "true") {
+
+    else if (fullContainer === "true" && alwaysColumn === "true") {
+        return (
+            <div className="DisplayBox">
+                <section>
+                    <div className="container-fluid">
+                        <div className="row justify-content-center">
+                            <div
+                                className={`col-lg-${colLeft} col-md-${colLeft} col-sm-12 col-12 justify-content-center `}
+                            >
+                                {contentLeft}
+                            </div>
+                            <div
+                                className={`col-lg-${colRight} col-md-${colRight} col-sm-12 col-12 justify-content-center `}
+                            >
+                                {contentRight}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        );
+    }
+    else if (reverse === "true" && fullContainer === "true" && alwaysColumn === "false") {
         return (
             <div className="DisplayBox">
                 <section>
@@ -74,6 +98,7 @@ const DisplayBox = ({
             </div>
         );
     }
+
     else {
         return (
             <div className="DisplayBox">
