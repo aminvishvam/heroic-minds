@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    float: right;
 }
 
 .profile-pic-button-container {
@@ -18,6 +19,18 @@
     border: 2px solid rgba(112, 115, 128, 0.2);
     border-radius: 10px;
 }
+.edit-profile-input:first-child {
+    margin-right: 20px;
+}
+
+.description-field {
+    width: 600px;
+    height: 140px;
+    background: rgba(255, 255, 255, 0.08);
+    mix-blend-mode: normal;
+    border: 2px solid rgba(112, 115, 128, 0.2);
+    border-radius: 10px;
+}
 
 .save-cancel-button {
     width: 90px; 
@@ -27,3 +40,31 @@
     border: none;
     color: #ffffff;
 }
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .container {
+        display: flex;
+        flex-direction: column !important;
+        margin-bottom: 8px;
+    }
+    .profile-pic-button-container {
+        align-items: center;
+    }
+    .Button-wrapper {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    .container {
+        display: flex;
+        flex-direction: column !important;
+        margin-bottom: 8px;
+    }
+  }

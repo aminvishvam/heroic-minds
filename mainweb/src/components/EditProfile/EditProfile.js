@@ -18,13 +18,13 @@ import ProfilePic from '../../assets/ProfilePic.svg';
 
 
 class EditProfile extends Component {
-  // onSubmit = (formValues) => {
-  //   this.props.personalRegister(formValues);
-  // };
+  onSubmit = (formValues) => {
+    this.props.personalRegister(formValues);
+  };
 
-  // clearErrorState = () => {
-  //   this.props.resetPreviousError();
-  // }
+  clearErrorState = () => {
+    this.props.resetPreviousError();
+  }
 
   renderLocationOption() {
     const location = [{ id: 1, area: 'Ahmedabad' }, { id: 1, area: 'Ahmedabad' }, { id: 1, area: 'Ahmedabad' }];
@@ -58,12 +58,12 @@ class EditProfile extends Component {
         <div className="profile-pic-button-container">
           <img width="280px" height="280px" src={ProfilePic} />
           <div className="Button-wrapper">
-            <button style={{ width: '95px', height: '40px' }} className="btn btn-dark">Upload</button>
             <button style={{ width: '95px', height: '40px' }} className="btn btn-dark">Remove</button>
+            <button style={{ width: '95px', height: '40px' }} className="btn btn-dark">Upload</button>
           </div>
         </div>
-        <div className="row justify-content-center">
-          <div>
+        <div>
+          <div className="container">
             <form onSubmit={handleSubmit(this.onSubmit)}>
               <div className="row justify-content-between">
                 <Field
@@ -80,7 +80,7 @@ class EditProfile extends Component {
                   label="Last Name"
                   className="edit-profile-input"
                   component={RenderField}
-                  validate={[required(), email()]}
+                  validate={[required()]}
                 />
               </div>
               <div className="row justify-content-between">
@@ -94,17 +94,17 @@ class EditProfile extends Component {
                   validate={[required(), email()]}
                 />
               </div>
-              <div>
+              <div className="row justify-content-between">
                 <Field
                   name="Description"
-                  type="text-area"
                   label="Description"
+                  className="description-field"
                   component={RenderField}
-                  validate={[required(), email()]}
+                  validate={[required()]}
                 />
               </div>
-              <div style={{ float:'right' }} className="Button-wrapper">
-                <button  className="btn btn-dark save-cancel-button">Cancel</button>
+              <div className="Button-wrapper">
+                <button style={{ marginRight: '25px' }} className="btn btn-dark save-cancel-button">Cancel</button>
                 <button className="save-cancel-button" >Save</button>
               </div>
             </form>
@@ -120,18 +120,16 @@ class EditProfile extends Component {
   }
 }
 
-// function mapStateToProps(state) {
-//   return {
-//     errorMessage: state.auth.errorMessage,
-//     emailVerfiyError: state.auth.emailVerifyError,
-//   };
-// }
+function mapStateToProps(state) {
+  return {
+    errorMessage: state.auth.errorMessage,
+    emailVerfiyError: state.auth.emailVerifyError,
+  };
+}
 
-// export default compose(
-//   connect(mapStateToProps, actions),
-//   reduxForm({
-//     form: "PersonalRegisterForm",
-//   })
-// )(EditProfile);
- export default EditProfile;
- 
+export default compose(
+  connect(mapStateToProps, actions),
+  reduxForm({
+    form: "PersonalRegisterForm",
+  })
+)(EditProfile);

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Menu, MenuItem } from "@material-ui/core";
 import ProfilePic from '../../assets/ProfilePic.svg';
 import Nav from "react-bootstrap/Nav";
+import history from "../../history";
 
 
 class TopNavProfile extends Component {
@@ -52,7 +53,10 @@ class TopNavProfile extends Component {
                         <label style={{ fontSize: '20px', marginLeft: '15px', lineHeight: '24px' }} >User Name</label>
                         <MenuItem onClick={this.handleClose}>Connect with Friends</MenuItem>
                         <div style={{ height: '1px', backgroundColor: '#A8A8A8' }}></div>
-                        <MenuItem onClick={this.handleClose}>Profile Settings</MenuItem>
+                        <MenuItem onClick={() => {
+                            history.push('/edit-profile');
+                            this.handleClose();
+                        }}>Profile Settings</MenuItem>
                         <MenuItem onClick={this.handleClose}>Billing & Payments</MenuItem>
                         <div style={{ height: '1px', backgroundColor: '#A8A8A8' }}></div>
                         <MenuItem onClick={this.handleClose}>Get Help & Give Feedback</MenuItem>
