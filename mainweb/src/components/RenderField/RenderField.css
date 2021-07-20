@@ -6,8 +6,8 @@
 }
 
 .input-field {
-    width: auto; 
-    min-width: 590px;
+    width: 100%; 
+    max-width: 590px;
     height: 55px;
     background: rgba(112, 115, 128, 0.08);
     border-radius: 10px;

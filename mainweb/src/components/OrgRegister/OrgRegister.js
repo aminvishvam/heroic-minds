@@ -60,7 +60,7 @@ class OrgRegister extends Component {
     return (
       <div className="container justify-content-center">
         <div className="row justify-content-center">
-          <div>
+          <div style={{ maxWidth: '600px', width: '100%' }} className="container"> 
             <form onSubmit={handleSubmit(this.onSubmit)}>
               <Field
                 name="firstName"

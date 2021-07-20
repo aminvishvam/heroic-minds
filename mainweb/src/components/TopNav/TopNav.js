@@ -7,6 +7,10 @@ import { NavLink } from "react-router-dom";
 import "./TopNav.css";
 import { connect } from "react-redux";
 
+import TopNavLibrary from "../TopNavLibrary/TopNavLibrary";
+import TopNavProfile from "../TopNavProfile/TopNavProfile";
+import SearchBar from "../SearchBar/searchBar";
+
 class TopNav extends Component {
   itemStyle = {
     color: "black",
@@ -31,17 +35,7 @@ class TopNav extends Component {
                 navbarScroll
               >
                 <span className="Nav-item-left d-flex align-items-center">
-                  <NavLink
-                    to="/library"
-                    className="Nav-text navbar-right s18"
-                    activeClassName="active"
-                    activeStyle={{
-                      fontWeight: "bold",
-                      color: "#F57C00",
-                    }}
-                  >
-                    Library
-                  </NavLink>
+                  <TopNavLibrary />
                   <NavLink
                     to="/community"
                     className="Nav-text s18"
@@ -54,7 +48,9 @@ class TopNav extends Component {
                     Community
                   </NavLink>
                 </span>
+                <SearchBar />
               </Nav>
+              <TopNavProfile />
             </Navbar.Collapse>
           </Navbar>
         </div>
