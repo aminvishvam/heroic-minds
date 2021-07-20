@@ -26,7 +26,7 @@ import "./TextMobile.css";
 import "./TextIpad.css";
 import { Link } from "react-router-dom";
 import { Modal } from "react-bootstrap";
-import dateFormat from "dateformat";
+import dateFormat from "npm install dateformat";
 
 // export default HomePage;
 class HomePage extends Component {
