@@ -15,30 +15,30 @@ class AboutPage extends Component {
         <div className="justify-content-center ">
           <h1 className="text k40 lh150">
             <span className="bold ls1"> Heroic Minds </span> <br />
-            Logotherapy➔ Journaling➔ Behavioural Activation
+            Listen ➔ Reflect ➔ Act
           </h1>
           <br />
           <br />
           <br />
           <p className="text h22 lh150">
-            The basis of Heroic Minds is that if you want to live a purpose -
-            driven, resilient, high - performing life, without being stuck in
-            your own head, without forcing yourself to do the right thing, then
-            you need to intervene at the level of what drives your perceptions,
-            which is what you value and what you are aiming at in your life–
-            what we call, your value system or global beliefs.This value system
-            or global beliefs provide context for everything you do.Are you
-            seeking to create prosperity everywhere you go or do you feel that
-            there is a sense of meaninglessness to your life and a void that
-            needs to be filled ?
+            The basis of Heroic Minds is that if you want to live a
+            purpose-driven, resilient, high-performing life, without being stuck
+            in your own head, without forcing yourself to do the right thing,
+            then you need to intervene at the level of what drives your
+            perceptions, which is what you value and what you are aiming at in
+            your life – what we call, your value system or global beliefs. This
+            value system or global beliefs provide context for everything you
+            do. Are you seeking to create prosperity everywhere you go or do you
+            feel that there is a sense of meaninglessness to your life and a
+            void that needs to be filled?
             <br />
             <br />
             Global beliefs are the currents beneath your behaviour guiding how
-            you feel, think and what you ultimately do.That feeling when you
-            don’ t want to do something you know you should do or the reason you
-            feel off and can’ t quite explain why.Developing and nurturing these
+            you feel, think and what you ultimately do. That feeling when you
+            don’t want to do something you know you should do or the reason you
+            feel off and can’t quite explain why. Developing and nurturing these
             global beliefs are what build the strength of your psychological
-            foundation and provide direction to your life.This is what
+            foundation and provide direction to your life. This is what
             scientists, philosophers and psychologists have known for thousands
             of years.
           </p>
@@ -48,72 +48,88 @@ class AboutPage extends Component {
   }
   renderLeft1() {
     return (
-      <div className="about-page-2 image-padding-right">
-        <h1 className="text k45 lh120 ls1by2">
-          1. Fortify Your Psychological Foundation(Via Storytelling)
+      <div className="about-page-2 image-padding-right  pt-4">
+        <h1 className="text k45 lh120">
+          <b>Listen</b> to Powerful Stories (Logotherapy)
         </h1>
         <br />
         <br />
         <p className="text h22 lh150">
           Find meaning in life beyond the illusive ideas that society reinforces
-          today. <br />
+          today.
+          <br />
           Build a psychological foundation or reason to live that transcends any
-          finite“ thing” such that it can never be taken from you. <br />
+          finite “thing” such that it can never be taken from you.
+          <br />
           <br />
           Seek to find purpose in your daily ativities that truly fulfil your
-          deepest human needs and invigorate your life.A purose that brings
+          deepest human needs and invigorate your life. A purose that brings
           about love, connection, impact, and a feeling of adventure regardless
-          of your environment or circumstance. <br />
+          of your environment or circumstance.
+          <br />
           <br />
           When your psyche is oriented in this way, composure, fulfillment, and
-          an aptitude for high - performance become attainable in every life
-          moment.This makes daily tasks feel like an adventure and life itself,
-          an opportunity. <br />
-          <br /> “Life is never made unbearable by circumstances, but only by
-          lack of meaning and purpose.” <br /> -Creator of Logotherapy, Viktor
-          Frankl
+          an aptitude for high-performance become attainable in every life
+          moment. This makes daily tasks feel like an adventure and life itself,
+          an opportunity.
+          <br />
+          <br />
+          “Life is never made unbearable by circumstances, but only by lack of
+          meaning and purpose.”
+          <br />
+          <span className="h20">- Creator of Logotherapy, Viktor Frankl</span>
         </p>
       </div>
     );
   }
   renderRight1() {
     return (
-      <div className="text-center d-table ">
+      <div className="text-center d-table  pt-4">
         <span className="vertical-center">
-          <img alt="Hompage-image1 " className="img-fluid h-75" src={Man} />
+          <img
+            alt="Hompage-image1"
+            className="img-fluid man-img"
+            src={Man}
+          />
         </span>
       </div>
     );
   }
   renderLeft2() {
     return (
-      <div className="d-table text-center">
+      <div className="d-table text-center  pt-4">
         <span className="vertical-center">
-          <img alt="Hompage-image2" className="img-fluid " src={Storytelling} />
+          <img
+            alt="Hompage-image2"
+            className="img-fluid story-telling-img"
+            src={Storytelling}
+          />
         </span>
       </div>
     );
   }
   renderRight2() {
     return (
-      <div className="about-page-3 image-padding-left">
-        {/* <h1 className="text k45 lh120 ls1by2 ">2. Logotherapy</h1>
-                <br /> */}
+      <div className="about-page-3 image-padding-left  pt-4">
         <p className="text h22 lh150">
-          The Heroic Minds Library is full of 5 - 10 minute short and engaging
+          The Heroic Minds Library is full of 5-10 minute short and engaging
           stories to wake up with, enjoy during your communte or to fall asleep
-          to at night. <br />
+          to at night.
+          <br />
           <br />
           Heroic Minds utilizes the enjoyable medium of story telling as an
-          engaging, therapeutic experience. <br />
+          engaging, therapeutic experience.
+          <br />
           <br />
           Story telling creates a felt experience that allows you the listener,
-          to feel the message in the story.It is feelings that drives behaviour
-          more than thought alone. <br />
+          to feel the message in the story. It is feelings that drives behaviour
+          more than thought alone.
           <br />
-          Story telling is up to <b> 22 x more effective </b> in behavioural
-          change and memory of ideas than rational reason alone. <br />
-          -Standord University, 2019
+          <br />
+          Story telling is up to <b>22x more effective</b> in behavioural change
+          and memory of ideas than rational reason alone.
+          <br />
+          <span className="h20">- Standord University, 2019</span>
         </p>
       </div>
     );
@@ -121,32 +137,39 @@ class AboutPage extends Component {
 
   renderLeft3() {
     return (
-      <div className="about-page-4 image-padding-right">
-        <h1 className="text k45 lh120"> 3. Journal(In - App) </h1> <br />
+      <div className="about-page-4 image-padding-right  pt-4">
+        <h1 className="text k45 lh120">
+          <b>Reflect</b> (In-App Journal)
+        </h1>
+        <br />
         <br />
         <p className="text h22 lh150">
           In our modern day world of endlessly accessible information, podcasts,
           videos, articles and more, people often <b>consume knowledge</b>,
-          &nbsp;<b>dont apply it</b>&nbsp;and&nbsp;<b>forget it</b>
+          <b>dont apply it</b> and <b>forget it</b>. Meaning, the opportunity to
+          apply and embody learnt concepts, is missed.
           <br />
-          Meaning, the opportunity to apply and embody learnt concepts, is
-          missed. <br />
           <br />
           Heroic Minds ensures you have the opportunity to fully engage with
-          these powerful stories by giving yo the tools and guidance to reflect
-          on how they relate to your life. <br />
+          these powerful stories by giving you the tools and guidance to reflect
+          on how they relate to your life.
           <br />
-          This in -app journal is completely anonymous, secure and available for
-          you to edit, delete, or re - read in the future. <br />
+          <br />
+          This in-app journal is completely anonymous, secure and available for
+          you to edit, delete, or re-read in the future.
         </p>
       </div>
     );
   }
   renderRight3() {
     return (
-      <div className="d-table text-center">
+      <div className="d-table text-center  pt-4">
         <span className="vertical-center">
-          <img alt="Hompage-image3" className="img-fluid w-75" src={Pen} />
+          <img
+            alt="Hompage-image3"
+            className="img-fluid  penImg"
+            src={Pen}
+          />
         </span>
       </div>
     );
@@ -154,27 +177,33 @@ class AboutPage extends Component {
 
   renderRight4() {
     return (
-      <div className="about-page-5 image-padding-left">
-        <h1 className="text k45 lh120"> 4. Behavioural Activation </h1> <br />
+      <div className="about-page-5 image-padding-left pt-4">
+        <h1 className="text k45 lh120">
+          <b>Act</b> (Behavioural Activation)
+        </h1>
+        <br />
         <br />
         <p className="text  h22 lh150">
-          The most important part of Heroic Minds is implementation.Thinking is
-          not enough.It is the feelings created through action and behaviour
-          that brings meaning to your experience. <br />
+          The most important part of Heroic Minds is implementation.
+          <br />
+          Thinking is not enough. It is the feelings created through action and
+          behaviour that brings meaning to your experience.
+          <br />
           <br />
           Behaviours that truly fulfil your required human needs and improve the
           quality of your life have shown to be the most effective way to combat
-          negative feelings when compared to other leading tactics(World
-          Psychiatry Association, 2021). <br />
+          negative feelings when compared to other leading tactics (World
+          Psychiatry Association, 2021).
+          <br />
           <br />
           Heroic Minds aims to activate an impulse to do more of what brings
-          real value, purpose and meaning into your life.In other terms,
+          real value, purpose and meaning into your life. In other terms,
           activating heroic behaviours or a heroic orientation to your life.
           <br />
           <br />
           The goal is to have as many of these experiences as possible in your
-          day to day life.Ultimately leading to a purpose - driven, resilient,
-          high - performing individual. <br />
+          day to day life. Ultimately leading to a purpose-driven, resilient,
+          high-performing individual.
           <br />
         </p>
       </div>
@@ -182,16 +211,20 @@ class AboutPage extends Component {
   }
   renderLeft4() {
     return (
-      <div className="d-table text-center">
+      <div className="d-table text-center  pt-4">
         <span className="vertical-center">
-          <img alt="Hompage-image4" className="img-fluid" src={Behavioural} />
+          <img
+            alt="Hompage-image4"
+            className="img-fluid behavioural-img"
+            src={Behavioural}
+          />
         </span>
       </div>
     );
   }
   renderCom2() {
     return (
-      <div className="about-page-6">
+      <div className="about-page-6  pt-4">
         <h1 className="text text-center h40 bold lh150 ls1by2">
           Build your psychological foundation on solid rock.
         </h1>
@@ -227,16 +260,20 @@ class AboutPage extends Component {
   }
   renderLeft5() {
     return (
-      <div className="text-center d-table">
+      <div className="text-center d-table  pt-4">
         <span className="vertical-center">
-          <img alt="Hompage-image2" className="img-fluid" src={House} />
+          <img
+            alt="Hompage-image2"
+            className="img-fluid houseImg"
+            src={House}
+          />
         </span>
       </div>
     );
   }
   renderRight5() {
     return (
-      <div className="abput-page-7 text-center d-table">
+      <div className="abput-page-7 text-center d-table  pt-4">
         <span className="vertical-center">
           <p className="text h30 lh160 w500">
             When the heavy rain, wind, and floods arrived, those that built
@@ -256,7 +293,7 @@ class AboutPage extends Component {
   }
   renderCom3() {
     return (
-      <div className="about-page-8">
+      <div className="about-page-8  pt-4">
         <p className="text h20 text-center lh150">
           The optimal way to achieve a heroic life is such that you are not
           looking to the world to be fulfilled, you are not calculating your
@@ -280,58 +317,58 @@ class AboutPage extends Component {
 
   render() {
     return (
-      <div className="about-page my-container-90">
+      <div className="about-page my-container-85">
         <section className="mt-8"> {this.renderComp()} </section>
-        <div className="p-3">
-          <section className="mt-13">
-            <DisplayBox
-              colLeft="9"
-              colRight="3"
-              contentLeft={this.renderLeft1()}
-              contentRight={this.renderRight1()}
-              fullContainer="true"
-            />
-          </section>
+
+        <section className="mt-13">
+          <DisplayBox
+            colLeft="9"
+            colRight="3"
+            contentLeft={this.renderLeft1()}
+            contentRight={this.renderRight1()}
+            fullContainer="true"
+            reverse="true"
+          />
+        </section>
+        <section className="mt-13">
+          <DisplayBox
+            colLeft="3"
+            colRight="9"
+            contentLeft={this.renderLeft2()}
+            contentRight={this.renderRight2()}
+            fullContainer="true"
+
+          />
+        </section>
+        <section className="mt-13">
+          <DisplayBox
+            colLeft="9"
+            colRight="3"
+            contentLeft={this.renderLeft3()}
+            contentRight={this.renderRight3()}
+            fullContainer="true"
+            reverse="true"
+          />
           <section className="mt-13">
             <DisplayBox
               colLeft="3"
               colRight="9"
-              contentLeft={this.renderLeft2()}
-              contentRight={this.renderRight2()}
+              contentLeft={this.renderLeft4()}
+              contentRight={this.renderRight4()}
               fullContainer="true"
-              reverse="true"
+
             />
           </section>
-          <section className="mt-13">
-            <DisplayBox
-              colLeft="9"
-              colRight="3"
-              contentLeft={this.renderLeft3()}
-              contentRight={this.renderRight3()}
-              fullContainer="true"
-            />
-            <section className="mt-13">
-              <DisplayBox
-                colLeft="3"
-                colRight="9"
-                contentLeft={this.renderLeft4()}
-                contentRight={this.renderRight4()}
-                fullContainer="true"
-                reverse="true"
-              />
-            </section>
-          </section>
-        </div>
-        <div className="my-container-90">
+        </section>
+        <div className="p-2 mt-13">
           <section className="mt-13"> {this.renderCom2()} </section>
           <section className="mt-13">
             <DisplayBox
-              colLeft="5"
+              colLeft="4"
               colRight="7"
               contentLeft={this.renderLeft5()}
               contentRight={this.renderRight5()}
               fullContainer="true"
-              reverse="true"
             />
           </section>
           <section className="mt-13 mb-6"> {this.renderCom3()} </section>

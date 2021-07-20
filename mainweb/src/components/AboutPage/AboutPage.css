@@ -40,3 +40,45 @@
     transform: translateY(0);
   }
 }
+
+@media (max-width: 992px) {
+  .about-page img {
+    max-width: 200px !important;
+    max-height: 200px !important;
+  }
+
+  .about-page .penImg {
+    max-width: 150px !important;
+    max-height: 150px !important;
+  }
+
+  .about-page .houseImg {
+    max-width: 280px !important;
+    max-height: 280px !important;
+  }
+
+  .about-page .vertical-center {
+    vertical-align: top !important;
+  }
+
+  .image-padding-right {
+    padding-right: 0%;
+    margin-top: 5%;
+  }
+
+  .image-padding-left {
+    padding-left: 0%;
+    margin-top: 5%;
+  }
+
+  .about-page .col-md-12 {
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-page .mt-13 {
+    padding-top: 10%;
+  }
+}

@@ -17,30 +17,77 @@ import forward_20 from "../../assets/HomePageAssets/forward_20.png";
 import plusSign from "../../assets/HomePageAssets/plusSign.svg";
 import logotherapy from "../../assets/AboutPageAssets/Man.svg";
 import behavioural from "../../assets/HomePageAssets/behavioural.png";
-import pen_icon from "../../assets/HomePageAssets/penIcon.png";
+import pen_icon from "../../assets/HomePageAssets/penIcon2.svg";
+import pen_icon2 from "../../assets/HomePageAssets/penIcon2.png";
 
 import "./HomePage.css";
 import "./Text.css";
 import "./TextMobile.css";
 import "./TextIpad.css";
 import { Link } from "react-router-dom";
+import { Modal } from "react-bootstrap";
+import dateFormat from "dateformat";
 
 // export default HomePage;
 class HomePage extends Component {
-  state = {};
+  state = {
+    modal1IsOpen: false,
+    modal2IsOpen: false,
+    modal3IsOpen: false,
+    modal4IsOpen: false,
+  };
+
+  openModal1 = () => {
+    this.setState({ modal1IsOpen: true });
+  };
+
+  closeModal1 = () => {
+    this.setState({ modal1IsOpen: false });
+  };
+
+  openModal2 = () => {
+    this.setState({ modal2IsOpen: true });
+  };
+
+  closeModal2 = () => {
+    this.setState({ modal2IsOpen: false });
+  };
+
+  openModal3 = () => {
+    this.setState({ modal3IsOpen: true });
+  };
+
+  closeModal3 = () => {
+    this.setState({ modal3IsOpen: false });
+  };
+
+  openModal4 = () => {
+    this.setState({ modal4IsOpen: true });
+  };
+
+  closeModal4 = () => {
+    this.setState({ modal4IsOpen: false });
+  };
+
+  renderDate() {
+    var now = new Date();
+    var today = dateFormat(now, "mmmm dS, yyyy");
+    return (
+      <span>{today}</span>);
+  }
 
   renderMain() {
     return (
       <div className="my-container-85 home-page-1">
         <div className="row text-left">
-          <div className=" col-6  header-text-animation mt-10">
+          <div className=" col-11 col-sm-9 col-md-7 col-lg-7 col-xl-6  header-text-animation mt-15">
             <div className="pb-10">
-              <p className="text bold k40 lh140 ls1by2">
-                Shape your mind around the most powerful framework known for life.
+              <p className="text bold k40 lh140 ">
+                Shape your mind around the most powerful framework for life.
               </p>
               <br />
             </div>
-            <p className="text fw500 h20 lh150 ls1by2">
+            <p className="text fw500 h20 lh150 ">
               Live a purpose-driven, resilient, high-performing life.
             </p>
           </div>
@@ -51,8 +98,8 @@ class HomePage extends Component {
 
   renderpage2() {
     return (
-      <div className="my-container-85 home-page-2">
-        <p className="text-right text bold k40 lh130 text-gray-757 page-2-text">
+      <div className="my-container-100 home-page-2 p-4">
+        <p className="text bold k40 lh130 text-gray-757 page-2-text text-right mr-4">
           The root of well-being &amp; performance: &nbsp;
           <span className="text-black">your value system.</span>
         </p>
@@ -69,7 +116,7 @@ class HomePage extends Component {
 
   renderLeft1() {
     return (
-      <div className="home-page-3">
+      <div className="home-page-3 mt-5">
         <p className="text h22 lh130">
           Philosophical and psychological heavy weights have known for hundreds
           of years that there are currents beneath our behaviour guiding what we
@@ -96,17 +143,21 @@ class HomePage extends Component {
   }
   renderRight1() {
     return (
-      <div className="d-table home-page-3-image">
+      <div className="text-center d-table mt-3">
         <span className="vertical-center">
-          <img alt="Hompage-image2" className="img-fluid" src={HompageImage2} />
+          <img
+            alt="Hompage-image2"
+            className="img-fluid home-page-3-img"
+            src={HompageImage2}
+          />
         </span>
       </div>
     );
   }
   renderLeft2() {
     return (
-      <div className="section-box home-page-4">
-        <h1 className="text text-white bold k43 lh120 ls1by2">The Problem</h1>
+      <div className="section-box home-page-4 mt-5">
+        <h1 className="text text-white bold k43 lh120 ">The Problem</h1>
         <br />
         <p className="text text-white h21 lh130 ">
           An entire population is relentlessly exposed to illusive, self-serving
@@ -123,8 +174,8 @@ class HomePage extends Component {
   }
   renderRight2() {
     return (
-      <div className="section-box-white home-page-4">
-        <h1 className="text text-black bold k43 lh120 ls1by2">The Solution </h1>
+      <div className="section-box-white home-page-4 mt-5">
+        <h1 className="text text-black bold k43 lh120 ">The Solution </h1>
         <br />
         <p className="text text-black h21 lh130 ">
           Expose individuals to the most powerful framework for life through the
@@ -142,8 +193,8 @@ class HomePage extends Component {
 
   rendorComponantPlus() {
     return (
-      <div className="row home-page-5">
-        <div className="col-md-5 text-center">
+      <div className="row home-page-5 mr-3">
+        <div className="col-md-5 col-lg-5 col-xl-5 col-sm-5 col-5 text-center">
           <span className="">
             <img
               alt=""
@@ -151,28 +202,28 @@ class HomePage extends Component {
               src={logotherapy}
             />
 
-            <p className="text k40 lh100 ls1by2 text-center mt-5">
+            <p className="text k40 lh100  text-center mt-5">
               Logotherapy
             </p>
-            <p className="text h21 lh150 ls1by2 text-center mt-4">
+            <p className="text h21 lh130  text-center mt-4">
               Find meaning and purpose in life beyond the illusive ideas that
               society reinforces today.
             </p>
           </span>
         </div>
-        <div className="col-md-2 text-center verical-center my-auto">
+        <div className="col-md-2 col-lg-2 col-xl-2 col-sm-2 col-2 text-center verical-center my-auto">
           <span className="">
             <img alt="" className="img-fluid plusImg" src={plusSign} />
           </span>
         </div>
-        <div className="col-md-5 text-center">
+        <div className="col-md-5 col-lg-5 col-xl-5 col-sm-5 col-5 text-center">
           <span className="">
             <img alt="" className="img-fluid h-50 pb-4" src={behavioural} />
 
-            <p className="text k40 lh100 ls1by2 text-center mt-5">
+            <p className="text k40 lh100 text-center mt-5">
               Behavioural Activation
             </p>
-            <p className="text h21 lh150 ls1by2 text-center mt-4">
+            <p className="text h21 lh130  text-center mt-4">
               Heroic Minds aims to activate the feeling of doing more of what
               brings real value into your life.
             </p>
@@ -183,11 +234,11 @@ class HomePage extends Component {
   }
   renderLeft4() {
     return (
-      <div className="d-table home-page-6">
+      <div className="d-table home-page-6 pt-5">
         <span className="vertical-center text-center">
           <img
             alt="Hompage-image2"
-            className="img-fluid img-storytelling pr-4"
+            className="img-fluid img-storytelling  pr-4"
             src={storytelling}
           />
         </span>
@@ -196,8 +247,8 @@ class HomePage extends Component {
   }
   renderRight4() {
     return (
-      <div className="home-page-6">
-        <h1 className="text k40 lh130 ls1by2">
+      <div className="home-page-6 mt-5">
+        <h1 className="text k40 lh130 ">
           Through the invigorating medium of <b>story telling.</b>
         </h1>
         <br />
@@ -224,7 +275,7 @@ class HomePage extends Component {
     return (
       <div className="home-page-8">
         <div className="mb-5 pl-4">
-          <h1 className="text bold k45 lh120 ls1by2">Value of Heroic Minds</h1>
+          <h1 className="text bold k45 lh120 ">Value of Heroic Minds</h1>
         </div>
         <div className="row">
           <div className="col section-box-mini mr-4 text text-white">
@@ -288,34 +339,39 @@ class HomePage extends Component {
     );
   }
 
+  togglePlay() { }
+
   // ---------------- sound track 1  (title , catagory and lyrics) ------------ //
 
   renderStory1() {
     return (
       <div>
-        <div className="d-flex flex-md-row flex-column justify-content-between align-items-center">
-          <div className="Story-header my-auto">
-            <div className="story-title  d-flex  flex-sm-row flex-column align-items-end">
-              <p className="text s30 lh120 bold mr-4">A Heroic Mind</p>
-              <p className="text s18 lh150 text-gray-97 mr-3 fw600">Introduction Course</p>
+        <div className="d-flex flex-md-nowrap flex-sm-wrap-reverse flex-wrap-reverse justify-content-between align-items-sm-center align-items-end story-titlebar my-container-95 ml-0">
+          <div className="Story-header my-auto pt-4">
+            <div className="story-title  d-flex flex-wrap align-items-end">
+              <p className="text s30 lh120 bold mr-4">A Heroic Mind </p>
+              <p className="text s18 lh150 text-gray-97 mr-3 fw500">
+                Introduction Course
+              </p>
             </div>
-            <div className="mt-2 story-categary">
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Love</span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Behaviour</span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Philosophy</span>
-
+            <div className="d-flex flex-wrap mt-1 story-categary">
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
+                Love
+              </span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
+                Behaviour
+              </span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
+                Philosophy
+              </span>
             </div>
-
-
           </div>
-          <div className="d-flex flex-row align-items-center justify-content-center audio-controls mr-4 pr-4 ">
+          <div className="d-flex flex-row align-items-center justify-content-md-end justify-content-around audio-controls mt-4 pl-2">
             <input
               type="image"
               alt="audio-controls"
               className=" back-btn mr-3"
               src={back_20}
-              width="35"
-              height="35"
             />
             <input
               type="image"
@@ -323,8 +379,6 @@ class HomePage extends Component {
               id="play-btn"
               className="audio-btn mr-3"
               src={playIcon}
-              width="54px"
-              height="52.2px"
               onClick={this.togglePlay()}
             />
             <input
@@ -332,17 +386,72 @@ class HomePage extends Component {
               alt="audio-controls"
               className="forward-btn mr-3"
               src={forward_20}
-
-              width="35"
-              height="35"
             />
+
+            <Modal show={this.state.modal1IsOpen} onHide={this.closeModal1}>
+              <Modal.Header>
+                <div className="d-flex flex-row flex-wrap-reverse w-100 justify-content-end">
+                  <div className="d-flex flex-wrap flex-xl-row flex-column align-items-center justify-content-xl-between justify-content-around w-100 modal-header-div">
+
+
+                    <div className=" m-1  d-flex flex-row align-items-center">
+                      <div className="mr-0 modal-pen-icon">
+                        <img
+                          alt="pen"
+                          src={pen_icon2}
+                          className="m-1 "
+                        />
+                      </div>
+                      <p className="text fw500 h40  m-1">Sample Journal</p>
+                    </div>
+                    <div className="d-flex flex-xl-row flex-lg-column-reverse align-items-center  flex-column-reverse modal-header-right">
+                      <p className="text fw500 h26 m-1 p-1">A Heroic Mind</p>
+                      <img
+                        alt="audio img 1"
+                        src={audio1Img}
+                        className="m-1 modal-img"
+                      />
+                    </div>
+                  </div>
+                  <div className="closeModel">
+                    <button
+                      type="button"
+                      onClick={this.closeModal1}
+                      className="btn-lg close-btn"
+                    >
+                      X
+                    </button>
+                  </div>
+
+                </div>
+              </Modal.Header>
+              <Modal.Body className="ml-4 mt-2 pt-0">
+                <p className=" text fw600 text-gray-757 h16">
+                  {this.renderDate()}
+                </p>
+                <p className="mt-5 text s18 bold lh140">
+                  <i>
+                    Thoughts? How does this story relate to your past? present?
+                    future?
+                  </i>
+                </p>
+                <p className="mt-5 mb-5 text s18 bold lh140">
+                  <i>
+                    Thoughts? How does this story relate to your past? present?
+                    future?
+                  </i>
+                </p>
+              </Modal.Body>
+            </Modal>
             <input
               type="image"
+              variant="primary"
+              onClick={this.openModal1}
               alt="audio-controls"
-              className="audio-btn pen-btn ml-4 "
+              className="audio-btn ml-3"
               src={pen_icon}
-              width="35px"
-              height="35px"
+              width="35"
+              height="35"
             />
           </div>
         </div>
@@ -413,17 +522,21 @@ class HomePage extends Component {
           <br />
           <br />
         </div>
-      </div >
+      </div>
     );
   }
-
-  togglePlay() { }
 
   // ---------------- sound track 1  (image) ------------ //
   renderStory1Img() {
     return (
-      <div className="story-img  img-fluid center-text mt-3 mb-3">
-        <img alt="story-thumbnail" className="img-fluid " src={audio1Img} />
+      <div className=" d-table story-img-section">
+        <span className="vertical-center text-center">
+          <img
+            alt="Hompage-image1 "
+            className="img-fluid story-img "
+            src={audio1Img}
+          />
+        </span>
       </div>
     );
   }
@@ -432,29 +545,32 @@ class HomePage extends Component {
   renderStory2() {
     return (
       <div>
-        <div className="d-flex flex-md-row flex-column justify-content-between align-items-center">
-          <div className="Story-header my-auto">
-            <div className="story-title  d-flex  flex-sm-row flex-column align-items-end">
+        <div className="d-flex flex-md-nowrap flex-sm-wrap-reverse flex-wrap-reverse justify-content-between align-items-sm-center align-items-end story-titlebar my-container-95 ml-0">
+          <div className="Story-header my-auto pt-4">
+            <div className="story-title  d-flex flex-wrap align-items-end">
               <p className="text s30 lh120 bold mr-4">Music - Sia</p>
-              <p className="text s18 lh150 text-gray-97 mr-3 fw600">Pop Culture</p>
+              <p className="text s18 lh150 text-gray-97 mr-3 fw500">
+                Pop Culture
+              </p>
             </div>
-            <div className="mt-2 story-categary">
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Love</span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Change</span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Altruism</span>
-
+            <div className="d-flex flex-wrap mt-1 story-categary">
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
+                Love
+              </span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
+                Change
+              </span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
+                Altruism
+              </span>
             </div>
-
-
           </div>
-          <div className="d-flex flex-row align-items-center justify-content-center audio-controls mr-4 pr-4 ">
+          <div className="d-flex flex-row align-items-center justify-content-md-end justify-content-around audio-controls mt-4 pl-2">
             <input
               type="image"
               alt="audio-controls"
               className=" back-btn mr-3"
               src={back_20}
-              width="35"
-              height="35"
             />
             <input
               type="image"
@@ -462,8 +578,6 @@ class HomePage extends Component {
               id="play-btn"
               className="audio-btn mr-3"
               src={playIcon}
-              width="54px"
-              height="52.2px"
               onClick={this.togglePlay()}
             />
             <input
@@ -471,17 +585,72 @@ class HomePage extends Component {
               alt="audio-controls"
               className="forward-btn mr-3"
               src={forward_20}
-
-              width="35"
-              height="35"
             />
+
+            <Modal show={this.state.modal2IsOpen} onHide={this.closeModal2}>
+              <Modal.Header>
+                <div className="d-flex flex-row flex-wrap-reverse w-100 justify-content-end">
+                  <div className="d-flex flex-wrap flex-xl-row flex-column align-items-center justify-content-xl-between justify-content-around w-100 modal-header-div">
+
+
+                    <div className=" m-1  d-flex flex-row align-items-center">
+                      <div className="mr-0 modal-pen-icon">
+                        <img
+                          alt="pen"
+                          src={pen_icon2}
+                          className="m-1 "
+                        />
+                      </div>
+                      <p className="text fw500 h40  m-1">Sample Journal</p>
+                    </div>
+                    <div className="d-flex flex-xl-row flex-lg-column-reverse align-items-center  flex-column-reverse modal-header-right">
+                      <p className="text fw500 h26 m-1 p-1">Music - Sia</p>
+                      <img
+                        alt="audio img 1"
+                        src={audio2Img}
+                        className="m-1 modal-img"
+                      />
+                    </div>
+                  </div>
+                  <div className="closeModel">
+                    <button
+                      type="button"
+                      onClick={this.closeModal2}
+                      className="btn-lg close-btn"
+                    >
+                      X
+                    </button>
+                  </div>
+
+                </div>
+              </Modal.Header>
+              <Modal.Body className="ml-4 mt-2 pt-0">
+                <p className=" text fw600 text-gray-757 h16">
+                  {this.renderDate()}
+                </p>
+                <p className="mt-5 text s18 bold lh140">
+                  <i>
+                    Thoughts? How does this story relate to your past? present?
+                    future?
+                  </i>
+                </p>
+                <p className="mt-5 mb-5 text s18 bold lh140">
+                  <i>
+                    Thoughts? How does this story relate to your past? present?
+                    future?
+                  </i>
+                </p>
+              </Modal.Body>
+            </Modal>
             <input
               type="image"
+              variant="primary"
+              onClick={this.openModal1}
               alt="audio-controls"
-              className="audio-btn pen-btn ml-4 "
+              className="audio-btn ml-3"
               src={pen_icon}
-              width="35px"
-              height="35px"
+              width="35"
+              height="35"
             />
           </div>
         </div>
@@ -541,8 +710,14 @@ class HomePage extends Component {
   // ---------------- sound track 2  (image) ------------ //
   renderStory2Img() {
     return (
-      <div className="story-img  img-fluid center-text mb-3 mt-3">
-        <img alt="story-thumbnail" className="img-fluid" src={audio2Img} />
+      <div className=" d-table story-img-section">
+        <span className="vertical-center text-center">
+          <img
+            alt="Hompage-image2 "
+            className="img-fluid story-img "
+            src={audio2Img}
+          />
+        </span>
       </div>
     );
   }
@@ -551,29 +726,32 @@ class HomePage extends Component {
   renderStory3() {
     return (
       <div>
-        <div className="d-flex flex-md-row flex-column justify-content-between align-items-center">
-          <div className="Story-header my-auto">
-            <div className="story-title  d-flex  flex-sm-row flex-column align-items-end">
+        <div className="d-flex flex-md-nowrap flex-sm-wrap-reverse flex-wrap-reverse justify-content-between align-items-sm-center align-items-end story-titlebar my-container-95 ml-0">
+          <div className="Story-header my-auto pt-4">
+            <div className="story-title  d-flex flex-wrap align-items-end">
               <p className="text s30 lh120 bold mr-4">Quiddich - Harry Potter</p>
-              <p className="text s18 lh150 text-gray-97 mr-3 fw600">Fiction Literature</p>
+              <p className="text s18 lh150 text-gray-97 mr-3 fw500">
+                Fiction Literature
+              </p>
             </div>
-            <div className="mt-2 story-categary">
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Leadership</span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Adventure</span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Bravery</span>
-
+            <div className="d-flex flex-wrap mt-1 story-categary">
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
+                Leadership
+              </span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
+                Adventure
+              </span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
+                Bravery
+              </span>
             </div>
-
-
           </div>
-          <div className="d-flex flex-row align-items-center justify-content-center audio-controls mr-4 pr-4 ">
+          <div className="d-flex flex-row align-items-center justify-content-md-end justify-content-around audio-controls mt-4 pl-2">
             <input
               type="image"
               alt="audio-controls"
               className=" back-btn mr-3"
               src={back_20}
-              width="35"
-              height="35"
             />
             <input
               type="image"
@@ -581,8 +759,6 @@ class HomePage extends Component {
               id="play-btn"
               className="audio-btn mr-3"
               src={playIcon}
-              width="54px"
-              height="52.2px"
               onClick={this.togglePlay()}
             />
             <input
@@ -590,17 +766,72 @@ class HomePage extends Component {
               alt="audio-controls"
               className="forward-btn mr-3"
               src={forward_20}
-
-              width="35"
-              height="35"
             />
+
+            <Modal show={this.state.modal3IsOpen} onHide={this.closeModal3}>
+              <Modal.Header>
+                <div className="d-flex flex-row flex-wrap-reverse w-100 justify-content-end">
+                  <div className="d-flex flex-wrap flex-xl-row flex-column align-items-center justify-content-xl-between justify-content-around w-100 modal-header-div">
+
+
+                    <div className=" m-1  d-flex flex-row align-items-center">
+                      <div className="mr-0 modal-pen-icon">
+                        <img
+                          alt="pen"
+                          src={pen_icon2}
+                          className="m-1 "
+                        />
+                      </div>
+                      <p className="text fw500 h40  m-1">Sample Journal</p>
+                    </div>
+                    <div className="d-flex flex-xl-row flex-lg-column-reverse align-items-center  flex-column-reverse modal-header-right">
+                      <p className="text fw500 h26 m-1 p-1">Quiddich - Harry Potter</p>
+                      <img
+                        alt="audio img 1"
+                        src={audio3Img}
+                        className="m-1 modal-img"
+                      />
+                    </div>
+                  </div>
+                  <div className="closeModel">
+                    <button
+                      type="button"
+                      onClick={this.closeModal3}
+                      className="btn-lg close-btn"
+                    >
+                      X
+                    </button>
+                  </div>
+
+                </div>
+              </Modal.Header>
+              <Modal.Body className="ml-4 mt-2 pt-0">
+                <p className=" text fw600 text-gray-757 h16">
+                  {this.renderDate()}
+                </p>
+                <p className="mt-5 text s18 bold lh140">
+                  <i>
+                    Thoughts? How does this story relate to your past? present?
+                    future?
+                  </i>
+                </p>
+                <p className="mt-5 mb-5 text s18 bold lh140">
+                  <i>
+                    Thoughts? How does this story relate to your past? present?
+                    future?
+                  </i>
+                </p>
+              </Modal.Body>
+            </Modal>
             <input
               type="image"
+              variant="primary"
+              onClick={this.openModal3}
               alt="audio-controls"
-              className="audio-btn pen-btn ml-4 "
+              className="audio-btn ml-3"
               src={pen_icon}
-              width="35px"
-              height="35px"
+              width="35"
+              height="35"
             />
           </div>
         </div>
@@ -660,40 +891,48 @@ class HomePage extends Component {
   // ---------------- sound track 3  (image) ------------ //
   renderStory3Img() {
     return (
-      <div className="story-img  img-fluid center-text mb-3 mt-3">
-        <img alt="story-thumbnail" className="img-fluid" src={audio3Img} />
+      <div className=" d-table story-img-section">
+        <span className="vertical-center text-center">
+          <img
+            alt="Hompage-image3 "
+            className="img-fluid story-img "
+            src={audio3Img}
+          />
+        </span>
       </div>
     );
   }
-
 
   // ---------------- sound track 4 (title , catagory and lyrics) ------------ //
   renderStory4() {
     return (
       <div>
-        <div className="d-flex flex-md-row flex-column justify-content-between align-items-center">
-          <div className="Story-header my-auto">
-            <div className="story-title  d-flex  flex-sm-row flex-column align-items-end">
+        <div className="d-flex flex-md-nowrap flex-sm-wrap-reverse flex-wrap-reverse justify-content-between align-items-sm-center align-items-end story-titlebar my-container-95 ml-0">
+          <div className="Story-header my-auto pt-4">
+            <div className="story-title  d-flex flex-wrap align-items-end">
               <p className="text s30 lh120 bold mr-4">Nihilism - True Detective</p>
-              <p className="text s18 lh150 text-gray-97 mr-3 fw600">Pop Culture</p>
+              <p className="text s18 lh150 text-gray-97 mr-3 fw500">
+                Pop Culture
+              </p>
             </div>
-            <div className="mt-2 story-categary">
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Purpose</span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Meaning</span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">Philosophy</span>
-
+            <div className="d-flex flex-wrap mt-1 story-categary">
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
+                Purpose
+              </span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
+                Meaning
+              </span>
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
+                Philosophy
+              </span>
             </div>
-
-
           </div>
-          <div className="d-flex flex-row align-items-center justify-content-center audio-controls mr-4 pr-4 ">
+          <div className="d-flex flex-row align-items-center justify-content-md-end justify-content-around audio-controls mt-4 pl-2">
             <input
               type="image"
               alt="audio-controls"
               className=" back-btn mr-3"
               src={back_20}
-              width="35"
-              height="35"
             />
             <input
               type="image"
@@ -701,8 +940,6 @@ class HomePage extends Component {
               id="play-btn"
               className="audio-btn mr-3"
               src={playIcon}
-              width="54px"
-              height="52.2px"
               onClick={this.togglePlay()}
             />
             <input
@@ -710,17 +947,72 @@ class HomePage extends Component {
               alt="audio-controls"
               className="forward-btn mr-3"
               src={forward_20}
-
-              width="35"
-              height="35"
             />
+
+            <Modal show={this.state.modal4IsOpen} onHide={this.closeModal4}>
+              <Modal.Header>
+                <div className="d-flex flex-row flex-wrap-reverse w-100 justify-content-end">
+                  <div className="d-flex flex-wrap flex-xl-row flex-column align-items-center justify-content-xl-between justify-content-around w-100 modal-header-div">
+
+
+                    <div className=" m-1  d-flex flex-row align-items-center">
+                      <div className="mr-0 modal-pen-icon">
+                        <img
+                          alt="pen"
+                          src={pen_icon2}
+                          className="m-1 "
+                        />
+                      </div>
+                      <p className="text fw500 h40  m-1">Sample Journal</p>
+                    </div>
+                    <div className="d-flex flex-xl-row flex-lg-column-reverse align-items-center  flex-column-reverse modal-header-right">
+                      <p className="text fw500 h26 m-1 p-1">Nihilism - True Detective</p>
+                      <img
+                        alt="audio img 1"
+                        src={audio4Img}
+                        className="m-1 modal-img"
+                      />
+                    </div>
+                  </div>
+                  <div className="closeModel">
+                    <button
+                      type="button"
+                      onClick={this.closeModal4}
+                      className="btn-lg close-btn"
+                    >
+                      X
+                    </button>
+                  </div>
+
+                </div>
+              </Modal.Header>
+              <Modal.Body className="ml-4 mt-2 pt-0">
+                <p className=" text fw600 text-gray-757 h16">
+                  {this.renderDate()}
+                </p>
+                <p className="mt-5 text s18 bold lh140">
+                  <i>
+                    Thoughts? How does this story relate to your past? present?
+                    future?
+                  </i>
+                </p>
+                <p className="mt-5 mb-5 text s18 bold lh140">
+                  <i>
+                    Thoughts? How does this story relate to your past? present?
+                    future?
+                  </i>
+                </p>
+              </Modal.Body>
+            </Modal>
             <input
               type="image"
+              variant="primary"
+              onClick={this.openModal4}
               alt="audio-controls"
-              className="audio-btn pen-btn ml-4 "
+              className="audio-btn ml-3"
               src={pen_icon}
-              width="35px"
-              height="35px"
+              width="35"
+              height="35"
             />
           </div>
         </div>
@@ -780,12 +1072,17 @@ class HomePage extends Component {
   // ---------------- sound track 4  (image) ------------ //
   renderStory4Img() {
     return (
-      <div className="story-img  img-fluid center-text mb-3 mt-3">
-        <img alt="story-thumbnail" className="img-fluid" src={audio4Img} />
+      <div className=" d-table story-img-section">
+        <span className="vertical-center text-center">
+          <img
+            alt="Hompage-image4 "
+            className="img-fluid story-img "
+            src={audio4Img}
+          />
+        </span>
       </div>
     );
   }
-
 
   renderCommunity() {
     return (
@@ -793,7 +1090,7 @@ class HomePage extends Component {
         <div className="row">
           <div className="col-9 d-flex align-items-end p-0">
             <div>
-              <h1 className="text k45 ls1by2 ">
+              <h1 className="text k45  ">
                 Heroic Minds Global Community
               </h1>
               <br />
@@ -836,8 +1133,10 @@ class HomePage extends Component {
       <div className="home-page-13">
         <div className="row justify-content-center">
           <div className="col-lg-3 mb-8">
-            <a href="/"><p className="text text-center bold h30 lh130 pb-4">
-              <u>30-Day Free Trial</u></p>
+            <a href="/">
+              <p className="text text-center bold h30 lh130 pb-4">
+                <u>30-Day Free Trial</u>
+              </p>
             </a>
             <p className="text text-center h22 lh130 mt-4">
               30% of Heroic Minds Library
@@ -856,7 +1155,9 @@ class HomePage extends Component {
               Full Heroic Minds Library
             </p>
             <h1 className="text text-center h60 lh130">$170</h1>
-            <p className="text text-center h24 lh130 text-gray-97 ">$14/month</p>
+            <p className="text text-center h24 lh130 text-gray-97 ">
+              $14/month
+            </p>
           </div>
 
           <div className="col-lg-3 mb-8">
@@ -869,7 +1170,9 @@ class HomePage extends Component {
               Full Heroic Minds Library
             </p>
             <h1 className="text text-center h45 lh150">$240</h1>
-            <p className="text text-center h22 lh130 text-gray-97 ">$20/month</p>
+            <p className="text text-center h22 lh130 text-gray-97 ">
+              $20/month
+            </p>
           </div>
         </div>
       </div>
@@ -885,29 +1188,29 @@ class HomePage extends Component {
     };
     return (
       <div className="HomePage">
-        <section className="HomePageHeader" style={mainSectionStyle}>
-          {this.renderMain()}
-        </section>
+        <section className="HomePageHeader image1">{this.renderMain()}</section>
 
         <section className="mt-7">{this.renderpage2()}</section>
 
         <div className="HomePageData my-container-85">
-          <section className="mt-6">
+          <section className="mt-5">
             <DisplayBox
               colLeft="8"
               colRight="4"
               contentLeft={this.renderLeft1()}
               contentRight={this.renderRight1()}
               fullContainer="true"
+              alwaysColumn="true"
             />
           </section>
-          <section className="mt-15">
+          <section className="mt-18">
             <DisplayBox
               colLeft="6"
               colRight="6"
               contentLeft={this.renderLeft2()}
               contentRight={this.renderRight2()}
               fullContainer="true"
+              alwaysColumn="true"
             />
           </section>
 
@@ -926,6 +1229,7 @@ class HomePage extends Component {
 
         <div className=" my-container-90">
           {/* -----------Listen Now page */}
+
           <section className="mt-15">{this.renderListenNowHead()}</section>
           <section className="mt-8 ">
             <DisplayBox
@@ -937,7 +1241,7 @@ class HomePage extends Component {
               fullContainer="true"
             />
           </section>
-          <section className="mt-4">
+          <section className="mt-6">
             <DisplayBox
               colLeft="8"
               colRight="4"
@@ -947,7 +1251,7 @@ class HomePage extends Component {
               fullContainer="true"
             />
           </section>
-          <section className=" mt-4">
+          <section className=" mt-6">
             <DisplayBox
               colLeft="8"
               colRight="4"
@@ -958,7 +1262,7 @@ class HomePage extends Component {
             />
           </section>
 
-          <section className=" mt-4">
+          <section className=" mt-6">
             <DisplayBox
               colLeft="8"
               colRight="4"
