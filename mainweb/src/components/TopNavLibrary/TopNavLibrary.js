@@ -28,7 +28,7 @@ class TopNavLibrary extends Component {
     render() {
         return (
             <div style={{ display: 'flex', alignItems: 'center', padding: '0 20px', marginTop: '5px', flexDirection: 'row', lineHeight: '30px' }} onClick={this.handleClick} >
-                <label style={{ marginRight: '8px', marginBottom: '0', fontSize: '15px' }}>library</label>
+                <label className="Nav-text s18">Library</label>
                 <DropdownArrow />
                 <Menu
                     elevation={0}
