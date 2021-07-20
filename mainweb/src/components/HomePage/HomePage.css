@@ -7,7 +7,7 @@
 
 .page-2-text {
   position: relative;
-  bottom: -80px;
+  bottom: -70px;
 }
 
 /* ---------------------------------- styles for listen now page  ------------------------------------*/
@@ -59,9 +59,10 @@
   border-radius: 6px !important;
 }
 
-.model-header2 img,
-.modal-content {
+.modal-img {
   border-radius: 8px !important;
+  width: 90px;
+  height: 57px;
 }
 
 .audio-btn {
@@ -132,7 +133,7 @@
 }
 
 .modal-dialog {
-  margin-top: 35vh !important;
+  margin-top: 25vh !important;
   margin-left: auto !important;
   width: 65vw !important;
   height: 100% !important;
@@ -140,14 +141,16 @@
 }
 
 .modal-content {
-  box-shadow: 4px 7px 0px #e59d53;
+  border-width: 2px !important;
+  border-color: #4b4a4a !important;
+  border-style: outset !important;
+  border-radius: 15px !important;
 }
 
 .modal-header {
-  border-bottom: 0px !important;
-  font-size: 30px !important;
-  font-family: sans-serif !important;
-  padding-bottom: 0px !important;
+  padding: 2px !important ;
+  border-bottom: 10px !important;
+  padding-bottom: 10px !important;
 }
 
 .close-btn {
@@ -162,6 +165,46 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 800px;
+}
+
+.modal-header-div {
+  padding: 0px 40px 0px 10px !important;
+}
+
+.modal .btn-lg {
+  padding: 0px 8px 0px 0px !important;
+  margin: 0px !important;
+  font-size: 30px !important;
+  line-height: 130%;
+}
+
+.audio-controls {
+  width: fit-content !important;
+}
+
+.modal-pen-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 1200px) {
+  .modal-img {
+    width: 75%;
+    height: 75%;
+  }
+
+  .modal-header-div {
+    padding: 0px 1px 0px 1px !important;
+  }
+
+  .modal-pen-icon img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .modal-dialog {
+    margin-top: 15vh !important;
+  }
 }
 
 @media (max-width: 991px) {
@@ -203,6 +246,11 @@
   .section-box-white {
     padding: 12% 8%;
   }
+
+  .modal-pen-icon img {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -212,8 +260,8 @@
 
   .back-btn,
   .forward-btn {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
   }
 
   .audio-btn {
@@ -223,6 +271,16 @@
 
   .section-box-white {
     background-color: #eeeeee;
+  }
+
+  .modal-dialog {
+    margin-top: 5vh !important;
+  }
+
+  .audio-controls {
+    width: 90% !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
   }
 }
 
@@ -239,11 +297,11 @@
   }
 
   .modal-dialog {
-    margin-top: 20vh !important;
+    margin-top: 5vh !important;
     margin-left: 15vw !important;
   }
 
-  .model-header2 {
+  .model-header {
     margin-top: 10%;
   }
 
@@ -257,5 +315,10 @@
 
   .vertical-center {
     vertical-align: bottom !important;
+  }
+
+  .modal-pen-icon img {
+    width: 30px;
+    height: 30px;
   }
 }

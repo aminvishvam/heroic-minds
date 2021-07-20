@@ -26,7 +26,7 @@ import "./TextMobile.css";
 import "./TextIpad.css";
 import { Link } from "react-router-dom";
 import { Modal } from "react-bootstrap";
-import dateFormat from 'dateformat';
+import dateFormat from "dateformat";
 
 // export default HomePage;
 class HomePage extends Component {
@@ -34,8 +34,7 @@ class HomePage extends Component {
     modal1IsOpen: false,
     modal2IsOpen: false,
     modal3IsOpen: false,
-    modal4IsOpen: false
-
+    modal4IsOpen: false,
   };
 
   openModal1 = () => {
@@ -72,22 +71,23 @@ class HomePage extends Component {
 
   renderDate() {
     var now = new Date();
-    var today = dateFormat(now, "mmmm dS, yyyy")
-    return today.toString;
+    var today = dateFormat(now, "mmmm dS, yyyy");
+    return (
+      <span>{today}</span>);
   }
 
   renderMain() {
     return (
       <div className="my-container-85 home-page-1">
         <div className="row text-left">
-          <div className=" col-11 col-sm-9 col-md-7 col-lg-7 col-xl-7  header-text-animation mt-15">
+          <div className=" col-11 col-sm-9 col-md-7 col-lg-7 col-xl-6  header-text-animation mt-15">
             <div className="pb-10">
-              <p className="text bold k40 lh140 ls1by2">
+              <p className="text bold k40 lh140 ">
                 Shape your mind around the most powerful framework for life.
               </p>
               <br />
             </div>
-            <p className="text fw500 h20 lh150 ls1by2">
+            <p className="text fw500 h20 lh150 ">
               Live a purpose-driven, resilient, high-performing life.
             </p>
           </div>
@@ -98,8 +98,8 @@ class HomePage extends Component {
 
   renderpage2() {
     return (
-      <div className="my-container-85 home-page-2">
-        <p className="text-right text bold k40 lh130 text-gray-757 page-2-text">
+      <div className="my-container-100 home-page-2 p-4">
+        <p className="text bold k40 lh130 text-gray-757 page-2-text text-right mr-4">
           The root of well-being &amp; performance: &nbsp;
           <span className="text-black">your value system.</span>
         </p>
@@ -145,7 +145,11 @@ class HomePage extends Component {
     return (
       <div className="text-center d-table mt-3">
         <span className="vertical-center">
-          <img alt="Hompage-image2" className="img-fluid home-page-3-img" src={HompageImage2} />
+          <img
+            alt="Hompage-image2"
+            className="img-fluid home-page-3-img"
+            src={HompageImage2}
+          />
         </span>
       </div>
     );
@@ -153,7 +157,7 @@ class HomePage extends Component {
   renderLeft2() {
     return (
       <div className="section-box home-page-4 mt-5">
-        <h1 className="text text-white bold k43 lh120 ls1by2">The Problem</h1>
+        <h1 className="text text-white bold k43 lh120 ">The Problem</h1>
         <br />
         <p className="text text-white h21 lh130 ">
           An entire population is relentlessly exposed to illusive, self-serving
@@ -171,7 +175,7 @@ class HomePage extends Component {
   renderRight2() {
     return (
       <div className="section-box-white home-page-4 mt-5">
-        <h1 className="text text-black bold k43 lh120 ls1by2">The Solution </h1>
+        <h1 className="text text-black bold k43 lh120 ">The Solution </h1>
         <br />
         <p className="text text-black h21 lh130 ">
           Expose individuals to the most powerful framework for life through the
@@ -198,10 +202,10 @@ class HomePage extends Component {
               src={logotherapy}
             />
 
-            <p className="text k40 lh100 ls1by2 text-center mt-5">
+            <p className="text k40 lh100  text-center mt-5">
               Logotherapy
             </p>
-            <p className="text h21 lh150 ls1by2 text-center mt-4">
+            <p className="text h21 lh130  text-center mt-4">
               Find meaning and purpose in life beyond the illusive ideas that
               society reinforces today.
             </p>
@@ -216,10 +220,10 @@ class HomePage extends Component {
           <span className="">
             <img alt="" className="img-fluid h-50 pb-4" src={behavioural} />
 
-            <p className="text k40 lh100 ls1by2 text-center mt-5">
+            <p className="text k40 lh100 text-center mt-5">
               Behavioural Activation
             </p>
-            <p className="text h21 lh150 ls1by2 text-center mt-4">
+            <p className="text h21 lh130  text-center mt-4">
               Heroic Minds aims to activate the feeling of doing more of what
               brings real value into your life.
             </p>
@@ -244,7 +248,7 @@ class HomePage extends Component {
   renderRight4() {
     return (
       <div className="home-page-6 mt-5">
-        <h1 className="text k40 lh130 ls1by2">
+        <h1 className="text k40 lh130 ">
           Through the invigorating medium of <b>story telling.</b>
         </h1>
         <br />
@@ -271,7 +275,7 @@ class HomePage extends Component {
     return (
       <div className="home-page-8">
         <div className="mb-5 pl-4">
-          <h1 className="text bold k45 lh120 ls1by2">Value of Heroic Minds</h1>
+          <h1 className="text bold k45 lh120 ">Value of Heroic Minds</h1>
         </div>
         <div className="row">
           <div className="col section-box-mini mr-4 text text-white">
@@ -335,20 +339,17 @@ class HomePage extends Component {
     );
   }
 
-
-  togglePlay() {
-
-  }
+  togglePlay() { }
 
   // ---------------- sound track 1  (title , catagory and lyrics) ------------ //
 
   renderStory1() {
     return (
       <div>
-        <div className="d-flex flex-sm-nowrap flex-wrap-reverse justify-content-sm-between justify-content-between align-items-sm-center align-items-end story-titlebar my-container-95 mx-0">
+        <div className="d-flex flex-md-nowrap flex-sm-wrap-reverse flex-wrap-reverse justify-content-between align-items-sm-center align-items-end story-titlebar my-container-95 ml-0">
           <div className="Story-header my-auto pt-4">
-            <div className="story-title  d-flex flex-wrap align-items-lg-end">
-              <p className="text s30 lh120 bold mr-4">A Heroic Mind</p>
+            <div className="story-title  d-flex flex-wrap align-items-end">
+              <p className="text s30 lh120 bold mr-4">A Heroic Mind </p>
               <p className="text s18 lh150 text-gray-97 mr-3 fw500">
                 Introduction Course
               </p>
@@ -365,7 +366,7 @@ class HomePage extends Component {
               </span>
             </div>
           </div>
-          <div className="d-flex flex-row align-items-center justify-content-center mx-auto audio-controls mt-4 ml-2">
+          <div className="d-flex flex-row align-items-center justify-content-md-end justify-content-around audio-controls mt-4 pl-2">
             <input
               type="image"
               alt="audio-controls"
@@ -378,7 +379,6 @@ class HomePage extends Component {
               id="play-btn"
               className="audio-btn mr-3"
               src={playIcon}
-
               onClick={this.togglePlay()}
             />
             <input
@@ -388,40 +388,59 @@ class HomePage extends Component {
               src={forward_20}
             />
 
-            <Modal show={this.state.modal1IsOpen} onHide={this.closeModal1} >
+            <Modal show={this.state.modal1IsOpen} onHide={this.closeModal1}>
               <Modal.Header>
-                <div className="d-flex flex-wrap align-items-center justify-content-between w-100 model-header mt-3">
-                  <div className="d-flex flex-row align-items-center"><img
-                    alt="pen"
-                    src={pen_icon2}
-                    width="30px"
-                    height="30px"
-                    className="mr-3"
-                  />
-                    <p className="text fw500 h40 ls1by2">Sample Journal</p>
-                  </div>
-                  <div className="d-flex flex-wrap align-items-center justify-content-center model-header2">
-                    <p className="text fw500 h26 mr-3">A Heroic Mind</p>
-                    <img
-                      alt="pen"
-                      src={audio1Img}
-                      width="90px"
-                      height="57px"
-                      className="mr-3 rounded mt-3"
-                    />
+                <div className="d-flex flex-row flex-wrap-reverse w-100 justify-content-end">
+                  <div className="d-flex flex-wrap flex-xl-row flex-column align-items-center justify-content-xl-between justify-content-around w-100 modal-header-div">
 
+
+                    <div className=" m-1  d-flex flex-row align-items-center">
+                      <div className="mr-0 modal-pen-icon">
+                        <img
+                          alt="pen"
+                          src={pen_icon2}
+                          className="m-1 "
+                        />
+                      </div>
+                      <p className="text fw500 h40  m-1">Sample Journal</p>
+                    </div>
+                    <div className="d-flex flex-xl-row flex-lg-column-reverse align-items-center  flex-column-reverse modal-header-right">
+                      <p className="text fw500 h26 m-1 p-1">A Heroic Mind</p>
+                      <img
+                        alt="audio img 1"
+                        src={audio1Img}
+                        className="m-1 modal-img"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div ClassName="closeModel">
-                  <button type="button" onClick={this.closeModal1} className="btn-lg  close-btn">
-                    X
-                  </button>
+                  <div className="closeModel">
+                    <button
+                      type="button"
+                      onClick={this.closeModal1}
+                      className="btn-lg close-btn"
+                    >
+                      X
+                    </button>
+                  </div>
+
                 </div>
               </Modal.Header>
               <Modal.Body className="ml-4 mt-2 pt-0">
-                <p className=" text fw600 text-gray-757 h16">{this.renderDate()}</p>
-                <p className="mt-5 text s18 bold lh140"><i>Thoughts? How does this story relate to your past? present? future?</i></p>
-                <p className="mt-5 mb-5 text s18 bold lh140"><i>Thoughts? How does this story relate to your past? present? future?</i></p>
+                <p className=" text fw600 text-gray-757 h16">
+                  {this.renderDate()}
+                </p>
+                <p className="mt-5 text s18 bold lh140">
+                  <i>
+                    Thoughts? How does this story relate to your past? present?
+                    future?
+                  </i>
+                </p>
+                <p className="mt-5 mb-5 text s18 bold lh140">
+                  <i>
+                    Thoughts? How does this story relate to your past? present?
+                    future?
+                  </i>
+                </p>
               </Modal.Body>
             </Modal>
             <input
@@ -510,12 +529,15 @@ class HomePage extends Component {
   // ---------------- sound track 1  (image) ------------ //
   renderStory1Img() {
     return (
-
-      <div className=" d-table story-img-section" >
+      <div className=" d-table story-img-section">
         <span className="vertical-center text-center">
-          <img alt="Hompage-image1 " className="img-fluid story-img " src={audio1Img} />
+          <img
+            alt="Hompage-image1 "
+            className="img-fluid story-img "
+            src={audio1Img}
+          />
         </span>
-      </div >
+      </div>
     );
   }
 
@@ -523,34 +545,32 @@ class HomePage extends Component {
   renderStory2() {
     return (
       <div>
-        <div className="d-flex flex-md-row flex-column justify-content-between align-items-center">
-          <div className="Story-header my-auto">
-            <div className="story-title  d-flex  flex-sm-row flex-column align-items-end">
+        <div className="d-flex flex-md-nowrap flex-sm-wrap-reverse flex-wrap-reverse justify-content-between align-items-sm-center align-items-end story-titlebar my-container-95 ml-0">
+          <div className="Story-header my-auto pt-4">
+            <div className="story-title  d-flex flex-wrap align-items-end">
               <p className="text s30 lh120 bold mr-4">Music - Sia</p>
               <p className="text s18 lh150 text-gray-97 mr-3 fw500">
                 Pop Culture
               </p>
             </div>
-            <div className="mt-2 story-categary">
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+            <div className="d-flex flex-wrap mt-1 story-categary">
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
                 Love
               </span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
                 Change
               </span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
                 Altruism
               </span>
             </div>
           </div>
-          <div className="d-flex flex-row align-items-center justify-content-center audio-controls mr-4 pr-4 ">
+          <div className="d-flex flex-row align-items-center justify-content-md-end justify-content-around audio-controls mt-4 pl-2">
             <input
               type="image"
               alt="audio-controls"
               className=" back-btn mr-3"
               src={back_20}
-              width="35"
-              height="35"
             />
             <input
               type="image"
@@ -558,8 +578,6 @@ class HomePage extends Component {
               id="play-btn"
               className="audio-btn mr-3"
               src={playIcon}
-              width="54px"
-              height="52.2px"
               onClick={this.togglePlay()}
             />
             <input
@@ -567,52 +585,70 @@ class HomePage extends Component {
               alt="audio-controls"
               className="forward-btn mr-3"
               src={forward_20}
-              width="35"
-              height="35"
             />
-            <Modal show={this.state.modal2IsOpen} onHide={this.closeModal2} >
-              <Modal.Header>
-                <div className="d-flex flex-row align-items-center justify-content-between w-100 model-header mt-3">
-                  <div className="d-flex flex-row align-items-center"><img
-                    alt="pen"
-                    src={pen_icon2}
-                    width="30px"
-                    height="30px"
-                    className="mr-3"
-                  />
-                    <p className="text fw500 h40 ls1by2">Music - Sia</p>
-                  </div>
-                  <div className="d-flex flex-row align-items-center model-header2">
-                    <p className="text fw500 h26 mr-3"></p>
-                    <img
-                      alt="pen"
-                      src={audio2Img}
-                      width="90px"
-                      height="57px"
-                      className="mr-3 rounded"
-                    />
 
+            <Modal show={this.state.modal2IsOpen} onHide={this.closeModal2}>
+              <Modal.Header>
+                <div className="d-flex flex-row flex-wrap-reverse w-100 justify-content-end">
+                  <div className="d-flex flex-wrap flex-xl-row flex-column align-items-center justify-content-xl-between justify-content-around w-100 modal-header-div">
+
+
+                    <div className=" m-1  d-flex flex-row align-items-center">
+                      <div className="mr-0 modal-pen-icon">
+                        <img
+                          alt="pen"
+                          src={pen_icon2}
+                          className="m-1 "
+                        />
+                      </div>
+                      <p className="text fw500 h40  m-1">Sample Journal</p>
+                    </div>
+                    <div className="d-flex flex-xl-row flex-lg-column-reverse align-items-center  flex-column-reverse modal-header-right">
+                      <p className="text fw500 h26 m-1 p-1">Music - Sia</p>
+                      <img
+                        alt="audio img 1"
+                        src={audio2Img}
+                        className="m-1 modal-img"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div ClassName="closeModel">
-                  <button type="button" onClick={this.closeModal2} className="btn-lg  close-btn">
-                    X
-                  </button>
+                  <div className="closeModel">
+                    <button
+                      type="button"
+                      onClick={this.closeModal2}
+                      className="btn-lg close-btn"
+                    >
+                      X
+                    </button>
+                  </div>
+
                 </div>
               </Modal.Header>
               <Modal.Body className="ml-4 mt-2 pt-0">
-                <p className=" text fw600 text-gray-757 h16">{this.renderDate()}</p>
-                <p className="mt-5 text s18 bold lh140"><i>Thoughts? How does this story relate to your past? present? future?</i></p>
-                <p className="mt-5 mb-5 text s18 bold lh140"><i>Thoughts? How does this story relate to your past? present? future?</i></p>
+                <p className=" text fw600 text-gray-757 h16">
+                  {this.renderDate()}
+                </p>
+                <p className="mt-5 text s18 bold lh140">
+                  <i>
+                    Thoughts? How does this story relate to your past? present?
+                    future?
+                  </i>
+                </p>
+                <p className="mt-5 mb-5 text s18 bold lh140">
+                  <i>
+                    Thoughts? How does this story relate to your past? present?
+                    future?
+                  </i>
+                </p>
               </Modal.Body>
             </Modal>
             <input
               type="image"
               variant="primary"
-              onClick={this.openModal2}
+              onClick={this.openModal1}
               alt="audio-controls"
-              className="forward-btn ml-3"
-              src={pen_icon2}
+              className="audio-btn ml-3"
+              src={pen_icon}
               width="35"
               height="35"
             />
@@ -674,8 +710,14 @@ class HomePage extends Component {
   // ---------------- sound track 2  (image) ------------ //
   renderStory2Img() {
     return (
-      <div className="story-img  img-fluid center-text mb-3 mt-3">
-        <img alt="story-thumbnail" className="img-fluid" src={audio2Img} />
+      <div className=" d-table story-img-section">
+        <span className="vertical-center text-center">
+          <img
+            alt="Hompage-image2 "
+            className="img-fluid story-img "
+            src={audio2Img}
+          />
+        </span>
       </div>
     );
   }
@@ -684,36 +726,32 @@ class HomePage extends Component {
   renderStory3() {
     return (
       <div>
-        <div className="d-flex flex-md-row flex-column justify-content-between align-items-center">
-          <div className="Story-header my-auto">
-            <div className="story-title  d-flex  flex-sm-row flex-column align-items-end">
-              <p className="text s30 lh120 bold mr-4">
-                Quiddich - Harry Potter
-              </p>
+        <div className="d-flex flex-md-nowrap flex-sm-wrap-reverse flex-wrap-reverse justify-content-between align-items-sm-center align-items-end story-titlebar my-container-95 ml-0">
+          <div className="Story-header my-auto pt-4">
+            <div className="story-title  d-flex flex-wrap align-items-end">
+              <p className="text s30 lh120 bold mr-4">Quiddich - Harry Potter</p>
               <p className="text s18 lh150 text-gray-97 mr-3 fw500">
                 Fiction Literature
               </p>
             </div>
-            <div className="mt-2 story-categary">
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+            <div className="d-flex flex-wrap mt-1 story-categary">
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
                 Leadership
               </span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
                 Adventure
               </span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
                 Bravery
               </span>
             </div>
           </div>
-          <div className="d-flex flex-row align-items-center justify-content-center audio-controls mr-4 pr-4 ">
+          <div className="d-flex flex-row align-items-center justify-content-md-end justify-content-around audio-controls mt-4 pl-2">
             <input
               type="image"
               alt="audio-controls"
               className=" back-btn mr-3"
               src={back_20}
-              width="35"
-              height="35"
             />
             <input
               type="image"
@@ -721,8 +759,6 @@ class HomePage extends Component {
               id="play-btn"
               className="audio-btn mr-3"
               src={playIcon}
-              width="54px"
-              height="52.2px"
               onClick={this.togglePlay()}
             />
             <input
@@ -730,43 +766,61 @@ class HomePage extends Component {
               alt="audio-controls"
               className="forward-btn mr-3"
               src={forward_20}
-              width="35"
-              height="35"
             />
-            <Modal show={this.state.modal3IsOpen} onHide={this.closeModal3} >
-              <Modal.Header>
-                <div className="d-flex flex-row align-items-center justify-content-between w-100 model-header mt-3">
-                  <div className="d-flex flex-row align-items-center"><img
-                    alt="pen"
-                    src={pen_icon2}
-                    width="30px"
-                    height="30px"
-                    className="mr-3"
-                  />
-                    <p className="text fw500 h40 ls1by2">Quiddich - Harry Potter</p>
-                  </div>
-                  <div className="d-flex flex-row align-items-center model-header2">
-                    <p className="text fw500 h26 mr-3"></p>
-                    <img
-                      alt="pen"
-                      src={audio3Img}
-                      width="90px"
-                      height="57px"
-                      className="mr-3 rounded"
-                    />
 
+            <Modal show={this.state.modal3IsOpen} onHide={this.closeModal3}>
+              <Modal.Header>
+                <div className="d-flex flex-row flex-wrap-reverse w-100 justify-content-end">
+                  <div className="d-flex flex-wrap flex-xl-row flex-column align-items-center justify-content-xl-between justify-content-around w-100 modal-header-div">
+
+
+                    <div className=" m-1  d-flex flex-row align-items-center">
+                      <div className="mr-0 modal-pen-icon">
+                        <img
+                          alt="pen"
+                          src={pen_icon2}
+                          className="m-1 "
+                        />
+                      </div>
+                      <p className="text fw500 h40  m-1">Sample Journal</p>
+                    </div>
+                    <div className="d-flex flex-xl-row flex-lg-column-reverse align-items-center  flex-column-reverse modal-header-right">
+                      <p className="text fw500 h26 m-1 p-1">Quiddich - Harry Potter</p>
+                      <img
+                        alt="audio img 1"
+                        src={audio3Img}
+                        className="m-1 modal-img"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div ClassName="closeModel">
-                  <button type="button" onClick={this.closeModal3} className="btn-lg  close-btn">
-                    X
-                  </button>
+                  <div className="closeModel">
+                    <button
+                      type="button"
+                      onClick={this.closeModal3}
+                      className="btn-lg close-btn"
+                    >
+                      X
+                    </button>
+                  </div>
+
                 </div>
               </Modal.Header>
               <Modal.Body className="ml-4 mt-2 pt-0">
-                <p className=" text fw600 text-gray-757 h16">{this.renderDate()}</p>
-                <p className="mt-5 text s18 bold lh140"><i>Thoughts? How does this story relate to your past? present? future?</i></p>
-                <p className="mt-5 mb-5 text s18 bold lh140"><i>Thoughts? How does this story relate to your past? present? future?</i></p>
+                <p className=" text fw600 text-gray-757 h16">
+                  {this.renderDate()}
+                </p>
+                <p className="mt-5 text s18 bold lh140">
+                  <i>
+                    Thoughts? How does this story relate to your past? present?
+                    future?
+                  </i>
+                </p>
+                <p className="mt-5 mb-5 text s18 bold lh140">
+                  <i>
+                    Thoughts? How does this story relate to your past? present?
+                    future?
+                  </i>
+                </p>
               </Modal.Body>
             </Modal>
             <input
@@ -774,8 +828,8 @@ class HomePage extends Component {
               variant="primary"
               onClick={this.openModal3}
               alt="audio-controls"
-              className="forward-btn ml-3"
-              src={pen_icon2}
+              className="audio-btn ml-3"
+              src={pen_icon}
               width="35"
               height="35"
             />
@@ -837,8 +891,14 @@ class HomePage extends Component {
   // ---------------- sound track 3  (image) ------------ //
   renderStory3Img() {
     return (
-      <div className="story-img  img-fluid center-text mb-3 mt-3">
-        <img alt="story-thumbnail" className="img-fluid" src={audio3Img} />
+      <div className=" d-table story-img-section">
+        <span className="vertical-center text-center">
+          <img
+            alt="Hompage-image3 "
+            className="img-fluid story-img "
+            src={audio3Img}
+          />
+        </span>
       </div>
     );
   }
@@ -847,36 +907,32 @@ class HomePage extends Component {
   renderStory4() {
     return (
       <div>
-        <div className="d-flex flex-md-row flex-column justify-content-between align-items-center">
-          <div className="Story-header my-auto">
-            <div className="story-title  d-flex  flex-sm-row flex-column align-items-end">
-              <p className="text s30 lh120 bold mr-4">
-                Nihilism - True Detective
-              </p>
+        <div className="d-flex flex-md-nowrap flex-sm-wrap-reverse flex-wrap-reverse justify-content-between align-items-sm-center align-items-end story-titlebar my-container-95 ml-0">
+          <div className="Story-header my-auto pt-4">
+            <div className="story-title  d-flex flex-wrap align-items-end">
+              <p className="text s30 lh120 bold mr-4">Nihilism - True Detective</p>
               <p className="text s18 lh150 text-gray-97 mr-3 fw500">
                 Pop Culture
               </p>
             </div>
-            <div className="mt-2 story-categary">
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+            <div className="d-flex flex-wrap mt-1 story-categary">
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
                 Purpose
               </span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
                 Meaning
               </span>
-              <span className="text text-white btn-sm btn-black s16 mr-3 rounded">
+              <span className="text text-white btn-sm btn-black s16 mr-3 mt-1 rounded">
                 Philosophy
               </span>
             </div>
           </div>
-          <div className="d-flex flex-row align-items-center justify-content-center audio-controls mr-4 pr-4 ">
+          <div className="d-flex flex-row align-items-center justify-content-md-end justify-content-around audio-controls mt-4 pl-2">
             <input
               type="image"
               alt="audio-controls"
               className=" back-btn mr-3"
               src={back_20}
-              width="35"
-              height="35"
             />
             <input
               type="image"
@@ -884,8 +940,6 @@ class HomePage extends Component {
               id="play-btn"
               className="audio-btn mr-3"
               src={playIcon}
-              width="54px"
-              height="52.2px"
               onClick={this.togglePlay()}
             />
             <input
@@ -893,43 +947,61 @@ class HomePage extends Component {
               alt="audio-controls"
               className="forward-btn mr-3"
               src={forward_20}
-              width="35"
-              height="35"
             />
-            <Modal show={this.state.modal4IsOpen} onHide={this.closeModal4} >
-              <Modal.Header>
-                <div className="d-flex flex-row align-items-center justify-content-between w-100 model-header mt-3">
-                  <div className="d-flex flex-row align-items-center"><img
-                    alt="pen"
-                    src={pen_icon2}
-                    width="30px"
-                    height="30px"
-                    className="mr-3"
-                  />
-                    <p className="text fw500 h40 ls1by2">Nihilism - True Detective</p>
-                  </div>
-                  <div className="d-flex flex-row align-items-center model-header2">
-                    <p className="text fw500 h26 mr-3"></p>
-                    <img
-                      alt="pen"
-                      src={audio4Img}
-                      width="90px"
-                      height="57px"
-                      className="mr-3 rounded"
-                    />
 
+            <Modal show={this.state.modal4IsOpen} onHide={this.closeModal4}>
+              <Modal.Header>
+                <div className="d-flex flex-row flex-wrap-reverse w-100 justify-content-end">
+                  <div className="d-flex flex-wrap flex-xl-row flex-column align-items-center justify-content-xl-between justify-content-around w-100 modal-header-div">
+
+
+                    <div className=" m-1  d-flex flex-row align-items-center">
+                      <div className="mr-0 modal-pen-icon">
+                        <img
+                          alt="pen"
+                          src={pen_icon2}
+                          className="m-1 "
+                        />
+                      </div>
+                      <p className="text fw500 h40  m-1">Sample Journal</p>
+                    </div>
+                    <div className="d-flex flex-xl-row flex-lg-column-reverse align-items-center  flex-column-reverse modal-header-right">
+                      <p className="text fw500 h26 m-1 p-1">Nihilism - True Detective</p>
+                      <img
+                        alt="audio img 1"
+                        src={audio4Img}
+                        className="m-1 modal-img"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div ClassName="closeModel">
-                  <button type="button" onClick={this.closeModal4} className="btn-lg  close-btn">
-                    X
-                  </button>
+                  <div className="closeModel">
+                    <button
+                      type="button"
+                      onClick={this.closeModal4}
+                      className="btn-lg close-btn"
+                    >
+                      X
+                    </button>
+                  </div>
+
                 </div>
               </Modal.Header>
               <Modal.Body className="ml-4 mt-2 pt-0">
-                <p className=" text fw600 text-gray-757 h16">{this.renderDate()}</p>
-                <p className="mt-5 text s18 bold lh140"><i>Thoughts? How does this story relate to your past? present? future?</i></p>
-                <p className="mt-5 mb-5 text s18 bold lh140"><i>Thoughts? How does this story relate to your past? present? future?</i></p>
+                <p className=" text fw600 text-gray-757 h16">
+                  {this.renderDate()}
+                </p>
+                <p className="mt-5 text s18 bold lh140">
+                  <i>
+                    Thoughts? How does this story relate to your past? present?
+                    future?
+                  </i>
+                </p>
+                <p className="mt-5 mb-5 text s18 bold lh140">
+                  <i>
+                    Thoughts? How does this story relate to your past? present?
+                    future?
+                  </i>
+                </p>
               </Modal.Body>
             </Modal>
             <input
@@ -937,8 +1009,8 @@ class HomePage extends Component {
               variant="primary"
               onClick={this.openModal4}
               alt="audio-controls"
-              className="forward-btn ml-3"
-              src={pen_icon2}
+              className="audio-btn ml-3"
+              src={pen_icon}
               width="35"
               height="35"
             />
@@ -1000,8 +1072,14 @@ class HomePage extends Component {
   // ---------------- sound track 4  (image) ------------ //
   renderStory4Img() {
     return (
-      <div className="story-img  img-fluid center-text mb-3 mt-3">
-        <img alt="story-thumbnail" className="img-fluid" src={audio4Img} />
+      <div className=" d-table story-img-section">
+        <span className="vertical-center text-center">
+          <img
+            alt="Hompage-image4 "
+            className="img-fluid story-img "
+            src={audio4Img}
+          />
+        </span>
       </div>
     );
   }
@@ -1012,7 +1090,7 @@ class HomePage extends Component {
         <div className="row">
           <div className="col-9 d-flex align-items-end p-0">
             <div>
-              <h1 className="text k45 ls1by2 ">
+              <h1 className="text k45  ">
                 Heroic Minds Global Community
               </h1>
               <br />
@@ -1110,9 +1188,7 @@ class HomePage extends Component {
     };
     return (
       <div className="HomePage">
-        <section className="HomePageHeader image1">
-          {this.renderMain()}
-        </section>
+        <section className="HomePageHeader image1">{this.renderMain()}</section>
 
         <section className="mt-7">{this.renderpage2()}</section>
 

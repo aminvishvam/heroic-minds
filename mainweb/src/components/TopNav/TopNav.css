@@ -19,7 +19,7 @@
   color: #f57c00;
 }
 
-@media (min-width: 481px) and (max-width: 992px) {
+@media (min-width: 481px) and (max-width: 991px) {
   .my-navbar .d-flex {
     flex-direction: column !important;
     margin-bottom: 8px;

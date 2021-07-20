@@ -8,12 +8,12 @@ class AuthorPage extends Component {
   renderHead1() {
     return (
       <div className="author-page-head">
-        <p className="text text-yellow bold k40 lh120 ls1by2">
+        <p className="text text-yellow bold k40 lh120 ">
           Share a story.
           <br />
           Be rewarded.
         </p>
-        <p className="text bold k60 lh120 mt-6 ls1by2">
+        <p className="text bold k60 lh120 mt-6 ">
           Stories from around
           <br /> the world.
         </p>
