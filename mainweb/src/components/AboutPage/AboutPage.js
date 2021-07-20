@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import DisplayBox from "../DisplayBox/DisplayBox";
-import Storytelling from "../../assets/AboutPageAssets/storytelling.svg";
+import Book from "../../assets/AboutPageAssets/Book.svg";
 import Behavioural from "../../assets/AboutPageAssets/Click.svg";
 import Man from "../../assets/AboutPageAssets/Man.svg";
 import House from "../../assets/AboutPageAssets/House.svg";
@@ -86,11 +86,7 @@ class AboutPage extends Component {
     return (
       <div className="text-center d-table  pt-4">
         <span className="vertical-center">
-          <img
-            alt="Hompage-image1"
-            className="img-fluid man-img"
-            src={Man}
-          />
+          <img alt="Hompage-image1" className="img-fluid man-img" src={Man} />
         </span>
       </div>
     );
@@ -102,7 +98,7 @@ class AboutPage extends Component {
           <img
             alt="Hompage-image2"
             className="img-fluid story-telling-img"
-            src={Storytelling}
+            src={Book}
           />
         </span>
       </div>
@@ -129,7 +125,7 @@ class AboutPage extends Component {
           Story telling is up to <b>22x more effective</b> in behavioural change
           and memory of ideas than rational reason alone.
           <br />
-          <span className="h20">- Standord University, 2019</span>
+          <span className="h20">- Stanford University, 2019</span>
         </p>
       </div>
     );
@@ -165,11 +161,7 @@ class AboutPage extends Component {
     return (
       <div className="d-table text-center  pt-4">
         <span className="vertical-center">
-          <img
-            alt="Hompage-image3"
-            className="img-fluid  penImg"
-            src={Pen}
-          />
+          <img alt="Hompage-image3" className="img-fluid  penImg" src={Pen} />
         </span>
       </div>
     );
@@ -254,6 +246,18 @@ class AboutPage extends Component {
           cognitive effort to produce the ideal life, thinking, analyzing and
           convincing themselves into submission of ideal behaviour. A stressful
           way to live.
+          <br />
+          <br />
+          The optimal way to achieve a heroic life is such that you are not
+          looking to the world to be fulfilled, you are not calculating your
+          behaviour.Rather, you allow an invigorating love of serving the world
+          to be your guiding global belief.In living this way, you feel as if
+          you already have everything you need because what you value is
+          attainable in every life experience.You have the ability to feel
+          fulfilled and engaged regardless of the situation or the environment
+          you are in .This allows you to build your psychological foundation on
+          solid rock.You maintain a composed and powerful mind that appears to
+          the world as the hero.
         </p>
       </div>
     );
@@ -273,44 +277,24 @@ class AboutPage extends Component {
   }
   renderRight5() {
     return (
-      <div className="abput-page-7 text-center d-table  pt-4">
+      <div className="abput-page-7 text-center d-table  pt-4 pb-4">
         <span className="vertical-center">
-          <p className="text h30 lh160 w500">
+          <p className="text h30 lh150 w500">
             When the heavy rain, wind, and floods arrived, those that built
             their homes on sand were in ruin, while those that built their homes
             solid rock, stood tall.
           </p>
-          <br />
-          <br />
-          <p className="text h20 lh130 w500">
-            Parable of the Wise and the Foolish Builders
+          <p className="text text-gray-757 h20 lh130 mt-4">
+            - Parable of the Wise and the Foolish Builders
           </p>
         </span>
-        <br />
-        <br />
       </div>
     );
   }
   renderCom3() {
     return (
       <div className="about-page-8  pt-4">
-        <p className="text h20 text-center lh150">
-          The optimal way to achieve a heroic life is such that you are not
-          looking to the world to be fulfilled, you are not calculating your
-          behaviour.Rather, you allow an invigorating love of serving the world
-          to be your guiding global belief.In living this way, you feel as if
-          you already have everything you need because what you value is
-          attainable in every life experience.You have the ability to feel
-          fulfilled and engaged regardless of the situation or the environment
-          you are in .This allows you to build your psychological foundation on
-          solid rock.You maintain a composed and powerful mind that appears to
-          the world as the hero. <br />
-          <br />
-          <b>
-            We have seen throughout history that living this way leads toward
-            the ultimate good for you and the world around you.
-          </b>
-        </p>
+        <p className="text h20 text-center lh150"></p>
       </div>
     );
   }
@@ -337,7 +321,6 @@ class AboutPage extends Component {
             contentLeft={this.renderLeft2()}
             contentRight={this.renderRight2()}
             fullContainer="true"
-
           />
         </section>
         <section className="mt-13">
@@ -356,22 +339,20 @@ class AboutPage extends Component {
               contentLeft={this.renderLeft4()}
               contentRight={this.renderRight4()}
               fullContainer="true"
-
             />
           </section>
         </section>
-        <div className="p-2 mt-13">
-          <section className="mt-13"> {this.renderCom2()} </section>
-          <section className="mt-13">
+        <div className="gray-box mt-13 mb-15 pb-4">
+          <section className=""> {this.renderCom2()} </section>
+          <section className="mt-10 pb-4">
             <DisplayBox
-              colLeft="4"
-              colRight="7"
+              colLeft="6"
+              colRight="6"
               contentLeft={this.renderLeft5()}
               contentRight={this.renderRight5()}
               fullContainer="true"
             />
           </section>
-          <section className="mt-13 mb-6"> {this.renderCom3()} </section>
         </div>
       </div>
     );

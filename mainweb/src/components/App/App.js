@@ -23,17 +23,19 @@ import FAQ from "../Footer/FAQ";
 
 class App extends Component {
   state = {};
+  history
+
 
   render() {
     return (
       <div className="App">
         <Router history={history}>
           <Switch>
-            <Route path="/" component={TopNav} />
+            <Route path="/heroic-minds" component={TopNav} />
           </Switch>
           <div className="Page">
             <ScrollToTop>
-              <Route path="/" exact component={HomePage} />
+              <Route path="/heroic-minds" exact component={HomePage} />
               <Route path="/about" exact component={AboutPage} />
               <Route path='/team-access' exact component={TeamAccess} />
               <Route path='/author' exact component={AuthorPage} />
@@ -52,7 +54,7 @@ class App extends Component {
 
           <div className='Footer'>
             <Switch>
-              <Route path="/" component={Footer} />
+              <Route path="/heroic-minds" component={Footer} />
             </Switch>
           </div>
         </Router>

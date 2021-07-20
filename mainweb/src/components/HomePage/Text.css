@@ -12,7 +12,7 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   visibility: visible;
   color: #000;
   text-align: left;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .text-orange {
@@ -61,10 +61,6 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 
 /* text weight */
 .bold {
-  font-weight: 700;
-}
-
-.fw700 {
   font-weight: 700;
 }
 

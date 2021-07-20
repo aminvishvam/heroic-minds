@@ -18,6 +18,25 @@
   padding-left: 4%;
 }
 
+.about-page hr {
+  width: 20%;
+  border-top: 3px solid black !important;
+}
+
+.gray-box {
+  background-color: #c4c4c4;
+  border-radius: 20px;
+  padding: 5%;
+}
+
+.about-page {
+  font-weight: 400 !important;
+}
+
+.gray-box .pb-7 {
+  padding-bottom: 7% !important;
+}
+
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -45,6 +64,7 @@
   .about-page img {
     max-width: 200px !important;
     max-height: 200px !important;
+    margin-top: 10%;
   }
 
   .about-page .penImg {
@@ -57,28 +77,13 @@
     max-height: 280px !important;
   }
 
-  .about-page .vertical-center {
-    vertical-align: top !important;
+  .about-page hr {
+    width: 40%;
   }
 
-  .image-padding-right {
-    padding-right: 0%;
-    margin-top: 5%;
-  }
-
-  .image-padding-left {
-    padding-left: 0%;
-    margin-top: 5%;
-  }
-
-  .about-page .col-md-12 {
-    padding-right: 5px !important;
-    padding-left: 5px !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .about-page .mt-13 {
-    padding-top: 10%;
+  @media (max-width: 768px) {
+    .about-page hr {
+      width: 75%;
+    }
   }
 }

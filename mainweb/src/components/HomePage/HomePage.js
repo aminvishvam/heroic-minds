@@ -2,23 +2,24 @@ import React, { Component } from "react";
 import DisplayBox from "../DisplayBox/DisplayBox";
 
 import Background from "../../assets/HomePageAssets/home-page-background.svg";
-import HompageImage2 from "../../assets/HomePageAssets/Hompage-image2.svg";
-import storytelling from "../../assets/AboutPageAssets/storytelling.svg";
-import vector from "../../assets/HomePageAssets/Vector.svg";
-import community from "../../assets/HomePageAssets/community.svg";
+import imgHeadphone from "../../assets/HomePageAssets/Homepage-2-img.jpg";
+import Libra from "../../assets/HomePageAssets/Libra.svg";
+import Book from "../../assets/AboutPageAssets/Book.svg";
+import World from "../../assets/HomePageAssets/World.svg";
+import Community from "../../assets/HomePageAssets/Community.svg";
+import Pause from "../../assets/HomePageAssets/Pause.svg";
 import audio1Img from "../../assets/HomePageAssets/audio1Img.svg";
 import audio2Img from "../../assets/HomePageAssets/audio2Img.svg";
 import audio3Img from "../../assets/HomePageAssets/audio3Img.svg";
 import audio4Img from "../../assets/HomePageAssets/audio4Img.svg";
-import imgHeadphone from "../../assets/HomePageAssets/Group 725.jpeg";
-import playIcon from "../../assets/HomePageAssets/play.png";
-import back_20 from "../../assets/HomePageAssets/back_20.png";
-import forward_20 from "../../assets/HomePageAssets/forward_20.png";
+import playIcon from "../../assets/HomePageAssets/play.svg";
+import back_20 from "../../assets/HomePageAssets/back_20.svg";
+import forward_20 from "../../assets/HomePageAssets/forward_20.svg";
 import plusSign from "../../assets/HomePageAssets/plusSign.svg";
-import logotherapy from "../../assets/AboutPageAssets/Man.svg";
-import behavioural from "../../assets/HomePageAssets/behavioural.png";
-import pen_icon from "../../assets/HomePageAssets/penIcon2.svg";
-import pen_icon2 from "../../assets/HomePageAssets/penIcon2.png";
+import Man from "../../assets/AboutPageAssets/Man.svg";
+import Click from "../../assets/AboutPageAssets/Click.svg";
+import Pen_Icon_Black from "../../assets/HomePageAssets/Pen_Icon_Black.svg";
+import Pen_Icon from "../../assets/HomePageAssets/Pen_Icon.svg";
 
 import "./HomePage.css";
 import "./Text.css";
@@ -72,8 +73,7 @@ class HomePage extends Component {
   renderDate() {
     var now = new Date();
     var today = dateFormat(now, "mmmm dS, yyyy");
-    return (
-      <span>{today}</span>);
+    return <span>{today}</span>;
   }
 
   renderMain() {
@@ -148,7 +148,7 @@ class HomePage extends Component {
           <img
             alt="Hompage-image2"
             className="img-fluid home-page-3-img"
-            src={HompageImage2}
+            src={Libra}
           />
         </span>
       </div>
@@ -193,41 +193,33 @@ class HomePage extends Component {
 
   rendorComponantPlus() {
     return (
-      <div className="row home-page-5 mr-3">
-        <div className="col-md-5 col-lg-5 col-xl-5 col-sm-5 col-5 text-center">
-          <span className="">
-            <img
-              alt=""
-              className="img-fluid h-50 logotherapyImg pb-4"
-              src={logotherapy}
-            />
+      <div className="d-flex flex-row flex-nowrap home-page-5 justify-content-md-between justify-content-lg-around">
+        <div className=" text-center">
+          <img
+            alt=""
+            className="img-fluid h-50 logotherapyImg pb-4"
+            src={Man}
+          />
+          <p className="text k32 lh100  text-center mt-4">Logotherapy</p>
+          <p className="text h21 lh130  text-center mt-4">
+            Find meaning and purpose that invigorates your life.
+          </p>
 
-            <p className="text k40 lh100  text-center mt-5">
-              Logotherapy
-            </p>
-            <p className="text h21 lh130  text-center mt-4">
-              Find meaning and purpose in life beyond the illusive ideas that
-              society reinforces today.
-            </p>
-          </span>
         </div>
-        <div className="col-md-2 col-lg-2 col-xl-2 col-sm-2 col-2 text-center verical-center my-auto">
-          <span className="">
+        <div className="text-center my-auto">
+          <span className="m-3">
             <img alt="" className="img-fluid plusImg" src={plusSign} />
           </span>
         </div>
-        <div className="col-md-5 col-lg-5 col-xl-5 col-sm-5 col-5 text-center">
-          <span className="">
-            <img alt="" className="img-fluid h-50 pb-4" src={behavioural} />
+        <div className=" text-center">
+          <img alt="" className="img-fluid h-50 pb-4" src={Click} />
 
-            <p className="text k40 lh100 text-center mt-5">
-              Behavioural Activation
-            </p>
-            <p className="text h21 lh130  text-center mt-4">
-              Heroic Minds aims to activate the feeling of doing more of what
-              brings real value into your life.
-            </p>
-          </span>
+          <p className="text k32 lh100 text-center mt-4">
+            Behavioural Activation
+          </p>
+          <p className="text h21 lh130  text-center mt-4">
+            Do more of what brings real value into your life
+          </p>
         </div>
       </div>
     );
@@ -239,7 +231,7 @@ class HomePage extends Component {
           <img
             alt="Hompage-image2"
             className="img-fluid img-storytelling  pr-4"
-            src={storytelling}
+            src={Book}
           />
         </span>
       </div>
@@ -277,34 +269,38 @@ class HomePage extends Component {
         <div className="mb-5 pl-4">
           <h1 className="text bold k45 lh120 ">Value of Heroic Minds</h1>
         </div>
-        <div className="row">
-          <div className="col section-box-mini mr-4 text text-white">
-            <h1 className="h28 bold lh150 ls1half pl-4">Enjoyable</h1>
-            <p className="h20 lh120 pl-3">
-              Short and engaging stories to wake up to, enjoy during your
-              communte or to fall asleep to at night.
-            </p>
+        <div className="d-flex flex-row flex-lg-nowrap flex-wrap">
+          <div className="d-flex flex-row flex-sm-nowrap  flex-wrap">
+            <div className="section-box-mini text text-white text-center">
+              <h1 className="h28 fw600 lh150 ls1half">Enjoyable</h1>
+              <p className="h20 lh120 text-center">
+                Short and engaging stories to wake up to, enjoy during your
+                communte or to fall asleep to at night.
+              </p>
+            </div>
+            <div className="section-box-mini text text-white">
+              <h1 className="h28 fw600 lh150 ls1half text-center">Organized</h1>
+              <p className="h20 lh120 text-center">
+                Content organizaed by topic, and theme such as, Pop Culture and
+                Greek Mythology OR Perseverence or Leadership.
+              </p>
+            </div>
           </div>
-          <div className="col section-box-mini text text-white mr-4">
-            <h1 className="h28 bold lh150 ls1half pl-4">Organized</h1>
-            <p className="h20 lh120 pl-3">
-              Content organizaed by topic, and theme such as, Pop Culture and
-              Greek Mythology OR Perseverence or Leadership.
-            </p>
-          </div>
-          <div className="col section-box-mini text text-white mr-4">
-            <h1 className="h28 bold lh150 ls1half pl-4">Impactful</h1>
-            <p className="h20 lh120 pl-3">
-              Long form stories and ideas condensed down to 5-10 minutes listens
-              or reads for an efficient and effective experience.
-            </p>
-          </div>
-          <div className="col section-box-mini text text-white mr-4">
-            <h1 className="h28 bold lh150 ls1half pl-4">Therapeutic </h1>
-            <p className="h20 lh120 pl-3">
-              The experience of listening to and reflecting on heroic stories is
-              a form of logotherapy and behaviooural activation.
-            </p>
+          <div className="d-flex flex-row flex-sm-nowrap flex-wrap">
+            <div className="section-box-mini text text-white">
+              <h1 className="h28 fw600 lh150 ls1half text-center">Impactful</h1>
+              <p className="h20 lh120 text-center">
+                Long form stories and ideas condensed down to 5-10 minutes listens
+                or reads for an efficient and effective experience.
+              </p>
+            </div>
+            <div className="section-box-mini text text-white ">
+              <h1 className="h28 fw600 lh150 ls1half text-center">Therapeutic </h1>
+              <p className="h20 lh120 text-center">
+                The experience of listening to and reflecting on heroic stories is
+                a form of logotherapy and behaviooural activation.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -315,13 +311,14 @@ class HomePage extends Component {
     return (
       <div className="home-page-9">
         <div className="my-container-85 pb-1 pt-1">
-          <div className="text text-center text-white h26 lh160 mt-10 mb-10 ">
-            When you lead your daily life with the aim to serve and improve the
-            lives of others, your attention shifts from self-serving worry and
-            rumination to focus on the world around you. <br />
-            It is then that you see life as an adventure and its challenges as
-            opportunities. <br />
-            It is then that you are able to live fully in the moment.
+          <div className="text text-center text-white h24 lh160 mt-10 mb-10 ">
+            &nbsp;&nbsp;&nbsp;Most of life’s challenges present a choice - to rise to the
+            challenge or continue to struggle. The framework of the hero is that
+            of a person whom values and aims to rise to the challenge out of
+            love for others. This shifts the focus from the individual, their
+            income, status, success, etc., to the world around them. Only then
+            can one truly be present and live fully, without reliance on
+            external tools.
           </div>
         </div>
       </div>
@@ -349,7 +346,7 @@ class HomePage extends Component {
         <div className="d-flex flex-md-nowrap flex-sm-wrap-reverse flex-wrap-reverse justify-content-between align-items-sm-center align-items-end story-titlebar my-container-95 ml-0">
           <div className="Story-header my-auto pt-4">
             <div className="story-title  d-flex flex-wrap align-items-end">
-              <p className="text s30 lh120 bold mr-4">A Heroic Mind </p>
+              <p className="text s30 lh120 fw600 mr-4">A Heroic Mind </p>
               <p className="text s18 lh150 text-gray-97 mr-3 fw500">
                 Introduction Course
               </p>
@@ -392,15 +389,9 @@ class HomePage extends Component {
               <Modal.Header>
                 <div className="d-flex flex-row flex-wrap-reverse w-100 justify-content-end">
                   <div className="d-flex flex-wrap flex-xl-row flex-column align-items-center justify-content-xl-between justify-content-around w-100 modal-header-div">
-
-
                     <div className=" m-1  d-flex flex-row align-items-center">
                       <div className="mr-0 modal-pen-icon">
-                        <img
-                          alt="pen"
-                          src={pen_icon2}
-                          className="m-1 "
-                        />
+                        <img alt="pen" src={Pen_Icon_Black} className="m-1 " />
                       </div>
                       <p className="text fw500 h40  m-1">Sample Journal</p>
                     </div>
@@ -422,20 +413,19 @@ class HomePage extends Component {
                       X
                     </button>
                   </div>
-
                 </div>
               </Modal.Header>
               <Modal.Body className="ml-4 mt-2 pt-0">
                 <p className=" text fw600 text-gray-757 h16">
                   {this.renderDate()}
                 </p>
-                <p className="mt-5 text s18 bold lh140">
+                <p className="mt-5 text s18 fw600 lh140">
                   <i>
                     Thoughts? How does this story relate to your past? present?
                     future?
                   </i>
                 </p>
-                <p className="mt-5 mb-5 text s18 bold lh140">
+                <p className="mt-5 mb-5 text s18 fw600 lh140">
                   <i>
                     Thoughts? How does this story relate to your past? present?
                     future?
@@ -449,7 +439,7 @@ class HomePage extends Component {
               onClick={this.openModal1}
               alt="audio-controls"
               className="audio-btn ml-3"
-              src={pen_icon}
+              src={Pen_Icon}
               width="35"
               height="35"
             />
@@ -548,7 +538,7 @@ class HomePage extends Component {
         <div className="d-flex flex-md-nowrap flex-sm-wrap-reverse flex-wrap-reverse justify-content-between align-items-sm-center align-items-end story-titlebar my-container-95 ml-0">
           <div className="Story-header my-auto pt-4">
             <div className="story-title  d-flex flex-wrap align-items-end">
-              <p className="text s30 lh120 bold mr-4">Music - Sia</p>
+              <p className="text s30 lh120 fw600 mr-4">Music - Sia</p>
               <p className="text s18 lh150 text-gray-97 mr-3 fw500">
                 Pop Culture
               </p>
@@ -591,15 +581,9 @@ class HomePage extends Component {
               <Modal.Header>
                 <div className="d-flex flex-row flex-wrap-reverse w-100 justify-content-end">
                   <div className="d-flex flex-wrap flex-xl-row flex-column align-items-center justify-content-xl-between justify-content-around w-100 modal-header-div">
-
-
                     <div className=" m-1  d-flex flex-row align-items-center">
                       <div className="mr-0 modal-pen-icon">
-                        <img
-                          alt="pen"
-                          src={pen_icon2}
-                          className="m-1 "
-                        />
+                        <img alt="pen" src={Pen_Icon_Black} className="m-1 " />
                       </div>
                       <p className="text fw500 h40  m-1">Sample Journal</p>
                     </div>
@@ -621,20 +605,19 @@ class HomePage extends Component {
                       X
                     </button>
                   </div>
-
                 </div>
               </Modal.Header>
               <Modal.Body className="ml-4 mt-2 pt-0">
                 <p className=" text fw600 text-gray-757 h16">
                   {this.renderDate()}
                 </p>
-                <p className="mt-5 text s18 bold lh140">
+                <p className="mt-5 text s18 fw600 lh140">
                   <i>
                     Thoughts? How does this story relate to your past? present?
                     future?
                   </i>
                 </p>
-                <p className="mt-5 mb-5 text s18 bold lh140">
+                <p className="mt-5 mb-5 text s18 fw600 lh140">
                   <i>
                     Thoughts? How does this story relate to your past? present?
                     future?
@@ -648,7 +631,7 @@ class HomePage extends Component {
               onClick={this.openModal1}
               alt="audio-controls"
               className="audio-btn ml-3"
-              src={pen_icon}
+              src={Pen_Icon}
               width="35"
               height="35"
             />
@@ -729,7 +712,9 @@ class HomePage extends Component {
         <div className="d-flex flex-md-nowrap flex-sm-wrap-reverse flex-wrap-reverse justify-content-between align-items-sm-center align-items-end story-titlebar my-container-95 ml-0">
           <div className="Story-header my-auto pt-4">
             <div className="story-title  d-flex flex-wrap align-items-end">
-              <p className="text s30 lh120 bold mr-4">Quiddich - Harry Potter</p>
+              <p className="text s30 lh120 fw600 mr-4">
+                Quiddich - Harry Potter
+              </p>
               <p className="text s18 lh150 text-gray-97 mr-3 fw500">
                 Fiction Literature
               </p>
@@ -772,20 +757,16 @@ class HomePage extends Component {
               <Modal.Header>
                 <div className="d-flex flex-row flex-wrap-reverse w-100 justify-content-end">
                   <div className="d-flex flex-wrap flex-xl-row flex-column align-items-center justify-content-xl-between justify-content-around w-100 modal-header-div">
-
-
                     <div className=" m-1  d-flex flex-row align-items-center">
                       <div className="mr-0 modal-pen-icon">
-                        <img
-                          alt="pen"
-                          src={pen_icon2}
-                          className="m-1 "
-                        />
+                        <img alt="pen" src={Pen_Icon_Black} className="m-1 " />
                       </div>
                       <p className="text fw500 h40  m-1">Sample Journal</p>
                     </div>
                     <div className="d-flex flex-xl-row flex-lg-column-reverse align-items-center  flex-column-reverse modal-header-right">
-                      <p className="text fw500 h26 m-1 p-1">Quiddich - Harry Potter</p>
+                      <p className="text fw500 h26 m-1 p-1">
+                        Quiddich - Harry Potter
+                      </p>
                       <img
                         alt="audio img 1"
                         src={audio3Img}
@@ -802,20 +783,19 @@ class HomePage extends Component {
                       X
                     </button>
                   </div>
-
                 </div>
               </Modal.Header>
               <Modal.Body className="ml-4 mt-2 pt-0">
                 <p className=" text fw600 text-gray-757 h16">
                   {this.renderDate()}
                 </p>
-                <p className="mt-5 text s18 bold lh140">
+                <p className="mt-5 text s18 fw600 lh140">
                   <i>
                     Thoughts? How does this story relate to your past? present?
                     future?
                   </i>
                 </p>
-                <p className="mt-5 mb-5 text s18 bold lh140">
+                <p className="mt-5 mb-5 text s18 fw600 lh140">
                   <i>
                     Thoughts? How does this story relate to your past? present?
                     future?
@@ -829,7 +809,7 @@ class HomePage extends Component {
               onClick={this.openModal3}
               alt="audio-controls"
               className="audio-btn ml-3"
-              src={pen_icon}
+              src={Pen_Icon}
               width="35"
               height="35"
             />
@@ -910,7 +890,9 @@ class HomePage extends Component {
         <div className="d-flex flex-md-nowrap flex-sm-wrap-reverse flex-wrap-reverse justify-content-between align-items-sm-center align-items-end story-titlebar my-container-95 ml-0">
           <div className="Story-header my-auto pt-4">
             <div className="story-title  d-flex flex-wrap align-items-end">
-              <p className="text s30 lh120 bold mr-4">Nihilism - True Detective</p>
+              <p className="text s30 lh120 fw600 mr-4">
+                Nihilism - True Detective
+              </p>
               <p className="text s18 lh150 text-gray-97 mr-3 fw500">
                 Pop Culture
               </p>
@@ -953,20 +935,16 @@ class HomePage extends Component {
               <Modal.Header>
                 <div className="d-flex flex-row flex-wrap-reverse w-100 justify-content-end">
                   <div className="d-flex flex-wrap flex-xl-row flex-column align-items-center justify-content-xl-between justify-content-around w-100 modal-header-div">
-
-
                     <div className=" m-1  d-flex flex-row align-items-center">
                       <div className="mr-0 modal-pen-icon">
-                        <img
-                          alt="pen"
-                          src={pen_icon2}
-                          className="m-1 "
-                        />
+                        <img alt="pen" src={Pen_Icon_Black} className="m-1 " />
                       </div>
                       <p className="text fw500 h40  m-1">Sample Journal</p>
                     </div>
                     <div className="d-flex flex-xl-row flex-lg-column-reverse align-items-center  flex-column-reverse modal-header-right">
-                      <p className="text fw500 h26 m-1 p-1">Nihilism - True Detective</p>
+                      <p className="text fw500 h26 m-1 p-1">
+                        Nihilism - True Detective
+                      </p>
                       <img
                         alt="audio img 1"
                         src={audio4Img}
@@ -983,20 +961,19 @@ class HomePage extends Component {
                       X
                     </button>
                   </div>
-
                 </div>
               </Modal.Header>
               <Modal.Body className="ml-4 mt-2 pt-0">
                 <p className=" text fw600 text-gray-757 h16">
                   {this.renderDate()}
                 </p>
-                <p className="mt-5 text s18 bold lh140">
+                <p className="mt-5 text s18 fw600 lh140">
                   <i>
                     Thoughts? How does this story relate to your past? present?
                     future?
                   </i>
                 </p>
-                <p className="mt-5 mb-5 text s18 bold lh140">
+                <p className="mt-5 mb-5 text s18 fw600 lh140">
                   <i>
                     Thoughts? How does this story relate to your past? present?
                     future?
@@ -1010,7 +987,7 @@ class HomePage extends Component {
               onClick={this.openModal4}
               alt="audio-controls"
               className="audio-btn ml-3"
-              src={pen_icon}
+              src={Pen_Icon}
               width="35"
               height="35"
             />
@@ -1090,9 +1067,7 @@ class HomePage extends Component {
         <div className="row">
           <div className="col-9 d-flex align-items-end p-0">
             <div>
-              <h1 className="text k45  ">
-                Heroic Minds Global Community
-              </h1>
+              <h1 className="text k45 fw500">Heroic Minds Global Community</h1>
               <br />
               <p className="text k32">
                 Sharing empowering stories and ideas to make the world a more
@@ -1102,7 +1077,7 @@ class HomePage extends Component {
           </div>
           <div className="col-3 p-0">
             <span className="home-page-10-img">
-              <img alt="Hompage-image2" className="img-fluid" src={vector} />
+              <img alt="Hompage-image2" className="img-fluid" src={World} />
             </span>
           </div>
         </div>
@@ -1112,7 +1087,7 @@ class HomePage extends Component {
   renderComponent3() {
     return (
       <div className="home-page-12">
-        <p className="text k45 lh150 bold text-center">
+        <p className="text k45 lh150 fw600 text-center">
           Be the first to hear when
           <br /> Heroic Minds go live!
         </p>
@@ -1132,46 +1107,46 @@ class HomePage extends Component {
     return (
       <div className="home-page-13">
         <div className="row justify-content-center">
-          <div className="col-lg-3 mb-8">
+          <div className="col-lg-3 mt-15">
             <a href="/">
-              <p className="text text-center bold h30 lh130 pb-4">
+              <p className="text text-center fw600 h30 lh130">
                 <u>30-Day Free Trial</u>
               </p>
             </a>
-            <p className="text text-center h22 lh130 mt-4">
+            <p className="text text-center h22 lh130 mt-3 fw500">
               30% of Heroic Minds Library
             </p>
-            <h1 className="text text-center h40 lh150">Free</h1>
+            <h1 className="text text-center h40 lh150 fw500">Free</h1>
           </div>
 
-          <div className="col-lg-6 mb-8">
+          <div className="col-lg-6 mt-15">
             <a href="/">
-              <p className="text text-center bold h60 lh47 pb-4">
+              <p className="text text-center fw600 h60 lh47">
                 <u>Yearly</u>
               </p>
               <br />
             </a>
-            <p className="text text-center h30 lh150 mt-1">
+            <p className="text text-center h30 lh150 mt-1 fw500">
               Full Heroic Minds Library
             </p>
-            <h1 className="text text-center h60 lh130">$170</h1>
+            <h1 className="text text-center h60 lh130 fw500">$84</h1>
             <p className="text text-center h24 lh130 text-gray-97 ">
-              $14/month
+              $7/month
             </p>
           </div>
 
-          <div className="col-lg-3 mb-8">
+          <div className="col-lg-3 mt-15">
             <a href="/">
-              <p className="text text-center bold h30 lh130 pb-4">
+              <p className="text text-center fw600 h30 lh130">
                 <u>Monthly</u>
               </p>
             </a>
-            <p className="text text-center h22 lh150 mt-4">
+            <p className="text text-center h22 lh150 mt-3 fw500">
               Full Heroic Minds Library
             </p>
-            <h1 className="text text-center h45 lh150">$240</h1>
+            <h1 className="text text-center h45 lh150 fw500">$120</h1>
             <p className="text text-center h22 lh130 text-gray-97 ">
-              $20/month
+              $10/month
             </p>
           </div>
         </div>
@@ -1187,7 +1162,7 @@ class HomePage extends Component {
       height: "800px",
     };
     return (
-      <div className="HomePage">
+      <div className="HomePage mb-15">
         <section className="HomePageHeader image1">{this.renderMain()}</section>
 
         <section className="mt-7">{this.renderpage2()}</section>
@@ -1203,7 +1178,7 @@ class HomePage extends Component {
               alwaysColumn="true"
             />
           </section>
-          <section className="mt-18">
+          <section className="mt-18 ">
             <DisplayBox
               colLeft="6"
               colRight="6"
@@ -1282,11 +1257,11 @@ class HomePage extends Component {
           <section className="mt-15">{this.renderCommunity()}</section>
           <section className="mt-15">
             <div className="container-fluid">
-              <img alt="Hompage-image2" className="img-fluid" src={community} />
+              <img alt="Hompage-image2" className="img-fluid" src={Community} />
             </div>
           </section>
           <section className="mt-1">{this.renderComponent3()}</section>
-          <section className="mt-18">{this.renderPrice()}</section>
+          <section className="mt-10">{this.renderPrice()}</section>
         </div>
       </div>
     );
