@@ -1,7 +1,6 @@
 .sign-up-button {
     background-color: #070B24 !important;
-    min-width: 590px;
-    width: auto;
+    width: 100% !important;
     height: 65px;
     border-radius: 10px;
     font-weight: 600;

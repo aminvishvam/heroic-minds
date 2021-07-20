@@ -7,6 +7,10 @@ import { NavLink } from "react-router-dom";
 import "./TopNav.css";
 import { connect } from "react-redux";
 
+import TopNavLibrary from "../TopNavLibrary/TopNavLibrary";
+import TopNavProfile from "../TopNavProfile/TopNavProfile";
+import SearchBar from "../SearchBar/searchBar";
+
 class TopNav extends Component {
   itemStyle = {
     color: "black",
@@ -31,29 +35,24 @@ class TopNav extends Component {
                 style={{ maxHeight: "100px" }}
                 navbarScroll
               >
-                <NavLink
-                  to="/library"
-                  className="Nav-text navbar-right"
-                  activeClassName="active"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "#F57C00",
-                  }}
-                >
-                  Library
+                <TopNavLibrary />
+                <div style={{ display: 'flex', alignItems: 'center', marginRight: '50px' }}>
+                  <NavLink
+                    to="/community"
+                    className="Nav-text"
+                    activeClassName="active"
+                    activeStyle={{
+                      fontWeight: "bold",
+                      color: "#F57C00",
+                    }}
+                  >
+                    Community
                 </NavLink>
-                <NavLink
-                  to="/community"
-                  className="Nav-text"
-                  activeClassName="active"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "#F57C00",
-                  }}
-                >
-                  Community
-                </NavLink>
+                </div>
+
+                <SearchBar />
               </Nav>
+              <TopNavProfile />
             </Navbar.Collapse>
           </Navbar>
         </div>
@@ -142,7 +141,7 @@ class TopNav extends Component {
                   Login
                 </NavLink>
               </span>
-              <NavLink to="/joinToday" className="Nav-text">
+              <NavLink to="/JoinNow" className="Nav-text">
                 <button className="btn btn-dark">Join Today</button>
               </NavLink>
             </Navbar.Collapse>

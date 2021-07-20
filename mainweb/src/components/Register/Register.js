@@ -25,7 +25,7 @@ class Register extends Component {
             <h1>Create a new Account</h1>
             <p>The Hero is in you</p>
           </div>
-          <div className="row justify-content-center ">
+          <div className="container row justify-content-center ">
             <div className="menu">
               <div
                 className={`items  ${isPersonalOpen ? "actived" : " "}`}

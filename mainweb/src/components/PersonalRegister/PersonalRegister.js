@@ -33,7 +33,7 @@ class PersonalRegister extends Component {
     return (
       <div className="container justify-content-center">
         <div className="row justify-content-center">
-          <div>
+          <div style={{ maxWidth: '600px', width: '100%' }} className="container">
             <form onSubmit={handleSubmit(this.onSubmit)}>
               <Field
                 name="Fullname"
@@ -78,10 +78,9 @@ class PersonalRegister extends Component {
               </label>
               </div>
               <button
-
+                className="sign-up-button"
                 type="submit"
                 disabled={submitting || pristine}
-                className="sign-up-button"
               >
                 Sign Up
               </button>

@@ -18,6 +18,10 @@ class Login extends Component {
     this.props.login(formValues);
   };
 
+  clearErrorState = () => {
+    this.props.resetPreviousError();
+  }
+
   render() {
     const { handleSubmit, pristine, submitting } = this.props;
     return (
@@ -28,7 +32,7 @@ class Login extends Component {
           <p>The Hero is in you</p>
         </div>
         <div className="row justify-content-center">
-          <div>
+          <div style={{ maxWidth: '600px', width: '100%' }} className="container">
             <form onSubmit={handleSubmit(this.onSubmit)}>
               <Field
                 name="email"
@@ -70,6 +74,7 @@ class Login extends Component {
         <ErrorMessage
           open={!!this.props.errorMessage}
           errorMessage={this.props.errorMessage}
+          clearErrorState={this.clearErrorState}
         />
       </div>
     );
