@@ -31,11 +31,11 @@ class App extends Component {
       <div className="App">
         <Router history={history}>
           <Switch>
-            <Route path="/heroic-minds" component={TopNav} />
+            <Route path="/" component={TopNav} />
           </Switch>
           <div className="Page">
             <ScrollToTop>
-              <Route path="/heroic-minds" exact component={HomePage} />
+              <Route path="/" exact component={HomePage} />
               <Route path="/about" exact component={AboutPage} />
               <Route path='/team-access' exact component={TeamAccess} />
               <Route path='/author' exact component={AuthorPage} />
@@ -54,7 +54,7 @@ class App extends Component {
 
           <div className='Footer'>
             <Switch>
-              <Route path="/heroic-minds" component={Footer} />
+              <Route path="/" component={Footer} />
             </Switch>
           </div>
         </Router>
