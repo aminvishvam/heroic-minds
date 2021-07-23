@@ -7,13 +7,13 @@ import "./AuthorPage.css";
 class AuthorPage extends Component {
   renderHead1() {
     return (
-      <div className="author-page-head">
-        <p className="text text-yellow bold k40 lh120 ">
+      <div className="author-page-head mt-6">
+        <p className="text text-yellow fw600 k40 lh120 ">
           Share a story.
           <br />
           Be rewarded.
         </p>
-        <p className="text bold k60 lh120 mt-6 ">
+        <p className="text fw600 k50 lh120 mt-6 ">
           Stories from around
           <br /> the world.
         </p>
@@ -23,17 +23,15 @@ class AuthorPage extends Component {
 
   renderHead1Img() {
     return (
-      <div className="text-center d-table">
-        <span className="vertical-center">
-          <img alt="Hompage-image2" className="img-fluid " src={book} />
-        </span>
+      <div className="text-center mt-6">
+        <img alt="Hompage-image2" className="img-fluid book-img" src={book} />
       </div>
     );
   }
 
   renderSharebtn() {
     return (
-      <div className="text-center  ">
+      <div className="text-center">
         <button type="submit" className="btn-lg btn-black book-btn-text">
           Share Something Today
         </button>
@@ -43,25 +41,28 @@ class AuthorPage extends Component {
 
   render() {
     return (
-      <div className="BookPage">
+      <div className="">
         <div className="my-container-90">
-          <section className="mt-6">
+          <section className="mt-3">
             <DisplayBox
-              colLeft="7"
-              colRight="5"
+              colLeft="6"
+              colRight="6"
               contentLeft={this.renderHead1()}
               contentRight={this.renderHead1Img()}
               fullContainer="true"
+              alwaysColumn="true"
             />
           </section>
           <section className="pl-3 mt-6">
-            <p className="txt intro h28">
+            <div className="txt intro h24 lh150">
+
               Your stories shared in the Heroic Minds Community may be featured
               in the Heroic Minds Library!
               <br />
               <b>Plus,</b> if your story is chosen, a Heroic Minds gift will be
               delivered to your door.
-            </p>
+
+            </div>
           </section>
           <section className="mt-7">{this.renderSharebtn()}</section>
         </div>
@@ -71,7 +72,7 @@ class AuthorPage extends Component {
             <img alt="Hompage-image2" className="img-fluid" src={bookBack} />
           </div>
         </section>
-      </div>
+      </div >
     );
   }
 }

@@ -11,7 +11,7 @@ class Contact extends Component {
                 <div className="text k40 bold lh100 pl-3">
                     <Link
                         to="/contact/frequently-asked-questions"
-                        className="link-text text-black-333"
+                        className="link-text text-black"
                     > Frequently Asked Questions</Link>
                 </div>
             </div>
@@ -21,19 +21,19 @@ class Contact extends Component {
     renderInfoLeft() {
         return (
             <div>
-                <p className="text bold text-black-047 h28 lh150">For:</p>
-                <p className="text h24 text-black-047 lh150">General Inquiries
+                <p className="text text-black-047 h28 lh150 fw600">For:</p>
+                <p className="text h24 text-black-047 lh150 fw500">General Inquiries
                     <br />Press  Media
                     <br />Team/Organization Subscription</p>
-                <p className="text h28 text-black-333 lh200">Email:&ensp;<u><a href="mailto:info@heroicminds.live" className="text-black-333">info@heroicminds.live</a></u></p>
+                <p className="text h28 text-black-333 lh200 fw500">Email:&ensp;<u><a href="mailto:info@heroicminds.live" className="text-black-333">info@heroicminds.live</a></u></p>
             </div>);
 
     }
 
     renderInfoRight() {
         return (<div className="pt-4">
-            <p className="text bold text-black-047 h28 lh150">Main Office</p>
-            <p className="text h24 text-black-047 lh150">191 King Street South Waterloo, Ontario Canada</p>
+            <p className="text text-black-047 h28 lh150 fw600">Main Office</p>
+            <p className="text h24 text-black-333 lh150 fw500">191 King Street South Waterloo, Ontario Canada</p>
         </div>);
 
     }
@@ -56,7 +56,7 @@ class Contact extends Component {
 
                 <section className="mt-4 pl-3">
                     <div>
-                        <p className="text h28 lh200 bold text-black-047">Work with Ben</p>
+                        <p className="text h28 lh200 fw600 text-black-047">Work with Ben</p>
                         <a href="mailto:info@heroicminds.live" className="btn-lg btn-black ls1 k18">
                             Click Here
                         </a>
