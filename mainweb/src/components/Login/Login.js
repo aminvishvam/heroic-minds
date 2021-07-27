@@ -18,6 +18,7 @@ class Login extends Component {
     this.props.login(formValues);
   };
 
+
   clearErrorState = () => {
     this.props.resetPreviousError();
   }

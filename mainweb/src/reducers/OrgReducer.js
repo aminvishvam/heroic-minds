@@ -7,7 +7,7 @@ const orgReducer = (state = {}, action) => {
       return { ...state, ..._.mapKeys(action.payload, "_id") };
     case FETCH_ORG:
       return { ...state, [action.payload._id]: action.payload };
-      case RESET_ERROR:
+    case RESET_ERROR:
       return { ...state, errorMessage: '' };
     default:
       return state;
