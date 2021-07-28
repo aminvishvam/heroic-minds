@@ -7,20 +7,26 @@ import Libra from "../../assets/HomePageAssets/Libra.svg";
 import Book from "../../assets/AboutPageAssets/Book.svg";
 import World from "../../assets/HomePageAssets/World.svg";
 import Text from "../../assets/HomePageAssets/Text.svg";
-import Pause from "../../assets/HomePageAssets/Pause.svg";
 import Community from "../../assets/HomePageAssets/Community.svg";
 import audio1Img from "../../assets/HomePageAssets/audio1Img.svg";
 import audio2Img from "../../assets/HomePageAssets/audio2Img.svg";
 import audio3Img from "../../assets/HomePageAssets/audio3Img.svg";
 import audio4Img from "../../assets/HomePageAssets/audio4Img.svg";
-import playIcon from "../../assets/HomePageAssets/play.svg";
-import back_20 from "../../assets/HomePageAssets/back_20.svg";
-import forward_20 from "../../assets/HomePageAssets/forward_20.svg";
 import plusSign from "../../assets/HomePageAssets/plusSign.svg";
 import Man from "../../assets/AboutPageAssets/Man.svg";
 import Click from "../../assets/AboutPageAssets/Click.svg";
 import Pen_Icon_Black from "../../assets/HomePageAssets/Pen_Icon_Black.svg";
 import Pen_Icon from "../../assets/HomePageAssets/Pen_Icon.svg";
+import { AudioPlayer } from "./MyAudioPlayer/AudioPlayer";
+
+
+import Audio1 from "../../assets/HomePageAssets/Audio2.wav";
+import Audio2 from "../../assets/HomePageAssets/Audio2.wav";
+import Audio3 from "../../assets/HomePageAssets/Audio4.wav";
+import Audio4 from "../../assets/HomePageAssets/Audio4.wav";
+
+
+import AudioText1 from "../../assets/HomePageAssets/AudioText2.srt";
 
 import "./HomePage.css";
 import "./Text.css";
@@ -30,8 +36,10 @@ import { Link } from "react-router-dom";
 import { Modal } from "react-bootstrap";
 import dateFormat from "dateformat";
 
+
 // export default HomePage;
 class HomePage extends Component {
+
   state = {
     modal1IsOpen: false,
     modal2IsOpen: false,
@@ -41,6 +49,7 @@ class HomePage extends Component {
     text2IsOpen: false,
     text3IsOpen: false,
     text4IsOpen: false,
+
   };
 
   openModal1 = () => {
@@ -105,7 +114,9 @@ class HomePage extends Component {
     return <span>{today}</span>;
   }
 
+
   renderMain() {
+
     return (
       <div className="my-container-90 mt-7">
         <div className="d-flex  flex-sm-nowrap flex-wrap-reverse align-items-center justify-content-center">
@@ -124,6 +135,13 @@ class HomePage extends Component {
         </div>
       </div>
     );
+  }
+
+  renderPlayer() {
+    return (
+      <div>
+
+      </div>);
   }
 
   renderProblem() {
@@ -397,26 +415,7 @@ class HomePage extends Component {
           </div>
           <div className="d-flex flex-row align-items-center justify-content-md-end justify-content-around audio-controls mt-4 pl-2 mr-4">
             <div className="d-flex flex-row align-items-center">
-              <input
-                type="image"
-                alt="audio-controls"
-                className=" back-btn mr-3"
-                src={back_20}
-              />
-              <input
-                type="image"
-                alt="audio-controls play-button"
-                id="play-btn"
-                className="audio-btn mr-3"
-                src={playIcon}
-                onClick={this.togglePlay()}
-              />
-              <input
-                type="image"
-                alt="audio-controls"
-                className="forward-btn mr-3"
-                src={forward_20}
-              />
+              <AudioPlayer audioToPlay={Audio1} textToDisplay={AudioText1} />
             </div>
             <div className="d-flex flex-row align-items-center">
               <Modal show={this.state.text1IsOpen} onHide={this.closeText1}>
@@ -712,26 +711,7 @@ class HomePage extends Component {
             />
           </div>
           <div className="d-flex flex-row align-items-center justify-content-md-end justify-content-around audio-controls mt-4 pl-2  mr-4">
-            <input
-              type="image"
-              alt="audio-controls"
-              className=" back-btn mr-3"
-              src={back_20}
-            />
-            <input
-              type="image"
-              alt="audio-controls play-button"
-              id="play-btn"
-              className="audio-btn mr-3"
-              src={playIcon}
-              onClick={this.togglePlay()}
-            />
-            <input
-              type="image"
-              alt="audio-controls"
-              className="forward-btn mr-3"
-              src={forward_20}
-            />
+            <AudioPlayer audioToPlay={Audio2} />
 
             <Modal show={this.state.text2IsOpen} onHide={this.closeText2}>
               <Modal.Header>
@@ -1021,26 +1001,7 @@ class HomePage extends Component {
             />
           </div>
           <div className="d-flex flex-row align-items-center justify-content-md-end justify-content-around audio-controls mt-4 pl-2  mr-4">
-            <input
-              type="image"
-              alt="audio-controls"
-              className=" back-btn mr-3"
-              src={back_20}
-            />
-            <input
-              type="image"
-              alt="audio-controls play-button"
-              id="play-btn"
-              className="audio-btn mr-3"
-              src={playIcon}
-              onClick={this.togglePlay()}
-            />
-            <input
-              type="image"
-              alt="audio-controls"
-              className="forward-btn mr-3"
-              src={forward_20}
-            />
+            <AudioPlayer audioToPlay={Audio3} />
 
             <Modal show={this.state.text3IsOpen} onHide={this.closeText3}>
               <Modal.Header>
@@ -1309,26 +1270,7 @@ class HomePage extends Component {
             />
           </div>
           <div className="d-flex flex-row align-items-center justify-content-md-end justify-content-around audio-controls mt-4 pl-2  mr-4">
-            <input
-              type="image"
-              alt="audio-controls"
-              className=" back-btn mr-3"
-              src={back_20}
-            />
-            <input
-              type="image"
-              alt="audio-controls play-button"
-              id="play-btn"
-              className="audio-btn mr-3"
-              src={playIcon}
-              onClick={this.togglePlay()}
-            />
-            <input
-              type="image"
-              alt="audio-controls"
-              className="forward-btn mr-3"
-              src={forward_20}
-            />
+            <AudioPlayer audioToPlay={Audio4} />
 
             <Modal show={this.state.text4IsOpen} onHide={this.closeText4}>
               <Modal.Header>
@@ -1573,22 +1515,18 @@ class HomePage extends Component {
 
   renderCommunity() {
     return (
-      <div className="home-page-10 my-container-90">
-        <div className="row">
-          <div className="col-9 d-flex align-items-end p-0">
-            <div>
-              <h1 className="text k45 fw500">Heroic Minds Global Community</h1>
-              <br />
-              <p className="text k32">
-                Sharing empowering stories and ideas to make the world a more
-                selfless, courageous, resilient place.
-              </p>
-            </div>
+      <div className="home-page-10">
+        <div className="d-flex align-items-center p-0">
+          <div>
+            <h1 className="text k45 fw500">Heroic Minds Global Community</h1>
+            <br />
+            <p className="text h24">
+              Sharing empowering stories and ideas to make the world a more
+              selfless, courageous, resilient place.
+            </p>
           </div>
-          <div className="col-3 p-2">
-            <span className="home-page-10-img">
-              <img alt="Hompage-image2" className="img-fluid" src={World} />
-            </span>
+          <div className="home-page-10-img">
+            <img alt="Hompage-image2" className="img-fluid" src={World} />
           </div>
         </div>
       </div>
@@ -1674,7 +1612,7 @@ class HomePage extends Component {
       <div className="HomePage mb-15">
         <div className="my-container-90">
           <section className="HomePageHeader">{this.renderMain()}</section>
-
+          <section className="">{this.renderPlayer()}</section>
           <section className="mt-15 my-container-95">
             <DisplayBox
               colLeft="6"
@@ -1749,7 +1687,7 @@ class HomePage extends Component {
 
         <section className="mt-18 black-box">{this.renderBlackBox()}</section>
 
-        <section className="mt-15 my-container-85">
+        <section className="mt-15 my-container-90">
           {this.renderCommunity()}
         </section>
         <section className="mt-15 my-container-95">
