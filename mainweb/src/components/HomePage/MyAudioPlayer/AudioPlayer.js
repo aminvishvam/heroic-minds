@@ -103,8 +103,7 @@ const AudioPlayer = ({ audioToPlay = null, textToDisplay }) => {
             </div>
             {/* current time */}
             <div className={isPlaying ? "d-flex mt-2 " : "d-none"}>
-                <div>{(currentTime == null) ? calculateTime(currentTime) : '0.00'}</div>
-
+                <div>{(currentTime && !isNaN(currentTime)) && calculateTime(currentTime)}</div>
                 {/* progress bar */}
                 <div>
                     <input type="range" defaultValue="0" ref={progressBar} onChange={changeRange} classname="progressBar w-25" />
