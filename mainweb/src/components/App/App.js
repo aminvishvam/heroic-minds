@@ -7,7 +7,7 @@ import ScrollToTop from "../ScrollToTop/ScrollTOTop";
 import Scrolls from "../Scrolls/Scrolls";
 import AboutPage from "../AboutPage/AboutPage";
 import TeamAccess from "../TeamAccess/TeamAccess";
-import Library from "../ComingSoon/Library";
+import Library from "../Library/Library";
 import Community from "../ComingSoon/Community";
 import JoinToday from "../ComingSoon/JoinToday";
 import AuthorPage from "../AuthorPage/AuthorPage";
@@ -27,6 +27,7 @@ import ForgetPassword from "../ForgotPassword/ForgetPassword";
 import EditProfile from "../EditProfile/EditProfile";
 
 import Payment from "../Payment/Payment";
+import SubApp from "../SubApp/SubApp";
 
 class App extends Component {
   state = {};
@@ -34,6 +35,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <SubApp/>
         <Router history={history}>
           <Switch>
             <Route path="/" component={TopNav} />
