@@ -7,7 +7,7 @@ import Libra from "../../assets/HomePageAssets/Libra.svg";
 import Book from "../../assets/AboutPageAssets/Book.svg";
 import World from "../../assets/HomePageAssets/World.svg";
 import Text from "../../assets/HomePageAssets/Text.svg";
-import Community from "../../assets/HomePageAssets/Community.svg";
+import Community from "../../assets/HomePageAssets/community.svg";
 import audio1Img from "../../assets/HomePageAssets/audio1Img.svg";
 import audio2Img from "../../assets/HomePageAssets/audio2Img.svg";
 import audio3Img from "../../assets/HomePageAssets/audio3Img.svg";
