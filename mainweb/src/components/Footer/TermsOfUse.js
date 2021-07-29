@@ -4,7 +4,7 @@ class TermsOfUse extends Component {
     renderHead() {
         return (
             <div>
-                <p className="text k40 lh150 ls1by2">Terms of Use</p>
+                <p className="text k40 lh150 ls1by2 fw500">Terms of Use</p>
 
                 <br />
                 <p className="text h20 lh160 fw500 ">

@@ -1,12 +1,16 @@
 .Nav-text {
   color: black;
   font-size: 18px;
-  font-weight: 500 !important;
+  font-weight: 400 !important;
   padding: 10px 15px !important;
   width: max-content !important;
 }
 .Nav-text:hover {
   color: #f57c00 !important;
+}
+
+.nav-link {
+  color: #000 !important;
 }
 
 .btn-black {

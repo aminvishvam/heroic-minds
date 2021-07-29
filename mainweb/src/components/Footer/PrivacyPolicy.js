@@ -4,7 +4,7 @@ class PrivacyPolicy extends Component {
     renderHead() {
         return (
             <div>
-                <p className="text k40 lh150 ls1by2">Privacy Policy</p>
+                <p className="text k40 lh150 ls1by2 fw600">Privacy Policy</p>
 
                 <br />
                 <br />

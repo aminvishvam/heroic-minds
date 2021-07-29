@@ -12,7 +12,7 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   visibility: visible;
   color: #000;
   text-align: left;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .text-orange {
@@ -52,19 +52,25 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 }
 
 .text-black-079 {
-  color: rgba(0, 0, 0, 0.79);
+  color: rgba(0, 0, 0, 0.65);
 }
 
 .text-black-047 {
   color: rgba(0, 0, 0, 0.47);
 }
 
-/* text weight */
-.bold {
-  font-weight: 700;
+/* bg-color  */
+
+.bg-black {
+  background-color: #000;
 }
 
-.fw700 {
+.bg-white {
+  background-color: #fff;
+}
+
+/* text weight */
+.bold {
   font-weight: 700;
 }
 
@@ -115,6 +121,11 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   .k32 {
     font-family: "Karma";
     font-size: 32px;
+  }
+
+  .k35 {
+    font-family: "Karma";
+    font-size: 35px;
   }
 
   .k18 {
@@ -188,45 +199,45 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
     font-size: 60px;
   }
 
-  /* font-family = sans-serif with different font sizes */
+  /* font-family = 'Roboto', sans-serif with different font sizes */
 
   .s10 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 10px;
   }
 
   .s16 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
   }
 
   .s18 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 18px !important;
   }
 
   .s20 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
   }
 
   .s23 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 23px;
   }
 
   .s25 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 25px;
   }
 
   .s30 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 30px;
   }
 
   .s35 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 35px !important;
   }
 }
@@ -295,12 +306,6 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 
 .pr-0 {
   padding-right: 0;
-}
-
-/* bg-color  */
-
-.bg-black {
-  background-color: #000;
 }
 
 /* margin bottom */

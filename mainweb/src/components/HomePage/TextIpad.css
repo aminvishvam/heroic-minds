@@ -34,6 +34,11 @@
     font-size: 25px;
   }
 
+  .k35 {
+    font-family: "Karma";
+    font-size: 23px;
+  }
+
   .k32 {
     font-family: "Karma";
     font-size: 23px;
@@ -116,35 +121,35 @@
     font-size: 32px;
   }
 
-  /* font-family = sans-serif with different font sizes */
+  /* font-family = 'Roboto', sans-serif with different font sizes */
 
   .s10 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 10px;
   }
 
   .s16 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 15px;
   }
 
   .s18 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 16px !important;
   }
 
   .s20 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 17px;
   }
 
   .s23 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 19px;
   }
 
   .s30 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 23px;
   }
 }

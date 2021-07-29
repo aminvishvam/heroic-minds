@@ -41,9 +41,14 @@
     font-size: 25px;
   }
 
+  .k35 {
+    font-family: "Karma";
+    font-size: 22px;
+  }
+
   .k32 {
     font-family: "Karma";
-    font-size: 23px;
+    font-size: 21px;
   }
 
   .k18 {
@@ -75,12 +80,12 @@
 
   .h22 {
     font-family: "Halant";
-    font-size: 19px;
+    font-size: 18px;
   }
 
   .h24 {
     font-family: "Halant";
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .h26 {
@@ -110,12 +115,12 @@
 
   .h45 {
     font-family: "Halant";
-    font-size: 27px;
+    font-size: 28px;
   }
 
   .h50 {
     font-family: "Halant";
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .h60 {
@@ -123,35 +128,160 @@
     font-size: 32px;
   }
 
-  /* font-family = sans-serif with different font sizes */
+  /* font-family = 'Roboto', sans-serif with different font sizes */
 
   .s10 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 10px;
   }
 
   .s16 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 15px;
   }
 
   .s18 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 16px !important;
   }
 
   .s20 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 17px;
   }
 
   .s23 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 19px;
   }
 
   .s30 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 23px;
+  }
+
+  /* line height  */
+
+  .p-0 {
+    padding: 0;
+  }
+
+  .pt-0 {
+    padding-top: 0;
+  }
+
+  .pl-0 {
+    padding-left: 0;
+  }
+
+  .pb-0 {
+    padding-bottom: 0;
+  }
+
+  .pr-0 {
+    padding-right: 0;
+  }
+
+  /* margin bottom */
+
+  .mb-0 {
+    margin-bottom: 0%;
+  }
+  .mb-3 {
+    margin-bottom: 8%;
+  }
+
+  .mb-4 {
+    margin-bottom: 9%;
+  }
+
+  .mb-5 {
+    margin-bottom: 10%;
+  }
+
+  .mb-6 {
+    margin-bottom: 11%;
+  }
+
+  .mb-7 {
+    margin-bottom: 12%;
+  }
+
+  .mb-8 {
+    margin-bottom: 13%;
+  }
+
+  .mb-9 {
+    margin-bottom: 14%;
+  }
+
+  .mb-10 {
+    margin-bottom: 15%;
+  }
+
+  .mb-15 {
+    margin-bottom: 20%;
+  }
+
+  .mb-18 {
+    margin-bottom: 23%;
+  }
+
+  .mb-20 {
+    margin-bottom: 25%;
+  }
+
+  /* morgin-top */
+
+  .mt-3 {
+    margin-top: 8%;
+  }
+
+  .mt-4 {
+    margin-top: 9% !important;
+  }
+
+  .mt-5 {
+    margin-top: 10%;
+  }
+
+  .mt-505 {
+    margin-top: 10.5%;
+  }
+
+  .mt-6 {
+    margin-top: 11%;
+  }
+
+  .mt-7 {
+    margin-top: 12%;
+  }
+
+  .mt-8 {
+    margin-top: 13%;
+  }
+
+  .mt-9 {
+    margin-top: 14%;
+  }
+
+  .mt-10 {
+    margin-top: 15%;
+  }
+
+  .mt-13 {
+    margin-top: 18%;
+  }
+
+  .mt-15 {
+    margin-top: 20%;
+  }
+
+  .mt-18 {
+    margin-top: 23%;
+  }
+
+  .mt-20 {
+    margin-top: 25%;
   }
 }

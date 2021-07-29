@@ -3,7 +3,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
 import Logo from "../Logo/Logo";
-import { NavLink } from "react-router-dom";
 import "./TopNav.css";
 import { connect } from "react-redux";
 

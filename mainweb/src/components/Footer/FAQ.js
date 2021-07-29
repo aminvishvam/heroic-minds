@@ -15,13 +15,13 @@ function GetCard({ question, answer }) {
                             as={Card.Text}
                             variant="link"
                             eventKey={cardNumber}
-                            className="text s18 lh150 p-1 bold pl-4"
+                            className="text s18 lh150 p-1 fw600 pl-4"
                         >
                             {question}
                         </Accordion.Toggle>
                     </Card.Header>
                     <Accordion.Collapse eventKey={cardNumber} className="pl-4 ">
-                        <Card.Body className="answer-text s16 lh150 pl-3 mb-5">
+                        <Card.Body className="text s16 lh150 pl-3 mb-5 fw400">
                             {answer}
                         </Card.Body>
                     </Accordion.Collapse>
@@ -37,28 +37,57 @@ class FAQ extends Component {
             <div>
                 <div>
                     <GetCard
-                        question="Is the community free access but to access the library you need a subscription?"
-                        answer="Yes."
+                        question={
+                            <p>
+                                Is the community free access but to access the library you need
+                                a subscription?
+                            </p>
+                        }
+                        answer={
+                            <p>
+                                Yes.
+                                <br />
+                                The community is always free.
+                                <br />
+                                The library can be accessed with a paid subscription here
+                            </p>
+                        }
                     />
 
                     <GetCard
-                        question="How do I create an account for my business or team?"
-                        answer="this is the answer."
+                        question={
+                            <p>How do I create an account for my business or team?</p>
+                        }
+                        answer={
+                            <p>Send us an email <a href="" className="text-black underline"><u>here</u></a>.</p>}
                     />
 
                     <GetCard
-                        question="Can I request stories/topics??"
-                        answer="this is the answer."
+                        question={
+                            <p>Can I request stories/topics?</p>}
+                        answer={
+                            <p>Yes! We would love to hear your idea and can send us a message <a href="" className="text-black underline"><u>here</u></a>.</p>}
                     />
 
                     <GetCard
-                        question="Are there family plans?"
-                        answer="this is the answer."
+                        question={
+                            <p>Are there family plans?</p>}
+                        answer={
+                            <p>Not yet but it is in the works... please check back soon!</p>}
                     />
 
                     <GetCard
-                        question="If I cancel my subscription for the library is my account and journal content deleted?"
-                        answer="this is the answer."
+                        question={
+                            <p>If I cancel my plan do I get refunded?</p>}
+                        answer={
+                            <p>Yes you will be refunded from the beginning of the next calendar month to the end of the subscription.<br />Please email us with any issues: info@heroicminds.live</p>}
+                    />
+
+                    <GetCard
+                        question={
+                            <p>If I cancel my subscription for the library is my account and journal content deleted?</p>}
+                        answer={
+                            <p>No. Your account will remain unafected along with your profile and community content.<br />Only access to the library will discontinue. </p>}
                     />
                 </div>
             </div>
@@ -74,9 +103,7 @@ class FAQ extends Component {
                             Frequently Asked Questions
                         </p>
                     </section>
-                    <section className="mt-6 ">
-                        {this.renderFAQ()}
-                    </section>
+                    <section className="mt-6 ">{this.renderFAQ()}</section>
 
                     <section className="mt-6">
                         <p className="text bold text-black-047 h28 lh150">

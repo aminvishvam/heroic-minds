@@ -31,6 +31,8 @@ import SubApp from "../SubApp/SubApp";
 
 class App extends Component {
   state = {};
+  history
+
 
   render() {
     return (
