@@ -46,7 +46,7 @@ export const login = (formValues) => async (dispatch) => {
     localStorage.setItem("token", response.data.token);
     history.push("/library");
   } catch (e) {
-    dispatch({ type: AUTH_ERROR, payload: e.response.data.message });
+    dispatch({ type: AUTH_ERROR, payload: e?.response?.data?.message });
   }
 };
 export const fetchUser = (_id) => async (dispatch) => {
@@ -62,4 +62,9 @@ export const logout = () => async (dispatch) => {
     dispatch({ type: AUTH_USER, payload: "" });
   } catch (e) {}
   history.push("/login");
+};
+
+export const EditProfile = (formValues) => async (dispatch) => {
+  // API binding is remaining
+  history.push("/");
 };

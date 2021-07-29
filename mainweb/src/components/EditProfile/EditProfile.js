@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import {
-  required,
   email,
-  length,
 } from "redux-form-validators";
 
 import { reduxForm, Field } from "redux-form";
@@ -18,8 +16,16 @@ import ProfilePic from '../../assets/ProfilePic.svg';
 
 
 class EditProfile extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pictureUrl: ProfilePic,
+    }
+
+    this.uploadInput = React.createRef();
+  }
   onSubmit = (formValues) => {
-    this.props.personalRegister(formValues);
+    this.props.EditProfile(formValues);
   };
 
   clearErrorState = () => {
@@ -27,7 +33,7 @@ class EditProfile extends Component {
   }
 
   renderLocationOption() {
-    const location = [{ id: 1, area: 'Ahmedabad' }, { id: 1, area: 'Ahmedabad' }, { id: 1, area: 'Ahmedabad' }];
+    const location = [{ id: 1, area: 'Ahmedabad' }, { id: 2, area: 'Mumbai' }, { id: 3, area: 'Chennai' }];
     return location.map((x) => {
       return (
         <option key={x.id} value={x.id}>
@@ -42,24 +48,45 @@ class EditProfile extends Component {
       <div style={{ padding: '10px 0' }}>
         <label>Location</label>
         <br />
-        <Field className='edit-profile-input' name="orgId" component="select">
+        <Field className='edit-profile-input' name="LocationId" component="select">
           {this.renderLocationOption()}
         </Field>
       </div>
     );
   }
 
+  handlePictureSelected = (event) => {
+    var picture = event.target.files[0];
+    var src = URL.createObjectURL(picture);
+    this.setState({
+      pictureUrl: src,
+    })
+  }
+
+  uploadProfile = () => {
+    this.uploadInput.current.click();
+  }
+
+  removeProfile = () => {
+      this.setState({
+        pictureUrl: null,
+      })
+  }
+
   render() {
-    const { handleSubmit, pristine, submitting } = this.props;
+    const { handleSubmit } = this.props;
     const isAnyError = !!(this.props.errorMessage || this.props.emailVerfiyError)
 
     return (
       <div style={{ display: 'flex', justifyContent: 'space-around' }} className="container">
         <div className="profile-pic-button-container">
-          <img width="280px" height="280px" src={ProfilePic} />
+          <img width="280px" height="280px" style={{ borderRadius: '140px' }} src={this.state.pictureUrl} />
           <div className="Button-wrapper">
-            <button style={{ width: '95px', height: '40px' }} className="btn btn-dark">Remove</button>
-            <button style={{ width: '95px', height: '40px' }} className="btn btn-dark">Upload</button>
+            <button style={{ width: '95px', height: '40px' }} className="btn btn-dark" onClick={this.removeProfile} >Remove</button>
+            <button style={{ width: '95px', height: '40px' }} className="btn btn-dark" onClick={this.uploadProfile}>Upload</button>              
+            <input ref={this.uploadInput} type="file" style={{ display: 'none' }}
+            onChange={this.handlePictureSelected}
+            />  
           </div>
         </div>
         <div>
@@ -72,7 +99,7 @@ class EditProfile extends Component {
                   label="First Name"
                   className="edit-profile-input"
                   component={RenderField}
-                  validate={[required(), length({ min: 2 })]}
+                  // validate={[required(), length({ min: 2 })]}
                 />
                 <Field
                   name="Last Name"
@@ -80,7 +107,7 @@ class EditProfile extends Component {
                   label="Last Name"
                   className="edit-profile-input"
                   component={RenderField}
-                  validate={[required()]}
+                  // validate={[required()]}
                 />
               </div>
               <div className="row justify-content-between">
@@ -91,7 +118,7 @@ class EditProfile extends Component {
                   className="edit-profile-input"
                   label="Username"
                   component={RenderField}
-                  validate={[required(), email()]}
+                  validate={[email()]}
                 />
               </div>
               <div className="row justify-content-between">
@@ -100,7 +127,7 @@ class EditProfile extends Component {
                   label="Description"
                   className="description-field"
                   component={RenderField}
-                  validate={[required()]}
+                  // validate={[required()]}
                 />
               </div>
               <div className="Button-wrapper">
@@ -130,6 +157,6 @@ function mapStateToProps(state) {
 export default compose(
   connect(mapStateToProps, actions),
   reduxForm({
-    form: "PersonalRegisterForm",
+    form: "EditProfileForm",
   })
 )(EditProfile);
