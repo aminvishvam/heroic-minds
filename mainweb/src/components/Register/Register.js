@@ -20,12 +20,12 @@ class Register extends Component {
     return (
       <div className="register">
         <div className="container">
-          <div className="justify-content-center">
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} className="justify-content-center">
             <LogoIcon />
             <h1>Create a new Account</h1>
             <p>The Hero is in you</p>
           </div>
-          <div className="row justify-content-center ">
+          <div className="container row justify-content-center ">
             <div className="menu">
               <div
                 className={`items  ${isPersonalOpen ? "actived" : " "}`}

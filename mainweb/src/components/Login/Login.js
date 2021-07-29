@@ -11,23 +11,28 @@ import "./Login.css";
 import RenderField from "../RenderField/RenderField";
 import LogoIcon from "../LogoIcon/LogoIcon";
 import { Link } from "react-router-dom";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 class Login extends Component {
   onSubmit = (formValues) => {
     this.props.login(formValues);
   };
 
+  clearErrorState = () => {
+    this.props.resetPreviousError();
+  }
+
   render() {
     const { handleSubmit, pristine, submitting } = this.props;
     return (
       <div className="container justify-content-center">
-        <div className="justify-content-center">
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} className="justify-content-center">
           <LogoIcon />
-          <h1>Welcome</h1>
+          <h1>Welcome back.</h1>
           <p>The Hero is in you</p>
         </div>
         <div className="row justify-content-center">
-          <div>
+          <div style={{ maxWidth: '600px', width: '100%' }} className="container">
             <form onSubmit={handleSubmit(this.onSubmit)}>
               <Field
                 name="email"
@@ -43,26 +48,34 @@ class Login extends Component {
                 component={RenderField}
                 validate={[required(), length({ min: 8 })]}
               />
-              <Field
-                name="remeber"
-                type="checkbox"
-                label="Remeber Me"
-                component={RenderField}
-              />
-              <Link to="/forgot-password">
-                <p>forgotPassword?</p>
-              </Link>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Field
+                    name="remeber"
+                    type="checkbox"
+                    component={RenderField}
+                  />
+                  <label>Remember Me</label>
+                </div>
+                <Link style={{ marginTop: '10px' }} to="/forgot-password">
+                  <p>forgotPassword?</p>
+                </Link>
+              </div>
               <button
                 type="submit"
                 disabled={submitting || pristine}
-                className="btn-dark "
+                className="login-button"
               >
                 LOGIN
               </button>
             </form>
           </div>
         </div>
-        <p>{this.props.errorMessage}</p>
+        <ErrorMessage
+          open={!!this.props.errorMessage}
+          errorMessage={this.props.errorMessage}
+          clearErrorState={this.clearErrorState}
+        />
       </div>
     );
   }

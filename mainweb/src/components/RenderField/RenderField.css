@@ -1,0 +1,27 @@
+.form-label {
+    color: #757780; 
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+}
+
+.input-field {
+    width: 100%; 
+    max-width: 590px;
+    height: 55px;
+    background: rgba(112, 115, 128, 0.08);
+    border-radius: 10px;
+    padding: 10px 0px;
+}
+
+.checkbox-label {
+    margin-left: 5px;
+    color: #000000; 
+    font-size: 18px; 
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.error-text {
+    color: red;
+}
