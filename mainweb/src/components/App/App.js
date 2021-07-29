@@ -28,10 +28,14 @@ import EditProfile from "../EditProfile/EditProfile";
 
 import Payment from "../Payment/Payment";
 import SubApp from "../SubApp/SubApp";
+import { connect } from "react-redux";
+import {fetchUser} from '../../actions/user'
+
 
 class App extends Component {
   state = {};
   history
+
 
 
   render() {
@@ -89,5 +93,7 @@ class App extends Component {
     );
   }
 }
+
+
 
 export default App;

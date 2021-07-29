@@ -25,7 +25,7 @@ class TopNav extends Component {
       return (
         <div className="TopNav">
           <Navbar expand="lg">
-            <Navbar.Brand to="/">
+            <Navbar.Brand href="/library">
               <Logo />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />

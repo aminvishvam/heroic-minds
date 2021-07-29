@@ -20,7 +20,7 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 class OrgRegister extends Component {
   componentDidMount() {
-    this.props.fetchOrgs();
+    this.props.fetchStream(this.props.match.params.id);
   }
   onSubmit = (formValues) => {
     this.props.orgRegister(formValues);

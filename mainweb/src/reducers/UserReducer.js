@@ -1,7 +1,8 @@
 import { USER, FETCH_USER } from "../actions/types";
 
 const INITIAL_STATE = {
-    userid: ''
+userId: null,
+user: null
 };
 
 const userReducer = (state = INITIAL_STATE, action) => {
@@ -9,10 +10,14 @@ const userReducer = (state = INITIAL_STATE, action) => {
     case USER:
       return {
         ...state,
-        userid: action.payload,
+        userId: action.payload,
       };
-    case FETCH_USER:
-      return { ...state, [action.payload._id]: action.payload };
+    case FETCH_USER:{
+      return {
+        ...state,
+        user: action.payload,
+      };
+    }
     default:
 
       return state;
