@@ -5,7 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import Logo from "../Logo/Logo";
 import "./TopNav.css";
 import { connect } from "react-redux";
-import { NavLink } from "react-router-dom";
+import  NavLink  from "react-bootstrap/NavLink";
 
 import TopNavLibrary from "../TopNavLibrary/TopNavLibrary";
 import TopNavProfile from "../TopNavProfile/TopNavProfile";
@@ -36,8 +36,8 @@ class TopNav extends Component {
               >
                 <span className="Nav-item-left d-flex align-items-center">
                   <TopNavLibrary />
-                  <NavLink
-                    to="/community"
+                  <Nav.Link
+                    href="/community"
                     className="Nav-text s18"
                     activeClassName="active"
                     activeStyle={{
@@ -46,7 +46,7 @@ class TopNav extends Component {
                     }}
                   >
                     Community
-                  </NavLink>
+                  </Nav.Link>
                 </span>
                 <SearchBar />
               </Nav>
@@ -59,7 +59,7 @@ class TopNav extends Component {
       return (
         <div className="TopNav">
           <Navbar expand="lg">
-            <Navbar.Brand to="/">
+            <Navbar.Brand href="/">
               <Logo />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
@@ -69,8 +69,8 @@ class TopNav extends Component {
                 navbarScroll
               >
                 <span className="Nav-item-left d-flex align-items-center">
-                  <NavLink
-                    to="/about"
+                  <Nav.Link
+                    href="/about"
                     className="Nav-text s18"
                     activeClassName="active"
                     activeStyle={{
@@ -79,10 +79,10 @@ class TopNav extends Component {
                     }}
                   >
                     About
-                  </NavLink>
+                  </Nav.Link>
 
-                  <NavLink
-                    to="/team-access"
+                  <Nav.Link
+                    href="/team-access"
                     className="Nav-text s18"
                     activeClassName="active"
                     activeStyle={{
@@ -91,9 +91,9 @@ class TopNav extends Component {
                     }}
                   >
                     Team Access
-                  </NavLink>
-                  <NavLink
-                    to="/author"
+                  </Nav.Link>
+                  <Nav.Link
+                    href="/author"
                     className="Nav-text s18"
                     activeClassName="active"
                     activeStyle={{
@@ -102,11 +102,11 @@ class TopNav extends Component {
                     }}
                   >
                     Author
-                  </NavLink>
+                  </Nav.Link>
                 </span>
                 <span className="Nav-item-right d-flex align-items-center">
-                  <NavLink
-                    to="/library"
+                  <Nav.Link
+                    href="/library"
                     className="Nav-text navbar-right s18"
                     activeClassName="active"
                     activeStyle={{
@@ -115,9 +115,9 @@ class TopNav extends Component {
                     }}
                   >
                     Library
-                  </NavLink>
-                  <NavLink
-                    to="/community"
+                  </Nav.Link>
+                  <Nav.Link
+                    href="/community"
                     className="Nav-text s18"
                     activeClassName="active"
                     activeStyle={{
@@ -126,9 +126,9 @@ class TopNav extends Component {
                     }}
                   >
                     Community
-                  </NavLink>
-                  <NavLink
-                    to="/login"
+                  </Nav.Link>
+                  <Nav.Link
+                    href="/login"
                     className="Nav-text s18"
                     activeClassName="active"
                     activeStyle={{
@@ -137,11 +137,11 @@ class TopNav extends Component {
                     }}
                   >
                     Login
-                  </NavLink>
+                  </Nav.Link>
 
-                  <NavLink to="/join-today" className="Nav-text">
+                  <Nav.Link href="/join-today" className="Nav-text">
                     <button className="btn btn-black s18">Join Today</button>
-                  </NavLink>
+                  </Nav.Link>
                 </span>
               </Nav>
             </Navbar.Collapse>
