@@ -1,0 +1,26 @@
+.main-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 660px;
+    margin: auto;
+    width: 430px;
+    border: 2px solid; 
+    background-color: #FCFCFC; 
+    text-align: center;
+    border-radius: 14px; 
+    box-shadow: 0px 12px 40px rgba(35, 34, 43, 0.16);
+}
+
+.text-content {
+    font-size: 18px; 
+    color: #01061F; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+}
+.ok-button {
+    width: 378px;
+    height: 67px;
+    border-radius: 10px !important;
+}

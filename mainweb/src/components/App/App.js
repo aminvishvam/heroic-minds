@@ -3,14 +3,13 @@ import { Router, Route, Switch } from "react-router-dom";
 import history from "../../history";
 import HomePage from "../HomePage/HomePage";
 import TopNav from "../TopNav/TopNav";
-import ScrollToTop from '../ScrollToTop/ScrollTOTop';
-import Scrolls from '../Scrolls/Scrolls';
+import ScrollToTop from "../ScrollToTop/ScrollTOTop";
+import Scrolls from "../Scrolls/Scrolls";
 import AboutPage from "../AboutPage/AboutPage";
 import TeamAccess from "../TeamAccess/TeamAccess";
 import Library from "../ComingSoon/Library";
 import Community from "../ComingSoon/Community";
 import JoinToday from "../ComingSoon/JoinToday";
-import Login from "../ComingSoon/Login";
 import AuthorPage from "../AuthorPage/AuthorPage";
 import Footer from "../Footer/Footer";
 import PrivacyPolicy from "../Footer/PrivacyPolicy";
@@ -20,6 +19,12 @@ import Contact from "../Footer/Contact";
 import WorkWithTheCreator from "../Footer/WorkWithTheCreator";
 import "./App.css"
 import FAQ from "../Footer/FAQ";
+
+import CreateAccount from "../CreateAccount/CreateAccount";
+import Login from "../Login/Login";
+import ConfirmRegister from "../ConfirmRegister/ConfirmRegister";
+import ForgetPassword from "../ForgotPassword/ForgetPassword";
+import EditProfile from "../EditProfile/EditProfile";
 
 class App extends Component {
   state = {};
@@ -56,10 +61,32 @@ class App extends Component {
             <Switch>
               <Route path="/" component={Footer} />
             </Switch>
+            <div className="Page">
+              <ScrollToTop>
+                <Route path="/" exact component={HomePage} />
+                <Route path="/about" exact component={AboutPage} />
+                <Route
+                  path="/about/PrivacyPolicy"
+                  exact
+                  component={PrivacyPolicy}
+                />
+                <Route path="/about/TermsOfUse" exact component={TermsOfUse} />
+                <Route path="/teamaccess" exact component={TeamAccess} />
+                <Route path="/book" exact component={BookPage} />
+                <Route path="/library" exact component={Library} />
+                <Route path="/community" exact component={Community} />
+                <Route path="/login" exact component={Login} />
+                <Route path="/register" exact component={CreateAccount} />
+                <Route path="/joinToday" exact component={JoinToday} />
+                <Route path="/confirm-register" exact component={ConfirmRegister} />
+                <Route path="/forgot-password" exact component={ForgetPassword} />
+                <Route path="/edit-profile" exact component={EditProfile} />
+              </ScrollToTop>
+            </div>
           </div>
         </Router>
         <Scrolls />
-      </div>
+      </div >
     );
   }
 }
