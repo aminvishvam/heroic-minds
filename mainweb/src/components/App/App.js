@@ -19,6 +19,7 @@ import Login from "../Login/Login";
 import ConfirmRegister from "../ConfirmRegister/ConfirmRegister";
 import ForgetPassword from "../ForgotPassword/ForgetPassword";
 import EditProfile from "../EditProfile/EditProfile";
+import Questionarries from "../Questionarries/Questionarries";
 
 class App extends Component {
   state = {};
@@ -51,6 +52,7 @@ class App extends Component {
                 <Route path="/confirm-register" exact component={ConfirmRegister} />
                 <Route path="/forgot-password" exact component={ForgetPassword} />
                 <Route path="/edit-profile" exact component={EditProfile} />
+                <Route path="/questionarries" exact component={Questionarries} />
               </ScrollToTop>
             </div>
           </div>
