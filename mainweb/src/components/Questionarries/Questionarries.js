@@ -1,8 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import * as Survey from "survey-react";
 import "./Questionarries.css";
 import "survey-react/survey.css";
+Survey.StylesManager.applyTheme("orange");
 
 class Questionarries extends React.Component {
   constructor(props) {
@@ -10,7 +10,8 @@ class Questionarries extends React.Component {
       this.onCompleteComponent = this.onCompleteComponent.bind(this);
     this.state = { isCompleted: false };
   }
-  onCompleteComponent() {
+  onCompleteComponent(e) {
+    console.log('selected value of questions', e.data);
     this.setState({ isCompleted: true });
   }
   render() {
@@ -82,7 +83,7 @@ class Questionarries extends React.Component {
             questions: [
               {
                   type: "checkbox",
-                  name: "qu1",
+                  name: "qu4",
                   title: "What are you facing challenges with today?",
                   isRequired: true,
                   choices: [
