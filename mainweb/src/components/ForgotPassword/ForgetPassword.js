@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Field } from "redux-form";
 import { email, required } from "redux-form-validators";
-import LogoIcon from "../LogoIcon/LogoIcon";
+import LogoIcon from "../Logo/LogoIcon/LogoIcon";
 import RenderField from "../RenderField/RenderField";
 import "./ForgetPassword.css";
 

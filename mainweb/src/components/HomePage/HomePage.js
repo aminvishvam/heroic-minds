@@ -7,7 +7,7 @@ import Libra from "../../assets/HomePageAssets/Libra.svg";
 import Book from "../../assets/AboutPageAssets/Book.svg";
 import World from "../../assets/HomePageAssets/World.svg";
 import Text from "../../assets/HomePageAssets/Text.svg";
-import Community from "../../assets/HomePageAssets/community.svg";
+import Community from "../../assets/HomePageAssets/Community.svg";
 import audio1Img from "../../assets/HomePageAssets/audio1Img.svg";
 import audio2Img from "../../assets/HomePageAssets/audio2Img.svg";
 import audio3Img from "../../assets/HomePageAssets/audio3Img.svg";
@@ -277,7 +277,7 @@ class HomePage extends Component {
               (Standord University, 2019)
               <br />
               <br />
-              <Link to="/heroic-minds/about">
+              <Link to="/about">
                 <span className="link-text text-black">
                   <b>Learn More.</b>
                 </span>

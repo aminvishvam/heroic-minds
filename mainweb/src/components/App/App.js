@@ -54,6 +54,9 @@ class App extends Component {
               <Route path='/press' exact component={Press} />
               <Route path='/contact' exact component={Contact} />
               <Route path='/contact/frequently-asked-questions' exact component={FAQ} />
+              <Route path="/confirm-register" exact component={ConfirmRegister} />
+              <Route path="/forgot-password" exact component={ForgetPassword} />
+              <Route path="/edit-profile" exact component={EditProfile} />
             </ScrollToTop>
           </div>
 
@@ -61,30 +64,8 @@ class App extends Component {
             <Switch>
               <Route path="/" component={Footer} />
             </Switch>
-            <div className="Page">
-              <ScrollToTop>
-                <Route path="/" exact component={HomePage} />
-                <Route path="/about" exact component={AboutPage} />
-                <Route
-                  path="/about/PrivacyPolicy"
-                  exact
-                  component={PrivacyPolicy}
-                />
-                <Route path="/about/TermsOfUse" exact component={TermsOfUse} />
-                <Route path="/teamaccess" exact component={TeamAccess} />
-                <Route path="/book" exact component={BookPage} />
-                <Route path="/library" exact component={Library} />
-                <Route path="/community" exact component={Community} />
-                <Route path="/login" exact component={Login} />
-                <Route path="/register" exact component={CreateAccount} />
-                <Route path="/joinToday" exact component={JoinToday} />
-                <Route path="/confirm-register" exact component={ConfirmRegister} />
-                <Route path="/forgot-password" exact component={ForgetPassword} />
-                <Route path="/edit-profile" exact component={EditProfile} />
-              </ScrollToTop>
-            </div>
           </div>
-        </Router>
+        </Router >
         <Scrolls />
       </div >
     );

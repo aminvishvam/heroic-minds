@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import Comming from "../../assets/com.png";
-import LogoIcon from "../LogoIcon/LogoIcon";
+import LogoIcon from "../Logo/LogoIcon/LogoIcon";
 import SliderImage from "../SliderImage/SliderImage";
 import SliderImage2 from "../SliderImage2/SliderImage2";
 import SliderImage3 from "../SliderImage3/SliderImage3";
@@ -23,10 +23,10 @@ class JoinNow extends Component {
                             <div style={{ fontSize: '30px', lineHeight: '35px' }}>Shape your life around the most powerful framework known to humankind.</div>
                         </p>
                         <div className="row justify-content-center box">
-                           <button className='btn btn-dark' style={{ width: '185px', height: '48px', marginBottom: '20px' }}>Sign-in</button>
+                            <button className='btn btn-dark' style={{ width: '185px', height: '48px', marginBottom: '20px' }}>Sign-in</button>
                         </div>
                         <div className="row justify-content-center box">
-                           <span style={{ fontSize: '22px', color: '#757780', lineHeight: '26px', fontWeight: '600' }}>Don't have an account? Sign up</span>
+                            <span style={{ fontSize: '22px', color: '#757780', lineHeight: '26px', fontWeight: '600' }}>Don't have an account? Sign up</span>
                         </div>
                     </div>
 
@@ -46,7 +46,7 @@ class JoinNow extends Component {
                     <SliderImage />
                     <SliderImage6 />
                 </div>
-                    {this.renderMain()}
+                {this.renderMain()}
             </div>
         );
     }
