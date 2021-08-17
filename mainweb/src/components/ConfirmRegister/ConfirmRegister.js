@@ -33,8 +33,8 @@ class ConfirmRegister extends Component {
                 <div className='text-content'>
                     <span>
                         Welcome to the Heroic Minds Community!<br /> We have a sent a <strong>verification link to your email</strong>.
-                    <br /> <br /> Click that link to get started.
-                    <br /> (It may have gone to your junk folder)
+                        <br /> <br /> Click that link to get started.
+                        <br /> (It may have gone to your junk folder)
                     </span>
 
                 </div>

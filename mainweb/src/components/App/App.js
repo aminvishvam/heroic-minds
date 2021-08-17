@@ -89,9 +89,9 @@ class App extends Component {
               <Route path="/" component={Footer} />
             </Switch>
           </div>
-        </Router>
+        </Router >
         <Scrolls />
-      </div>
+      </div >
     );
   }
 }

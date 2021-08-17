@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-
+import { NavLink } from "react-bootstrap";
 import Logo from "../Logo/Logo";
 import "./TopNav.css";
 import { connect } from "react-redux";
@@ -34,7 +34,7 @@ class TopNav extends Component {
                 className="w-100 d-flex justify-content-between my-navbar"
                 navbarScroll
               >
-                <span className="Nav-item-left d-flex align-items-center">
+                <div className="Nav-item-left d-flex align-items-center">
                   <TopNavLibrary />
                   <Nav.Link
                     href="/community"
@@ -47,7 +47,8 @@ class TopNav extends Component {
                   >
                     Community
                   </Nav.Link>
-                </span>
+                </div>
+
                 <SearchBar />
               </Nav>
               <TopNavProfile />
