@@ -10,7 +10,7 @@ class ConfirmRegister extends Component {
                 <div className="row justify-content-center box">
                     <div>
                         <div className="text-layout1 row justify-content-center box">
-                            <LogoIcon />
+                            <LogoIcon/>
                         </div>
                         <p className="about-intro-layout7">
                             <div style={{ fontSize: '38px', lineHeight: '45px' }}>Heroic Minds</div>

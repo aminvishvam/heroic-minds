@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Menu, MenuItem } from "@material-ui/core";
 import DropdownArrow from "../DropdownArrow/DropdownArrow";
+import { NavLink } from "react-router-dom";
 
 class TopNavLibrary extends Component {
     constructor(props) {
@@ -27,9 +28,13 @@ class TopNavLibrary extends Component {
 
     render() {
         return (
-            <div style={{ display: 'flex', alignItems: 'center', padding: '0 20px', marginTop: '5px', flexDirection: 'row', lineHeight: '30px' }} onClick={this.handleClick} >
-                <label style={{ marginRight: '8px', marginBottom: '0', fontSize: '15px' }}>library</label>
-                <DropdownArrow />
+            <div>
+            <div style={{ display: 'flex', alignItems: 'center', padding: '0 20px', marginTop: '5px', flexDirection: 'row', lineHeight: '30px' }}  >
+            <NavLink to='/library' >
+            <label className="Nav-text s18">Library</label>
+            </NavLink>
+            <span onClick={this.handleClick}><DropdownArrow  /></span>
+
                 <Menu
                     elevation={0}
                     getContentAnchorEl={null}
@@ -51,6 +56,7 @@ class TopNavLibrary extends Component {
                     <MenuItem onClick={this.handleClose}>Recommend a Story/Topic</MenuItem>
                     <MenuItem style={{ color: '#F57C00' }} onClick={this.handleClose}>Gift an Episode</MenuItem>
                 </Menu>
+            </div>
             </div>
         );
     }

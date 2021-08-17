@@ -11,13 +11,17 @@ import reducers from "./reducers/index";
 
 import reportWebVitals from './reportWebVitals';
 
+import axios from 'axios';
+window.axios = axios;
+
 const composeEnhacers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
   reducers,
-  // {
-  //   auth: { authenticated: localStorage.getItem('token') }
-  // },
+  {
+    auth: { authenticated: localStorage.getItem('token') },
+    user:{  userId:localStorage.getItem('userId')},
+  },
   composeEnhacers(applyMiddleware(reduxThunk))
 );
 

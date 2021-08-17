@@ -4,6 +4,9 @@ import ProfilePic from '../../assets/ProfilePic.svg';
 import Nav from "react-bootstrap/Nav";
 import history from "../../history";
 
+import {logout} from '../../actions/Auth'
+import { connect } from "react-redux";
+
 
 class TopNavProfile extends Component {
     constructor(props) {
@@ -26,8 +29,15 @@ class TopNavProfile extends Component {
             profileNode: null,
             shouldOpenMenuProfileMenu: false,
         })
+        
     }
-
+    handleLogOut = () => {
+        this.setState({
+            profileNode: null,
+            shouldOpenMenuProfileMenu: false,
+        })
+        this.props.logout()
+    }
     render() {
         return (
             <Nav.Link style={{ border: 'none !important', marginRight: '10px' }} className="border-left pl-2 ml-auto">
@@ -60,7 +70,7 @@ class TopNavProfile extends Component {
                         <MenuItem onClick={this.handleClose}>Billing & Payments</MenuItem>
                         <div style={{ height: '1px', backgroundColor: '#A8A8A8' }}></div>
                         <MenuItem onClick={this.handleClose}>Get Help & Give Feedback</MenuItem>
-                        <MenuItem onClick={this.handleClose}>Log Out</MenuItem>
+                        <MenuItem onClick={this.handleLogOut}>Log Out</MenuItem>
 
                     </Menu>
                 </div>
@@ -69,4 +79,4 @@ class TopNavProfile extends Component {
     }
 }
 
-export default TopNavProfile
+export default connect(null, {logout}) (TopNavProfile)

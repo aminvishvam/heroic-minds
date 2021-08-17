@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { NavLink } from "react-bootstrap";
 import Logo from "../Logo/Logo";
 import "./TopNav.css";
 import { connect } from "react-redux";
 import { NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
-
-
+import NavLink from "react-bootstrap/NavLink";
 import TopNavLibrary from "../TopNavLibrary/TopNavLibrary";
 import TopNavProfile from "../TopNavProfile/TopNavProfile";
 import SearchBar from "../SearchBar/searchBar";
@@ -28,21 +25,20 @@ class TopNav extends Component {
       return (
         <div className="TopNav p-1 pt-3 bg-white">
           <Navbar expand="xl" collapseOnSelect>
-            <Navbar.Brand>
+            <Navbar.Brand href="/library">
               <Logo />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav" >
               <Nav
-                className="mr-auto my-6 my-lg-0"
-                style={{ maxHeight: "100px" }}
+                className="w-100 d-flex justify-content-between my-navbar"
                 navbarScroll
               >
-                <TopNavLibrary />
-                <div style={{ display: 'flex', alignItems: 'center', marginRight: '50px' }}>
-                  <NavLink
-                    to="/community"
-                    className="Nav-text"
+                <div className="Nav-item-left d-flex align-items-center">
+                  <TopNavLibrary />
+                  <Nav.Link
+                    href="/community"
+                    className="Nav-text s18"
                     activeClassName="active"
                     activeStyle={{
                       fontWeight: "bold",
@@ -50,7 +46,7 @@ class TopNav extends Component {
                     }}
                   >
                     Community
-                  </NavLink>
+                  </Nav.Link>
                 </div>
 
                 <SearchBar />
