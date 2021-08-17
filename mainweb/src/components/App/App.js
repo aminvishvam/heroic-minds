@@ -6,6 +6,9 @@ import TopNav from "../TopNav/TopNav";
 import ScrollToTop from "../ScrollToTop/ScrollTOTop";
 import Scrolls from "../Scrolls/Scrolls";
 import AboutPage from "../AboutPage/AboutPage";
+import Apparel from "../AboutPage/AboutApparel";
+import Podcast from "../AboutPage/AboutPodcast";
+import Research from "../AboutPage/AboutResearch";
 import TeamAccess from "../TeamAccess/TeamAccess";
 import Library from "../ComingSoon/Library";
 import Community from "../ComingSoon/Community";
@@ -19,7 +22,6 @@ import Contact from "../Footer/Contact";
 import WorkWithTheCreator from "../Footer/WorkWithTheCreator";
 import "./App.css"
 import FAQ from "../Footer/FAQ";
-
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Login from "../Login/Login";
 import ConfirmRegister from "../ConfirmRegister/ConfirmRegister";
@@ -41,7 +43,10 @@ class App extends Component {
           <div className="Page">
             <ScrollToTop>
               <Route path="/" exact component={HomePage} />
-              <Route path="/about" exact component={AboutPage} />
+              <Route path="/about/mission" exact component={AboutPage} />
+              <Route path="/about/podcast" exact component={Podcast} />
+              <Route path="/about/apparel" exact component={Apparel} />
+              <Route path="/about/research" exact component={Research} />
               <Route path='/team-access' exact component={TeamAccess} />
               <Route path='/author' exact component={AuthorPage} />
               <Route path='/library' exact component={Library} />
@@ -65,9 +70,9 @@ class App extends Component {
               <Route path="/" component={Footer} />
             </Switch>
           </div>
-        </Router >
+        </Router>
         <Scrolls />
-      </div >
+      </div>
     );
   }
 }

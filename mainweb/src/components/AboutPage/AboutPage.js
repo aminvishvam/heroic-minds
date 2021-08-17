@@ -2,13 +2,32 @@ import React, { Component } from "react";
 import DisplayBox from "../DisplayBox/DisplayBox";
 import Book from "../../assets/AboutPageAssets/Book.svg";
 import Behavioural from "../../assets/AboutPageAssets/Click.svg";
-import Man from "../../assets/AboutPageAssets/Man.svg";
+import Brain from "../../assets/AboutPageAssets/Brain.svg";
 import House from "../../assets/AboutPageAssets/House.svg";
 import Pen from "../../assets/AboutPageAssets/Pen.svg";
+import IntroductionAudio from "../../assets/AboutPageAssets/Introduction.m4a";
+import pause from "../../assets/HomePageAssets/Pause.svg";
+import playIcon from "../../assets/HomePageAssets/play.svg";
 
 import "./AboutPage.css";
 
+
 class AboutPage extends Component {
+  state = {
+    audio: new Audio(IntroductionAudio),
+    isPlaying: false
+  }
+
+  togglePlayPause = () => {
+    let playerStatus = this.state.isPlaying;
+    if (!playerStatus) {
+      this.state.audio.play();
+    } else {
+      this.state.audio.pause();
+    }
+    this.setState({ isPlaying: !playerStatus });
+  }
+
   renderComp() {
     return (
       <div className="about-page-1">
@@ -20,27 +39,59 @@ class AboutPage extends Component {
           <br />
           <br />
           <br />
-          <p className="text h22 lh150">
-            The basis of Heroic Minds is that if you want to live a
-            purpose-driven, resilient, high-performing life, without being stuck
-            in your own head, without forcing yourself to do the right thing,
-            then you need to intervene at the level of what drives your
-            perceptions, which is what you value and what you are aiming at in
-            your life – what we call, your value system or global beliefs. This
-            value system or global beliefs provide context for everything you
-            do. Are you seeking to create prosperity everywhere you go or do you
-            feel that there is a sense of meaninglessness to your life and a
-            void that needs to be filled?
+          <p className="text h22 lh170">
+            475 different studies and 156 meta-analyses show that at the end of
+            psychotherapy 50-85% of people with sub-clinical distress are better
+            off than someone not recieving psychotherapy. Interestingly,
+            extensisve meta-analytic research shows that neither the approach to
+            psychotherapy (CBT, DBT, Positive Psychology, Solution Based, etc.)
+            nor the delivery of therapy (individual or group) makes a difference
+            in effectiveness on sub-clinical distress. Further, meta-analytic
+            research shows that relapse commonly occurs at 6 month follow-up
+            after completion of psychotherapy, demonstrating that psychotherapy
+            is required for continued remission of sub-clinical distress.
+            <br />
+            <span className="fw600">
+              Bergin and Garfield's Handbook of Psychotherapy and Behaviour
+              Change (2013)
+            </span>
             <br />
             <br />
-            Global beliefs are the currents beneath your behaviour guiding how
-            you feel, think and what you ultimately do. That feeling when you
-            don’t want to do something you know you should do or the reason you
-            feel off and can’t quite explain why. Developing and nurturing these
-            global beliefs are what build the strength of your psychological
-            foundation and provide direction to your life. This is what
-            scientists, philosophers and psychologists have known for thousands
-            of years.
+            Behaviours that truly fulfil your required human needs and improve
+            the quality of your life have shown to be the most effective way to
+            combat negative feelings when compared to other leading tactics.
+            <br />
+            <span className="fw600">World Psychiatry Association (2021)</span>
+            <br />
+            <br />
+            We are not willing to take the ethical bull by the horns and
+            understand that human health is a matter of moral action.
+            <br />
+            We don’t want to admit to that or discuss it because people don’t
+            want to burden thems with too much responsibility. All the
+            objective, speudo-science, is a form of admission, designed to
+            shield us from what it actually is that makes people sick.
+            <br />
+            <span className="fw600">
+              Self-Deception in Psychopathology, Jordan Peterson (2013)
+            </span>
+            <br />
+            <br />
+            Heroic Minds™ understands that regardless of the tactical approach,
+            integrating philosophical and psychological wisdom into ones life
+            serves as a beneficial practice to decrease distress and increase
+            quality of life.
+            <br />
+            <br />
+            Heroic Minds™ recognizes the shortcomings of the modern therapeutic
+            approach and endeavours to recognize mental health as an issue of
+            personal philosophy which can be managed through self-administered
+            exercise in the psyche of the individual.
+            <br />
+            <br />
+            Heroic Minds™ aims to simplify and de-stigmatize behavioural health
+            pratice, through the ancient wisdom our psychological and
+            philosophical founders left us.
           </p>
         </div>
       </div>
@@ -48,30 +99,30 @@ class AboutPage extends Component {
   }
   renderLeft1() {
     return (
-      <div className="about-page-2 image-padding-right  pt-4">
+      <div className="about-page-2 pt-4">
         <h1 className="text k45 lh120">
-          <b>Listen</b> to Powerful Stories (Logotherapy)
+          <b>Listen</b> (Engaging Stories &amp; Exercises)
         </h1>
         <br />
         <br />
         <p className="text h22 lh150">
-          Find meaning in life beyond the illusive ideas that society reinforces
-          today.
-          <br />
-          Build a psychological foundation or reason to live that transcends any
-          finite “thing” such that it can never be taken from you.
+          Through engaging short stories with a focus on values and morals,
+          Heroic Minds guides you to self-reflect on the values and morals that
+          are guiding your life.
           <br />
           <br />
-          Seek to find purpose in your daily ativities that truly fulfil your
-          deepest human needs and invigorate your life. A purose that brings
-          about love, connection, impact, and a feeling of adventure regardless
-          of your environment or circumstance.
+          Story telling creates a felt experience and is up to 22x more
+          effective in behavioural change and memory than rational reason alone
+          (Stanford University, 2019).
           <br />
           <br />
-          When your psyche is oriented in this way, composure, fulfillment, and
-          an aptitude for high-performance become attainable in every life
-          moment. This makes daily tasks feel like an adventure and life itself,
-          an opportunity.
+          The goal of shaping these values is to find purpose in your daily
+          activities and meaning in your life. Living a purpose-driven life
+          leads to an invigorating sense of self, and fulfills our deepest human
+          needs; connection, love, self-realization, growth, etc.
+          <br />
+          This allows daily tasks to feel like an adventure and life itself, an
+          opportunity.
           <br />
           <br />
           “Life is never made unbearable by circumstances, but only by lack of
@@ -84,48 +135,44 @@ class AboutPage extends Component {
   }
   renderRight1() {
     return (
-      <div className="text-center d-table  pt-4">
-        <span className="vertical-center">
-          <img alt="Hompage-image1" className="img-fluid man-img" src={Man} />
-        </span>
+      <div className="align-middle pt-4">
+        <img
+          alt="Hompage-image1"
+          className="img-fluid man-img pl-3 mb-2"
+          src={Book}
+        />
       </div>
     );
   }
   renderLeft2() {
     return (
-      <div className="d-table text-center  pt-4">
-        <span className="vertical-center">
-          <img
-            alt="Hompage-image2"
-            className="img-fluid story-telling-img"
-            src={Book}
-          />
-        </span>
+      <div className="align-middle  pt-4">
+        <img
+          alt="Hompage-image2"
+          className="img-fluid man-img pr-3 mt-0 mb-4"
+          src={Brain}
+        />
       </div>
     );
   }
   renderRight2() {
     return (
-      <div className="about-page-3 image-padding-left  pt-4">
+      <div className="about-page-3  pt-4">
         <p className="text h22 lh150">
-          The Heroic Minds Library is full of 5-10 minute short and engaging
-          stories to wake up with, enjoy during your communte or to fall asleep
-          to at night.
+          Heroic Minds™ Sessions are self-administered psychological and
+          philosophical exercises that cater to many audiences.
           <br />
           <br />
-          Heroic Minds utilizes the enjoyable medium of story telling as an
-          engaging, therapeutic experience.
+          Some examples are cognitive-behavioural, positive psychology, gestalt
+          psychology, existential psychology and more.
           <br />
           <br />
-          Story telling creates a felt experience that allows you the listener,
-          to feel the message in the story. It is feelings that drives behaviour
-          more than thought alone.
+          These Sessions are audio guided and come paired with a self-reflective
+          exercise that can be saved and/or edited in your private journal.
           <br />
           <br />
-          Story telling is up to <b>22x more effective</b> in behavioural change
-          and memory of ideas than rational reason alone.
-          <br />
-          <span className="h20">- Stanford University, 2019</span>
+          New Sessions are constantly uploaded and can be completed as many
+          times as possible.
         </p>
       </div>
     );
@@ -133,7 +180,7 @@ class AboutPage extends Component {
 
   renderLeft3() {
     return (
-      <div className="about-page-4 image-padding-right  pt-4">
+      <div className="about-page-4  pt-4">
         <h1 className="text k45 lh120">
           <b>Reflect</b> (In-App Journal)
         </h1>
@@ -141,9 +188,9 @@ class AboutPage extends Component {
         <br />
         <p className="text h22 lh150">
           In our modern day world of endlessly accessible information, podcasts,
-          videos, articles and more, people often <b>consume knowledge</b>,
-          <b>dont apply it</b> and <b>forget it</b>. Meaning, the opportunity to
-          apply and embody learnt concepts, is missed.
+          videos, articles and more, people often consume knowledge and forget
+          to apply it. Meaning, the opportunity to apply and embody learnt
+          concepts, is missed.
           <br />
           <br />
           Heroic Minds ensures you have the opportunity to fully engage with
@@ -159,33 +206,28 @@ class AboutPage extends Component {
   }
   renderRight3() {
     return (
-      <div className="d-table text-center  pt-4">
-        <span className="vertical-center">
-          <img alt="Hompage-image3" className="img-fluid  penImg" src={Pen} />
-        </span>
+      <div className="align-middle pt-4">
+        <img
+          alt="Hompage-image3"
+          className="img-fluid penImg pl-3 mb-2"
+          src={Pen}
+        />
       </div>
     );
   }
 
   renderRight4() {
     return (
-      <div className="about-page-5 image-padding-left pt-4">
+      <div className="about-page-5 pt-4">
         <h1 className="text k45 lh120">
           <b>Act</b> (Behavioural Activation)
         </h1>
         <br />
         <br />
         <p className="text  h22 lh150">
-          The most important part of Heroic Minds is implementation.
-          <br />
-          Thinking is not enough. It is the feelings created through action and
-          behaviour that brings meaning to your experience.
-          <br />
-          <br />
-          Behaviours that truly fulfil your required human needs and improve the
-          quality of your life have shown to be the most effective way to combat
-          negative feelings when compared to other leading tactics (World
-          Psychiatry Association, 2021).
+          The most important part of Heroic Minds is implementation. Thinking is
+          not enough. It is the feelings created through action that bring
+          meaning to your experience.
           <br />
           <br />
           Heroic Minds aims to activate an impulse to do more of what brings
@@ -196,21 +238,18 @@ class AboutPage extends Component {
           The goal is to have as many of these experiences as possible in your
           day to day life. Ultimately leading to a purpose-driven, resilient,
           high-performing individual.
-          <br />
         </p>
       </div>
     );
   }
   renderLeft4() {
     return (
-      <div className="d-table text-center  pt-4">
-        <span className="vertical-center">
-          <img
-            alt="Hompage-image4"
-            className="img-fluid behavioural-img"
-            src={Behavioural}
-          />
-        </span>
+      <div className="align-middle pt-4">
+        <img
+          alt="Hompage-image4"
+          className="img-fluid behavioural-img pr-3 mb-4"
+          src={Behavioural}
+        />
       </div>
     );
   }
@@ -220,43 +259,97 @@ class AboutPage extends Component {
         <h1 className="text text-center h40 bold lh150 ls1by2">
           Build your psychological foundation on solid rock.
         </h1>
-        <br />
-        <br />
-        <p className="text text-center h20 lh140">
+        <button
+          type="image"
+          alt="audio for paragraph below"
+          id="play-btn"
+          className="bg-transparent border-0 mx-auto w-100 my-3"
+          onClick={this.togglePlayPause}
+        >
+          <img
+            src={!this.state.isPlaying ? playIcon : pause} />
+        </button>
+        <p className="text text-center h21 lh170 mt-5">
           Throughout history, people have persevered through immense adversity
-          and tribulation, giving rise to lives of purpose, meaning, and
+          and tribulation. This has led to lives of purpose, meaning, and
           exploration of human potential. But today, it appears we are less able
-          to handle the challenges that are inherent to our existence. What has
-          caused this change?
+          to handle the challenges that are inherent to our existence.
           <br />
           <br />
-          People’s lives were once guided by a very simple global belief that
+          What has caused this change?
+          <br />
+          <br />
+          People's lives were once guided by a very simple global belief that
           assumed life and its collection of challenges were an opportunity to
           serve others and this was guided by an invigorating love to do so.
+          <br />
           This led people to see life as an opportunity and its challenges as
           adventures.
           <br />
           <br />
           But today, the aims of our society have shifted to hyper-focus on
-          self-fulfillment at the expense of one’s own psychological well-being
+          self-fulfillment at the expense of one's own psychological well-being
           and the well-being of those around them. What is the product of living
           this way? Presently, there is more anxiety, depression and fatigue
-          than there has ever been. People feelings are increasingly at odds
-          with what they need to do or want to do. We see a world of immense
-          cognitive effort to produce the ideal life, thinking, analyzing and
-          convincing themselves into submission of ideal behaviour. A stressful
-          way to live.
+          than there has ever been.
           <br />
           <br />
-          The optimal way to achieve a heroic life is such that you are not
-          looking to the world to be fulfilled, you are not calculating your
-          behaviour.Rather, you allow an invigorating love of serving the world
-          to be your guiding global belief.In living this way, you feel as if
-          you already have everything you need because what you value is
-          attainable in every life experience.You have the ability to feel
+          Heroic Minds has studied hundreds of real life heroic stories through
+          the lens of psychological and philosophical heavy weights such as
+          Jung, James, Rogers, Nietzsche, Plato and many more.
+          <br />
+          <br />
+          We want to make one thing clear, the problem is not that you haven’t
+          created the right habits, set measurable goals, worked hard, read
+          enough neuroscience or meditated enough. The issue is that deep down
+          there exists a void that we perceive would be filled if we got certain
+          things or attached our lives to certain finite ideas. For some it is
+          money, for some it is power, others it is attention, status, the list
+          goes on. It is the act of seeking things in the world to cover up this
+          void that leads to being stuck in your own head, tired, and
+          disconnected. This is what leads to feeling like when it is time to
+          perform, time to get the job done, time to change a behaviour, time to
+          do the right thing, the required energy or feeling, just isn’t there.
+          <br />
+          <br />
+          The basis of Heroic Minds is that if you want to live a
+          purpose-driven, resilient, high-performing life, without being stuck
+          in your own head, without forcing yourself to do the right thing, then
+          you need to intervene at the level of what drives your perceptions,
+          which is what you value and what you are aiming at in your life - what
+          we call, your global beliefs. Global beliefs provide context for
+          everything you do. Are you seeking to create prosperity everywhere you
+          go or do you feel that there is a sense of meaninglessness to your
+          life?
+          <br />
+          <br />
+          Global beliefs are the currents beneath your behaviour guiding how you
+          feel, think and behave. You experience these currents when you don't
+          feel like doing something you know you should or when you feel like
+          doing something you know you should not. Developing and nurturing
+          these global beliefs are what build the strength of your psychological
+          foundation and provide direction to your life.
+          <br />
+          <br />
+          This is what allows surgeons to perform with someone's life in their
+          hands, the leader to act with vigour while maintaining love for their
+          team, the entrepreneur to risk it all to chase something they believe
+          in, a parent to give up their old life for the benefit of someone
+          else's, and top athletes to execute with the game on the line. It is
+          only when an individual has everything they need internally that human
+          potential is realized. And the reality is, this hero is in every
+          single one of us.
+          <br />
+          <br />
+          The optimal way to achieve this life is such that you are not looking
+          to the world to be fulfilled, you are not calculating your behaviour.
+          Rather, you allow an invigorating love of serving the world to be your
+          guiding global belief. In living this way, you feel as if you already
+          have everything you need because what you value is attainable in every
+          life experience. This allows you to build your psychological
+          foundation on solid rock because you have the ability to feel
           fulfilled and engaged regardless of the situation or the environment
-          you are in .This allows you to build your psychological foundation on
-          solid rock.You maintain a composed and powerful mind that appears to
+          you are in. You maintain a composed and powerful mind that appears to
           the world as the hero.
         </p>
       </div>
@@ -264,44 +357,29 @@ class AboutPage extends Component {
   }
   renderLeft5() {
     return (
-      <div className="text-center d-table  pt-4">
-        <span className="vertical-center">
-          <img
-            alt="Hompage-image2"
-            className="img-fluid houseImg"
-            src={House}
-          />
-        </span>
+      <div className="align-middle my-3">
+        <img alt="Hompage-image2" className="img-fluid houseImg" src={House} />
       </div>
     );
   }
   renderRight5() {
     return (
-      <div className="abput-page-7 text-center d-table  pt-4 pb-4">
-        <span className="vertical-center">
-          <p className="text h30 lh150 w500">
-            When the heavy rain, wind, and floods arrived, those that built
-            their homes on sand were in ruin, while those that built their homes
-            solid rock, stood tall.
-          </p>
-          <p className="text text-gray-757 h20 lh130 mt-4">
-            - Parable of the Wise and the Foolish Builders
-          </p>
-        </span>
-      </div>
-    );
-  }
-  renderCom3() {
-    return (
-      <div className="about-page-8  pt-4">
-        <p className="text h20 text-center lh150"></p>
+      <div className="abput-page-7 align-middle flex-column align-items-start my-3">
+        <p className="text h30 lh170 fw500">
+          When the heavy rain, wind, and floods arrived, those that built their
+          homes on sand were in ruin, while those that built their homes solid
+          rock, stood tall.
+        </p>
+        <p className="text text-gray-757 text-left h20 lh130">
+          - Parable of the Wise and the Foolish Builders
+        </p>
       </div>
     );
   }
 
   render() {
     return (
-      <div className="about-page my-container-85">
+      <div className="about-page my-container-90">
         <section className="mt-8"> {this.renderComp()} </section>
 
         <section className="mt-13">
@@ -314,7 +392,7 @@ class AboutPage extends Component {
             reverse="true"
           />
         </section>
-        <section className="mt-13">
+        <section className="mt-5">
           <DisplayBox
             colLeft="3"
             colRight="9"
@@ -342,9 +420,9 @@ class AboutPage extends Component {
             />
           </section>
         </section>
-        <div className="gray-box mt-13 mb-15 pb-4">
+        <div className="gray-box mt-13 pb-5">
           <section className=""> {this.renderCom2()} </section>
-          <section className="mt-10 pb-4">
+          <section className="mt-7 pb-5">
             <DisplayBox
               colLeft="6"
               colRight="6"
