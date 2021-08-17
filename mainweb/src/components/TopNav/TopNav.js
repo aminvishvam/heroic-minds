@@ -5,6 +5,10 @@ import { NavLink } from "react-bootstrap";
 import Logo from "../Logo/Logo";
 import "./TopNav.css";
 import { connect } from "react-redux";
+import { NavDropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
+
 
 import TopNavLibrary from "../TopNavLibrary/TopNavLibrary";
 import TopNavProfile from "../TopNavProfile/TopNavProfile";
@@ -22,13 +26,13 @@ class TopNav extends Component {
   renderLinks() {
     if (this.props.authenticated) {
       return (
-        <div>
-          <Navbar expand="lg">
-            <Navbar.Brand to="/">
+        <div className="TopNav p-1 pt-3 bg-white">
+          <Navbar expand="xl" collapseOnSelect>
+            <Navbar.Brand>
               <Logo />
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="navbarScroll" />
-            <Navbar.Collapse id="navbarScroll" className="Nav-item">
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav" >
               <Nav
                 className="mr-auto my-6 my-lg-0"
                 style={{ maxHeight: "100px" }}
@@ -58,99 +62,68 @@ class TopNav extends Component {
       );
     } else {
       return (
-        <div>
-          <Navbar expand="lg">
-            <Navbar.Brand to="/">
+        <div className="TopNav p-1 pt-3 bg-white">
+          <Navbar expand="xl" collapseOnSelect>
+            <Navbar.Brand>
               <Logo />
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="navbarScroll" />
-            <Navbar.Collapse id="navbarScroll" className="Nav-item">
-              <Nav
-                className="mr-auto my-6 my-lg-0"
-                style={{ maxHeight: "100px" }}
-                navbarScroll
-              >
-                <NavLink
-                  to="/about"
-                  className="Nav-text"
-                  activeClassName="active"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "#F57C00",
-                  }}
-                >
-                  About
-                </NavLink>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav" >
+              <Nav>
+                <NavDropdown id="dropdown-basic" className="Nav-text" title="About">
+                  <NavDropdown.Item className="Nav-text "><Nav.Link as={Link} eventKey="1" to="/about/mission" className="text-black">Philosophy/Mission</Nav.Link ></NavDropdown.Item>
+                  <NavDropdown.Item className="Nav-text "><Nav.Link as={Link} eventKey="2" to="/about/podcast" className="text-black">Podcast</Nav.Link ></NavDropdown.Item>
+                  <NavDropdown.Item className="Nav-text "><Nav.Link as={Link} eventKey="3" to="/about/apparel" className="text-black">Apparel</Nav.Link ></NavDropdown.Item>
+                  <NavDropdown.Item className="Nav-text "> <Nav.Link as={Link} eventKey="4" to="/about/research/coming-soon" className="text-black">Research</Nav.Link ></NavDropdown.Item>
+                </NavDropdown>
 
-                <NavLink
-                  to="/teamaccess"
-                  className="Nav-text"
-                  activeClassName="active"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "#F57C00",
-                  }}
+
+                <Nav.Link as={Link} eventKey="5"
+                  to="/team-access"
+                  className="text-black Nav-text "
                 >
                   Team Access
-                </NavLink>
-                <NavLink
-                  to="/book"
-                  className="Nav-text"
-                  activeClassName="active"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "#F57C00",
-                  }}
+                </Nav.Link >
+                <Nav.Link as={Link} eventKey="6"
+                  to="/author"
+                  className="text-black Nav-text "
+
                 >
-                  Book
-                </NavLink>
+                  Author
+                </Nav.Link >
               </Nav>
-              <span className="Nav-item-right">
-                <NavLink
+              <Nav className="ml-auto">
+                <Nav.Link as={Link} eventKey="7"
                   to="/library"
-                  className="Nav-text navbar-right"
-                  activeClassName="active"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "#F57C00",
-                  }}
+                  className="text-black Nav-text  navbar-right"
+
                 >
                   Library
-                </NavLink>
-                <NavLink
+                </Nav.Link >
+                <Nav.Link as={Link} eventKey="8"
                   to="/community"
-                  className="Nav-text"
-                  activeClassName="active"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "#F57C00",
-                  }}
+                  className="text-black Nav-text "
                 >
                   Community
-                </NavLink>
-                <NavLink
+                </Nav.Link >
+                <Nav.Link as={Link} eventKey="9"
                   to="/login"
-                  className="Nav-text"
-                  activeClassName="active"
-                  activeStyle={{
-                    fontWeight: "bold",
-                    color: "#F57C00",
-                  }}
+                  className="text-black Nav-text "
                 >
                   Login
-                </NavLink>
-              </span>
-              <NavLink to="/JoinNow" className="Nav-text">
-                <button className="btn btn-dark">Join Today</button>
-              </NavLink>
+                </Nav.Link >
+                <Nav.Link as={Link} eventKey="10" to="/join-today" className="text-black Nav-text ">
+                  <button className="btn btn-black s18">Join Today</button>
+                </Nav.Link >
+              </Nav>
             </Navbar.Collapse>
-          </Navbar>
-        </div>
+          </Navbar >
+        </div >
       );
     }
   }
   render() {
-    return <div className="TopNav">{this.renderLinks()}</div>;
+    return <>{this.renderLinks()}</>;
   }
 }
 function mapStateToProps(state) {

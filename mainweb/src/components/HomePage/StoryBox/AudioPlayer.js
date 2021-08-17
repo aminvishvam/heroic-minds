@@ -1,12 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
-
 import playIcon from "../../../assets/HomePageAssets/play.svg";
 import back_20 from "../../../assets/HomePageAssets/back_20.svg";
 import forward_20 from "../../../assets/HomePageAssets/forward_20.svg";
 import pause from "../../../assets/HomePageAssets/Pause.svg";
-import "./AudioPlayer"
+import "./StoryBox.css"
 
-const AudioPlayer = ({ audioToPlay = null, textToDisplay }) => {
+const AudioPlayer = ({ audio }) => {
     //state
     const [isPlaying, setIsPlaying] = useState(false);
     const [duration, setDuration] = useState(0);
@@ -15,6 +14,7 @@ const AudioPlayer = ({ audioToPlay = null, textToDisplay }) => {
     const audioPlayer = useRef();   // reference our audio component
     const progressBar = useRef();   // reference our progress bar
     const animationRef = useRef();  // reference the animation
+
 
     useEffect(() => {
         const seconds = Math.floor(audioPlayer.current.duration);
@@ -74,14 +74,13 @@ const AudioPlayer = ({ audioToPlay = null, textToDisplay }) => {
     return (
         <div >
             <audio ref={audioPlayer} preload="true" id="audio" >
-                <source src={audioToPlay} />
-                <track label="English" kind="subtitles" srclang="en" src={textToDisplay} default />
+                <source src={audio} />
             </audio>
-            <div className="d-flex flex-row align-items-center justify-content-md-end justify-content-around audio-controls mt-4 pl-2  mr-4">
+            <div className="d-flex flex-row align-items-center justify-content-md-end justify-content-around audio-controls">
                 <input
                     type="image"
                     alt="audio-controls"
-                    className=" back-btn mr-3"
+                    className=" back-btn"
                     src={back_20}
                     onClick={back20Sec}
                 />
@@ -89,28 +88,24 @@ const AudioPlayer = ({ audioToPlay = null, textToDisplay }) => {
                     type="image"
                     alt="audio-controls play-button"
                     id="play-btn"
-                    className="audio-btn mr-3"
+                    className="audio-btn"
                     src={isPlaying ? pause : playIcon}
                     onClick={togglePlayPause}
                 />
                 <input
                     type="image"
                     alt="audio-controls"
-                    className="forward-btn mr-3"
+                    className="forward-btn"
                     src={forward_20}
                     onClick={forward20Sec}
                 />
-            </div>
-            {/* current time */}
-            <div className={isPlaying ? "d-flex mt-2 " : "d-none"}>
-                <div>{(currentTime && !isNaN(currentTime)) && calculateTime(currentTime)}</div> 
-                {/* progress bar */}
-                <div>
-                    <input type="range" defaultValue="0" ref={progressBar} onChange={changeRange} classname="progressBar w-25" />
+                <div className="d-none">
+                    <div>{(currentTime && !isNaN(currentTime)) && calculateTime(currentTime)}</div>
+                    <div>
+                        <input type="range" defaultValue="0" ref={progressBar} onChange={changeRange} className="progressBar w-25" />
+                    </div>
+                    <div >{(duration && !isNaN(duration)) && calculateTime(duration)}</div>
                 </div>
-
-                {/* duration */}
-                <div >{(duration && !isNaN(duration)) && calculateTime(duration)}</div>
             </div>
         </div>
     );

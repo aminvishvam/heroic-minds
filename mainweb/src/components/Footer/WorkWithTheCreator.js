@@ -9,7 +9,7 @@ import BenProfile4 from "../../assets/Footer/BenProfile4.svg";
 class WorkWithTheCreator extends Component {
     renderHeader() {
         return (
-            <div className="container ">
+            <div className="my-container-85">
                 <div className="text text-black-333 bold h40 lh100 ls2 text-center">
                     Ben Fanelli
                 </div>
@@ -32,8 +32,8 @@ class WorkWithTheCreator extends Component {
 
     renderIntro() {
         return (
-            <div className="d-table ">
-                <div className="vertical-center ">
+            <div className="align-middle">
+                <div>
                     <div className="text text-black-333 text-uppercase h35 lh100 ls2 fw500">
                         lover. creator. thinker.
                     </div>
@@ -87,12 +87,10 @@ class WorkWithTheCreator extends Component {
 
     renderIntroImg() {
         return (
-            <div className="text-center d-table pt-4 ">
-                <span className="vertical-center">
-                    <img alt="" src={BenProfileImg} className="img-fluid "></img>
-                    <br />
-                    <br />
-                </span>
+            <div className="align-middle pt-4 ">
+                <img alt="" src={BenProfileImg} className="img-fluid "></img>
+                <br />
+                <br />
             </div>
         );
     }
@@ -145,10 +143,8 @@ class WorkWithTheCreator extends Component {
 
     renderInfoImg1() {
         return (
-            <div className="pt-4 mb-3 d-table text-center">
-                <span className="vertical-center">
-                    <img alt="" src={BenProfile1} className="img-fluid"></img>
-                </span>
+            <div className="pt-4 mb-3 align-middle">
+                <img alt="" src={BenProfile1} className="img-fluid"></img>
             </div>
         );
     }
@@ -179,10 +175,8 @@ class WorkWithTheCreator extends Component {
 
     renderInfoImg2() {
         return (
-            <div className="pt-4 mb-3 d-table text-center pr-4">
-                <span className="vertical-center">
-                    <img alt="" src={BenProfile2} className="img-fluid"></img>
-                </span>
+            <div className="pt-4 mb-3 align-middle pr-4">
+                <img alt="" src={BenProfile2} className="img-fluid"></img>
             </div>
         );
     }
@@ -214,10 +208,8 @@ class WorkWithTheCreator extends Component {
 
     renderInfoImg3() {
         return (
-            <div className="pt-4 mb-3 d-table text-center">
-                <span className="vertical-center">
-                    <img alt="" src={BenProfile3} className="img-fluid"></img>
-                </span>
+            <div className="pt-4 mb-3 align-middle">
+                <img alt="" src={BenProfile3} className="img-fluid"></img>
             </div>
         );
     }
@@ -255,10 +247,8 @@ class WorkWithTheCreator extends Component {
 
     renderInfoImg4() {
         return (
-            <div className="pt-4 mb-3 d-table text-center pr-4">
-                <span className="vertical-center">
-                    <img alt="" src={BenProfile4} className="img-fluid"></img>
-                </span>
+            <div className="pt-4 mb-3 align-middle pr-4">
+                <img alt="" src={BenProfile4} className="img-fluid"></img>
             </div>
         );
     }

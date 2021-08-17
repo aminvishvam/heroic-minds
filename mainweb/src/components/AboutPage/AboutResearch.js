@@ -21,10 +21,7 @@ class Research extends Component {
             <div className="my-container-85">
                 <section>{this.renderHead()}</section>
                 <section>
-                    <section className="mt-10 ">{<StoryBox index="1" />}</section>
-                    <section className="mt-10 ">{<StoryBox index="2" />}</section>
-                    <section className="mt-10 ">{<StoryBox index="3" />}</section>
-                    <section className="mt-10 ">{<StoryBox index="4" />}</section>
+                    <section className="mt-10 ">{<StoryBox />}</section>
                 </section>
             </div>
         );
