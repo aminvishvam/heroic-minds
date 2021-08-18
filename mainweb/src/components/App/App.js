@@ -25,7 +25,7 @@ import Login from "../Login/Login";
 import ConfirmRegister from "../ConfirmRegister/ConfirmRegister";
 import ForgetPassword from "../ForgotPassword/ForgetPassword";
 import EditProfile from "../EditProfile/EditProfile";
-import Questionarries from "../Questionarries/Questionarries";
+
 
 import Payment from "../Payment/Payment";
 import SubApp from "../SubApp/SubApp";
@@ -80,7 +80,7 @@ class App extends Component {
               />
               <Route path="/payment" exact component={Payment} />
               <Route path="/edit-profile" exact component={EditProfile} />
-              <Route path="/questionarries" exact component={Questionarries} />
+           
             </ScrollToTop>
           </div>
 

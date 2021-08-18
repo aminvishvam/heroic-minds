@@ -3,29 +3,23 @@ import { connect } from "react-redux";
 import { compose } from "redux";
 
 import { Field, reduxForm } from "redux-form";
-import actions from "redux-form/lib/actions";
+import * as actions from "../../actions/payment";
 
 class MontlyPlan extends Component {
   state = {};
+  onSubmit = () => {
+    const value= this.props.userId
+    this.props.create_Subscription(value);
+  };
   render() {
+    const { handleSubmit, pristine, submitting } = this.props;
     return (
       <div className="MontlyPlan">
-        <form>
-          <Field
-            type="hidden"
-            id="basicPrice"
-            name="userId"
-            value="60ef10b4a3772e1574b15fe6"
-            component="input"
-          />
-          <button id="basic-plan-btn">Select Plan</button>
+        {this.props.userId}
+        <form onSubmit={handleSubmit(this.onSubmit)}>
+          <button id="basic-plan-btn" >Select Plan</button>
         </form>
       </div>
     );
   }
 }
-export default compose(
-  reduxForm({
-    form: "Plan",
-  })
-)(MontlyPlan);

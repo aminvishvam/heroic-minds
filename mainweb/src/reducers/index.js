@@ -5,6 +5,9 @@ import teamAccessReducer from "./teamAccessReducer";
 import toggleRegReducer from "./toggleRegReducer";
 import userAuthReducer from "./userAuthReducer";
 import userReducer from "./UserReducer";
+import episodeReducer from "./episodeReducer";
+import themeReducer from "./themeReducer";
+import topicReducer from "./topicReducer";
 
 export default combineReducers({
   form: formReducer,
@@ -12,5 +15,8 @@ export default combineReducers({
   auth: userAuthReducer,
   toggle: toggleRegReducer,
   org: orgReducer,
-  user: userReducer
+  user: userReducer,
+  theme: themeReducer,
+  topic: topicReducer,
+  episode: episodeReducer,
 });

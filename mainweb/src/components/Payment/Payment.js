@@ -1,8 +1,15 @@
 import React, { Component } from "react";
-import MontlyPlan from "./MonltyPlan";
+import { connect } from "react-redux";
+import { compose } from "redux";
 
-const ProductDisplay = () => (
-  <div>
+
+
+class Payment extends Component {
+  state = {};
+  render() {
+    return (
+      <div className="Payment">
+        <div>
     <section>
       <form
         action="http://localhost:5080/create-checkout-session"
@@ -12,7 +19,7 @@ const ProductDisplay = () => (
           type="hidden"
           id="basicPrice"
           name="userId"
-          value="60ef10b4a3772e1574b15fe6"
+          value={this.props.userId}
         />
         <img src="/img/starter.png" width="120" height="120" />
         <div class="name">Monthly</div>
@@ -45,28 +52,24 @@ const ProductDisplay = () => (
           type="hidden"
           id="basicPrice"
           name="userId"
-          value="60ef10b4a3772e1574b15fe6"
+          value={this.props.userId}
         />
 
         <button id="basic-plan-btn">Manging Billing</button>
       </form>
     </section>
   </div>
-);
-
-export default function App() {
-  return <ProductDisplay />;
+      </div>
+    );
+  }
 }
 
-// class Payment extends Component {
-//   state = {};
-//   render() {
-//     return (
-//       <div className="Payment">
-//         <MontlyPlan />
-//       </div>
-//     );
-//   }
-// }
+function mapStateToProps(state,ownProps) {
+  return {
+  userId: state.user.userId
+  };
+}
 
-// export default Payment;
+export default compose(
+  connect(mapStateToProps, null),
+)(Payment);

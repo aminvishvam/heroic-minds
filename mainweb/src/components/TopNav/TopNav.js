@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { NavLink } from "react-bootstrap";
 import Logo from "../Logo/Logo";
 import "./TopNav.css";
 import { connect } from "react-redux";
-import  NavLink  from "react-bootstrap/NavLink";
+
 
 import TopNavLibrary from "../TopNavLibrary/TopNavLibrary";
 import TopNavProfile from "../TopNavProfile/TopNavProfile";
@@ -48,7 +47,6 @@ class TopNav extends Component {
                     Community
                   </Nav.Link>
                 </div>
-
                 <SearchBar />
               </Nav>
               <TopNavProfile />
