@@ -31,13 +31,14 @@ const MyModal = ({ myObject, type }) => {
 
     const renderModal = () => {
         return (
-            <Modal show={isJournalOpen} onHide={handleCloseJournal}>
-                <Modal.Header closeButton className="p-1 pr-3 k40" />
-                <Modal.Body className="p-0 mb-4">
-                    <div className="d-flex justify-content-center align-items-center text-center">
+            <Modal show={isJournalOpen} onHide={handleCloseJournal} className="px-4">
+                <Modal.Header closeButton className="p-1 pr-3 k40 text-center" >
+                    <div className="d-flex text-center mx-auto my-3">
                         <img alt="Pen Icon" src={Pen_Icon_Black} className="m-1 modal-pen-icon" />
                         <p className="text s25 m-1 lh130"> Journal</p>
                     </div>
+                </Modal.Header>
+                <Modal.Body className="p-0 mb-4">
                     <div className="d-flex mb-3 flex-xl-nowrap flex-wrap justify-content-center align-items-center">
                         <div className="col-lg-4">
                             <div className="mt-3 text-center">
@@ -54,10 +55,10 @@ const MyModal = ({ myObject, type }) => {
                         </div>
                         <div className="d-flex flex-column justify-content-center col-lg-8 journal-question">
                             <div className="text s20 lh130 font-italic mt-3 bg-gray rounded py-2 px-4">
-                                <div className="s18">{myObject?.journalQuestions.question1}</div>
+                                <div className="s18 text-center">{myObject?.journalQuestions.question1}</div>
                             </div>
                             <div className="text s20 lh130 font-italic  mt-3 bg-gray rounded py-2 px-4">
-                                <div className="s18">{myObject?.journalQuestions.question2}</div>
+                                <div className="s18 text-center">{myObject?.journalQuestions.question2}</div>
                             </div>
                         </div>
                     </div>
