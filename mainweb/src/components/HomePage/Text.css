@@ -8,16 +8,12 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 
 /* font color */
 .text {
-  margin: 0;
-  visibility: visible;
   color: #000;
   text-align: left;
   font-weight: 400;
 }
 
 .text-orange {
-  margin: 0;
-  visibility: visible;
   text-align: left;
   color: #f57c00;
   font-weight: 400;
@@ -27,13 +23,15 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   color: #757780;
 }
 
+.text-gray-57 {
+  color: #575757;
+}
+
 .text-gray-97 {
   color: #979797;
 }
 
 .text-white {
-  margin: 0;
-  visibility: visible;
   text-align: left;
   color: #fff;
   font-weight: 400;
@@ -69,6 +67,9 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   background-color: #fff;
 }
 
+.bg-gray {
+  background-color: #c4c4c4;
+}
 /* text weight */
 .bold {
   font-weight: 700;
@@ -206,6 +207,11 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
     font-size: 10px;
   }
 
+  .s12 {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+  }
+
   .s16 {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
@@ -284,6 +290,10 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 
 .lh160 {
   line-height: 160%;
+}
+
+.lh170 {
+  line-height: 170%;
 }
 
 /* line height  */

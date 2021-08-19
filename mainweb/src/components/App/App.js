@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SubApp/>
+        <SubApp />
         <Router history={history}>
           <Switch>
             <Route path="/" component={TopNav} />
@@ -38,9 +38,9 @@ class App extends Component {
               <Route path="/" component={Footer} />
             </Switch>
           </div>
-        </Router >
+        </Router>
         <Scrolls />
-      </div >
+      </div>
     );
   }
 }

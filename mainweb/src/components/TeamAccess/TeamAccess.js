@@ -60,14 +60,8 @@ class TeamAccess extends Component {
     const { handleSubmit } = this.props;
     return (
       <div className="team-page-header">
-        <p className="text k40 w600 bold lh140">Bring heroism into your team.</p>
-        <p className="text-gray-757 k18 lh140 fw600 mt-2">
-          Selflessness, purpose, passion, courage, honesty, integrity,
-          resolve...
-        </p>
-        <br />
-        <br />
-        <p className="text h20 lh150 w400" >
+        <p className="text k40 w600 bold lh140 mb-0">Offer Heroic Minds™ to your team.</p>
+        <p className="text h22 lh150 mt-2" >
           Are you interested in offering Heroic Minds to your team?
           <br />
           If so, send us an email.
