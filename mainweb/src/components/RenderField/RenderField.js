@@ -8,6 +8,7 @@ const RenderField = ({
   type,
   className,
   meta: { touched, error, warning },
+
 }) => {
   const isCheckbox = type === 'checkbox';
   const inputClass = classNames({
@@ -25,6 +26,7 @@ const RenderField = ({
           ((error && <div className='error-text'>{error}</div>) ||
             (warning && <div className='error-text'>{warning}</div>))}
       </div>
+
     </div>
   );
 }

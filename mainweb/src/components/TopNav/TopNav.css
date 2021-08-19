@@ -1,35 +1,85 @@
-.Nav-text{
-    color: black;
-    font-size: 15px;
-    font-weight: 500;
-    padding: 0px 20px;
-    margin-top: 5px;
-}
-.Nav-text:hover{
-    color: #F57C00;
-}
-.Nav-item-right{
-    margin-top: 8px;
+.Nav-text {
+  color: black !important;
+  font-size: 18px !important;
+  font-family: "Roboto";
+  font-weight: 400 !important;
+  padding: 10px 15px !important;
+  width: max-content !important;
+  background-color: #fff !important;
+  border-style: none !important;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-    .Nav-item-right{
-        display: flex;
-        flex-direction: column!important;
-        margin-bottom: 8px;
-    }
+.Nav-text:hover {
+  color: #f57c00 !important;
+}
+
+.Nav-text .text-black:hover {
+  color: #f57c00 !important;
+}
+
+.nav-link {
+  color: #000 !important;
+}
+
+.btn-black {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+
+.btn-black:hover {
+  color: #f57c00;
+}
+
+.TopNav {
+  z-index: 1000 !important;
+}
+
+.navbar-nav {
+  background-color: #fff;
+}
+
+/* @media (min-width: 481px) and (max-width: 992px) {
+  .my-navbar .d-flex {
+    flex-direction: column !important;
   }
-  
-  /* 
+
+  .navbar {
+    z-index: 1;
+    background-color: #fff;
+  }
+} */
+
+/* 
     ##Device = Most of the Smartphones Mobiles (Portrait)
-    ##Screen = B/w 320px to 479px
-  */
-  
-  @media (min-width: 320px) and (max-width: 480px) {
+    ##Screen = B/w 320px to 479px */
 
-    .Nav-item-right{
-        display: flex;
-        flex-direction: column!important;
-        margin-bottom: 8px;
-    }
+/* @media (min-width: 320px) and (max-width: 480px) {
+  .my-navbar .d-flex {
+    flex-direction: column !important;
+    margin-bottom: 8px;
   }
+
+  .navbar {
+    z-index: 1;
+    background-color: #fff;
+  }
+} */
+
+@media (max-width: 1200px) {
+  .Nav-text {
+    margin-right: auto !important;
+    margin-left: auto !important;
+    text-align: center !important;
+  }
+
+  .dropdown .nav-link {
+    padding: 0px !important;
+  }
+
+  .dropdown-menu {
+    margin-top: 10px !important;
+  }
+}

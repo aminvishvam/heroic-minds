@@ -9,14 +9,16 @@ import * as actions from "../../actions/Auth";
 
 import "./Login.css";
 import RenderField from "../RenderField/RenderField";
-import LogoIcon from "../LogoIcon/LogoIcon";
+import LogoIcon from "../Logo/LogoIcon/LogoIcon";
 import { Link } from "react-router-dom";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 class Login extends Component {
   onSubmit = (formValues) => {
     this.props.login(formValues);
+    
   };
+
 
   clearErrorState = () => {
     this.props.resetPreviousError();

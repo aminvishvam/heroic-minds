@@ -20,7 +20,7 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 class OrgRegister extends Component {
   componentDidMount() {
-    this.props.fetchOrgs();
+    this.props.fetchStream(this.props.match.params.id);
   }
   onSubmit = (formValues) => {
     this.props.orgRegister(formValues);
@@ -38,14 +38,14 @@ class OrgRegister extends Component {
 
   clearErrorState = () => {
     this.props.resetPreviousError();
-  }
+  };
 
   renderOrgSelect() {
     return (
       <div>
         <label>Organization Name</label>
         <br />
-        <Field className='dropdown-wrapper' name="orgId" component="select">
+        <Field className="dropdown-wrapper" name="orgId" component="select">
           {this.renderOrgOption()}
         </Field>
       </div>
@@ -53,7 +53,9 @@ class OrgRegister extends Component {
   }
   render() {
     const { handleSubmit, pristine, submitting } = this.props;
-    const isAnyError = !!(this.props.errorMessage || this.props.emailVerfiyError)
+    const isAnyError = !!(
+      this.props.errorMessage || this.props.emailVerfiyError
+    );
 
     return (
       <div className="container justify-content-center">
@@ -61,9 +63,16 @@ class OrgRegister extends Component {
           <div style={{ maxWidth: '600px', width: '100%' }} className="container"> 
             <form onSubmit={handleSubmit(this.onSubmit)}>
               <Field
-                name="FullName"
+                name="firstName"
                 type="text"
-                label="Full name"
+                label="First Name"
+                component={RenderField}
+                validate={[required(), length({ min: 2 })]}
+              />
+              <Field
+                name="lastName"
+                type="text"
+                label="Last Name"
                 component={RenderField}
                 validate={[required(), length({ min: 2 })]}
               />
@@ -99,7 +108,7 @@ class OrgRegister extends Component {
                   fieldLabel: "Password",
                 })}
               />
-              <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div style={{ display: "flex", alignItems: "center" }}>
                 <Field
                   name="terms"
                   type="checkbox"
@@ -108,7 +117,7 @@ class OrgRegister extends Component {
                 />
                 <label>
                   By signing up, I agree to privacy policy of this app
-              </label>
+                </label>
               </div>
               <button
                 type="submit"

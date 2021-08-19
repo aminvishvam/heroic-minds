@@ -1,0 +1,44 @@
+.book-img {
+  max-width: 450px !important;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+/* Standard syntax */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1200px) {
+  .book-img {
+    max-width: 400px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .book-img {
+    width: 300px !important;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .book-img {
+    width: 300px !important;
+  }
+}

@@ -1,26 +1,39 @@
 .bg-img {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 
 .community-bg-img {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   opacity: 0.15;
 }
 
-.header-text {
+.coming-soon-head {
+  z-index: 1;
+  height: 200px;
+  margin-top: 200px;
+}
+
+.community-image-block {
   position: relative;
-  height: 100vh;
-  height: 100vw;
-  vertical-align: middle;
+  top: -450px;
+  z-index: -1;
 }
 
 .image-block {
-  position: absolute;
+  position: relative;
+  top: -400px;
+  z-index: -1;
 }
 
-.h28 {
-  font-family: "Halant";
-  font-size: 28px;
+@media (max-width: 767px) {
+  .coming-soon-head {
+    margin-top: 100px;
+  }
+
+  .image-block,
+  .community-image-block {
+    top: -300px;
+  }
 }

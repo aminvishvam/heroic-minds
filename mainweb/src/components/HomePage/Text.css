@@ -8,134 +8,268 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 
 /* font color */
 .text {
-  margin: 0;
-  visibility: visible;
   color: #000;
   text-align: left;
   font-weight: 400;
 }
 
 .text-orange {
-  margin: 0;
-  visibility: visible;
   text-align: left;
   color: #f57c00;
   font-weight: 400;
 }
 
-.text-gray {
-  margin: 0;
-  visibility: visible;
-  text-align: left;
+.text-gray-757 {
   color: #757780;
-  font-weight: 400;
 }
 
-.text-gray2 {
-  margin: 0;
-  visibility: visible;
-  text-align: left;
+.text-gray-57 {
+  color: #575757;
+}
+
+.text-gray-97 {
   color: #979797;
+}
+
+.text-white {
+  text-align: left;
+  color: #fff;
   font-weight: 400;
 }
 
+.text-black {
+  color: #000;
+}
+
+.text-black-333 {
+  color: #333333;
+}
+
+.text-yellow {
+  color: rgba(245, 124, 0, 0.7);
+}
+
+.text-black-079 {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.text-black-047 {
+  color: rgba(0, 0, 0, 0.47);
+}
+
+/* bg-color  */
+
+.bg-black {
+  background-color: #000;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-gray {
+  background-color: #c4c4c4;
+}
 /* text weight */
 .bold {
   font-weight: 700;
 }
 
-.w600 {
+.fw600 {
   font-weight: 600;
 }
 
-.w400 {
+.fw400 {
   font-weight: 400;
 }
 
-.w300 {
-  font-weight: 300;
-}
-
-.w500 {
+.fw500 {
   font-weight: 500;
 }
 
-/* font-family = Karma with different font sizes */
-.k40 {
-  font-family: "Karma";
-  font-size: 40px;
+@media (min-width: 768px) {
+  /* font-family = Karma with different font sizes */
+  .k70 {
+    font-family: "Karma";
+    font-size: 70px;
+  }
+
+  .k60 {
+    font-family: "Karma";
+    font-size: 60px;
+  }
+
+  .k50 {
+    font-family: "Karma";
+    font-size: 50px;
+  }
+
+  .k45 {
+    font-family: "Karma";
+    font-size: 45px;
+  }
+
+  .k43 {
+    font-family: "Karma";
+    font-size: 43px;
+  }
+
+  .k40 {
+    font-family: "Karma";
+    font-size: 40px;
+  }
+
+  .k32 {
+    font-family: "Karma";
+    font-size: 32px;
+  }
+
+  .k35 {
+    font-family: "Karma";
+    font-size: 35px;
+  }
+
+  .k18 {
+    font-family: "Karma";
+    font-size: 18px;
+  }
+  /* font-family = Halant with different font sizes */
+
+  .h16 {
+    font-family: "Halant";
+    font-size: 16px !important;
+  }
+
+  .h20 {
+    font-family: "Halant";
+    font-size: 20px;
+  }
+
+  .h21 {
+    font-family: "Halant";
+    font-size: 21px;
+  }
+
+  .h22 {
+    font-family: "Halant";
+    font-size: 22px;
+  }
+
+  .h24 {
+    font-family: "Halant";
+    font-size: 24px;
+  }
+
+  .h26 {
+    font-family: "Halant";
+    font-size: 26px;
+  }
+
+  .h28 {
+    font-family: "Halant";
+    font-size: 28px;
+  }
+
+  .h30 {
+    font-family: "Halant";
+    font-size: 30px;
+  }
+
+  .h35 {
+    font-family: "Halant";
+    font-size: 35px;
+  }
+
+  .h40 {
+    font-family: "Halant";
+    font-size: 40px;
+  }
+
+  .h45 {
+    font-family: "Halant";
+    font-size: 45px;
+  }
+
+  .h50 {
+    font-family: "Halant";
+    font-size: 50px;
+  }
+
+  .h60 {
+    font-family: "Halant";
+    font-size: 60px;
+  }
+
+  /* font-family = 'Roboto', sans-serif with different font sizes */
+
+  .s10 {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+  }
+
+  .s12 {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+  }
+
+  .s16 {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+  }
+
+  .s18 {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px !important;
+  }
+
+  .s20 {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+  }
+
+  .s23 {
+    font-family: "Roboto", sans-serif;
+    font-size: 23px;
+  }
+
+  .s25 {
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+  }
+
+  .s30 {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+  }
+
+  .s35 {
+    font-family: "Roboto", sans-serif;
+    font-size: 35px !important;
+  }
 }
-
-.k45 {
-  font-family: "Karma";
-  font-size: 45px;
-}
-
-.k50 {
-  font-family: "Karma";
-  font-size: 50px;
-}
-
-.k70 {
-  font-family: "Karma";
-  font-size: 70px;
-}
-
-.k18 {
-  font-family: "Karma";
-  font-size: 18px;
-}
-
-/* font-family = Halant with different font sizes */
-.h20 {
-  font-family: "Halant";
-  font-size: 20px;
-}
-
-.h22 {
-  font-family: "Halant";
-  font-size: 22px;
-}
-
-.h24 {
-  font-family: "Halant";
-  font-size: 24px;
-}
-
-.h28 {
-  font-family: "Halant";
-  font-size: 28px;
-}
-
-.h30 {
-  font-family: "Halant";
-  font-size: 30px;
-}
-
-.h40 {
-  font-family: "Halant";
-  font-size: 40px;
-}
-
-/* font-family = sans-serif with different font sizes */
-
-.s16 {
-  font-family: sans-serif;
-  font-size: 16px;
-}
-
-.s23 {
-  font-family: sans-serif;
-  font-size: 23px;
-}
-
 /* line height  */
+.lh93 {
+  line-height: 93%;
+}
+
+.lh47 {
+  line-height: 47%;
+}
+
 .lh150 {
   line-height: 150%;
 }
 
+.lh140 {
+  line-height: 140%;
+}
+
 .lh120 {
   line-height: 120%;
+}
+
+.lh110 {
+  line-height: 110%;
 }
 
 .lh130 {
@@ -148,6 +282,18 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 
 .lh200 {
   line-height: 200%;
+}
+
+.lh60 {
+  line-height: 60%;
+}
+
+.lh160 {
+  line-height: 160%;
+}
+
+.lh170 {
+  line-height: 170%;
 }
 
 /* line height  */
@@ -170,4 +316,179 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
 
 .pr-0 {
   padding-right: 0;
+}
+
+/* margin bottom */
+
+.mb-0 {
+  margin-bottom: 0%;
+}
+.mb-3 {
+  margin-bottom: 3%;
+}
+
+.mb-4 {
+  margin-bottom: 4%;
+}
+
+.mb-5 {
+  margin-bottom: 5%;
+}
+
+.mb-6 {
+  margin-bottom: 6%;
+}
+
+.mb-7 {
+  margin-bottom: 7%;
+}
+
+.mb-8 {
+  margin-bottom: 8%;
+}
+
+.mb-9 {
+  margin-bottom: 9%;
+}
+
+.mb-10 {
+  margin-bottom: 10%;
+}
+
+.mb-15 {
+  margin-bottom: 15%;
+}
+
+.mb-18 {
+  margin-bottom: 18%;
+}
+
+.mb-20 {
+  margin-bottom: 20%;
+}
+
+/* morgin-top */
+
+.mt-3 {
+  margin-top: 3%;
+}
+
+.mt-4 {
+  margin-top: 4% !important;
+}
+
+.mt-5 {
+  margin-top: 5%;
+}
+
+.mt-505 {
+  margin-top: 5.5%;
+}
+
+.mt-6 {
+  margin-top: 6%;
+}
+
+.mt-7 {
+  margin-top: 7%;
+}
+
+.mt-8 {
+  margin-top: 8%;
+}
+
+.mt-9 {
+  margin-top: 9%;
+}
+
+.mt-10 {
+  margin-top: 10%;
+}
+
+.mt-13 {
+  margin-top: 13%;
+}
+
+.mt-15 {
+  margin-top: 15%;
+}
+
+.mt-18 {
+  margin-top: 18%;
+}
+
+.mt-20 {
+  margin-top: 20%;
+}
+
+/* letter-spacing */
+
+.ls1 {
+  letter-spacing: 1px;
+}
+
+.ls1half {
+  letter-spacing: 1.5px;
+}
+
+.ls2 {
+  letter-spacing: 2px;
+}
+
+.ls1by2 {
+  letter-spacing: 0.5px;
+}
+
+.my-container-95 {
+  max-width: 95%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-container-90 {
+  max-width: 90%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-container-85 {
+  max-width: 85%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-container-80 {
+  max-width: 80%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-container-75 {
+  max-width: 75%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-container-70 {
+  max-width: 70%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-container-65 {
+  max-width: 65%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-container-60 {
+  max-width: 60%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-container-50 {
+  max-width: 50%;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }

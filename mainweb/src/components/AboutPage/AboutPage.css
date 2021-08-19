@@ -1,115 +1,27 @@
-.layout1 {
-  padding-bottom: 18%;
+.about-page hr {
+  width: 20%;
+  border-top: 3px solid black !important;
 }
 
-.layout2 {
-  margin-top: 10%;
-}
-.layout3 {
-  margin-top: 5%;
-}
-
-.layout4 {
-  margin-top: 3%;
+.gray-box {
+  background-color: #c4c4c4;
+  border-radius: 20px;
+  padding: 5%;
 }
 
-.pt-15 {
-  padding-bottom: 15%;
+.about-page {
+  font-weight: 400 !important;
 }
 
-.d-table {
-  display: table;
+.gray-box .pb-7 {
+  padding-bottom: 7% !important;
+}
+
+.align-middle {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
   justify-content: center;
-  height: 100%;
-  width: 100%;
-}
-
-.vertical-center {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.full-div {
-  height: 100%;
-}
-
-.pp-intro-layout1 {
-  font-size: 44px;
-  font-family: "Karma";
-  text-align: left;
-  color: #000000;
-}
-
-.pp-intro-layout2 {
-  font-size: 22px;
-  font-family: "Halant";
-  text-align: left;
-  color: #000000;
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-.about-storytelling {
-  height: 100%;
-  width: 100%;
-}
-.about-tagline-layout3 {
-  margin: 0;
-  visibility: visible;
-  font-weight: 200;
-  font-family: "Karma";
-  font-size: 48px;
-  text-align: right;
-  line-height: 1.4;
-  color: #000;
-}
-.about-intro-layout2 {
-  font-size: 22px;
-  font-family: "Halant";
-  text-align: right;
-  color: #000000;
-  text-align: justify;
-  text-justify: inter-word;
-}
-.about-tagline-layout5 {
-  margin: 0;
-  visibility: visible;
-  font-weight: 900;
-  font-family: "Karma";
-  font-size: 48px;
-  text-align: center;
-  line-height: 1.4;
-  color: #000;
-}
-
-.about-intro-layout5 {
-  font-size: 22px;
-  font-family: "Halant";
-  text-align: center;
-  color: #000000;
-}
-
-.about-intro-layout4 {
-  font-size: 34px;
-  font-family: "Halant";
-  font-weight: 500;
-  text-align: left;
-  color: #000000;
-}
-.about-intro-layout6 {
-  font-size: 21px;
-  letter-spacing: 1;
-  font-family: "Halant";
-  text-align: center;
-  color: #000000;
-}
-.about-intro-layout7 {
-  font-size: 20px;
-  letter-spacing: 1;
-  font-family: "Halant";
-  font-weight: 800;
-  text-align: center;
-  color: #000000;
 }
 
 @-webkit-keyframes fadeInUp {
@@ -132,5 +44,72 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 992px) {
+  .about-page img {
+    max-width: 200px !important;
+    max-height: 200px !important;
+    margin-top: 10%;
+  }
+
+  .about-page .penImg {
+    max-width: 150px !important;
+    max-height: 150px !important;
+  }
+
+  .about-page .houseImg {
+    max-width: 280px !important;
+    max-height: 280px !important;
+  }
+
+  .about-page hr {
+    width: 40%;
+  }
+
+  @media (max-width: 768px) {
+    .about-page hr {
+      width: 75%;
+    }
+  }
+
+  .podcast-img {
+    max-width: 300px !important;
+    height: 100% !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-page img {
+    max-width: 200px !important;
+    max-height: 200px !important;
+  }
+
+  .about-page .penImg {
+    max-width: 150px !important;
+    max-height: 150px !important;
+  }
+
+  .about-page .houseImg {
+    max-width: 400px !important;
+    max-height: 100% !important;
+  }
+
+  .align-middle .pr-3,
+  .align-middle .pl-3 {
+    padding: 0px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-page .houseImg {
+    max-width: 300px !important;
+  }
+}
+
+@media (max-width: 585px) {
+  .about-page .houseImg {
+    max-width: 250px !important;
   }
 }

@@ -1,0 +1,9 @@
+.question-box {
+  background-color: #eeecea !important;
+  border-radius: 0px !important;
+}
+
+.answer-box {
+  border-radius: 0px !important;
+  background-color: #fff;
+}
