@@ -17,7 +17,7 @@ class NewEpisode extends Component {
               className="res"
               alt="/"
               src={
-                process.env.REACT_APP_AWS_URL + episode.imageUrl
+                'https://portfoilo.s3.us-east-2.amazonaws.com/'+ episode.imageUrl
               }
             />
                 <div className="header">

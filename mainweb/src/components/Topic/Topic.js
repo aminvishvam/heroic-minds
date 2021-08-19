@@ -21,7 +21,7 @@ class Topic extends Component {
               className="res"
               alt='/'
               src={
-                process.env.REACT_APP_AWS_URL + topic.imageurl
+                'https://portfoilo.s3.us-east-2.amazonaws.com/' + topic.imageurl
               }
             />
           </div>
