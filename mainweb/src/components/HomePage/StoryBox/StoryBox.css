@@ -2,6 +2,10 @@
   cursor: pointer;
 }
 
+.journal-question .rounded {
+  border-radius: 30px !important;
+}
+
 .close {
   font-size: 3.5rem !important;
   font-weight: 400 !important;

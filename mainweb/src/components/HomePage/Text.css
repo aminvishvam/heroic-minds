@@ -67,6 +67,9 @@ lhXXX = lh is line height and XXX is value in percentage '.lh150' is line herigh
   background-color: #fff;
 }
 
+.bg-gray {
+  background-color: #c4c4c4;
+}
 /* text weight */
 .bold {
   font-weight: 700;
