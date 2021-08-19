@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchUser } from "../../actions/user";
+import NewEpisode from "../NewEpisode/NewEpisode"
 
 
 class MainLibrary extends Component {
@@ -14,7 +15,7 @@ class MainLibrary extends Component {
     }
     render() { 
         return ( <div>
-      
+          <NewEpisode/>
         </div> );
     }
 }

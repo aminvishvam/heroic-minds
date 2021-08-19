@@ -1,4 +1,4 @@
-import epsiode from "../Api/heroicmindsapi";
+import epsiode from "../api/heroicmindsapi";
 import history from "../history";
 import {
   CREATE_EPISODE,
