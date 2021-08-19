@@ -4,7 +4,9 @@ import Nav from "react-bootstrap/Nav";
 import Logo from "../Logo/Logo";
 import "./TopNav.css";
 import { connect } from "react-redux";
-
+import { NavDropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import NavLink from "react-bootstrap/NavLink";
 import TopNavLibrary from "../TopNavLibrary/TopNavLibrary";
 import TopNavProfile from "../TopNavProfile/TopNavProfile";
 import SearchBar from "../SearchBar/searchBar";
@@ -46,6 +48,7 @@ class TopNav extends Component {
                     Community
                   </Nav.Link>
                 </div>
+
                 <SearchBar />
               </Nav>
               <TopNavProfile />
