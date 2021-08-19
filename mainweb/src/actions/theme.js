@@ -1,4 +1,4 @@
-import theme from '../Api/heroicmindsapi';
+import theme from '../api/heroicmindsapi';
 import history from '../history';
 import {
   CREATE_THEME,

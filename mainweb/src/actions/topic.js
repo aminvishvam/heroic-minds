@@ -1,4 +1,4 @@
-import topic from "../Api/heroicmindsapi";
+import topic from "../api/heroicmindsapi";
 import history from "../history";
 import {
   CREATE_TOPIC,

@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import { fetchUser } from "../../actions/user";
 import NewEpisode from "../NewEpisode/NewEpisode"
+import Theme from '../Theme/Theme';
+import Topic from '../Topic/Topic';
 
 
 class MainLibrary extends Component {
@@ -16,6 +18,8 @@ class MainLibrary extends Component {
     render() { 
         return ( <div>
           <NewEpisode/>
+          <Theme/>
+          <Topic/>
         </div> );
     }
 }
