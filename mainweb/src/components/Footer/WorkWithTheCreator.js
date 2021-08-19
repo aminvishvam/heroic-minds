@@ -97,7 +97,7 @@ class WorkWithTheCreator extends Component {
 
     renderVideo() {
         return (
-            <div class="col-sm-11 col-md-11 col-lg-11 col-11  mx-auto embed-responsive embed-responsive-16by9">
+            <div className="col-sm-11 col-md-11 col-lg-11 col-11  mx-auto embed-responsive embed-responsive-16by9">
                 <iframe
                     className="embed-responsive-item"
                     src="https://www.youtube.com/embed/0Cv7tX1cwKE"

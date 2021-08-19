@@ -15,7 +15,7 @@ const ApparelBox = (category, index) => {
     console.log(`Apparel${category}${index}`);
 
     return (
-        <img src={`Apparel${category}${index}`} className="img-fluid" />
+        <img alt="apparel" alt="Apparel" src={`Apparel${category}${index}`} className="img-fluid" />
     );
 }
 
@@ -33,8 +33,8 @@ class Apparel extends Component {
                     Order Today
                 </a></div>
                 <div className="d-flex mt-5 flex-wrap">
-                    <div className="col-sm-6 mt-4"> <img src={ApparelMain1} className="img-fluid" /></div>
-                    <div className="col-sm-6 mt-4"><img src={ApparelMain2} className="img-fluid" /></div>
+                    <div className="col-sm-6 mt-4"> <img alt="apparel" src={ApparelMain1} className="img-fluid" /></div>
+                    <div className="col-sm-6 mt-4"><img alt="apparel" src={ApparelMain2} className="img-fluid" /></div>
                 </div>
             </div>
         );
@@ -46,23 +46,23 @@ class Apparel extends Component {
                 <div className="text k32 fw600 text-center">2021 Collection</div>
                 <div className="text-center d-flex flex-wrap justify-content-center mt-5">
                     <div className="collection-img d-flex">
-                        <img src={ApparelCollection1} className="img-fluid" />
-                        <img src={ApparelCollection2} className="img-fluid" />
+                        <img alt="apparel" src={ApparelCollection1} className="img-fluid" />
+                        <img alt="apparel" src={ApparelCollection2} className="img-fluid" />
                     </div>
                     <div className="collection-img d-flex">
-                        <img src={ApparelCollection3} className="img-fluid" />
-                        <img src={ApparelCollection4} className="img-fluid" />
+                        <img alt="apparel" src={ApparelCollection3} className="img-fluid" />
+                        <img alt="apparel" src={ApparelCollection4} className="img-fluid" />
                     </div>
                     <div className="collection-img d-flex">
-                        <img src={ApparelCollection5} className="img-fluid" />
-                        <img src={ApparelCollection6} className="img-fluid" />
+                        <img alt="apparel" src={ApparelCollection5} className="img-fluid" />
+                        <img alt="apparel" src={ApparelCollection6} className="img-fluid" />
                     </div>
                     <div className="collection-img d-flex">
-                        <img src={ApparelCollection7} className="img-fluid" />
-                        <img src={ApparelCollection8} className="img-fluid" />
+                        <img alt="apparel" src={ApparelCollection7} className="img-fluid" />
+                        <img alt="apparel" src={ApparelCollection8} className="img-fluid" />
                     </div>
                 </div>
-                <div className="mt-6 text-center"><a href="" className="btn-lg btn-black ls1 k18">
+                <div className="mt-6 text-center"><a href="#df" className="btn-lg btn-black ls1 k18">
                     Order Today
                 </a></div>
             </div>

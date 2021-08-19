@@ -16,7 +16,7 @@ class Topic extends Component {
     return this.props.topics.map((topic) => {
       return (
         <div className="scrollmenu" key={topic._id}>
-          <div class="image">
+          <div className="image">
             <img
               className="res"
               alt='/'

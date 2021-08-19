@@ -267,6 +267,7 @@ class AboutPage extends Component {
           onClick={this.togglePlayPause}
         >
           <img
+          alt="dak"
             src={!this.state.isPlaying ? playIcon : pause} />
         </button>
         <p className="text text-center h21 lh170 mt-5">

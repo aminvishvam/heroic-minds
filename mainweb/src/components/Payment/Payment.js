@@ -21,10 +21,10 @@ class Payment extends Component {
           name="userId"
           value={this.props.userId}
         />
-        <img src="/img/starter.png" width="120" height="120" />
-        <div class="name">Monthly</div>
-        <div class="price">$20</div>
-        <div class="duration">per month</div>
+        <img alt='alt' src="/img/starter.png" width="120" height="120" />
+        <div className="name">Monthly</div>
+        <div className="price">$20</div>
+        <div className="duration">per month</div>
         <button id="basic-plan-btn">Select</button>
       </form>
     </section>
@@ -39,10 +39,10 @@ class Payment extends Component {
           name="email"
           value="ronakpatel@gmail.com"
         />
-        <img src="/img/starter.png" width="120" height="120" />
-        <div class="name">Annual</div>
-        <div class="price">$170</div>
-        <div class="duration">14 per month</div>
+        <img alt='alt' src="/img/starter.png" width="120" height="120" />
+        <div className="name">Annual</div>
+        <div className="price">$170</div>
+        <div className="duration">14 per month</div>
         <button id="basic-plan-btn">Select</button>
       </form>
     </section>

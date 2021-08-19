@@ -11,23 +11,11 @@ import {
 export const createEpisode = (formValues, file, audiofile) => async (dispatch) => {
   const uploadConfig = await epsiode.get("/api/v1/upload");
 
-  const upload = await epsiode.put(uploadConfig.data.url, file, {
-    headers: {
-      "Content-Type": file.type,
-    },
-  });
-  const audioUploadConfig = await epsiode.get("/api/v1/audio");
-
-  const audioUpload = await epsiode.put(audioUploadConfig.data.url, audiofile, {
-    headers: {
-      "Content-Type": audiofile.type,
-    },
-  });
 
   const response = await epsiode.post("/api/v1/episode", {
     ...formValues,
     imageUrl: uploadConfig.data.key,
-    audioFile:audioUploadConfig.data.key
+   
   });
 
   dispatch({ type: CREATE_EPISODE, payload: response.data });

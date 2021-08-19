@@ -1,7 +1,6 @@
 
 import { FETCH_USER } from "./types";
 import user from "../api/heroicmindsapi";
-import history from "../history";
 
 
 export const fetchUser = (_id) => async (dispatch) => {
