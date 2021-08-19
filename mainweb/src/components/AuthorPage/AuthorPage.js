@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import bookBack from "../../assets/BookBack.png";
-import book from "../../assets/Book.svg";
+import book from "../../assets/Book.png";
 import DisplayBox from "../DisplayBox/DisplayBox";
 import "./AuthorPage.css";
 
@@ -51,8 +51,8 @@ class AuthorPage extends Component {
         <div className="my-container-90">
           <section className="mt-7">
             <DisplayBox
-              colLeft="8"
-              colRight="4"
+              colLeft="6"
+              colRight="6"
               contentLeft={this.renderHead1()}
               contentRight={this.renderHead1Img()}
               fullContainer="true"

@@ -11,7 +11,7 @@ const SessionObject = [
 
     {
         key: 1,
-        title: "Letter To You",
+        title: "Letter To Yourself",
         subtitle: "Positive Psychology",
         audio: Audio1,
         audioImg: Image1,
@@ -25,7 +25,7 @@ const SessionObject = [
 
     {
         key: 2,
-        title: "The Now Plan",
+        title: "Here & Now",
         subtitle: "Gestalt Psychology",
         audio: Audio2,
         audioImg: Image2,

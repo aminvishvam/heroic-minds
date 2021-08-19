@@ -120,8 +120,8 @@ class HomePage extends Component {
     return (
       <div>
         <p className="text k32 text-center fw600 lh130">
-          Accessible. Actionable. Enjoyable.&nbsp;
-          <span className="text-gray-57">Exercise for your mind.</span>
+          Psychological &amp; philosophical&nbsp;
+          <span className="text-gray-57">exercise for your mind.</span>
         </p>
       </div>
     );
@@ -134,7 +134,7 @@ class HomePage extends Component {
           The Problem
         </h1>
         <br />
-        <p className="text text-white h21 lh130 fw500 text-lg-left text-center">
+        <p className="text text-white h21 lh130 text-lg-left text-center">
           1. The majority of our behaviour is determined by what we value.
           People are relentlessly exposed to illusive, self-serving values such
           as attention, money and status that once attained, do not satiate our
@@ -156,7 +156,7 @@ class HomePage extends Component {
           The Solution
         </h1>
         <br />
-        <p className="text text-black h21 lh130 fw500 text-lg-left text-center">
+        <p className="text text-black h21 lh130 text-lg-left text-center">
           1. Guide people to shape the values that orient their life through the
           engaging medium of storytelling.
           <br />
@@ -336,8 +336,8 @@ class HomePage extends Component {
           <div className="section-box-mini text-white lh150 text-lg-left text-center">
             <p className="h28 fw600 ls1half">Enjoyable</p>
             <p className="h22">
-              Short and engaging stories or exercises to wake up to, enjoy
-              during your communte or to fall asleep to at night.
+              A short and engaging experience to wake up to, enjoy during your communte or fall asleep to at night.
+
             </p>
           </div>
           <div className="section-box-mini text-white lh150 text-lg-left text-center">
@@ -349,16 +349,13 @@ class HomePage extends Component {
           <div className="section-box-mini text-white lh150 text-lg-left  text-center">
             <p className="h28 fw600 ls1half">Impactful</p>
             <p className="h22">
-              Long form stories and ideas condensed down to 2-10 minutes listens
-              or reads for an efficient and impactful experience.
+              Long form stories and ideas condensed down to 10 minutes or less for an efficient and impactful experience.
             </p>
           </div>
           <div className="section-box-mini text-white lh150 text-lg-left  text-center">
             <p className="h28 fw600 ls1half">Therapeutic</p>
             <p className="h22">
-              The experience of reflecting on stories and
-              psychological/philosophical ideas can function to nurture the
-              mind.
+              Reflecting on psychological &amp; philosophical ideas function to nurture and enhance the mind.
             </p>
           </div>
         </div>
@@ -414,7 +411,7 @@ class HomePage extends Component {
     return (
       <div className="home-page-10">
         <div>
-          <h1 className="text k45 fw500">Heroic Minds Global Community</h1>
+          <h1 className="text-left text k45 fw500">Heroic Minds Global Community</h1>
           <p className="text text-wrap h24 lh150">
             Sharing empowering stories and ideas to make the world a more
             selfless, courageous, resilient place.

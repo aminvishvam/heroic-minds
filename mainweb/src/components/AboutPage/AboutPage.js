@@ -32,7 +32,7 @@ class AboutPage extends Component {
     return (
       <div className="about-page-1">
         <div className="justify-content-center ">
-          <h1 className="text k40 lh150">
+          <h1 className="text-left text k40 lh150">
             <span className="bold ls1"> Heroic Minds </span> <br />
             Listen ➔ Reflect ➔ Act
           </h1>
@@ -100,7 +100,7 @@ class AboutPage extends Component {
   renderLeft1() {
     return (
       <div className="about-page-2 pt-4">
-        <h1 className="text k45 lh120">
+        <h1 className="text-left text k45 lh120">
           <b>Listen</b> (Engaging Stories &amp; Exercises)
         </h1>
         <br />
@@ -181,7 +181,7 @@ class AboutPage extends Component {
   renderLeft3() {
     return (
       <div className="about-page-4  pt-4">
-        <h1 className="text k45 lh120">
+        <h1 className="text-left text k45 lh120">
           <b>Reflect</b> (In-App Journal)
         </h1>
         <br />
@@ -219,7 +219,7 @@ class AboutPage extends Component {
   renderRight4() {
     return (
       <div className="about-page-5 pt-4">
-        <h1 className="text k45 lh120">
+        <h1 className="text-left text k45 lh120">
           <b>Act</b> (Behavioural Activation)
         </h1>
         <br />
