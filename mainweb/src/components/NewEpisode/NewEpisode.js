@@ -3,38 +3,38 @@ import { connect } from "react-redux";
 import { fetchEpisodes } from "../../actions/epsiode";
 
 class NewEpisode extends Component {
-    state = {  }
-    componentDidMount() {
-        this.props.fetchEpisodes();
-      }
-    renderList() {
-        return this.props.episodes.map((episode) => {
-          return (
-            <div className="card" key={episode._id}>
-              <div className="content negative">
+  state = {}
+  componentDidMount() {
+    this.props.fetchEpisodes();
+  }
+  renderList() {
+    return this.props.episodes.map((episode) => {
+      return (
+        <div className="card" key={episode._id}>
+          <div className="content negative">
 
-              <img
+            <img
               className="res"
               alt="/"
               src={
-                process.env.REACT_APP_AWS_URL + episode.imageUrl
+                'https://portfoilo.s3.us-east-2.amazonaws.com/' + episode.imageUrl
               }
             />
-                <div className="header">
-                  {episode.title}
-                </div>
-                {episode.topic}
-              </div>
+            <div className="header">
+              {episode.title}
             </div>
-          );
-        });
-      }
-    render() { 
-        return ( <div>
-            <h1>New Episode</h1>
-            <div className="ui cards">{this.renderList()}</div>
-        </div> );
-    }
+            {episode.topic}
+          </div>
+        </div>
+      );
+    });
+  }
+  render() {
+    return (<div>
+      <h1>New Episode</h1>
+      <div className="ui cards">{this.renderList()}</div>
+    </div>);
+  }
 }
 const mapStateToProps = (state) => {
   return {

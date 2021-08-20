@@ -102,8 +102,8 @@ class HomePage extends Component {
       <div className=" home-page-1-title d-flex flex-xl-nowrap flex-wrap align-items-center justify-content-around">
         <div className="header-text-animation">
           <p className="text bold k45 lh120 mt-4 d-flex flex-sm-nowrap flex-wrap mb-0">
-            <span class="text-nowrap">A healthy mind.&nbsp;</span>
-            <span class="text-nowrap">A powerful life.</span>
+            <span className="text-nowrap">A healthy mind.&nbsp;</span>
+            <span className="text-nowrap">A powerful life.</span>
           </p>
           <p className="text h26 lh150 text-sm-nowrap mt-4">
             Giving you the tools to nurture your mind.

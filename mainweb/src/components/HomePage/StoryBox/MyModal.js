@@ -31,7 +31,7 @@ const MyModal = ({ myObject, type }) => {
 
     const renderModal = () => {
         return (
-            <Modal show={isJournalOpen} onHide={handleCloseJournal} className="px-4">
+            <Modal show={isJournalOpen} onHide={handleCloseJournal}>
                 <Modal.Header closeButton className="p-1 pr-3 k40 text-center" >
                     <div className="d-flex text-center mx-auto my-3">
                         <img alt="Pen Icon" src={Pen_Icon_Black} className="m-1 modal-pen-icon" />

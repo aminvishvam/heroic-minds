@@ -11,17 +11,17 @@ class Topic extends Component {
     this.props.fetchTopics();
   }
 
- 
+
   renderList() {
     return this.props.topics.map((topic) => {
       return (
         <div className="scrollmenu" key={topic._id}>
-          <div class="image">
+          <div className="image">
             <img
               className="res"
               alt='/'
               src={
-                process.env.REACT_APP_AWS_URL + topic.imageurl
+                'https://portfoilo.s3.us-east-2.amazonaws.com/' + topic.imageurl
               }
             />
           </div>
