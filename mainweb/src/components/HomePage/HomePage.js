@@ -110,7 +110,7 @@ class HomePage extends Component {
           </p>
         </div>
         <div className="text-center mt-4 w-50">
-          <img src={Main_Img} className="img-fluid home-page-1-img" />
+          <img  alt ="main Img "src={Main_Img} className="img-fluid home-page-1-img" />
         </div>
       </div>
     );
@@ -180,7 +180,7 @@ class HomePage extends Component {
     return (
       <div className="my-container-90">
         <div className="text-center">
-          <img src={Libra} className="img-fluid img-libra" />
+          <img alt= "libra" src={Libra} className="img-fluid img-libra" />
         </div>
         <div className="mt-8">
           <p className="text text-center h22 lh130">
@@ -205,7 +205,7 @@ class HomePage extends Component {
   renderMainImage2() {
     return (
       <div className="text-center container-fluid">
-        <img src={imgHeadphone} className="img-fluid" />
+        <img alt='imageHeadPhone' src={imgHeadphone} className="img-fluid" />
       </div>
     );
   }
@@ -373,15 +373,15 @@ class HomePage extends Component {
         <div className="text text-black-333 h22 lh120 mt-5 text-center">
           Listen to &nbsp;&nbsp;
           <span>
-            <img src={Book} width="30px" height="30px" className="mb-2" />
+            <img alt="BOok" src={Book} width="30px" height="30px" className="mb-2" />
           </span>
           &nbsp;&nbsp; or read &nbsp;&nbsp;
           <span>
-            <img src={Text} width="30px" height="30px" className="mb-2" />
+            <img alt="Text" src={Text} width="30px" height="30px" className="mb-2" />
           </span>
           &nbsp;&nbsp; the stories below and reflect &nbsp; &nbsp;
           <span>
-            <img src={Pen} width="30px" height="30px" className="mb-2" />
+            <img alt="pen" src={Pen} width="30px" height="30px" className="mb-2" />
           </span>
           &nbsp;&nbsp;on how they relate to your life.
         </div>
@@ -437,7 +437,7 @@ class HomePage extends Component {
   renderCommunityImg2() {
     return (
       <div className="text-center">
-        <img src={Community} className="img-fluid" />
+        <img alt="community" src={Community} className="img-fluid" />
       </div>
     );
   }
