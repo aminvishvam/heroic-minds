@@ -37,7 +37,7 @@ class Topic extends Component {
     return (
       <div className="ProjectsList">
         <div className="container justify-content-center">
-          <h1 style={{ textAlign: "center" }}>Topic </h1>
+          <h1>Topic </h1>
           <div className="scroll">{this.renderList()}</div>
         </div>
       </div>

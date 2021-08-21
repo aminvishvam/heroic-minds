@@ -1,0 +1,24 @@
+.cards {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.card {
+  min-width: fit-content !important;
+}
+
+.scroll-button {
+  position: sticky;
+  right: -1px;
+  border: none;
+  z-index: 10;
+  scroll-behavior: unset;
+  opacity: 0;
+  background: transparent;
+  border-radius: 100px 0px 0px 100px;
+}
+
+.scroll-button:hover {
+  background-color: rgba(245, 245, 245, 0.2);
+  opacity: 1;
+}

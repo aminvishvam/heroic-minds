@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { fetchEpisodes } from "../../actions/epsiode";
+import './NewEpisode.css';
+import { GoChevronRight } from 'react-icons/go';
 
 class NewEpisode extends Component {
   state = {}
@@ -10,12 +12,11 @@ class NewEpisode extends Component {
   renderList() {
     return this.props.episodes.map((episode) => {
       return (
-        <div className="card" key={episode._id}>
-          <div className="content negative">
-
+        <div className="scrollmenu p-2" key={episode._id}>
+          <div className="text-center p-2">
             <img
               className="res"
-              alt="/"
+              alt="New Story Episode"
               src={
                 'https://portfoilo.s3.us-east-2.amazonaws.com/' + episode.imageUrl
               }
@@ -30,10 +31,13 @@ class NewEpisode extends Component {
     });
   }
   render() {
-    return (<div>
-      <h1>New Episode</h1>
-      <div className="ui cards">{this.renderList()}</div>
-    </div>);
+    return (
+      <div className="my-container-95">
+        <h1>New Episode</h1>
+        <div className="scroll align-items-center justify-content-start">{this.renderList()}
+          <button className="scroll-button image p-1"><GoChevronRight size="48" /></button>
+        </div>
+      </div>);
   }
 }
 const mapStateToProps = (state) => {
