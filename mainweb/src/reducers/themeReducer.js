@@ -7,15 +7,18 @@ import {
   DELETE_THEME,
 }                           from "../actions/types";
 
+const initialState ={
+    relatedThemes: []
+}
 
-const themeReducer = (state = {}, action) => {
+const themeReducer = (state = initialState, action) => {
 
     switch (action.type) {
 
         case FETCH_THEMES:
            return { ...state, ..._.mapKeys(action.payload, '_id')}; 
         case FETCH_THEME:
-            return{...state,[action.payload._id]: action.payload};
+            return{...state, relatedThemes: [...state.relatedThemes, action.payload]};
         case CREATE_THEME:
             return{...state,[action.payload._id]: action.payload};
         case EDIT_THEME:

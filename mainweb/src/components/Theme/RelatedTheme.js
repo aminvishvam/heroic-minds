@@ -2,19 +2,24 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 
-import { fetchThemes } from "../../actions/theme";
+import { fetchTheme } from "../../actions/theme";
 
 
 class Theme extends Component {
 
     componentDidMount() {
-        this.props.fetchThemes();
+        const { themeIds } = this.props;
+        const getKeysOfTheme = themeIds?.filter(x => /\d/.test(x));
+        const promisesArray = getKeysOfTheme.map(x => {
+            this.props.fetchTheme(x);
+        });
+        Promise.all(promisesArray);
     }
 
 
     renderList() {
-         
-        return this.props.themes.map((theme) => {
+        
+        return this.props.relatedThemes.map((theme) => {
             return (
                 <div className="card" key={theme._id}>
                     <div className="content negative">
@@ -44,9 +49,9 @@ class Theme extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        themes: Object.values(state.theme),
+        relatedThemes: state.theme.relatedThemes,
     };
 };
 
 
-export default connect(mapStateToProps, { fetchThemes })(Theme);
+export default connect(mapStateToProps, { fetchTheme  })(Theme);

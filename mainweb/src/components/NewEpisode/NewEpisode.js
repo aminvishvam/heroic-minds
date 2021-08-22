@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { fetchEpisodes } from "../../actions/epsiode";
+import { fetchEpisodes, fetchEpisode } from "../../actions/epsiode";
 
 class NewEpisode extends Component {
     state = {  }
     componentDidMount() {
         this.props.fetchEpisodes();
       }
+
+      handleCardClick = (id) => {
+        this.props.fetchEpisode(id)
+      }
     renderList() {
         return this.props.episodes.map((episode) => {
           return (
-            <div className="card" key={episode._id}>
+            <div className="card" key={episode._id} onClick={() => { this.handleCardClick(episode._id) }}>
               <div className="content negative">
 
               <img
@@ -42,4 +46,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { fetchEpisodes })(NewEpisode);
+export default connect(mapStateToProps, { fetchEpisodes, fetchEpisode })(NewEpisode);

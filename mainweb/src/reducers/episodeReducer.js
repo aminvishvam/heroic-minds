@@ -12,7 +12,8 @@ const episodeReducer = (state = {}, action) => {
     case FETCH_EPISODES:
       return { ...state, ..._.mapKeys(action.payload, "_id") };
     case FETCH_EPISODE:
-      return { ...state, [action.payload._id]: action.payload };
+      const newState = { ...state, 'currentEpisode': action.payload };
+      return newState;
     case CREATE_EPISODE:
       return { ...state, [action.payload._id]: action.payload };
     case EDIT_EPISODE:

@@ -44,6 +44,7 @@ export const fetchEpisode = (_id) => async (dispatch) => {
   const response = await epsiode.get(`/api/v1/episode/${_id}`);
 
   dispatch({ type: FETCH_EPISODE, payload: response.data });
+  history.push(`/episode/${_id}`);
 };
 
 export const editEpisode = (_id, formValues,file) => async (dispatch) => {
