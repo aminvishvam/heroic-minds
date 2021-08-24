@@ -5,6 +5,7 @@ import {
   FETCH_EPISODE,
   EDIT_EPISODE,
   DELETE_EPISODE,
+  FETCH_RELATED_EPISODE,
 } from "../actions/types";
 
 const episodeReducer = (state = {}, action) => {
@@ -20,6 +21,8 @@ const episodeReducer = (state = {}, action) => {
       return { ...state, [action.payload._id]: action.payload };
     case DELETE_EPISODE:
       return _.omit(state, action.payload);
+    case FETCH_RELATED_EPISODE:
+      return { ...state, 'relatedEpisodes': state?.relatedEpisodes ? [...state.relatedEpisodes, action.payload] : [action.payload] };
     default:
       return state;
   }

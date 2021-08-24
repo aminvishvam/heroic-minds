@@ -19,7 +19,7 @@ import ConfirmRegister from "../ConfirmRegister/ConfirmRegister";
 import ForgetPassword from "../ForgotPassword/ForgetPassword";
 import EditProfile from "../EditProfile/EditProfile";
 import Payment from "../Payment/Payment";
-import OpenEpisode from "../Library/OpenEpisode";
+import OpenEpisode from "../OpenEpisode/OpenEpisode";
 
 let routes = {
   "/": HomePage,
