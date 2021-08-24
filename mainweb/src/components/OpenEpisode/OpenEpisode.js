@@ -8,13 +8,21 @@ import Topic from "../Topic/Topic";
 
 class OpenEpisode extends Component {
   state = {};
-
+  constructor(props){
+    super(props);
+    if (!props.episode) {
+      const pathName = props.location.pathname;
+      var episodeId = /[^/]*$/.exec(pathName)[0];
+      this.props.fetchEpisode(episodeId);
+    }
+  }
   componentDidMount() {
     this.props.fetchEpisode(this.props.match.params.id);
     this.props.fetchEpisodes();
   }
 
   renderMoreEpisode() {
+    
     const topId = this.props.episode.theme1Id;
     const topEpi = this.props.episodes.filter(epi => {
       return epi.theme1Id === topId ||  epi.theme2Id === topId || epi.theme3Id === topId 
@@ -29,10 +37,12 @@ class OpenEpisode extends Component {
     if(topId !== null){
       return( <div>
         <h1>Some More Episode</h1>
-        {moreEpi.map((episode) => {
+        <div style={{display:"flex"}}>
+        {moreEpi.filter((episode)=> episode.title!==this.props.episode.title).map((episode) => {
         return (
-          <div className="card" key={episode._id}>
-            <Link to={`episodes/${episode._id}`}>
+         
+          <div className="card open-card-image" key={episode._id}>
+            <Link to={`${episode._id}`}>
             <div className="content negative">
               <img
                 className="res"
@@ -48,21 +58,25 @@ class OpenEpisode extends Component {
             </div>
           </Link>
           </div>
+          
         );
       })}
+      </div>
       </div>);
     }
-
   }
 
   render() {
+    if(!this.props.episode){
+      return null;
+    }
     const { title, topic, description, theme1, theme2, theme3,imageUrl,audioFile} = this.props.episode;
     return (
       <div className="OpenEpisode">
         <div className="ui container">
         <h1 className="admin_text_box font-weight-bold">{title}</h1>
         <img
-              className="res"
+              className="res open-card-image"
               alt="/"
               src={
                 "https://portfoilo.s3.us-east-2.amazonaws.com/" + imageUrl
