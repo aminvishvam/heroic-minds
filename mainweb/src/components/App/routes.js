@@ -19,6 +19,7 @@ import ConfirmRegister from "../ConfirmRegister/ConfirmRegister";
 import ForgetPassword from "../ForgotPassword/ForgetPassword";
 import EditProfile from "../EditProfile/EditProfile";
 import Payment from "../Payment/Payment";
+import OpenEpisode from "../OpenEpisode/OpenEpisode";
 
 let routes = {
   "/": HomePage,
@@ -40,5 +41,6 @@ let routes = {
   "/confirm-register": ConfirmRegister,
   "/payment": Payment,
   "/edit-profile": EditProfile,
+  "/episode/:id": OpenEpisode,
 };
 export default routes;

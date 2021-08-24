@@ -13,7 +13,7 @@ class Theme extends Component {
 
 
     renderList() {
-        
+         
         return this.props.themes.map((theme) => {
             return (
                 <div className="card" key={theme._id}>

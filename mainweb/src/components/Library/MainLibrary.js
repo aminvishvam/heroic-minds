@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchUser } from "../../actions/user";
-import NewEpisode from "../NewEpisode/NewEpisode"
+import AllNewEpisode from '../NewEpisode/AllNewEpisode';
 import Theme from '../Theme/Theme';
 import Topic from '../Topic/Topic';
 
@@ -17,7 +17,7 @@ class MainLibrary extends Component {
     }
     render() { 
         return ( <div>
-          <NewEpisode/>
+          <AllNewEpisode />
           <Theme/>
           <Topic/>
         </div> );

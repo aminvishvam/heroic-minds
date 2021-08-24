@@ -6,6 +6,7 @@ import {
   FETCH_EPISODE,
   DELETE_EPISODE,
   EDIT_EPISODE,
+  FETCH_RELATED_EPISODE
 } from "./types";
 
 export const createEpisode = (formValues, file, audiofile) => async (dispatch) => {
@@ -44,6 +45,13 @@ export const fetchEpisode = (_id) => async (dispatch) => {
   const response = await epsiode.get(`/api/v1/episode/${_id}`);
 
   dispatch({ type: FETCH_EPISODE, payload: response.data });
+  history.push(`/episode/${_id}`);
+};
+
+export const fetchRelatedEpisode = (_id) => async (dispatch) => {
+  const response = await epsiode.get(`/api/v1/episode/${_id}`);
+
+  dispatch({ type: FETCH_RELATED_EPISODE, payload: response.data });
 };
 
 export const editEpisode = (_id, formValues,file) => async (dispatch) => {
