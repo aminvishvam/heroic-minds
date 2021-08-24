@@ -15,7 +15,7 @@ class AllNewEpisode extends Component {
   renderList() {
     return this.props.episodes.map((episode) => {
       return (
-        <div className="card" key={episode._id} onClick={() => { this.handleEpisodeCardClick(episode._id) }}>
+        <div className="card card-image" key={episode._id} onClick={() => { this.handleEpisodeCardClick(episode._id) }}>
           <div className="content negative">
             <img
               className="res"
