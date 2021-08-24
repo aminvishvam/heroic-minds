@@ -11,9 +11,9 @@ import {
 const episodeReducer = (state = {}, action) => {
   switch (action.type) {
     case FETCH_EPISODES:
-      return { ...state, ..._.mapKeys(action.payload, "_id") };
+      return { ...state, ..._.mapKeys(action.payload  || false , "_id") };
     case FETCH_EPISODE:
-      const newState = { ...state, 'currentEpisode': action.payload };
+      const newState = { ...state, [action.payload._id]: action.payload || false};
       return newState;
     case CREATE_EPISODE:
       return { ...state, [action.payload._id]: action.payload };

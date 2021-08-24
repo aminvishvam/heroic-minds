@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { connect } from "react-redux";
+import { Link } from 'react-router-dom';
 import { fetchEpisodes, fetchEpisode } from "../../actions/epsiode";
 
 class AllNewEpisode extends Component {
@@ -35,7 +36,9 @@ class AllNewEpisode extends Component {
   }
   render() {
     return (<div>
-      <h1>New Episode :</h1>
+      <h1>
+        <Link to='./new-episode' >New Episode :</Link>
+      </h1>
       <div className="ui cards">{this.renderList()}</div>
     </div>);
   }

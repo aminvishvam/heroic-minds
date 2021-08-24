@@ -1,30 +1,24 @@
 import React, { Component } from 'react';
+
 import { connect } from "react-redux";
-import { fetchRelatedEpisode, fetchEpisode } from "../../actions/epsiode";
+import { Link } from 'react-router-dom';
+import { fetchEpisodes, fetchEpisode } from "../../actions/epsiode";
 
 class NewEpisode extends Component {
-  async componentDidMount() {
-    const promiseCollection = [];
-    const { themeIds } = this.props;
-    const getKeysOfTheme = themeIds?.filter(x => /\d/.test(x));
-    getKeysOfTheme.forEach((i) => {
-      // calling action
-      const apiResult = this.props.fetchRelatedEpisode('611ef856cb11a09b9e4ada3e');
-      // adding promise to collection array
-      promiseCollection.push(apiResult);
-    });
-    Promise.all(promiseCollection);
-  }
+    componentDidMount() {
+      this.props.fetchEpisodes();
+    }
 
   handleEpisodeCardClick = (id) => {
     this.props.fetchEpisode(id)
   }
-  renderList() {
-    return this.props?.relatedEpisodes?.map((episode) => {
-      return (
-        <div className="card" key={episode._id} onClick={() => { this.handleEpisodeCardClick(episode._id) }}>
-          <div className="content negative">
 
+  renderList() {
+    return this.props.episodes.map((episode) => {
+      return (
+        <div className="card" key={episode._id}>
+          <Link to={`episodes/${episode._id}`}>
+          <div className="content negative">
             <img
               className="res"
               alt="/"
@@ -37,21 +31,23 @@ class NewEpisode extends Component {
             </div>
             {episode.topic}
           </div>
+          </Link>
         </div>
+        
       );
     });
   }
   render() {
-    return (<div style={{ padding: '30px' }}>
-      <h1>More New Episodes</h1>
-      <div className="ui cards">{this.props.relatedEpisodes?.length ? this.renderList() : 'No Episode Found'}</div>
+    return (<div>
+      <h1>New Episode :</h1>
+      <div className="ui cards">{this.renderList()}</div>
     </div>);
   }
 }
 const mapStateToProps = (state) => {
   return {
-    relatedEpisodes: state.episode.relatedEpisodes,
+    episodes: Object.values(state.episode),
   };
 };
 
-export default connect(mapStateToProps, { fetchRelatedEpisode, fetchEpisode })(NewEpisode);
+export default connect(mapStateToProps, { fetchEpisodes, fetchEpisode })(NewEpisode);

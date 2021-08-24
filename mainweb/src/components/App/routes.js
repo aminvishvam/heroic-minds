@@ -20,6 +20,7 @@ import ForgetPassword from "../ForgotPassword/ForgetPassword";
 import EditProfile from "../EditProfile/EditProfile";
 import Payment from "../Payment/Payment";
 import OpenEpisode from "../OpenEpisode/OpenEpisode";
+import NewEpisode from "../NewEpisode/NewEpisode";
 
 let routes = {
   "/": HomePage,
@@ -41,6 +42,7 @@ let routes = {
   "/confirm-register": ConfirmRegister,
   "/payment": Payment,
   "/edit-profile": EditProfile,
+  '/new-episode': NewEpisode,
   "/episode/:id": OpenEpisode,
 };
 export default routes;
