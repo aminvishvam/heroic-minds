@@ -7,7 +7,7 @@ import Libra from "../../assets/HomePageAssets/Libra.svg";
 import Book from "../../assets/AboutPageAssets/Book.svg";
 import World from "../../assets/HomePageAssets/World.svg";
 import Text from "../../assets/HomePageAssets/Text.svg";
-import Community from "../../assets/HomePageAssets/Community.svg";
+import Community from "../../assets/HomePageAssets/community.svg";
 import plusSign from "../../assets/HomePageAssets/plusSign.svg";
 import Man from "../../assets/AboutPageAssets/Man.svg";
 import Click from "../../assets/AboutPageAssets/Click.svg";
