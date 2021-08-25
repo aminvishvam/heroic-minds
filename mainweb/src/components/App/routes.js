@@ -7,9 +7,7 @@ import Research from "../AboutPage/AboutResearch";
 import TeamAccess from "../TeamAccess/TeamAccess";
 import Library from "../Library/Library";
 import Community from "../ComingSoon/Community";
-import JoinToday from "../ComingSoon/JoinToday";
 import AuthorPage from "../AuthorPage/AuthorPage";
-
 import PrivacyPolicy from "../Footer/PrivacyPolicy";
 import TermsOfUse from "../Footer/TermsOfUse";
 import Press from "../Footer/Press";
@@ -37,7 +35,7 @@ let routes = {
   "/author": AuthorPage,
   "/library": Library,
   "/community": Community,
-  "/join-today": JoinToday,
+  "/join-today": CreateAccount,
   "/work-with-the-creator": WorkWithTheCreator,
   "/privacy-policy": PrivacyPolicy,
   "/terms-of-use": TermsOfUse,
