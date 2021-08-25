@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import { connect } from "react-redux";
-import { Link } from 'react-router-dom';
 import { fetchEpisodes, fetchEpisode } from "../../actions/epsiode";
+import { audioSelect } from "../../actions/player";
 
 class AllNewEpisode extends Component {
     componentDidMount() {
@@ -16,7 +16,7 @@ class AllNewEpisode extends Component {
   renderList() {
     return this.props.episodes.map((episode) => {
       return (
-        <div className="card card-image" key={episode._id} onClick={() => { this.handleEpisodeCardClick(episode._id) }}>
+        <div className="card" key={episode._id} onClick={()=>this.props.audioSelect(episode)}>
           <div className="content negative">
             <img
               className="res"
@@ -25,7 +25,7 @@ class AllNewEpisode extends Component {
                 'https://portfoilo.s3.us-east-2.amazonaws.com/' + episode.imageUrl
               }
             />
-            <div className="header">
+            <div className="header" onClick={() => { this.handleEpisodeCardClick(episode._id) }}>
               {episode.title}
             </div>
             {episode.topic}
@@ -36,9 +36,7 @@ class AllNewEpisode extends Component {
   }
   render() {
     return (<div>
-      <h1>
-        <Link to='./new-episode' >New Episode :</Link>
-      </h1>
+      <h1>New Episode :</h1>
       <div className="ui cards">{this.renderList()}</div>
     </div>);
   }
@@ -49,4 +47,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { fetchEpisodes, fetchEpisode })(AllNewEpisode);
+export default connect(mapStateToProps, { fetchEpisodes, fetchEpisode, audioSelect })(AllNewEpisode);

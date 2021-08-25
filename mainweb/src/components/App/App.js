@@ -10,7 +10,8 @@ import ScrollToTop from "../ScrollToTop/ScrollTOTop";
 import Scrolls from "../Scrolls/Scrolls";
 import Footer from "../Footer/Footer";
 import SubApp from "../SubApp/SubApp";
-import Player from "../Player/Player";
+import PlayerBar from "../PlayerBar/PlayerBar";
+
 
 
 class App extends Component {
@@ -38,7 +39,7 @@ class App extends Component {
 
           <div className="Footer">
             <Switch>
-            <Route path="/" component={Player} />
+            <Route path="/" component={PlayerBar} />
             </Switch>
           </div>
         </Router>

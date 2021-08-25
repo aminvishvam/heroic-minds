@@ -8,6 +8,7 @@ import userReducer from "./UserReducer";
 import episodeReducer from "./episodeReducer";
 import themeReducer from "./themeReducer";
 import topicReducer from "./topicReducer";
+import audioReducer from "./audioReducer";
 
 export default combineReducers({
   form: formReducer,
@@ -19,4 +20,5 @@ export default combineReducers({
   theme: themeReducer,
   topic: topicReducer,
   episode: episodeReducer,
+  activeAudio: audioReducer
 });

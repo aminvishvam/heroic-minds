@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
 import { fetchEpisodes, fetchEpisode } from "../../actions/epsiode";
+import { audioSelect } from "../../actions/player";
 
 class NewEpisode extends Component {
     componentDidMount() {
@@ -17,8 +18,7 @@ class NewEpisode extends Component {
     return this.props.episodes.map((episode) => {
       return (
         <div className="card" key={episode._id}>
-          <Link to={`episodes/${episode._id}`}>
-          <div className="content negative">
+          <div className="content negative" >
             <img
               className="res"
               alt="/"
@@ -26,12 +26,14 @@ class NewEpisode extends Component {
                 'https://portfoilo.s3.us-east-2.amazonaws.com/' + episode.imageUrl
               }
             />
+             <Link to={`episodes/${episode._id}`}>
             <div className="header">
+
               {episode.title}
             </div>
+            </Link>
             {episode.topic}
           </div>
-          </Link>
         </div>
         
       );
@@ -50,4 +52,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { fetchEpisodes, fetchEpisode })(NewEpisode);
+export default connect(mapStateToProps, { fetchEpisodes, fetchEpisode , audioSelect})(NewEpisode);
