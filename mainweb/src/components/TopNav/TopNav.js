@@ -6,10 +6,10 @@ import "./TopNav.css";
 import { connect } from "react-redux";
 import { NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import NavLink from "react-bootstrap/NavLink";
 import TopNavLibrary from "../TopNavLibrary/TopNavLibrary";
 import TopNavProfile from "../TopNavProfile/TopNavProfile";
 import SearchBar from "../SearchBar/searchBar";
+
 
 class TopNav extends Component {
   itemStyle = {
@@ -47,6 +47,7 @@ class TopNav extends Component {
                   >
                     Community
                   </Nav.Link>
+
                 </div>
 
                 <SearchBar />
@@ -72,6 +73,7 @@ class TopNav extends Component {
                   <NavDropdown.Item className="Nav-text "><Nav.Link as={Link} eventKey="3" to="/about/apparel" className="text-black">Apparel</Nav.Link ></NavDropdown.Item>
                   <NavDropdown.Item className="Nav-text "> <Nav.Link as={Link} eventKey="4" to="/about/research/coming-soon" className="text-black">Research</Nav.Link ></NavDropdown.Item>
                 </NavDropdown>
+
 
 
                 <Nav.Link as={Link} eventKey="5"

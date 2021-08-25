@@ -1,6 +1,9 @@
 import HomePage from "../HomePage/HomePage";
 
 import AboutPage from "../AboutPage/AboutPage";
+import Apparel from "../AboutPage/AboutApparel";
+import Podcast from "../AboutPage/AboutPodcast";
+import Research from "../AboutPage/AboutResearch";
 import TeamAccess from "../TeamAccess/TeamAccess";
 import Library from "../Library/Library";
 import Community from "../ComingSoon/Community";
@@ -22,9 +25,14 @@ import Payment from "../Payment/Payment";
 import OpenEpisode from "../OpenEpisode/OpenEpisode";
 import NewEpisode from "../NewEpisode/NewEpisode";
 
+
 let routes = {
   "/": HomePage,
   "/about": AboutPage,
+  "/about/mission": AboutPage,
+  "/about/podcast": Podcast,
+  "/about/apparel": Apparel,
+  "/about/research": Research,
   "/team-access": TeamAccess,
   "/author": AuthorPage,
   "/library": Library,

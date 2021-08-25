@@ -21,7 +21,7 @@ class NewEpisode extends Component {
           <div className="content negative" >
             <img
               className="res"
-              alt="/"
+              alt="New Story Episode"
               src={
                 'https://portfoilo.s3.us-east-2.amazonaws.com/' + episode.imageUrl
               }
