@@ -14,20 +14,69 @@ import Audio1 from "../../assets/HomePageAssets/storyAudio1.wav";
 import "./Player.css";
 
 const Player = ({audio,image,title,topic}) => {
+  const [episodeData, setEpisodeData] = useState([]);
+  const [percentage, setPercentage] = useState();
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
-  const [currentTime, setCurrentTime] = useState(0);
-  //reference
-  const audioPlayer = useRef(); // reference our audio component
-  const progressBar = useRef(); // reference our progress bar
-  const animationRef = useRef(); // reference the animation
+  const [currentTime, setCurrentTime] = useState();
+  const [speed, setSpeed] = useState(1);
+  const [volume, setVolume] = useState(1)
 
-  useEffect(() => {
-    const seconds = Math.floor(audioPlayer.current.duration);
-    setDuration(seconds);
-    progressBar.current.max = seconds;
-  }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState]);
+  const audioRef = useRef();
 
+  const onChange = (e) => {
+      const audio = audioRef.current;
+      audio.currentTime = (audio.duration / 100) * e.target.value;
+      setPercentage(e.target.value);
+  };
+  const onVolchange = (e) => {
+    setVolume(e.target.valueAsNumber)
+  }
+
+  const play = () => {
+      const audio = audioRef.current;
+      // audio.playbackRate = speed;
+
+      if (!isPlaying) {
+          setIsPlaying(true);
+          audio.play();
+      }
+
+      if (isPlaying) {
+          setIsPlaying(false);
+          audio.pause();
+      }
+  };
+
+  const getCurrDuration = (e) => {
+      const percent = (
+          (e.currentTarget.currentTime / e.currentTarget.duration) *
+          100
+      ).toFixed(2);
+
+      const time = e.currentTarget.currentTime;
+
+      setPercentage(+percent);
+      setCurrentTime(time.toFixed(2));
+  };
+
+  const changeSpeed = () => {
+      if (speed >= 2) {
+          setSpeed(0.5);
+      } else setSpeed(speed + 0.5);
+  };
+
+  const skip = (time) => {
+      const audio = audioRef.current;
+
+      if (time === "back") {
+          console.log("15");
+          setCurrentTime(audio.currentTime - 20);
+      } else if (time === "fwd") {
+          console.log("15");
+          setCurrentTime(audio.currentTime + 20);
+      }
+  };
   const calculateTime = (secs) => {
     const minutes = Math.floor(secs / 60);
     const returnedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
@@ -36,58 +85,27 @@ const Player = ({audio,image,title,topic}) => {
     return `${returnedMinutes}:${returnedSeconds}`;
   };
 
-  const togglePlayPause = () => {
-    const playerStatus = isPlaying;
-    setIsPlaying(!playerStatus);
 
-    if (!playerStatus) {
-      audioPlayer.current.play();
-      animationRef.current = requestAnimationFrame(whilePlaying);
-    } else {
-      audioPlayer.current.pause();
-      cancelAnimationFrame(animationRef.current);
-    }
-  };
 
-  const whilePlaying = () => {
-    progressBar.current.value = audioPlayer.current.currentTime;
-    changePlayerCurrentTime();
-    animationRef.current = requestAnimationFrame(whilePlaying);
-  };
+  useEffect(() => {
+    const audio = audioRef.current;
+    audio.playbackRate = speed;
+}, [speed]);
 
-  const changeRange = () => {
-    audioPlayer.current.currentTime = progressBar.current.value;
-    changePlayerCurrentTime();
-  };
 
-  const changePlayerCurrentTime = () => {
-    progressBar.current.style.setProperty(
-      "--seek-before-width",
-      `${(progressBar.current.value / duration) * 100}%`
-    );
-    setCurrentTime(parseInt(progressBar.current.value));
-  };
-
-  const back20Sec = () => {
-    progressBar.current.value = Number(
-      parseInt(progressBar.current.value) - 20
-    );
-    changeRange();
-  };
-
-  const forward20Sec = () => {
-    progressBar.current.value = Number(
-      parseInt(progressBar.current.value) + 20
-    );
-    changeRange();
-  };
   return (
     <div className="Player">
-      <audio ref={audioPlayer} preload="true" id="audio">
-        <source src={audio} />
+      <audio    ref={audioRef}
+                            onTimeUpdate={getCurrDuration}
+                            onLoadedData={(e) => {
+                              setIsPlaying(false);
+                                setDuration(e.currentTarget.duration.toFixed(2));
+                            }}
+                            src={"https://portfoilo.s3.us-east-2.amazonaws.com/"+ audio}>
+
       </audio>
       <div className="Player__left">
-        <img className="Player__albumLogo" src={image}
+        <img className="Player__albumLogo" src={"https://portfoilo.s3.us-east-2.amazonaws.com/"+ image}
                  alt="item_name" />
         <div className="Player__songInfo">
           <h4>{title}</h4>
@@ -102,7 +120,7 @@ const Player = ({audio,image,title,topic}) => {
                     alt="audio-controls"
                     className=" back-btn"
                     src={back_20}
-                    onClick={back20Sec}
+                    onClick={() => skip("back")}
                 />
                 <input
                     type="image"
@@ -110,14 +128,14 @@ const Player = ({audio,image,title,topic}) => {
                     id="play-btn"
                     className="audio-btn"
                     src={isPlaying ? pause : playIcon}
-                    onClick={togglePlayPause}
+                    onClick={play}
                 />
                 <input
                     type="image"
                     alt="audio-controls"
                     className="forward-btn"
                     src={forward_20}
-                    onClick={forward20Sec}
+                    onClick={() => skip("fwd")}
                 />
         </div>
       </div>
@@ -136,11 +154,15 @@ const Player = ({audio,image,title,topic}) => {
           className="modal-btn "
           src={Un_mute}
         />
-        <Slider aria-labelledby="continuous-slider" />
+         <input
+          type="range"
+          min={0}
+          max={1}
+          step={0.02}
+          value={volume}
+          onChange={onVolchange}
+        />
         <span className="time-slider">
-                    <span className="d-none">
-                        <input type="range" defaultValue="0" ref={progressBar} onChange={changeRange} className="progressBar w-50" />
-                    </span>
                     <span>{(currentTime && !isNaN(currentTime)) && calculateTime(currentTime)}</span>/
                     <span >{(duration && !isNaN(duration)) && calculateTime(duration)}</span>
                 </span>

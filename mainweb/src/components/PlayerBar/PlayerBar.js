@@ -5,11 +5,12 @@ import Player from '../Player/Player';
 const PlayerBar = ({audio}) => {
     console.log(audio)
     if(!audio){
-        return(<Player/>)
+    
     }
+    else
     return (  
         <div>
-            <Player audio={`https://portfoilo.s3.us-east-2.amazonaws.com/${audio.audioFile}`} image={`https://portfoilo.s3.us-east-2.amazonaws.com/${audio.imageUrl}`} title={audio.title} topic={audio.topic}/>
+            <Player audio={audio.audioFile} image={audio.imageUrl} title={audio.title} topic={audio.topic}/>
         </div>
     );
 }
