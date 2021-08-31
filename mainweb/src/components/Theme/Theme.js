@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import history from "../../history";
 
-
-import { fetchThemes } from "../../actions/theme";
+import { fetchThemes, setSelectedTheme } from "../../actions/theme";
 
 
 class Theme extends Component {
@@ -11,12 +11,15 @@ class Theme extends Component {
         this.props.fetchThemes();
     }
 
+    renderRelatedEpisode = (e) => {
+        this.props.setSelectedTheme(e.target.innerText);
+        history.push(`/themes/${e.target.innerText}`);
+    }
 
     renderList() {
-         
         return this.props.themes.map((theme) => {
             return (
-                <div className="card" key={theme._id}>
+                <div className="card" key={theme._id} onClick={this.renderRelatedEpisode}>
                     <div className="content negative">
 
                         <div className="header">
@@ -49,4 +52,4 @@ const mapStateToProps = (state) => {
 };
 
 
-export default connect(mapStateToProps, { fetchThemes })(Theme);
+export default connect(mapStateToProps, { fetchThemes, setSelectedTheme })(Theme);

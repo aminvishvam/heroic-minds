@@ -24,6 +24,7 @@ import EditProfile from "../EditProfile/EditProfile";
 import Payment from "../Payment/Payment";
 import OpenEpisode from "../OpenEpisode/OpenEpisode";
 import NewEpisode from "../NewEpisode/NewEpisode";
+import ThemeRelatedEpisode from "../AllTheme/ThemeRelatedEpisode";
 
 
 let routes = {
@@ -52,5 +53,6 @@ let routes = {
   "/edit-profile": EditProfile,
   '/new-episode': NewEpisode,
   "/episode/:id": OpenEpisode,
+  "/themes/:id": ThemeRelatedEpisode,
 };
 export default routes;

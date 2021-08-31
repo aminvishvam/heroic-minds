@@ -10,10 +10,6 @@ class NewEpisode extends Component {
       this.props.fetchEpisodes();
     }
 
-  handleEpisodeCardClick = (id) => {
-    this.props.fetchEpisode(id)
-  }
-
   renderList() {
     return this.props.episodes.map((episode) => {
       return (

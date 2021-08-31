@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import history from "../../history";
 
 
 import { fetchEpisode, fetchEpisodes } from "../../actions/epsiode";
-import { fetchThemes } from "../../actions/theme";
+import { fetchThemes, setSelectedTheme } from "../../actions/theme";
 import Topic from "../Topic/Topic";
 
 class OpenEpisode extends Component {
@@ -23,6 +24,11 @@ class OpenEpisode extends Component {
     this.props.fetchThemes();
   }
 
+  renderRelatedEpisode = (e) => {
+    this.props.setSelectedTheme(e.target.innerText);
+    history.push(`/themes/${e.target.innerText}`);
+  }
+
   renderRelatedTheme() {
     const topId = this.props.episode.theme1Id;
     const secondId = this.props.episode.theme2Id;
@@ -36,7 +42,7 @@ class OpenEpisode extends Component {
         <div className="ui cards">
           {relatedThemes.filter((theme) => theme.theme !== this.props.episode.title).map((theme) => {
             return (
-              <div className="card" key={theme._id}>
+              <div className="card" key={theme._id} onClick={this.renderRelatedEpisode}>
                 <div className="content negative">
 
                   <div className="header">
@@ -141,4 +147,4 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps, { fetchEpisode, fetchEpisodes, fetchThemes })(OpenEpisode);
+export default connect(mapStateToProps, { fetchEpisode, fetchEpisodes, fetchThemes, setSelectedTheme })(OpenEpisode);

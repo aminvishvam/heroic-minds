@@ -18,6 +18,7 @@ export const FETCH_ORG = "FETCH_ORG";
 export const CREATE_THEME = 'CREATE_THEME';
 export const FETCH_THEMES = 'FETCH_THEMES';
 export const FETCH_THEME = 'FETCH_THEME';
+export const SET_CUURENT_THEME = 'SET_CUURENT_THEME';
 export const EDIT_THEME = 'EDIT_THEME';
 export const DELETE_THEME = 'DELETE_THEME';
 

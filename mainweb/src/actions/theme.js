@@ -5,7 +5,8 @@ import {
   FETCH_THEMES,
   FETCH_THEME,
   DELETE_THEME,
-  EDIT_THEME
+  EDIT_THEME,
+  SET_CUURENT_THEME
 } from './types';
 
 
@@ -25,6 +26,10 @@ export const fetchTheme = _id => async dispatch => {
   const response = await theme.get(`/api/v1/theme/${_id}`);
 
   dispatch({ type: FETCH_THEME, payload: response.data });
+};
+
+export const setSelectedTheme = themeName => async dispatch => {
+  dispatch({ type: SET_CUURENT_THEME, payload: themeName });
 };
 
 export const editTheme = (_id, formValues) => async dispatch => {
