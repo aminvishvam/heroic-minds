@@ -102,7 +102,7 @@
   transform: scale(1.15);
   z-index: 100;
   background-color: #fff;
-  border: 1px solid rgb(197, 196, 196);
+  border: 0px solid rgb(197, 196, 196);
   border-radius: 15px;
 }
 
@@ -249,8 +249,7 @@
     bottom: 0vh;
     width: 90vw;
     z-index: 100;
-    background-color: rgb(247, 247, 247);
-    border: 1px solid rgb(197, 196, 196);
+    border: 0px solid rgb(197, 196, 196);
     border-radius: 15px;
   }
 }

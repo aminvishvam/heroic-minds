@@ -102,15 +102,15 @@ class HomePage extends Component {
       <div className=" home-page-1-title d-flex flex-xl-nowrap flex-wrap align-items-center justify-content-around">
         <div className="header-text-animation">
           <p className="text bold k45 lh120 mt-4 d-flex flex-sm-nowrap flex-wrap mb-0">
-            <span className="text-nowrap">A healthy mind.&nbsp;</span>
+            <span className="text-nowrap">A powerful mind.&nbsp;</span>
             <span className="text-nowrap">A powerful life.</span>
           </p>
-          <p className="text h26 lh150 text-sm-nowrap mt-4">
+          <p className="text h24 lh150 text-sm-nowrap mt-4">
             Giving you the tools to nurture your mind.
           </p>
         </div>
-        <div className="text-center mt-4 w-50">
-          <img  alt ="main Img "src={Main_Img} className="img-fluid home-page-1-img" />
+        <div className="text-center mt-4">
+          <img alt="main Img " src={Main_Img} className="img-fluid home-page-1-img" />
         </div>
       </div>
     );
@@ -119,9 +119,9 @@ class HomePage extends Component {
   renderMain2() {
     return (
       <div>
-        <p className="text k32 text-center fw600 lh130">
-          Psychological &amp; philosophical&nbsp;
-          <span className="text-gray-57">exercise for your mind.</span>
+        <p className="text k32 text-center fw600 lh130 ls1by2 d-flex flex-wrap justify-content-center">
+          <span className="text-nowrap">Psychological &amp; philosophical&nbsp;</span>
+          <span className="text-gray-57 text-nowrap"> exercise for your mind.</span>
         </p>
       </div>
     );
@@ -134,7 +134,7 @@ class HomePage extends Component {
           The Problem
         </h1>
         <br />
-        <p className="text text-white h21 lh130 text-lg-left text-center">
+        <p className="text text-white h21 lh150 text-lg-left text-center">
           1. The majority of our behaviour is determined by what we value.
           People are relentlessly exposed to illusive, self-serving values such
           as attention, money and status that once attained, do not satiate our
@@ -156,7 +156,7 @@ class HomePage extends Component {
           The Solution
         </h1>
         <br />
-        <p className="text text-black h21 lh130 text-lg-left text-center">
+        <p className="text text-black h21 lh150 text-lg-left text-center">
           1. Guide people to shape the values that orient their life through the
           engaging medium of storytelling.
           <br />
@@ -180,7 +180,7 @@ class HomePage extends Component {
     return (
       <div className="my-container-90">
         <div className="text-center">
-          <img alt= "libra" src={Libra} className="img-fluid img-libra" />
+          <img alt="libra" src={Libra} className="img-fluid img-libra" />
         </div>
         <div className="mt-8">
           <p className="text text-center h22 lh130">

@@ -11,6 +11,7 @@ class AuthorPage extends Component {
         <p className="text text-nowrap text-yellow fw600 k40 lh120 mb-0">
           The Heroic Minds™ Community
         </p>
+        <span className="text s12 lh100 mt-0">(Coming Soon)</span>
         <p className="text fw600 k50 lh120 mt-10 ">
           Stories from around
           <br /> the world.
@@ -59,7 +60,7 @@ class AuthorPage extends Component {
               alwaysColumn="true"
             />
           </section>
-          <section className="mt-5">{this.renderSharebtn()}</section>
+          {/* <section className="mt-5">{this.renderSharebtn()}</section> */}
         </div>
 
         <section className="mt-15 mb-7 my-container-95">

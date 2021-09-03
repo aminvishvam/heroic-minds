@@ -14,7 +14,7 @@ const StoryBox = () => {
                 <div className="row">
 
                     {StoryObject.map((item) => (
-                        <div className="col-xl-3 col-6 my-4 d-flex justify-content-center story-box py-3">
+                        <div className="col-xl-3 col-6 my-4 d-flex justify-content-center py-3">
                             <div>
                                 <img alt='ids' src={item?.audioImg} height="100%" width="350px" className="img-fluid mt-2" />
                                 <h1 className="text-left text s20 fw600 lh130 mt-4 mb-0">{item?.title}</h1>
@@ -27,7 +27,7 @@ const StoryBox = () => {
                                     ))
                                     }
                                 </div>
-                                <div className="d-flex flex-row align-items-center audio-controls mt-4 w-100 justify-content-around">
+                                <div className="d-flex flex-row align-items-center audio-controls mt-4 w-100 justify-content-around story-box">
                                     <AudioPlayer audio={item?.audio} />
                                     <MyModal myObject={item} type="story" />
                                 </div>

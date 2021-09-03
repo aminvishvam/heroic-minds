@@ -70,8 +70,8 @@ class TopNav extends Component {
                 <NavDropdown id="dropdown-basic" className="Nav-text" title="About">
                   <NavDropdown.Item className="Nav-text "><Nav.Link as={Link} eventKey="1" to="/about/mission" className="text-black">Philosophy/Mission</Nav.Link ></NavDropdown.Item>
                   <NavDropdown.Item className="Nav-text "><Nav.Link as={Link} eventKey="2" to="/about/podcast" className="text-black">Podcast</Nav.Link ></NavDropdown.Item>
-                  <NavDropdown.Item className="Nav-text "><Nav.Link as={Link} eventKey="3" to="/about/apparel" className="text-black">Apparel</Nav.Link ></NavDropdown.Item>
-                  <NavDropdown.Item className="Nav-text "> <Nav.Link as={Link} eventKey="4" to="/about/research/coming-soon" className="text-black">Research</Nav.Link ></NavDropdown.Item>
+                  {/* <NavDropdown.Item className="Nav-text "><Nav.Link as={Link} eventKey="3" to="/about/apparel" className="text-black">Apparel</Nav.Link ></NavDropdown.Item>
+                  <NavDropdown.Item className="Nav-text "> <Nav.Link as={Link} eventKey="4" to="/about/research/coming-soon" className="text-black">Research</Nav.Link ></NavDropdown.Item> */}
                 </NavDropdown>
 
 
