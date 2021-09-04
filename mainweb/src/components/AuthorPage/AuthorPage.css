@@ -1,5 +1,5 @@
 .book-img {
-  max-width: 450px !important;
+  max-width: 400px !important;
 }
 
 @-webkit-keyframes fadeInUp {
@@ -27,18 +27,20 @@
 
 @media (max-width: 1200px) {
   .book-img {
-    max-width: 400px !important;
+    max-width: 350px !important;
+    margin-top: 10%;
   }
 }
 
 @media (max-width: 900px) {
   .book-img {
-    width: 300px !important;
+    width: 325px !important;
   }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
   .book-img {
     width: 300px !important;
+    margin-top: 0%;
   }
 }

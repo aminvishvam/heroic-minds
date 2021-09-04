@@ -7,30 +7,23 @@ import "./AuthorPage.css";
 class AuthorPage extends Component {
   renderHead1() {
     return (
-      <div className="author-page-head mt-5">
-        <p className="text text-nowrap text-yellow fw600 k40 lh120 mb-0">
-          The Heroic Minds™ Community
-        </p>
-        <span className="text s12 lh100 mt-0">(Coming Soon)</span>
-        <p className="text fw600 k50 lh120 mt-10 ">
-          Stories from around
-          <br /> the world.
-        </p>
-        <p className="txt intro h20 lh150">
-          Have a story or idea that would make the world a more courageous, resilient place?
-
-
-
-        </p>
-      </div>
-    );
-  }
-
-  renderHead1Img() {
-    return (
-      <div className=" align-middle mt-5">
-        <div className="text-xl-left text-center">
-          <img alt="Hompage-image2" className="img-fluid  book-img" src={book} />
+      <div className="d-flex flex-wrap">
+        <div className="author-page-head mt-5">
+          <p className="text text-nowrap text-yellow fw600 k40 lh120 mb-0">
+            The Heroic Minds™ Community
+          </p>
+          <span className="text s12 lh100 mt-0">(Coming Soon)</span>
+          <p className="text fw600 k40 lh120 mt-5 text-nowrap">
+            Stories from around the world.
+          </p>
+          <p className="txt intro h20 lh150">
+            Have a story or idea that would make the world a more courageous, resilient place?
+          </p>
+        </div>
+        <div className="align-middle mt-5 px-5 mx-auto">
+          <div className="text-xl-left text-center">
+            <img alt="Hompage-image2" className="img-fluid  book-img" src={book} />
+          </div>
         </div>
       </div>
     );
@@ -51,14 +44,7 @@ class AuthorPage extends Component {
       <div className="Author-Page">
         <div className="my-container-90">
           <section className="mt-7">
-            <DisplayBox
-              colLeft="6"
-              colRight="6"
-              contentLeft={this.renderHead1()}
-              contentRight={this.renderHead1Img()}
-              fullContainer="true"
-              alwaysColumn="true"
-            />
+            {this.renderHead1()}
           </section>
           {/* <section className="mt-5">{this.renderSharebtn()}</section> */}
         </div>

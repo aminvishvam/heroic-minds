@@ -7,7 +7,9 @@ import InputField from "../InputField/InputField";
 import InputTextArea from "../InputTextArea/InputTextArea";
 import DisplayBox from "../DisplayBox/DisplayBox";
 import teamacess from "../../assets/teamacess.png";
-import Organizations1 from "../../assets/Organizations1.jpeg";
+import Organization1 from "../../assets/Organizations1.png";
+import Organization2 from "../../assets/Organizations2.jpeg";
+import Organization3 from "../../assets/Organizations3.png";
 
 import _ from "lodash";
 import teamField from "./teamfield";
@@ -107,13 +109,22 @@ class TeamAccess extends Component {
     return (
       <div className="text-center">
         <h1 className="text text-center k30 lh130 bold">
-          Organizations Enjoying the Benefits of Heroic Minds
+          Who we work with
         </h1>
         <img
-          src={Organizations1}
+          src={Organization1}
+          alt="Waterloo Wolves"
+          className="img-fluid mt-5 px-4 organization-img"
+        />
+        <img
+          src={Organization2}
           alt="Kitchener minor hockey association"
-          className="img-fluid mt-5"
-          width="350px"
+          className="img-fluid mt-5 px-4 organization-img"
+        />
+        <img
+          src={Organization3}
+          alt="Waterloo United"
+          className="img-fluid mt-5 px-4 organization-img"
         />
       </div>
     );

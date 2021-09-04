@@ -110,7 +110,11 @@ class HomePage extends Component {
           </p>
         </div>
         <div className="text-center mt-4">
-          <img alt="main Img " src={Main_Img} className="img-fluid home-page-1-img" />
+          <img
+            alt="main Img "
+            src={Main_Img}
+            className="img-fluid home-page-1-img"
+          />
         </div>
       </div>
     );
@@ -120,8 +124,13 @@ class HomePage extends Component {
     return (
       <div>
         <p className="text k32 text-center fw600 lh130 ls1by2 d-flex flex-wrap justify-content-center">
-          <span className="text-nowrap">Psychological &amp; philosophical&nbsp;</span>
-          <span className="text-gray-57 text-nowrap"> exercise for your mind.</span>
+          <span className="text-nowrap">
+            Psychological &amp; philosophical&nbsp;
+          </span>
+          <span className="text-gray-757 text-nowrap">
+            {" "}
+            exercise for your mind.
+          </span>
         </p>
       </div>
     );
@@ -135,10 +144,10 @@ class HomePage extends Component {
         </h1>
         <br />
         <p className="text text-white h21 lh150 text-lg-left text-center">
-          1. The majority of our behaviour is determined by what we value.
-          People are relentlessly exposed to illusive, self-serving values such
-          as attention, money and status that once attained, do not satiate our
-          deepest human needs.
+          1. People are relentlessly exposed to illusive, self-serving ideals
+          such as attention, money and status that once attained, do not satiate
+          our deepest human needs nor do they promote a composed and powerful
+          mind.
           <br />
           <br />
           2. This has led to lives with an unfillable void, stressed, anxious,
@@ -165,11 +174,11 @@ class HomePage extends Component {
           self-reflection, and behavioural change.
           <br />
           <br />
-          Give people constant access to resources that may nurture their
-          behavioural well-being.
+          Give people constant access to efficient resources that nurture their
+          mind.
           <br />
           <br />
-          Turn an over-thinking, exhausted mind into a composed and energized
+          Turn an over-thinking, exhausted mind into a composed and powerful
           mind.
         </p>
       </div>
@@ -205,7 +214,7 @@ class HomePage extends Component {
   renderMainImage2() {
     return (
       <div className="text-center container-fluid">
-        <img alt='imageHeadPhone' src={imgHeadphone} className="img-fluid" />
+        <img alt="imageHeadPhone" src={imgHeadphone} className="img-fluid" />
       </div>
     );
   }
@@ -247,20 +256,18 @@ class HomePage extends Component {
         </div>
         <br />
         <div className="text h21 lh120">
-          Heroic Minds utilizes the engaging and self-reflective medium of
-          story telling as a therapeutic experience. The goal is to use the
-          felt experience of story telling to shape the values that orient
-          your life.
+          Heroic Minds utilizes the engaging and self-reflective medium of story
+          telling as a therapeutic experience. The goal is to use the felt
+          experience of story telling to shape the values that orient your life.
           <br />
           <br />
-          Heroic Minds Stories are short summarizes from a wide range of
-          domains such as greek mythology, medieval tales, pop-culture,
-          fiction and non-fiction literature, real-life stories and much more.
+          Heroic Minds Stories are short summarizes from a wide range of domains
+          such as greek mythology, medieval tales, pop-culture, fiction and
+          non-fiction literature, real-life stories and much more.
           <br />
           <br />
-          Story telling is up to <b>22x more effective</b> in behavioural
-          change and memory than rational reason alone. (Stanford University,
-          2019)
+          Story telling is up to <b>22x more effective</b> in behavioural change
+          and memory than rational reason alone. (Stanford University, 2019)
           <br />
           <br />
           <Link to="/about/mission">
@@ -275,7 +282,11 @@ class HomePage extends Component {
   renderStoryTellingImg() {
     return (
       <div className="align-middle pt-5">
-        <img alt="Hompage-image1" className="img-fluid img-storytelling pl-3" src={Book} />
+        <img
+          alt="Hompage-image1"
+          className="img-fluid img-storytelling pl-3"
+          src={Book}
+        />
       </div>
     );
   }
@@ -298,10 +309,9 @@ class HomePage extends Component {
         </div>
         <br />
         <div className="text h21 lh120">
-          Heroic Minds believes one of the oldest known proverbs, practice
-          makes perfect. If you want to have a mind armed for resilience and
-          built for performance then there is a duty owed to achieve such a
-          mind.
+          Heroic Minds believes one of the oldest known proverbs, practice makes
+          perfect. If you want to have a mind armed for resilience and built for
+          performance then there is a duty owed to achieve such a mind.
           <br />
           <br />
           Heroic Minds gives you the tools to do just that through various
@@ -336,8 +346,8 @@ class HomePage extends Component {
           <div className="section-box-mini text-white lh150 text-lg-left text-center">
             <p className="h28 fw600 ls1half">Enjoyable</p>
             <p className="h22">
-              A short and engaging experience to wake up to, enjoy during your communte or fall asleep to at night.
-
+              A short and engaging experience to wake up to, enjoy during your
+              commute or at night before bed.
             </p>
           </div>
           <div className="section-box-mini text-white lh150 text-lg-left text-center">
@@ -349,13 +359,15 @@ class HomePage extends Component {
           <div className="section-box-mini text-white lh150 text-lg-left  text-center">
             <p className="h28 fw600 ls1half">Impactful</p>
             <p className="h22">
-              Long form stories and ideas condensed down to 10 minutes or less for an efficient and impactful experience.
+              Long form stories and ideas condensed down to 10 minutes or less
+              for an efficient and impactful experience.
             </p>
           </div>
           <div className="section-box-mini text-white lh150 text-lg-left  text-center">
             <p className="h28 fw600 ls1half">Therapeutic</p>
             <p className="h22">
-              Reflecting on psychological &amp; philosophical ideas function to nurture and enhance the mind.
+              Reflecting on psychological &amp; philosophical ideas function to
+              nurture and enhance the mind.
             </p>
           </div>
         </div>
@@ -373,15 +385,33 @@ class HomePage extends Component {
         <div className="text text-black-333 h22 lh120 mt-5 text-center">
           Listen to &nbsp;&nbsp;
           <span>
-            <img alt="BOok" src={Book} width="30px" height="30px" className="mb-2" />
+            <img
+              alt="BOok"
+              src={Book}
+              width="30px"
+              height="30px"
+              className="mb-2"
+            />
           </span>
           &nbsp;&nbsp; or read &nbsp;&nbsp;
           <span>
-            <img alt="Text" src={Text} width="30px" height="30px" className="mb-2" />
+            <img
+              alt="Text"
+              src={Text}
+              width="30px"
+              height="30px"
+              className="mb-2"
+            />
           </span>
           &nbsp;&nbsp; the stories below and reflect &nbsp; &nbsp;
           <span>
-            <img alt="pen" src={Pen} width="30px" height="30px" className="mb-2" />
+            <img
+              alt="pen"
+              src={Pen}
+              width="30px"
+              height="30px"
+              className="mb-2"
+            />
           </span>
           &nbsp;&nbsp;on how they relate to your life.
         </div>
@@ -411,7 +441,9 @@ class HomePage extends Component {
     return (
       <div className="home-page-10">
         <div>
-          <h1 className="text-left text k45 fw500">Heroic Minds Global Community</h1>
+          <h1 className="text-left text k45 fw500">
+            Heroic Minds Global Community
+          </h1>
           <p className="text text-wrap h24 lh150">
             Sharing empowering stories and ideas to make the world a more
             selfless, courageous, resilient place.
@@ -481,7 +513,8 @@ class HomePage extends Component {
             </a>
             <h1 className="text text-center h60 lh130 fw500">&#36;84</h1>
             <p className="text text-center h24 lh130 text-gray-57 ">
-              Billed Annually <br />&#36;7/Month <br />
+              Billed Annually <br />
+              &#36;7/Month <br />
               (CAD)
             </p>
           </div>
@@ -537,11 +570,7 @@ class HomePage extends Component {
           />
         </section>
 
-        <section className="my-container-90 mt-10">
-          {
-            <StoryBox />
-          }
-        </section>
+        <section className="my-container-90 mt-10">{<StoryBox />}</section>
         <section className="mt-15 my-container-90">
           <DisplayBox
             colLeft="3"
@@ -551,11 +580,7 @@ class HomePage extends Component {
             fullContainer="true"
           />
         </section>
-        <section className="my-container-90 mt-10">
-          {
-            <SessionBox />
-          }
-        </section>
+        <section className="my-container-90 mt-10">{<SessionBox />}</section>
 
         <section className="mt-15 my-container-90">
           {this.renderValues()}
