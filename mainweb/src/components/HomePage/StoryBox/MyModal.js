@@ -49,7 +49,7 @@ const MyModal = ({ myObject, type }) => {
                                 />
                             </div>
                             <div className="mt-3">
-                                <div className="text s23 fw500 lh130 text-center">{myObject?.title}</div>
+                                <div className="text s23 fw500 lh130 text-center">{myObject?.title}<br />{myObject?.author}</div>
                                 <div className="text text-gray-97 fw400 s16 lh130 text-center">{myObject?.subtitle}</div>
                             </div>
                         </div>

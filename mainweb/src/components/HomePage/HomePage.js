@@ -22,6 +22,10 @@ import dateFormat from "dateformat";
 import { StoryBox } from "./StoryBox/StoryBox";
 import { SessionBox } from "./StoryBox/SessionBox";
 
+import Download_Apple from "../../assets/Download_Apple.svg";
+import Download_PlayStore from "../../assets/Download_PlayStore.png";
+import book from "../../assets/Book.png";
+
 // export default HomePage;
 class HomePage extends Component {
   state = {
@@ -105,9 +109,18 @@ class HomePage extends Component {
             <span className="text-nowrap">A powerful mind.&nbsp;</span>
             <span className="text-nowrap">A powerful life.</span>
           </p>
-          <p className="text h24 lh150 text-sm-nowrap mt-4">
+          <p className="text h24 lh120 text-sm-nowrap mt-4">
             Giving you the tools to nurture your mind.
           </p>
+          <div className="d-flex d-row">
+            <a href="https://heroicminds.live/">
+              <img alt="Download link for apple app store" src={Download_Apple} className=" mr-3 download-img" />
+            </a>
+
+            <a href="https://heroicminds.live/">
+              <img alt="Download link for google play store" src={Download_PlayStore} className=" download-img" />
+            </a>
+          </div>
         </div>
         <div className="text-center mt-4">
           <img
@@ -128,7 +141,6 @@ class HomePage extends Component {
             Psychological &amp; philosophical&nbsp;
           </span>
           <span className="text-gray-757 text-nowrap">
-            {" "}
             exercise for your mind.
           </span>
         </p>
@@ -215,6 +227,16 @@ class HomePage extends Component {
     return (
       <div className="text-center container-fluid">
         <img alt="imageHeadPhone" src={imgHeadphone} className="img-fluid" />
+
+        <div className="d-flex d-row justify-content-center">
+          <a href="https://heroicminds.live/">
+            <img alt="Download link for apple app store" src={Download_Apple} className="my-0 mr-3 download-img" />
+          </a>
+
+          <a href="https://heroicminds.live/">
+            <img alt="Download link for google play store" src={Download_PlayStore} className="my-0 download-img" />
+          </a>
+        </div>
       </div>
     );
   }
@@ -346,8 +368,8 @@ class HomePage extends Component {
           <div className="section-box-mini text-white lh150 text-lg-left text-center">
             <p className="h28 fw600 ls1half">Enjoyable</p>
             <p className="h22">
-              A short and engaging experience to wake up to, enjoy during your
-              commute or at night before bed.
+              An engaging experience to wake up to, enjoy during your commute or to listen to before bed.
+
             </p>
           </div>
           <div className="section-box-mini text-white lh150 text-lg-left text-center">
@@ -358,16 +380,13 @@ class HomePage extends Component {
           </div>
           <div className="section-box-mini text-white lh150 text-lg-left  text-center">
             <p className="h28 fw600 ls1half">Impactful</p>
-            <p className="h22">
-              Long form stories and ideas condensed down to 10 minutes or less
-              for an efficient and impactful experience.
+            <p className="h22">Stories and ideas condensed down to 10 minutes or less for an efficient and impactful experience.
             </p>
           </div>
           <div className="section-box-mini text-white lh150 text-lg-left  text-center">
             <p className="h28 fw600 ls1half">Therapeutic</p>
             <p className="h22">
-              Reflecting on psychological &amp; philosophical ideas function to
-              nurture and enhance the mind.
+              Psychological &amp; philosophical reflections function to nurture and enhance the mind.
             </p>
           </div>
         </div>
@@ -470,6 +489,40 @@ class HomePage extends Component {
     return (
       <div className="text-center">
         <img alt="community" src={Community} className="img-fluid" />
+      </div>
+    );
+  }
+
+  renderCommunity2() {
+    return (
+      <div className="d-flex flex-wrap ">
+        <div className="author-page-head mt-5">
+          <p className="text text-nowrap text-yellow fw600 k35 lh120 mb-0">
+            The Heroic Minds™ Community
+          </p>
+          <span className="text s16 lh100 mt-0">(Coming Soon)</span>
+          <p className="text fw600 k50 lh120 pt-4 text-nowrap mb-0">
+            A Platform to Empower.
+          </p>
+          <p className="text h22 lh120 text-gray-57 mt-2">
+            Sharing ideas and stories to empower the lives of others.
+          </p>
+          <div className="d-flex d-row">
+            <a href="https://heroicminds.live/">
+              <img alt="Download link for apple app store" src={Download_Apple} className="my-3 mr-3 download-img" />
+            </a>
+
+            <a href="https://heroicminds.live/">
+              <img alt="Download link for google play store" src={Download_PlayStore} className="my-3 download-img" />
+            </a>
+          </div>
+
+        </div>
+        <div className="align-middle mt-5 px-5 mx-auto">
+          <div className="text-xl-left text-center">
+            <img alt="Hompage-image2" className="img-fluid  book-img" src={book} />
+          </div>
+        </div>
       </div>
     );
   }
@@ -587,8 +640,10 @@ class HomePage extends Component {
         </section>
 
         <section className="mt-18 black-box">{this.renderBlackBox()}</section>
-
-        <section className="mt-15 my-container-90">
+        <section className="mt-15 my-container-90">{
+          this.renderCommunity2()}
+        </section>
+        {/*<section className="mt-15 my-container-90">
           <DisplayBox
             colLeft="9"
             colRight="3"
@@ -600,10 +655,10 @@ class HomePage extends Component {
         <section className="mt-9 my-container-95">
           {this.renderCommunityImg2()}
         </section>
-        <section className="mt-10 my-container-85">
+         <section className="mt-10 my-container-85">
           {this.renderEmail()}
-        </section>
-        <section className="mt-10 my-container-85">
+        </section> */}
+        <section className="mt-5 my-container-85">
           {this.renderPrice()}
         </section>
       </div>

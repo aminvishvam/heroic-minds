@@ -87,7 +87,7 @@ class TopNav extends Component {
                   className="text-black Nav-text "
 
                 >
-                  Author
+                  Share
                 </Nav.Link >
               </Nav>
               <Nav className="ml-auto">
