@@ -1,7 +1,7 @@
-import Audio1 from "../../../assets/HomePageAssets/storyAudio1.wav";
+import Audio1 from "../../../assets/HomePageAssets/storyAudio1.mp3";
 import Audio2 from "../../../assets/HomePageAssets/storyAudio2.wav";
 import Audio3 from "../../../assets/HomePageAssets/storyAudio3.wav";
-import Audio4 from "../../../assets/HomePageAssets/storyAudio4.wav";
+import Audio4 from "../../../assets/HomePageAssets/storyAudio4.mp3";
 import Image1 from "../../../assets/HomePageAssets/storyImg1.png";
 import Image2 from "../../../assets/HomePageAssets/storyImg2.png";
 import Image3 from "../../../assets/HomePageAssets/storyImg3.png";
@@ -11,8 +11,9 @@ const StoryObject = [
 
     {
         key: 1,
-        title: "David & Goliath",
-        subtitle: "A Wise Myth",
+        title: "He’s Not The Under Dog",
+        author: "- David & Goliath",
+        subtitle: "Greek Myth",
         categories: ["Spirit", "Humility", "Purpose"],
         audio: Audio1,
         audioImg: Image1,
@@ -26,7 +27,8 @@ const StoryObject = [
 
     {
         key: 2,
-        title: "Music by Sia",
+        title: "Power of Loving Others",
+        author: "- Music by Sia",
         subtitle: "Pop-Culture",
         categories: ["Love", "Change", "Altruism"],
         audio: Audio2,
@@ -41,7 +43,8 @@ const StoryObject = [
 
     {
         key: 3,
-        title: "Quiddich",
+        title: "The Game of Games",
+        author: "- Quidditch",
         subtitle: "Harry Potter",
         categories: ["Leadership", "Purpose", "Bravery"],
         audio: Audio3,
@@ -56,7 +59,8 @@ const StoryObject = [
 
     {
         key: 4,
-        title: "True Detective",
+        title: "What is The Point of it All?",
+        author: "- True Detective",
         subtitle: "Pop-Culture",
         categories: ["Purpose", "Meaning", "Philosophy"],
         audio: Audio4,

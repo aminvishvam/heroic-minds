@@ -5,18 +5,17 @@ import Behavioural from "../../assets/AboutPageAssets/Click.svg";
 import Brain from "../../assets/AboutPageAssets/Brain.svg";
 import House from "../../assets/AboutPageAssets/House.svg";
 import Pen from "../../assets/AboutPageAssets/Pen.svg";
-import IntroductionAudio from "../../assets/AboutPageAssets/Introduction.m4a";
+import Psychological_Foundation_audio from "../../assets/AboutPageAssets/Psychological_Foundation.mp3";
 import pause from "../../assets/HomePageAssets/Pause.svg";
 import playIcon from "../../assets/HomePageAssets/play.svg";
 
 import "./AboutPage.css";
 
-
 class AboutPage extends Component {
   state = {
-    audio: new Audio(IntroductionAudio),
-    isPlaying: false
-  }
+    audio: new Audio(Psychological_Foundation_audio),
+    isPlaying: false,
+  };
 
   togglePlayPause = () => {
     let playerStatus = this.state.isPlaying;
@@ -26,7 +25,7 @@ class AboutPage extends Component {
       this.state.audio.pause();
     }
     this.setState({ isPlaying: !playerStatus });
-  }
+  };
 
   renderComp() {
     return (
@@ -266,91 +265,68 @@ class AboutPage extends Component {
           className="bg-transparent border-0 mx-auto w-100 my-3"
           onClick={this.togglePlayPause}
         >
-          <img
-            src={!this.state.isPlaying ? playIcon : pause} />
+          <img src={!this.state.isPlaying ? playIcon : pause} />
         </button>
         <p className="text text-center h21 lh170 mt-5">
-          Throughout history, people have persevered through immense adversity
-          and tribulation. This has led to lives of purpose, meaning, and
-          exploration of human potential. But today, it appears we are less able
-          to handle the challenges that are inherent to our existence.
+          When your life is oriented solely by self-fulfillment or your own
+          personal gain, you constantly measure your self worth against finite
+          ideas or concepts, such as your job, your title, your social or
+          monetary status or how well you played your last game. These mentally
+          draining and strenuous aims lead people toward negative motivation-
+          the fear of an undesired outcome driving one's behaviour. It is a life
+          that leads to living in your own head, over-thinking, calculating and
+          comparing. Historical theology says, this is building your
+          psychological foundation on sand instead of solid rock because you are
+          always at the mercy of something outside of you, there is constantly a
+          void that needs to be filled.
           <br />
           <br />
-          What has caused this change?
+          Let’s say, instead of shaping your life around your own self-serving
+          agenda you aim to grow and evolve in the direction of your greatest
+          self, to mutually create the greatest life for you and for the people
+          around you. To put this another way, what if you allowed one of the
+          most vitalizing feelings to orient your life? Love. Love, not meaning
+          frilly, comfortable, nostalgia. But rather, devotion to becoming your
+          greatest self, knowing that it fosters a life of purpose, impact and
+          high-performance.
           <br />
           <br />
-          People's lives were once guided by a very simple global belief that
-          assumed life and its collection of challenges were an opportunity to
-          serve others and this was guided by an invigorating love to do so.
-          <br />
-          This led people to see life as an opportunity and its challenges as
-          adventures.
-          <br />
-          <br />
-          But today, the aims of our society have shifted to hyper-focus on
-          self-fulfillment at the expense of one's own psychological well-being
-          and the well-being of those around them. What is the product of living
-          this way? Presently, there is more anxiety, depression and fatigue
-          than there has ever been.
+          When you allow this love for improving the world and those in it to
+          orient your life, your view of life changes. You have an understanding
+          for the stark realities of life, knowing that it may rain, you may
+          lose things, you may fail, you may struggle, but that understanding of
+          the hard truth is balanced by an empowering and invigorating
+          realization that it is in these moments that you can find purpose and
+          opportunity.
           <br />
           <br />
-          Heroic Minds has studied hundreds of real life heroic stories through
-          the lens of psychological and philosophical heavy weights such as
-          Jung, James, Rogers, Nietzsche, Plato and many more.
+          What happens when this is the approach you take to life? You run on a
+          high-octane fuel that is created through the ecstasy of a fulfilling
+          life. You are no longer stuck in your head overthinking every move due
+          to the worry of what you might lose, where you may make a mistake,
+          where you stand in society or how you made a bad pass earlier in the
+          game. You lead with your attention on improving the world and what
+          could be.
           <br />
           <br />
-          We want to make one thing clear, the problem is not that you haven’t
-          created the right habits, set measurable goals, worked hard, read
-          enough neuroscience or meditated enough. The issue is that deep down
-          there exists a void that we perceive would be filled if we got certain
-          things or attached our lives to certain finite ideas. For some it is
-          money, for some it is power, others it is attention, status, the list
-          goes on. It is the act of seeking things in the world to cover up this
-          void that leads to being stuck in your own head, tired, and
-          disconnected. This is what leads to feeling like when it is time to
-          perform, time to get the job done, time to change a behaviour, time to
-          do the right thing, the required energy or feeling, just isn’t there.
+          The goal is for you to have a quiet mind with the ball in your hands
+          and 10 seconds left in the game, to not let the loss of something take
+          away from the opportunity in its place, to do difficult things without
+          having to convince yourself to do them. To live a life full of
+          connection, purpose, meaning, love and naturally bring optimism into
+          every room you enter.
           <br />
           <br />
-          The basis of Heroic Minds is that if you want to live a
-          purpose-driven, resilient, high-performing life, without being stuck
-          in your own head, without forcing yourself to do the right thing, then
-          you need to intervene at the level of what drives your perceptions,
-          which is what you value and what you are aiming at in your life - what
-          we call, your global beliefs. Global beliefs provide context for
-          everything you do. Are you seeking to create prosperity everywhere you
-          go or do you feel that there is a sense of meaninglessness to your
-          life?
+          Heroic Minds mission is to guide you to shape and nurture your mind in
+          such a way that you maintain a powerful life and carry an unwavering
+          confidence regardless of what is standing in your way. This is what we
+          refer to as the hero.
           <br />
           <br />
-          Global beliefs are the currents beneath your behaviour guiding how you
-          feel, think and behave. You experience these currents when you don't
-          feel like doing something you know you should or when you feel like
-          doing something you know you should not. Developing and nurturing
-          these global beliefs are what build the strength of your psychological
-          foundation and provide direction to your life.
-          <br />
-          <br />
-          This is what allows surgeons to perform with someone's life in their
-          hands, the leader to act with vigour while maintaining love for their
-          team, the entrepreneur to risk it all to chase something they believe
-          in, a parent to give up their old life for the benefit of someone
-          else's, and top athletes to execute with the game on the line. It is
-          only when an individual has everything they need internally that human
-          potential is realized. And the reality is, this hero is in every
-          single one of us.
-          <br />
-          <br />
-          The optimal way to achieve this life is such that you are not looking
-          to the world to be fulfilled, you are not calculating your behaviour.
-          Rather, you allow an invigorating love of serving the world to be your
-          guiding global belief. In living this way, you feel as if you already
-          have everything you need because what you value is attainable in every
-          life experience. This allows you to build your psychological
-          foundation on solid rock because you have the ability to feel
-          fulfilled and engaged regardless of the situation or the environment
-          you are in. You maintain a composed and powerful mind that appears to
-          the world as the hero.
+          This hero exists in every single one of us but so does the opposite,
+          selfishness, resentment, pessimism, over-thinking, etc. So you must
+          continuously shape and nurture your mind. Only then can you build your
+          psychological foundation solid rock.
         </p>
       </div>
     );
