@@ -83,15 +83,13 @@ class TopNav extends Component {
                   Team Access
                 </Nav.Link >
                 <Nav.Link as={Link} eventKey="6"
-                  to="/author"
-                  className="text-black Nav-text "
-
-                >
-                  Share
+                  to="/community"
+                  className="text-black Nav-text ">
+                  Community
                 </Nav.Link >
               </Nav>
               <Nav className="ml-auto">
-                <Nav.Link as={Link} eventKey="7"
+                {/* <Nav.Link as={Link} eventKey="7"
                   to="/library"
                   className="text-black Nav-text  navbar-right"
 
@@ -103,7 +101,7 @@ class TopNav extends Component {
                   className="text-black Nav-text "
                 >
                   Community
-                </Nav.Link >
+                </Nav.Link > */}
                 <Nav.Link as={Link} eventKey="9"
                   to="/login"
                   className="text-black Nav-text "

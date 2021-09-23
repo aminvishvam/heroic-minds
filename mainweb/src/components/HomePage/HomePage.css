@@ -184,3 +184,7 @@ button:focus {
     }
   }
 }
+
+a p {
+  text-decoration-color: rgba(245, 124, 0, 0.7);
+}

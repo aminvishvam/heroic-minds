@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Community from "../../assets/HomePageAssets/Community.svg";
+import Community from "../../assets/HomePageAssets/community.svg";
 import book from "../../assets/Book.png";
 import Download_Apple from "../../assets/Download_Apple.svg";
 import Download_PlayStore from "../../assets/Download_PlayStore.png";

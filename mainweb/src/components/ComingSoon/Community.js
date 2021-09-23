@@ -20,7 +20,7 @@ class Community extends Component {
                 <br />
                 <p className="text k40 lh150 text-center">Be the first to hear when<br /> Heroic Minds go live!</p>
                 <br />
-                <p className="text-center"><input type="email" className=" text intro h28 lh100 pl4" id="email1" placeholder="Email..." /></p>
+                <p className="text-center"><input type="email" className="text intro h28 lh100 pl4" id="email1" placeholder="Email..." /></p>
             </div >
 
 

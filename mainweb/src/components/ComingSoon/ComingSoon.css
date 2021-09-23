@@ -3,6 +3,12 @@
   width: 100vw;
 }
 
+#email1 {
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 .community-bg-img {
   height: 100%;
   width: 100vw;

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import PodcastImg from "../../assets/AboutPageAssets/Podcast.svg"
 import Spotify from "../../assets/AboutPageAssets/Spotify.svg"
-import Itunes from "../../assets/AboutPageAssets/Itunes.svg"
-import Google from "../../assets/AboutPageAssets/Google.svg"
+// import Spotify_black from "../../assets/AboutPageAssets/spotify_logo.svg"
+import Itunes from "../../assets/AboutPageAssets/apple_podcast.svg"
+import Google from "../../assets/AboutPageAssets/google_podcast.svg"
 import "./AboutPage.css"
 
 class Podcast extends Component {
@@ -31,8 +32,17 @@ class Podcast extends Component {
                 </div>
                 <div className="d-flex flex-column mt-7">
                     <div className="text-center text text-black-333 s30 lh130">Available On:</div>
-                    <div className="mt-2 d-flex justify-content-center">
-                        <a href="" className="btn-lg border border-dark text-black ls1 k18 m-3">
+                    <div className="mt-5 d-flex justify-content-center">
+                        <a href="" className="logo">
+                            <img src={Spotify} />
+                        </a>
+                        <a href="" className="logo">
+                            <img src={Itunes} />
+                        </a>
+                        <a href="" className="logo">
+                            <img src={Google} />
+                        </a>
+                        {/* <a href="" className="btn-lg border border-dark text-black ls1 k18 m-3">
                             <img src={Spotify} className="img-fluid" />&nbsp;Click Here
                         </a>
                         <a href="" className="btn-lg border border-dark text-black ls1 k18 m-3">
@@ -40,7 +50,7 @@ class Podcast extends Component {
                         </a>
                         <a href="" className="btn-lg border border-dark text-black ls1 k18 m-3">
                             <img src={Google} className="img-fluid" />&nbsp;Click Here
-                        </a>
+                        </a> */}
                     </div>
                 </div>
             </div>

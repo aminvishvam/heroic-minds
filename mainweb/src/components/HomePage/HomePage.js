@@ -7,7 +7,7 @@ import Libra from "../../assets/HomePageAssets/Libra.svg";
 import Book from "../../assets/AboutPageAssets/Book.svg";
 import World from "../../assets/HomePageAssets/World.svg";
 import Text from "../../assets/HomePageAssets/Text.svg";
-import Community from "../../assets/HomePageAssets/Community.svg";
+import Community from "../../assets/HomePageAssets/community.svg";
 import plusSign from "../../assets/HomePageAssets/plusSign.svg";
 import Man from "../../assets/AboutPageAssets/Man.svg";
 import Click from "../../assets/AboutPageAssets/Click.svg";
@@ -501,7 +501,7 @@ class HomePage extends Component {
             The Heroic Minds™ Community
           </p>
           <span className="text s16 lh100 mt-0">(Coming Soon)</span>
-          <p className="text fw600 k50 lh120 pt-4 text-nowrap mb-0">
+          <p className="text fw600 k70 lh120 pt-4 text-nowrap mb-0">
             A Platform to Empower.
           </p>
           <p className="text h22 lh120 text-gray-57 mt-2">
@@ -518,7 +518,7 @@ class HomePage extends Component {
           </div>
 
         </div>
-        <div className="align-middle mt-5 px-5 mx-auto">
+        <div className="align-middle mt-5 mx-auto">
           <div className="text-xl-left text-center">
             <img alt="Hompage-image2" className="img-fluid  book-img" src={book} />
           </div>
@@ -547,12 +547,12 @@ class HomePage extends Component {
   }
   renderPrice() {
     return (
-      <div className="home-page-13">
+      <div className="home-page-13 links">
         <div className="row justify-content-center">
           <div className="col-lg-3 mt-10">
             <a href="/">
               <p className="text text-center fw600 h30 lh130 my-4">
-                <u>30-Day Free Trial</u>
+                30-Day Free Trial
               </p>
             </a>
             <h1 className="text text-center h40 lh150 fw500 ">Free</h1>
@@ -561,11 +561,11 @@ class HomePage extends Component {
           <div className="col-lg-6 mt-10">
             <a href="/">
               <p className="text text-center fw600 h60 lh120 my-4">
-                <u>Yearly</u>
+                Yearly
               </p>
             </a>
             <h1 className="text text-center h60 lh130 fw500">&#36;84</h1>
-            <p className="text text-center h24 lh130 text-gray-57 ">
+            <p className="text text-center h24 lh130 text-gray-57">
               Billed Annually <br />
               &#36;7/Month <br />
               (CAD)
@@ -575,7 +575,7 @@ class HomePage extends Component {
           <div className="col-lg-3 mt-10">
             <a href="/">
               <p className="text text-center fw600 h30 lh130 my-4">
-                <u>Monthly</u>
+                Monthly
               </p>
             </a>
             <h1 className="text text-center h45 lh150 fw500">&#36;10</h1>

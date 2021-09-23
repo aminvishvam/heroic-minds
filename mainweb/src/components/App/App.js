@@ -19,14 +19,14 @@ class App extends Component {
 
   render() {
     if (this.props.authenticated) {
-    return (  
-      <div className="App">
-        <SubApp />
-        <Router history={history}>
-          <Switch>
-            <Route path="/" component={TopNav} />
-          </Switch>
-          <div className="Page">
+      return (
+        <div className="App">
+          <SubApp />
+          <Router history={history}>
+            <Switch>
+              <Route path="/" component={TopNav} />
+            </Switch>
+            {/* <div className="Page">
             <ScrollToTop>
             {
 								Object.keys(routes).map((o, i) => (
@@ -34,18 +34,19 @@ class App extends Component {
 								))
 							}
             </ScrollToTop>
-          </div>
+          </div> */}
 
-          <div className="Footer">
-            <Switch>
-            <Route path="/" component={Player} />
-            </Switch>
-          </div>
-        </Router>
-      </div>
-    )}
+            <div className="Footer">
+              <Switch>
+                <Route path="/" component={Player} />
+              </Switch>
+            </div>
+          </Router>
+        </div>
+      )
+    }
     else {
-      return (  
+      return (
         <div className="App">
           <SubApp />
           <Router history={history}>
@@ -54,21 +55,21 @@ class App extends Component {
             </Switch>
             <div className="Page">
               <ScrollToTop>
-              {
+                {
                   Object.keys(routes).map((o, i) => (
-                    <Route exact key={i} path={o} component={routes[o]}/>
+                    <Route exact key={i} path={o} component={routes[o]} />
                   ))
                 }
               </ScrollToTop>
             </div>
-  
+
             <div className="Footer">
               <Switch>
                 <Route path="/" component={Footer} />
               </Switch>
             </div>
           </Router>
-          <Scrolls />
+          {/* <Scrolls /> */}
         </div>
       );
     }
