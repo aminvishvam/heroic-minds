@@ -1,7 +1,7 @@
-import Audio1 from "../../../assets/HomePageAssets/storyAudio1.wav";
+import Audio1 from "../../../assets/HomePageAssets/storyAudio1.mp3";
 import Audio2 from "../../../assets/HomePageAssets/storyAudio2.wav";
 import Audio3 from "../../../assets/HomePageAssets/storyAudio3.wav";
-import Audio4 from "../../../assets/HomePageAssets/storyAudio4.wav";
+import Audio4 from "../../../assets/HomePageAssets/storyAudio4.mp3";
 import Image1 from "../../../assets/HomePageAssets/storyImg1.png";
 import Image2 from "../../../assets/HomePageAssets/storyImg2.png";
 import Image3 from "../../../assets/HomePageAssets/storyImg3.png";
@@ -11,8 +11,9 @@ const StoryObject = [
 
     {
         key: 1,
-        title: "David & Goliath",
-        subtitle: "A Wise Myth",
+        title: "He’s Not The Under Dog",
+        author: "- David & Goliath",
+        subtitle: "Greek Myth",
         categories: ["Spirit", "Humility", "Purpose"],
         audio: Audio1,
         audioImg: Image1,
@@ -26,7 +27,8 @@ const StoryObject = [
 
     {
         key: 2,
-        title: "Music by Sia",
+        title: "Power of Loving Others",
+        author: "- Music by Sia",
         subtitle: "Pop-Culture",
         categories: ["Love", "Change", "Altruism"],
         audio: Audio2,
@@ -41,7 +43,8 @@ const StoryObject = [
 
     {
         key: 3,
-        title: "Quiddich",
+        title: "The Game of Games",
+        author: "- Quidditch",
         subtitle: "Harry Potter",
         categories: ["Leadership", "Purpose", "Bravery"],
         audio: Audio3,
@@ -56,7 +59,8 @@ const StoryObject = [
 
     {
         key: 4,
-        title: "True Detective",
+        title: "What is The Point of it All?",
+        author: "- True Detective",
         subtitle: "Pop-Culture",
         categories: ["Purpose", "Meaning", "Philosophy"],
         audio: Audio4,
@@ -79,80 +83,65 @@ const StoryTranscript = ({ index }) => {
         case 1:
             return (
                 <p>
-                    David was the youngest of eight Israli brothers. He was the smallest
-                    and weakest of them all. David was the only one of his brothers not
-                    chosen to fight in the army. Instead, his job was to be a shepherd,
-                    taking care of and herding the family's sheep.
+                    David was the youngest of eight Israeli brothers. He was the smallest and weakest of them all. David was the only one of his brothers not chosen to fight in the army.
+                    Instead, his job was to be a shepherd, taking care of and herding the family's sheep.
                     <br />
                     <br />
-                    While in the fields all alone, lions and bears tried to attack the
-                    sheep. Scared and searching for a way to protect the sheep David began
-                    using a slingshot and rocks to scare the animals away. Once the
-                    animals scurried away and David was able to catch his breath, he
-                    wondered where the fearlessness came from. Then he realized, the
-                    desire to protect the sheep, uncovered a courage deep within him. Time
-                    and time again this occurred, the predators would come, he would focus
-                    on nothing other than doing the best he could for the sheep and for
-                    his family. This allowed David to perfect his ability to fight and
-                    specifically use a slingshot and stones as a weapon. David’s family
-                    did not know of the lions or bears nor that he could fight or use a
-                    slingshot.
+                    While in the fields all alone, lions and bears tried to attack the sheep.
+                    Scared and searching for a way to protect the sheep David began using a slingshot and rocks to scare the animals away.
+                    Once the animals scurried away and David was able to catch his breath, he wondered where the fearlessness came from.
+                    Then he realized, the desire to protect the sheep, uncovered a courage deep within him. Time and time again this occurred,
+                    the predators would come, he would focus on nothing other than doing the best he could for the sheep and for his family.
+                    This allowed David to perfect his ability to fight and specifically use a slingshot and stones as a weapon.
+                    David’s family did not know of the lions or bears nor that he could fight or use a slingshot.
                     <br />
                     <br />
-                    One day, David and his family got word that there was a giant man
-                    named Goliath in the opposing Philistine army threatening to fight
-                    anyone.
+                    One day, David and his family got word that there was a giant man named Goliath in the opposing
+                    Philistine army threatening to fight anyone.
                     <br />
                     <br />
                     While his seven brothers went off to battle, David was stuck at home.
                     <br />
                     <br />
-                    David was leaving the house one day to tend the pasture and care for
-                    the sheep.
+                    David was leaving the house one day to tend the pasture and care for the sheep.
                     <br />
                     <br />
-                    His father stopped him and asked if he would be willing to bring
-                    something to his brothers at the battle. He quickly obliged and began
-                    his journey to meet his brothers.
+                    His father stopped him and asked if he would be willing to bring something to his brothers at the battle.
+                    He quickly obliged and began his journey to meet his brothers.
                     <br />
                     <br />
-                    When David arrived he saw his seven brothers standing in a crowd of
-                    other Israli warriors. They all looked scared and worried. As David
-                    glanced above their heads he noticed a man in the distance at least
-                    three times bigger than any man he had ever seen. This man was covered
-                    in body armour and holding a big metal sword.
+                    When David arrived he saw his seven brothers standing in a crowd of other Israli warriors.
+                    They all looked scared and worried.
+                    As David glanced above their heads he noticed a man in the distance at least three times bigger than any man he had ever seen.
+                    This man was covered in body armour and holding a big metal sword.
                     <br />
                     <br />
                     David approached his brothers. He asked them, “what is going on?”
                     <br />
-                    His brothers told him that if no one was going to fight goliath, he
-                    would make all of the Israelites his slaves.
+                    His brothers told him that if no one was going to fight Goliath, he would make all of the Israelites his slaves.
                     <br />
                     <br />
-                    David thought to himself about protecting the sheep, when he was
-                    scared but needed to protect his own, he found a courage deep within
-                    him that would overpower the fear that he felt.
+                    David thought to himself about protecting the sheep,
+                    when he was scared but needed to protect his own,
+                    he found a courage deep within him that would overpower the fear that he felt.
                     <br />
                     <br />
                     David asked his brothers, “who is going to fight him?”
                     <br />
                     <br />
-                    His brothers, without hesitation said, “no one, none of us want to die
-                    for no reason. Not even the king has any idea of what to do.”
+                    His brothers, without hesitation said, “no one, none of us want to die for no reason.
+                    Not even the king has any idea of what to do.”
                     <br />
                     <br />
-                    David looked at his brothers and the other warriors. He saw how much
-                    bigger and stronger they were than he was. He thought to himself, they
-                    must be missing the courage and fearlessness that I have experienced.
+                    David looked at his brothers and the other warriors.
+                    He saw how much bigger and stronger they were than he was. He thought to himself,
+                    they must be missing the courage and fearlessness that I have experienced.
                     <br />
                     <br />
-                    David, shy to admit that he believed he could take on the giant,
-                    tapped one of his brothers on the shoulder, and said, “I will fight
-                    him.”
+                    David, shy to admit that he believed he could take on the giant, tapped one of his brothers on the shoulder, and said, “I will fight him.”
                     <br />
                     <br />
-                    His brothers said, “are you sure? A small, weak shepherd boy armed
-                    with a slingshot and a few stones, is going to fight a giant?”
+                    His brothers said, “are you sure? A small, weak shepherd boy armed with a slingshot and a few stones, is going to fight a giant?”
                     <br />
                     <br />
                     David responded, yes.
@@ -164,41 +153,30 @@ const StoryTranscript = ({ index }) => {
                     David, not strong enough to carry it, pushed the offering away.
                     <br />
                     <br />
-                    Everyone but David was overwhelmed by the giant. They all thought
-                    ‘Look at the size of him!’ but David looked at the giant in relation
-                    to the courage that he had felt many times when he was out in the
-                    field alone. He also thought, this giant man must think because he is
-                    big, and strong, that he can survive by his own rules, killing,
-                    abusing and making life as brutal as possible for others, which David
-                    knew, meant that he didn’t have the spirit in his heart, and the
-                    courage that comes from serving the greatest good.
+                    Everyone but David was overwhelmed by the giant.
+                    They all thought ‘Look at the size of him!’ but David looked at the giant in relation to the courage that
+                    he had felt many times when he was out in the field alone. He also thought, this giant man must think because
+                    he is big, and strong, that he can survive by his own rules, killing, abusing and making life as brutal as
+                    possible for others, which David knew, meant that he didn’t have the spirit in his heart,
+                    and the courage that comes from serving the greatest good.
                     <br />
                     <br />
-                    So as others saw Goliath as too big to fight David saw Goliath as too
-                    big to miss.
+                    So as others saw Goliath as too big to fight David saw Goliath as too big to miss.
                     <br />
                     <br />
                     David stepped out of the crowd to approach Goliath.
                     <br />
                     <br />
-                    Goliath, said to David, “I am a dog, that you come at me with sticks.”
-                    Meaning, you think this is a game? You bring me this insignificant
-                    challenge?
+                    Goliath, said to David, “I am a dog, that you come at me with sticks.” Meaning, you think this is a game? You bring me this insignificant challenge?
                     <br />
                     <br />
-                    David responded to Goliath, “You come against me with a sword, and
-                    spear and Javelin, and that is all. But I come against you with
-                    fearlessness and courage from serving my people.” Meaning, you can
-                    have all the tools and weapons in the world but if you do it for the
-                    wrong reasons, without a powerful spirit in your heart, you don't have
-                    anything powerful.”
+                    David responded to Goliath, “You come against me with a sword, and spear and Javelin, and that is all. But I come against you with fearlessness and courage from serving my people.” Meaning, you can have all the tools and weapons in the world but if you do it for the wrong reasons, without a powerful spirit in your heart, you don't have anything powerful.”
                     <br />
                     <br />
                     As Goliath began to come toward David, David ran toward him.
                     <br />
                     <br />
-                    David reached into his bag and grabbed a stone, he pulled it back in
-                    his slingshot and let go.
+                    David reached into his bag and grabbed a stone, he pulled it back in his slingshot and let go.
                     <br />
                     <br />
                     He hit Goliath square in the forehead, and he fell to the ground.
@@ -207,46 +185,20 @@ const StoryTranscript = ({ index }) => {
                     Little, weak, quiet David defeated Goliath.
                     <br />
                     <br />
-                    The point of the story isn’t just the underdog, courage, that the
-                    bigger they are the harder they fall, or that you can beat strength
-                    with intellect.
+                    The point of the story isn’t just the underdog, courage, that the bigger they are the harder they fall, or that you can beat strength with intellect.
                     <br />
                     <br />
-                    It is the courage that comes through purely wanting to serve others.
-                    That is how David found his courage in the field protecting the sheep.
-                    That is why David never had the desire to tell anyone he defeated the
-                    lions and bears, that he could use a slingshot or that he had the
-                    ability to be fearless. So much so that in the original story in the
-                    bible, David says things to himself such as, the lord is my shepherd,
-                    I lack nothing. Even though I walk through the darkest valley, I will
-                    fear no evil, for you are with me. I know in the bible this refers to
-                    a god, but the idea of god itself refers to bringing heaven to earth,
-                    therefore serving other people to improve the world. If you are that
-                    confident in yourself from serving the world, you don't have to tell a
-                    soul how powerful you are nor do you have to act in any way to appear
-                    above anyone else.
+                    It is the courage that comes through purely wanting to serve others. That is how David found his courage in the field protecting the sheep. That is why David never had the desire to tell anyone he defeated the lions and bears, that he could use a slingshot or that he had the ability to be fearless. So much so that in the original story in the bible, David says things to himself such as, the lord is my shepherd, I lack nothing.  Even though I walk through the darkest valley, I will fear no evil, for you are with me. I know in the bible this refers to a god, but the idea of god itself refers to bringing heaven to earth, therefore serving other people to improve the world. If you are that confident in yourself from serving the world, you don't have to tell a soul how powerful you are nor do you have to act in any way to appear above anyone else.
                     <br />
                     <br />
-                    In the story there is no sign of hesitation in David whether he can or
-                    cannot handle Goliath because the focus is taken off of him. I realize
-                    this story involves the concept of potential death, which is not to be
-                    taken literally. The message is when you do completely serve others
-                    and not yourself, there is no longer a reason to have any fear. When
-                    the sole priority becomes serving others there is an uncovering of a
-                    deep resolve and courage that you feel. We see this in the paternal
-                    instinct to protect loved ones, to protect teammates, to protect
-                    friends, this is not some far off idea.
+                    In the story there is no sign of hesitation in David whether he can or cannot handle Goliath because the focus is taken off of him. I realize this story involves the concept of potential death, which is not to be taken literally. The message is when you do completely serve others and not yourself, there is no longer a reason to have any fear. When the sole priority becomes serving others there is an uncovering of a deep resolve and courage that you feel. We see this in the paternal instinct to protect loved ones, to protect teammates, to protect friends, this is not some far off idea.
                     <br />
                     <br />
-                    In this approach to life, you still hear and think about the fear, but
-                    the hero chooses whether or not to listen to it.
+                    In this approach to life, you still hear and think about the fear,
+                    but the hero chooses whether or not to listen to it.
                     <br />
                     <br />
-                    To conclude when we think of being a leader often we think we have to
-                    be put into that role in which to act as a leader, especially in
-                    business or sport. David makes it abundantly clear that, you have the
-                    ability to lead in any moment, even while alone and no one is
-                    watching. Your time will come that people will see.
+                    To conclude when we think of being a leader often we think we have to be put into that role in which to act as a leader, especially in business or sport. David makes it abundantly clear that, you have the ability to lead in any moment, even while alone and no one is watching. Your time will come that people will see.
                     <br />
                     <br />
                 </p>

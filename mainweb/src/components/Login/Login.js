@@ -16,7 +16,7 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
 class Login extends Component {
   onSubmit = (formValues) => {
     this.props.login(formValues);
-    
+
   };
 
 
@@ -40,6 +40,7 @@ class Login extends Component {
                 name="email"
                 type="email"
                 label="Email"
+                style={{ outline: "none" }}
                 component={RenderField}
                 validate={[required(), email()]}
               />
@@ -47,6 +48,7 @@ class Login extends Component {
                 name="password"
                 type="password"
                 label="Password"
+                style={{ outline: "none" }}
                 component={RenderField}
                 validate={[required(), length({ min: 8 })]}
               />

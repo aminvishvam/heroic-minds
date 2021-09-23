@@ -3,6 +3,11 @@
   border-top: 3px solid black !important;
 }
 
+.logo {
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
 .gray-box {
   background-color: #c4c4c4;
   border-radius: 20px;

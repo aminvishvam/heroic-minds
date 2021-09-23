@@ -22,6 +22,10 @@ import dateFormat from "dateformat";
 import { StoryBox } from "./StoryBox/StoryBox";
 import { SessionBox } from "./StoryBox/SessionBox";
 
+import Download_Apple from "../../assets/Download_Apple.svg";
+import Download_PlayStore from "../../assets/Download_PlayStore.png";
+import book from "../../assets/Book.png";
+
 // export default HomePage;
 class HomePage extends Component {
   state = {
@@ -102,15 +106,28 @@ class HomePage extends Component {
       <div className=" home-page-1-title d-flex flex-xl-nowrap flex-wrap align-items-center justify-content-around">
         <div className="header-text-animation">
           <p className="text bold k45 lh120 mt-4 d-flex flex-sm-nowrap flex-wrap mb-0">
-            <span class="text-nowrap">A healthy mind.&nbsp;</span>
-            <span class="text-nowrap">A powerful life.</span>
+            <span className="text-nowrap">A powerful mind.&nbsp;</span>
+            <span className="text-nowrap">A powerful life.</span>
           </p>
-          <p className="text h26 lh150 text-sm-nowrap mt-4">
+          <p className="text h24 lh120 text-sm-nowrap mt-4">
             Giving you the tools to nurture your mind.
           </p>
+          <div className="d-flex d-row">
+            <a href="https://heroicminds.live/">
+              <img alt="Download link for apple app store" src={Download_Apple} className=" mr-3 download-img" />
+            </a>
+
+            <a href="https://heroicminds.live/">
+              <img alt="Download link for google play store" src={Download_PlayStore} className=" download-img" />
+            </a>
+          </div>
         </div>
-        <div className="text-center mt-4 w-50">
-          <img  alt ="main Img "src={Main_Img} className="img-fluid home-page-1-img" />
+        <div className="text-center mt-4">
+          <img
+            alt="main Img "
+            src={Main_Img}
+            className="img-fluid home-page-1-img"
+          />
         </div>
       </div>
     );
@@ -119,9 +136,13 @@ class HomePage extends Component {
   renderMain2() {
     return (
       <div>
-        <p className="text k32 text-center fw600 lh130">
-          Psychological &amp; philosophical&nbsp;
-          <span className="text-gray-57">exercise for your mind.</span>
+        <p className="text k32 text-center fw600 lh130 ls1by2 d-flex flex-wrap justify-content-center">
+          <span className="text-nowrap">
+            Psychological &amp; philosophical&nbsp;
+          </span>
+          <span className="text-gray-757 text-nowrap">
+            exercise for your mind.
+          </span>
         </p>
       </div>
     );
@@ -134,11 +155,11 @@ class HomePage extends Component {
           The Problem
         </h1>
         <br />
-        <p className="text text-white h21 lh130 text-lg-left text-center">
-          1. The majority of our behaviour is determined by what we value.
-          People are relentlessly exposed to illusive, self-serving values such
-          as attention, money and status that once attained, do not satiate our
-          deepest human needs.
+        <p className="text text-white h21 lh150 text-lg-left text-center">
+          1. People are relentlessly exposed to illusive, self-serving ideals
+          such as attention, money and status that once attained, do not satiate
+          our deepest human needs nor do they promote a composed and powerful
+          mind.
           <br />
           <br />
           2. This has led to lives with an unfillable void, stressed, anxious,
@@ -156,7 +177,7 @@ class HomePage extends Component {
           The Solution
         </h1>
         <br />
-        <p className="text text-black h21 lh130 text-lg-left text-center">
+        <p className="text text-black h21 lh150 text-lg-left text-center">
           1. Guide people to shape the values that orient their life through the
           engaging medium of storytelling.
           <br />
@@ -165,11 +186,11 @@ class HomePage extends Component {
           self-reflection, and behavioural change.
           <br />
           <br />
-          Give people constant access to resources that may nurture their
-          behavioural well-being.
+          Give people constant access to efficient resources that nurture their
+          mind.
           <br />
           <br />
-          Turn an over-thinking, exhausted mind into a composed and energized
+          Turn an over-thinking, exhausted mind into a composed and powerful
           mind.
         </p>
       </div>
@@ -180,7 +201,7 @@ class HomePage extends Component {
     return (
       <div className="my-container-90">
         <div className="text-center">
-          <img alt= "libra" src={Libra} className="img-fluid img-libra" />
+          <img alt="libra" src={Libra} className="img-fluid img-libra" />
         </div>
         <div className="mt-8">
           <p className="text text-center h22 lh130">
@@ -205,7 +226,17 @@ class HomePage extends Component {
   renderMainImage2() {
     return (
       <div className="text-center container-fluid">
-        <img alt='imageHeadPhone' src={imgHeadphone} className="img-fluid" />
+        <img alt="imageHeadPhone" src={imgHeadphone} className="img-fluid" />
+
+        <div className="d-flex d-row justify-content-center">
+          <a href="https://heroicminds.live/">
+            <img alt="Download link for apple app store" src={Download_Apple} className="my-0 mr-3 download-img" />
+          </a>
+
+          <a href="https://heroicminds.live/">
+            <img alt="Download link for google play store" src={Download_PlayStore} className="my-0 download-img" />
+          </a>
+        </div>
       </div>
     );
   }
@@ -247,20 +278,18 @@ class HomePage extends Component {
         </div>
         <br />
         <div className="text h21 lh120">
-          Heroic Minds utilizes the engaging and self-reflective medium of
-          story telling as a therapeutic experience. The goal is to use the
-          felt experience of story telling to shape the values that orient
-          your life.
+          Heroic Minds utilizes the engaging and self-reflective medium of story
+          telling as a therapeutic experience. The goal is to use the felt
+          experience of story telling to shape the values that orient your life.
           <br />
           <br />
-          Heroic Minds Stories are short summarizes from a wide range of
-          domains such as greek mythology, medieval tales, pop-culture,
-          fiction and non-fiction literature, real-life stories and much more.
+          Heroic Minds Stories are short summarizes from a wide range of domains
+          such as greek mythology, medieval tales, pop-culture, fiction and
+          non-fiction literature, real-life stories and much more.
           <br />
           <br />
-          Story telling is up to <b>22x more effective</b> in behavioural
-          change and memory than rational reason alone. (Stanford University,
-          2019)
+          Story telling is up to <b>22x more effective</b> in behavioural change
+          and memory than rational reason alone. (Stanford University, 2019)
           <br />
           <br />
           <Link to="/about/mission">
@@ -275,7 +304,11 @@ class HomePage extends Component {
   renderStoryTellingImg() {
     return (
       <div className="align-middle pt-5">
-        <img alt="Hompage-image1" className="img-fluid img-storytelling pl-3" src={Book} />
+        <img
+          alt="Hompage-image1"
+          className="img-fluid img-storytelling pl-3"
+          src={Book}
+        />
       </div>
     );
   }
@@ -298,10 +331,9 @@ class HomePage extends Component {
         </div>
         <br />
         <div className="text h21 lh120">
-          Heroic Minds believes one of the oldest known proverbs, practice
-          makes perfect. If you want to have a mind armed for resilience and
-          built for performance then there is a duty owed to achieve such a
-          mind.
+          Heroic Minds believes one of the oldest known proverbs, practice makes
+          perfect. If you want to have a mind armed for resilience and built for
+          performance then there is a duty owed to achieve such a mind.
           <br />
           <br />
           Heroic Minds gives you the tools to do just that through various
@@ -336,7 +368,7 @@ class HomePage extends Component {
           <div className="section-box-mini text-white lh150 text-lg-left text-center">
             <p className="h28 fw600 ls1half">Enjoyable</p>
             <p className="h22">
-              A short and engaging experience to wake up to, enjoy during your communte or fall asleep to at night.
+              An engaging experience to wake up to, enjoy during your commute or to listen to before bed.
 
             </p>
           </div>
@@ -348,14 +380,13 @@ class HomePage extends Component {
           </div>
           <div className="section-box-mini text-white lh150 text-lg-left  text-center">
             <p className="h28 fw600 ls1half">Impactful</p>
-            <p className="h22">
-              Long form stories and ideas condensed down to 10 minutes or less for an efficient and impactful experience.
+            <p className="h22">Stories and ideas condensed down to 10 minutes or less for an efficient and impactful experience.
             </p>
           </div>
           <div className="section-box-mini text-white lh150 text-lg-left  text-center">
             <p className="h28 fw600 ls1half">Therapeutic</p>
             <p className="h22">
-              Reflecting on psychological &amp; philosophical ideas function to nurture and enhance the mind.
+              Psychological &amp; philosophical reflections function to nurture and enhance the mind.
             </p>
           </div>
         </div>
@@ -373,15 +404,33 @@ class HomePage extends Component {
         <div className="text text-black-333 h22 lh120 mt-5 text-center">
           Listen to &nbsp;&nbsp;
           <span>
-            <img alt="BOok" src={Book} width="30px" height="30px" className="mb-2" />
+            <img
+              alt="BOok"
+              src={Book}
+              width="30px"
+              height="30px"
+              className="mb-2"
+            />
           </span>
           &nbsp;&nbsp; or read &nbsp;&nbsp;
           <span>
-            <img alt="Text" src={Text} width="30px" height="30px" className="mb-2" />
+            <img
+              alt="Text"
+              src={Text}
+              width="30px"
+              height="30px"
+              className="mb-2"
+            />
           </span>
           &nbsp;&nbsp; the stories below and reflect &nbsp; &nbsp;
           <span>
-            <img alt="pen" src={Pen} width="30px" height="30px" className="mb-2" />
+            <img
+              alt="pen"
+              src={Pen}
+              width="30px"
+              height="30px"
+              className="mb-2"
+            />
           </span>
           &nbsp;&nbsp;on how they relate to your life.
         </div>
@@ -411,7 +460,9 @@ class HomePage extends Component {
     return (
       <div className="home-page-10">
         <div>
-          <h1 className="text-left text k45 fw500">Heroic Minds Global Community</h1>
+          <h1 className="text-left text k45 fw500">
+            Heroic Minds Global Community
+          </h1>
           <p className="text text-wrap h24 lh150">
             Sharing empowering stories and ideas to make the world a more
             selfless, courageous, resilient place.
@@ -441,6 +492,40 @@ class HomePage extends Component {
       </div>
     );
   }
+
+  renderCommunity2() {
+    return (
+      <div className="d-flex flex-wrap ">
+        <div className="author-page-head mt-5">
+          <p className="text text-nowrap text-yellow fw600 k35 lh120 mb-0">
+            The Heroic Minds™ Community
+          </p>
+          <span className="text s16 lh100 mt-0">(Coming Soon)</span>
+          <p className="text fw600 k70 lh120 pt-4 text-nowrap mb-0">
+            A Platform to Empower.
+          </p>
+          <p className="text h22 lh120 text-gray-57 mt-2">
+            Sharing ideas and stories to empower the lives of others.
+          </p>
+          <div className="d-flex d-row">
+            <a href="https://heroicminds.live/">
+              <img alt="Download link for apple app store" src={Download_Apple} className="my-3 mr-3 download-img" />
+            </a>
+
+            <a href="https://heroicminds.live/">
+              <img alt="Download link for google play store" src={Download_PlayStore} className="my-3 download-img" />
+            </a>
+          </div>
+
+        </div>
+        <div className="align-middle mt-5 mx-auto">
+          <div className="text-xl-left text-center">
+            <img alt="Hompage-image2" className="img-fluid  book-img" src={book} />
+          </div>
+        </div>
+      </div>
+    );
+  }
   renderEmail() {
     return (
       <div className="home-page-12">
@@ -462,12 +547,12 @@ class HomePage extends Component {
   }
   renderPrice() {
     return (
-      <div className="home-page-13">
+      <div className="home-page-13 links">
         <div className="row justify-content-center">
           <div className="col-lg-3 mt-10">
             <a href="/">
               <p className="text text-center fw600 h30 lh130 my-4">
-                <u>30-Day Free Trial</u>
+                30-Day Free Trial
               </p>
             </a>
             <h1 className="text text-center h40 lh150 fw500 ">Free</h1>
@@ -476,12 +561,13 @@ class HomePage extends Component {
           <div className="col-lg-6 mt-10">
             <a href="/">
               <p className="text text-center fw600 h60 lh120 my-4">
-                <u>Yearly</u>
+                Yearly
               </p>
             </a>
             <h1 className="text text-center h60 lh130 fw500">&#36;84</h1>
-            <p className="text text-center h24 lh130 text-gray-57 ">
-              Billed Annually <br />&#36;7/Month <br />
+            <p className="text text-center h24 lh130 text-gray-57">
+              Billed Annually <br />
+              &#36;7/Month <br />
               (CAD)
             </p>
           </div>
@@ -489,7 +575,7 @@ class HomePage extends Component {
           <div className="col-lg-3 mt-10">
             <a href="/">
               <p className="text text-center fw600 h30 lh130 my-4">
-                <u>Monthly</u>
+                Monthly
               </p>
             </a>
             <h1 className="text text-center h45 lh150 fw500">&#36;10</h1>
@@ -537,11 +623,7 @@ class HomePage extends Component {
           />
         </section>
 
-        <section className="my-container-90 mt-10">
-          {
-            <StoryBox />
-          }
-        </section>
+        <section className="my-container-90 mt-10">{<StoryBox />}</section>
         <section className="mt-15 my-container-90">
           <DisplayBox
             colLeft="3"
@@ -551,19 +633,17 @@ class HomePage extends Component {
             fullContainer="true"
           />
         </section>
-        <section className="my-container-90 mt-10">
-          {
-            <SessionBox />
-          }
-        </section>
+        <section className="my-container-90 mt-10">{<SessionBox />}</section>
 
         <section className="mt-15 my-container-90">
           {this.renderValues()}
         </section>
 
         <section className="mt-18 black-box">{this.renderBlackBox()}</section>
-
-        <section className="mt-15 my-container-90">
+        <section className="mt-15 my-container-90">{
+          this.renderCommunity2()}
+        </section>
+        {/*<section className="mt-15 my-container-90">
           <DisplayBox
             colLeft="9"
             colRight="3"
@@ -575,10 +655,10 @@ class HomePage extends Component {
         <section className="mt-9 my-container-95">
           {this.renderCommunityImg2()}
         </section>
-        <section className="mt-10 my-container-85">
+         <section className="mt-10 my-container-85">
           {this.renderEmail()}
-        </section>
-        <section className="mt-10 my-container-85">
+        </section> */}
+        <section className="mt-5 my-container-85">
           {this.renderPrice()}
         </section>
       </div>

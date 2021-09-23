@@ -1,30 +1,35 @@
 import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
-import { compose } from 'redux';
-import { connect } from 'react-redux';
+import { compose } from "redux";
+import { connect } from "react-redux";
 
 import InputField from "../InputField/InputField";
 import InputTextArea from "../InputTextArea/InputTextArea";
 import DisplayBox from "../DisplayBox/DisplayBox";
 import teamacess from "../../assets/teamacess.png";
+import Organization1 from "../../assets/Organizations1.png";
+import Organization2 from "../../assets/Organizations2.jpeg";
+import Organization3 from "../../assets/Organizations3.png";
 
 import _ from "lodash";
 import teamField from "./teamfield";
 import teamArea from "./teamArea";
 
-
-import * as actions from '../../actions/teamAccess';
-
+import * as actions from "../../actions/teamAccess";
 
 import "./TeamAccess.css";
-
 
 class TeamAccess extends Component {
   renderFields() {
     return _.map(teamField, ({ label, name }) => {
       return (
-        <div className='row align-items-center'>
-          <label for={label} className="col-lg-2 text-left text  bold s16 lh150 text-uppercase ">{label}</label>
+        <div className="row align-items-center">
+          <label
+            for={label}
+            className="col-lg-2 text-left text  bold s16 lh150 text-uppercase "
+          >
+            {label}
+          </label>
           <span className="col-lg-10 p-0 pl-3 text-left ">
             <Field
               key={name}
@@ -41,8 +46,13 @@ class TeamAccess extends Component {
   renderTextArea() {
     return _.map(teamArea, ({ label, name }) => {
       return (
-        <div className='row align-items-center'>
-          <label for={label} className="col-lg-2 text-left text   s16 bold lh150 text-uppercase ">{label}</label>
+        <div className="row align-items-center">
+          <label
+            for={label}
+            className="col-lg-2 text-left text   s16 bold lh150 text-uppercase "
+          >
+            {label}
+          </label>
           <span className="col-lg-10 p-0 pl-3 text-left ">
             <Field key={name} component={InputTextArea} name={name} />
           </span>
@@ -51,8 +61,8 @@ class TeamAccess extends Component {
     });
   }
 
-  onSubmit = formValues => {
-    console.log(formValues)
+  onSubmit = (formValues) => {
+    console.log(formValues);
     this.props.createTeamAccess(formValues);
   };
 
@@ -60,16 +70,16 @@ class TeamAccess extends Component {
     const { handleSubmit } = this.props;
     return (
       <div className="team-page-header">
-        <p className="text k40 w600 bold lh140 mb-0">Offer Heroic Minds™ to your team.</p>
-        <p className="text h22 lh150 mt-2" >
-          Are you interested in offering Heroic Minds to your team?
+        <p className="text k32 w600 bold lh140 mb-0 text-nowrap">
+          Offer Heroic Minds™ to your team.
+        </p>
+        <p className="text h20 lh150 mt-2">
+          Team discounts and customizations available.
           <br />
-          If so, send us an email.
+          Inquire below.
           <br />
           <br />
           <br />
-
-
         </p>
         <form onSubmit={handleSubmit(this.onSubmit)}>
           {this.renderFields()}
@@ -97,11 +107,26 @@ class TeamAccess extends Component {
 
   renderBottom() {
     return (
-      <div>
+      <div className="text-center">
         <h1 className="text text-center k30 lh130 bold">
-          Organizations Enjoying the Benefits of Heroic Minds
+          Who we work with
         </h1>
-      </div >
+        <img
+          src={Organization1}
+          alt="Waterloo Wolves"
+          className="img-fluid mt-5 px-4 organization-img"
+        />
+        <img
+          src={Organization2}
+          alt="Kitchener minor hockey association"
+          className="img-fluid mt-5 px-4 organization-img"
+        />
+        <img
+          src={Organization3}
+          alt="Waterloo United"
+          className="img-fluid mt-5 px-4 organization-img"
+        />
+      </div>
     );
   }
   render() {
@@ -116,9 +141,7 @@ class TeamAccess extends Component {
             fullContainer="true"
           />
         </section>
-        <section className="mt-15 mb-15">
-          {this.renderBottom()}
-        </section>
+        <section className="mt-15 mb-15">{this.renderBottom()}</section>
       </div>
     );
   }
@@ -153,8 +176,6 @@ export default compose(
   reduxForm({
     validate,
     validatetextarea,
-    form: 'TeamAccess',
-
+    form: "TeamAccess",
   })
 )(TeamAccess);
-

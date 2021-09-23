@@ -1,7 +1,10 @@
 .book-img {
-  max-width: 450px !important;
+  max-width: 400px !important;
 }
 
+.download-img {
+  max-height: 40px;
+}
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -27,18 +30,37 @@
 
 @media (max-width: 1200px) {
   .book-img {
-    max-width: 400px !important;
+    max-width: 350px !important;
+    margin-top: 10%;
+  }
+
+  .download-img {
+    max-height: 38px;
   }
 }
 
 @media (max-width: 900px) {
   .book-img {
-    width: 300px !important;
+    width: 325px !important;
+  }
+
+  .download-img {
+    max-height: 35px;
+  }
+
+  .author-page-1 .px-5 {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
   }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
   .book-img {
     width: 300px !important;
+    margin-top: 0%;
+  }
+
+  .download-img {
+    max-height: 30px;
   }
 }

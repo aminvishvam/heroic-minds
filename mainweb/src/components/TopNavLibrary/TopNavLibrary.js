@@ -29,34 +29,31 @@ class TopNavLibrary extends Component {
     render() {
         return (
             <div>
-            <div style={{ display: 'flex', alignItems: 'center', padding: '0 20px', marginTop: '5px', flexDirection: 'row', lineHeight: '30px' }}  >
-            <NavLink to='/library' >
-            <label className="Nav-text s18">Library</label>
-            </NavLink>
-            <span onClick={this.handleClick}><DropdownArrow  /></span>
+                <div style={{ display: 'flex', alignItems: 'center', padding: '0 20px', marginTop: '5px', flexDirection: 'row', lineHeight: '30px' }}  >
+                    <NavLink to='/library' >
+                        <label className="Nav-text s18">Library</label>
+                    </NavLink>
+                    <span onClick={this.handleClick}><DropdownArrow /></span>
 
-                <Menu
-                    elevation={0}
-                    getContentAnchorEl={null}
-                    anchorEl={this.state.anchorEl}
-                    anchorOrigin={{
-                        vertical: 'bottom',
-                        horizontal: 'center',
-                    }}
-                    transformOrigin={{
-                        vertical: 'top',
-                        horizontal: 'center',
-                    }}
-                    open={this.state.shouldOpenMenu}
-                    onClose={this.handleClose}
-                >
-                    <MenuItem onClick={this.handleClose}>Keep Listening</MenuItem>
-                    <MenuItem onClick={this.handleClose}>Favourites</MenuItem>
-                    <div style={{ height: '1px', backgroundColor: '#A8A8A8' }}></div>
-                    <MenuItem onClick={this.handleClose}>Recommend a Story/Topic</MenuItem>
-                    <MenuItem style={{ color: '#F57C00' }} onClick={this.handleClose}>Gift an Episode</MenuItem>
-                </Menu>
-            </div>
+                    <Menu
+                        elevation={0}
+                        getContentAnchorEl={null}
+                        anchorEl={this.state.anchorEl}
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'center',
+                        }}
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'center',
+                        }}
+                        open={this.state.shouldOpenMenu}
+                        onClose={this.handleClose}
+                    >
+                        <MenuItem onClick={this.handleClose}>Keep Listening</MenuItem>
+                        <MenuItem onClick={this.handleClose}>Favourites</MenuItem>
+                    </Menu>
+                </div>
             </div>
         );
     }

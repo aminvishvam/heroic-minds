@@ -6,10 +6,10 @@ import "./TopNav.css";
 import { connect } from "react-redux";
 import { NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import NavLink from "react-bootstrap/NavLink";
 import TopNavLibrary from "../TopNavLibrary/TopNavLibrary";
 import TopNavProfile from "../TopNavProfile/TopNavProfile";
 import SearchBar from "../SearchBar/searchBar";
+
 
 class TopNav extends Component {
   itemStyle = {
@@ -47,6 +47,7 @@ class TopNav extends Component {
                   >
                     Community
                   </Nav.Link>
+
                 </div>
 
                 <SearchBar />
@@ -69,9 +70,10 @@ class TopNav extends Component {
                 <NavDropdown id="dropdown-basic" className="Nav-text" title="About">
                   <NavDropdown.Item className="Nav-text "><Nav.Link as={Link} eventKey="1" to="/about/mission" className="text-black">Philosophy/Mission</Nav.Link ></NavDropdown.Item>
                   <NavDropdown.Item className="Nav-text "><Nav.Link as={Link} eventKey="2" to="/about/podcast" className="text-black">Podcast</Nav.Link ></NavDropdown.Item>
-                  <NavDropdown.Item className="Nav-text "><Nav.Link as={Link} eventKey="3" to="/about/apparel" className="text-black">Apparel</Nav.Link ></NavDropdown.Item>
-                  <NavDropdown.Item className="Nav-text "> <Nav.Link as={Link} eventKey="4" to="/about/research/coming-soon" className="text-black">Research</Nav.Link ></NavDropdown.Item>
+                  {/* <NavDropdown.Item className="Nav-text "><Nav.Link as={Link} eventKey="3" to="/about/apparel" className="text-black">Apparel</Nav.Link ></NavDropdown.Item>
+                  <NavDropdown.Item className="Nav-text "> <Nav.Link as={Link} eventKey="4" to="/about/research/coming-soon" className="text-black">Research</Nav.Link ></NavDropdown.Item> */}
                 </NavDropdown>
+
 
 
                 <Nav.Link as={Link} eventKey="5"
@@ -81,15 +83,13 @@ class TopNav extends Component {
                   Team Access
                 </Nav.Link >
                 <Nav.Link as={Link} eventKey="6"
-                  to="/author"
-                  className="text-black Nav-text "
-
-                >
-                  Author
+                  to="/community"
+                  className="text-black Nav-text ">
+                  Community
                 </Nav.Link >
               </Nav>
               <Nav className="ml-auto">
-                <Nav.Link as={Link} eventKey="7"
+                {/* <Nav.Link as={Link} eventKey="7"
                   to="/library"
                   className="text-black Nav-text  navbar-right"
 
@@ -101,7 +101,7 @@ class TopNav extends Component {
                   className="text-black Nav-text "
                 >
                   Community
-                </Nav.Link >
+                </Nav.Link > */}
                 <Nav.Link as={Link} eventKey="9"
                   to="/login"
                   className="text-black Nav-text "
