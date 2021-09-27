@@ -7,7 +7,7 @@ class Community extends Component {
     renderImg() {
         return (
             <div className="text-center community-image-block">
-                <img className='img-fluid community-bg-img' alt='' src={comingSoonImg} />
+                <img className='community-bg-img' alt='' src={comingSoonImg} />
             </div>
         );
     }

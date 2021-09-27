@@ -28,7 +28,7 @@ class Podcast extends Component {
                             world.
                         </div>
                     </div>
-                    <div className="col-xl-4 col-md-5 text-center mt-5"><img src={PodcastImg} className="img-fluid" /></div>
+                    <div className="col-xl-4 col-md-5 text-center mt-5"><img src={PodcastImg} className="img-fluid" style={{ filter: 'grayscale(100%)' }} /></div>
                 </div>
                 <div className="d-flex flex-column mt-7">
                     <div className="text-center text text-black-333 s30 lh130">Available On:</div>
