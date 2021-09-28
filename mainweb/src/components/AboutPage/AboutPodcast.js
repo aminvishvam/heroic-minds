@@ -53,6 +53,9 @@ class Podcast extends Component {
                         </a> */}
                     </div>
                 </div>
+                <div className="mt-7 card">
+                    <iframe id="player_iframe" src="https://www.buzzsprout.com/1800516?client_source=large_player&iframe=true&referrer=https%3A%2F%2Fwww.buzzsprout.com%2F1800516%2Fpodcast%2Fembed" loading="lazy" width="100%" height="375" frameborder="0" scrolling="no" title="The Heroic Minds Podcast"></iframe>
+                </div>
             </div>
         );
     }

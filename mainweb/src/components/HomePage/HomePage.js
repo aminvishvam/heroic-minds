@@ -592,11 +592,11 @@ class HomePage extends Component {
     return (
       <div className="HomePage mb-15">
         <div className="my-container-90">
-          <section className="HomePageHeader mt-7">{this.renderMain()}</section>
-          <section className="HomePageHeader mt-18 ">
+          <section className="HomePageHeader mt-10">{this.renderMain()}</section>
+          <section className="HomePageHeader mt-10 ">
             {this.renderMain2()}
           </section>
-          <section className="mt-18">
+          <section className="mt-10">
             <DisplayBox
               colLeft="6"
               colRight="6"
@@ -608,11 +608,11 @@ class HomePage extends Component {
           </section>
         </div>
 
-        <section className="mt-15 my-container-95">
+        <section className="mt-10 my-container-95">
           {this.renderMainImage2()}
         </section>
 
-        <section className="mt-15 my-container-90">
+        <section className="mt-10 my-container-90">
           <DisplayBox
             colLeft="9"
             colRight="3"
@@ -624,7 +624,7 @@ class HomePage extends Component {
         </section>
 
         <section className="my-container-90 mt-10">{<StoryBox />}</section>
-        <section className="mt-15 my-container-90">
+        <section className="mt-10 my-container-90">
           <DisplayBox
             colLeft="3"
             colRight="9"
@@ -635,12 +635,12 @@ class HomePage extends Component {
         </section>
         <section className="my-container-90 mt-10">{<SessionBox />}</section>
 
-        <section className="mt-15 my-container-90">
+        <section className="mt-10 my-container-90">
           {this.renderValues()}
         </section>
 
-        <section className="mt-18 black-box">{this.renderBlackBox()}</section>
-        <section className="mt-15 my-container-90">{
+        <section className="mt-10 black-box">{this.renderBlackBox()}</section>
+        <section className="mt-10 my-container-90">{
           this.renderCommunity2()}
         </section>
         {/*<section className="mt-15 my-container-90">
