@@ -50,7 +50,7 @@
   "homepage": "http://localhost:3000",
   "proxy": "http://localhost:5080",
   "engines": {
-    "node": "14.x"
+    "node": "6.x"
   },
   "scripts": {
     "start": "react-scripts start",
