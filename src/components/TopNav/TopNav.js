@@ -83,7 +83,7 @@ class TopNav extends Component {
                   Team Access
                 </Nav.Link >
                 <Nav.Link as={Link} eventKey="6"
-                  to="/community"
+                  to="/author"
                   className="text-black Nav-text ">
                   Community
                 </Nav.Link >

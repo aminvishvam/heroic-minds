@@ -9,7 +9,7 @@ class AuthorPage extends Component {
   renderHead1() {
     return (
       <div className="d-flex flex-wrap author-page-1">
-        <div className="author-page-head mt-5">
+        <div className="author-page-head mt-7">
           <p className="text text-nowrap text-yellow fw600 k35 lh120 mb-0">
             The Heroic Minds™ Community
           </p>
@@ -31,7 +31,7 @@ class AuthorPage extends Component {
           </div>
 
         </div>
-        <div className="align-middle mt-5 px-5 mx-auto">
+        <div className="align-middle mt-5 mx-auto">
           <div className="text-xl-left text-center">
             <img alt="Hompage-image2" className="img-fluid  book-img" src={book} />
           </div>
@@ -53,18 +53,18 @@ class AuthorPage extends Component {
   render() {
     return (
       <div className="Author-Page">
-        <div className="my-container-90">
+        <div className="my-container-80">
           <section className="mt-7">
             {this.renderHead1()}
           </section>
           {/* <section className="mt-5">{this.renderSharebtn()}</section> */}
         </div>
 
-        <section className="mt-15 mb-7 my-container-95">
+        {/* <section className="mt-15 mb-7 my-container-95">
           <div className="text-center">
             <img alt="Hompage-image2" className="img-fluid " src={Community} width="100%" />
           </div>
-        </section>
+        </section> */}
       </div >
     );
   }
